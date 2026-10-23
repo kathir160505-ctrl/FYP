@@ -45,7 +45,17 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
 - **Feature definitions:** `src/process/features.py`, `CLUSTER_FEATURES` (13 features). Club names: `data/reference/teams.csv`.
 - **Gotcha:** a stale `~/soccerdata/data/FBref/seasons_*.html` cache can map "2526" to FBref's current-season URL. `check_coverage.py` guards against this with an MP == 38 check.
 - **Tests:** `python -m pytest tests`.
-- **Next:** Phase 3 EDA notebook, then Phase 4 clustering.
+## Phases 3–4 done (2026-10-23)
+- **Run:** `python -m src.model.eda`, then `python -m src.model.clustering`. Reports are `reports/phase3_eda.md` and `reports/phase4_clustering.md`; figures are in `reports/figures/`.
+- **Model:** StandardScaler → PCA with 4 components (Kaiser rule, 87.4% variance) → KMeans k = 4 (seed 42). Saved to `models/cluster_model.joblib`.
+  - k = 2 has the best silhouette but is just "big clubs vs rest", so it is kept as `top_level`.
+  - k = 4 is the most stable choice for k ≥ 3 (bootstrap ARI 0.64) and sits at the elbow.
+- **Clusters:** Dominant Possession (12), Controlled Build-up (13), Direct & Cross-Oriented (26), Long-Ball Low Block (9). Names are assigned by PC1 rank and verified by `check_names()`.
+- **DBSCAN:** a consensus over 24 settings. "Unique" clubs are Barcelona, Villarreal, Inter, Hellas Verona and Getafe.
+- **Split-half:** 80% of clubs keep the same cluster.
+- **League chi-square:** not significant (permutation p = 0.45, Cramér's V = 0.22). This is a real finding, so report it honestly.
+- **App data:** `data/processed/{clusters,cluster_profiles,similar_clubs,model_selection}.csv`.
+- **Next:** Phase 5, the "more attacking" prediction model. Then Phase 6, the Streamlit app.
 
 ## Original feature set (Table 3.1), with candidate sources from before the audit
 | Feature | Candidate source |
