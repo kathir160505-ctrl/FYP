@@ -1,13 +1,9 @@
-pandas
-numpy
-scikit-learn
-scipy
-soccerdata
-matplotlib
-seaborn
-plotly
-streamlit
-jupyter
-pytest
-joblib
-tabulate
+# Dashboard runtime (installed by Streamlit Community Cloud).
+# scikit-learn is pinned to the version that saved models/*.joblib.
+streamlit==1.66.1
+pandas==3.1.0
+numpy==2.5.4
+scikit-learn==1.9.1
+scipy==1.18.1
+plotly==7.1.0
+joblib==1.6.0

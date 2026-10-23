@@ -1,0 +1,777 @@
+league,team,block,category,shots,goals,xg,shots_against,goals_against,xg_against
+ENG-Premier League,Arsenal,attackSpeed,Normal,305,33,39.95729193650186,191,16,17.635757468640804
+ENG-Premier League,Arsenal,attackSpeed,Standard,162,27,30.095831130631268,71,7,8.777284819632769
+ENG-Premier League,Arsenal,attackSpeed,Slow,59,6,7.074158746749163,28,3,5.477298629004508
+ENG-Premier League,Arsenal,attackSpeed,Fast,31,5,6.855083391070366,21,1,3.5684551801532507
+ENG-Premier League,Arsenal,shotZone,ownGoals,5,5,5.0,1,1,1.0
+ENG-Premier League,Arsenal,shotZone,shotOboxTotal,147,9,4.951998872682452,113,6,3.568858067970723
+ENG-Premier League,Arsenal,shotZone,shotPenaltyArea,322,38,44.29829260520637,168,16,20.206292844377458
+ENG-Premier League,Arsenal,shotZone,shotSixYardBox,83,19,29.732073727063835,29,4,10.68364518508315
+ENG-Premier League,Arsenal,situation,OpenPlay,395,44,53.88653407432139,240,20,26.681511277798563
+ENG-Premier League,Arsenal,situation,FromCorner,110,19,20.506443264894187,43,4,5.735525920987129
+ENG-Premier League,Arsenal,situation,SetPiece,40,4,6.209633234888315,21,2,2.6266886703670025
+ENG-Premier League,Arsenal,situation,DirectFreekick,8,0,0.3350792806595564,7,1,0.41507022827863693
+ENG-Premier League,Arsenal,situation,Penalty,4,4,3.044675350189209,0,0,0.0
+ENG-Premier League,Aston Villa,attackSpeed,Normal,285,28,31.474037868436426,302,26,32.971722593996674
+ENG-Premier League,Aston Villa,attackSpeed,Standard,134,17,16.820045828819275,120,14,15.50045806542039
+ENG-Premier League,Aston Villa,attackSpeed,Slow,37,5,7.773457592353225,42,5,4.873050200752914
+ENG-Premier League,Aston Villa,attackSpeed,Fast,29,6,5.386999340727925,27,4,5.193318320438266
+ENG-Premier League,Aston Villa,shotZone,ownGoals,3,3,3.0,1,1,1.0
+ENG-Premier League,Aston Villa,shotZone,shotOboxTotal,179,15,6.007731776684523,168,6,5.655558334197849
+ENG-Premier League,Aston Villa,shotZone,shotPenaltyArea,239,21,29.558847244363278,268,28,34.21611799299717
+ENG-Premier League,Aston Villa,shotZone,shotSixYardBox,64,17,22.88796160928905,54,14,17.666872853413224
+ENG-Premier League,Aston Villa,situation,OpenPlay,351,39,44.634494801517576,371,35,43.038091115187854
+ENG-Premier League,Aston Villa,situation,FromCorner,98,14,11.852228590287268,84,10,10.32215441018343
+ENG-Premier League,Aston Villa,situation,SetPiece,21,1,3.8431065334007144,25,2,3.0343317575752735
+ENG-Premier League,Aston Villa,situation,DirectFreekick,15,2,1.1247107051312923,9,1,0.6216342225670815
+ENG-Premier League,Aston Villa,situation,Penalty,0,0,0.0,2,1,1.5223376750946045
+ENG-Premier League,Bournemouth,attackSpeed,Normal,340,32,41.7268255148083,265,24,27.670658260583878
+ENG-Premier League,Bournemouth,attackSpeed,Standard,116,17,17.88729279395193,155,24,23.468368276488036
+ENG-Premier League,Bournemouth,attackSpeed,Slow,36,1,2.876345807686448,28,1,2.4585034670308232
+ENG-Premier League,Bournemouth,attackSpeed,Fast,34,8,7.199599962681532,34,5,6.508253071457148
+ENG-Premier League,Bournemouth,shotZone,ownGoals,1,1,1.0,3,3,3.0
+ENG-Premier League,Bournemouth,shotZone,shotOboxTotal,212,12,7.37705750297755,143,8,5.058836887590587
+ENG-Premier League,Bournemouth,shotZone,shotPenaltyArea,258,29,37.84995193965733,280,33,36.300291942898184
+ENG-Premier League,Bournemouth,shotZone,shotSixYardBox,55,16,23.463054636493325,56,10,15.746654245071113
+ENG-Premier League,Bournemouth,situation,OpenPlay,410,41,51.80277128517628,327,30,36.63741479907185
+ENG-Premier League,Bournemouth,situation,FromCorner,66,5,8.663268640637398,102,10,13.299151321873069
+ENG-Premier League,Bournemouth,situation,SetPiece,24,5,3.323724796064198,37,4,4.823955283965915
+ENG-Premier League,Bournemouth,situation,DirectFreekick,20,2,1.3332863319665194,10,4,0.7782854214310646
+ENG-Premier League,Bournemouth,situation,Penalty,6,5,4.5670130252838135,6,6,4.566976249217987
+ENG-Premier League,Brentford,attackSpeed,Normal,236,31,36.592570499517024,319,34,37.78603617940098
+ENG-Premier League,Brentford,attackSpeed,Standard,114,12,21.253248000517488,120,11,15.888698824681342
+ENG-Premier League,Brentford,attackSpeed,Fast,31,10,8.030995041131973,21,4,5.587510853074491
+ENG-Premier League,Brentford,attackSpeed,Slow,27,2,2.7395403729751706,41,3,4.4144968800246716
+ENG-Premier League,Brentford,shotZone,ownGoals,2,2,2.0,3,3,3.0
+ENG-Premier League,Brentford,shotZone,shotOboxTotal,100,2,4.358523596078157,181,4,5.4457801235839725
+ENG-Premier League,Brentford,shotZone,shotPenaltyArea,247,38,43.390105162747204,274,31,39.11571955215186
+ENG-Premier League,Brentford,shotZone,shotSixYardBox,59,13,18.867725155316293,43,14,16.115243061445653
+ENG-Premier League,Brentford,situation,OpenPlay,294,43,47.36310591362417,381,41,47.78804391250014
+ENG-Premier League,Brentford,situation,FromCorner,70,4,8.712863915599883,84,4,7.003501819446683
+ENG-Premier League,Brentford,situation,SetPiece,24,0,4.228620727546513,20,2,2.2842296874150634
+ENG-Premier League,Brentford,situation,Penalty,10,8,7.6116883754730225,8,5,6.089350700378418
+ENG-Premier League,Brentford,situation,DirectFreekick,10,0,0.7000749818980694,8,0,0.5116166174411774
+ENG-Premier League,Brighton,attackSpeed,Normal,307,32,36.61613289453089,259,23,28.857144083827734
+ENG-Premier League,Brighton,attackSpeed,Standard,122,13,15.234328018501401,120,14,18.55116615910083
+ENG-Premier League,Brighton,attackSpeed,Slow,42,2,3.331630600616336,28,1,3.0708005661144853
+ENG-Premier League,Brighton,attackSpeed,Fast,24,5,4.459907101467252,41,8,7.865256030112505
+ENG-Premier League,Brighton,shotZone,ownGoals,1,1,1.0,4,4,4.0
+ENG-Premier League,Brighton,shotZone,shotOboxTotal,166,6,5.425844117067754,133,8,4.431841043755412
+ENG-Premier League,Brighton,shotZone,shotPenaltyArea,272,32,36.17993286065757,262,22,35.07732534967363
+ENG-Premier League,Brighton,shotZone,shotSixYardBox,56,13,17.036221637390554,49,12,14.835200445726514
+ENG-Premier League,Brighton,situation,OpenPlay,373,39,44.40767059661448,328,32,39.793200680054724
+ENG-Premier League,Brighton,situation,FromCorner,83,9,9.56754502095282,74,7,8.722237888723612
+ENG-Premier League,Brighton,situation,SetPiece,20,0,1.0859975814819336,30,1,4.762975481338799
+ENG-Premier League,Brighton,situation,DirectFreekick,14,1,0.7749412283301353,10,1,0.49893976375460625
+ENG-Premier League,Brighton,situation,Penalty,5,3,3.8058441877365112,6,5,4.5670130252838135
+ENG-Premier League,Burnley,attackSpeed,Normal,213,25,22.167566019576043,409,46,52.949491599574685
+ENG-Premier League,Burnley,attackSpeed,Standard,100,6,11.70159747544676,157,20,22.85524698998779
+ENG-Premier League,Burnley,attackSpeed,Fast,22,1,2.9044289272278547,35,5,6.692454751580954
+ENG-Premier League,Burnley,attackSpeed,Slow,22,6,3.49350412376225,39,4,5.606423580087721
+ENG-Premier League,Burnley,shotZone,ownGoals,3,3,3.0,4,4,4.0
+ENG-Premier League,Burnley,shotZone,shotOboxTotal,140,3,4.3040801580064,214,6,7.454603265970945
+ENG-Premier League,Burnley,shotZone,shotPenaltyArea,186,27,23.707246801815927,347,48,50.540702829137444
+ENG-Premier League,Burnley,shotZone,shotSixYardBox,28,5,9.255769586190581,75,17,26.10831082612276
+ENG-Premier League,Burnley,situation,OpenPlay,257,32,28.565499070566148,483,55,65.24836993124336
+ENG-Premier League,Burnley,situation,FromCorner,59,4,6.498314019292593,111,11,13.326735838316381
+ENG-Premier League,Burnley,situation,SetPiece,25,0,2.887278494425118,26,2,2.724979419261217
+ENG-Premier League,Burnley,situation,DirectFreekick,14,0,0.7936672866344452,12,0,0.7141810320317745
+ENG-Premier League,Burnley,situation,Penalty,2,2,1.5223376750946045,8,7,6.089350700378418
+ENG-Premier League,Chelsea,attackSpeed,Normal,294,32,39.744947887957096,254,27,38.525408149231225
+ENG-Premier League,Chelsea,attackSpeed,Standard,133,21,22.38888872321695,109,15,14.95373479835689
+ENG-Premier League,Chelsea,attackSpeed,Slow,52,1,4.979736387729645,29,5,3.7253137682564557
+ENG-Premier League,Chelsea,attackSpeed,Fast,31,4,7.403791286051273,24,5,3.509333537891507
+ENG-Premier League,Chelsea,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ENG-Premier League,Chelsea,shotZone,shotOboxTotal,171,7,6.7610304690897465,119,4,4.355391195975244
+ENG-Premier League,Chelsea,shotZone,shotPenaltyArea,278,31,42.641984888352454,247,27,34.32858712412417
+ENG-Premier League,Chelsea,shotZone,shotSixYardBox,60,19,24.114348927512765,49,20,21.029811933636665
+ENG-Premier League,Chelsea,situation,OpenPlay,377,37,52.128475561738014,307,37,45.76005545537919
+ENG-Premier League,Chelsea,situation,FromCorner,83,10,12.749457699246705,60,11,8.302524846978486
+ENG-Premier League,Chelsea,situation,SetPiece,21,1,2.2220589984208345,32,2,4.099779850803316
+ENG-Premier League,Chelsea,situation,DirectFreekick,21,3,1.3280213251709938,15,0,1.029092425480485
+ENG-Premier League,Chelsea,situation,Penalty,8,7,6.089350700378418,2,2,1.5223376750946045
+ENG-Premier League,Crystal Palace,attackSpeed,Normal,264,21,34.05521714081988,234,23,31.303314165212214
+ENG-Premier League,Crystal Palace,attackSpeed,Standard,121,16,20.40704472269863,139,20,22.047896660864353
+ENG-Premier League,Crystal Palace,attackSpeed,Fast,35,2,6.547031745314598,26,6,6.398468495346606
+ENG-Premier League,Crystal Palace,attackSpeed,Slow,23,2,2.8931392822414637,47,2,4.3888383796438575
+ENG-Premier League,Crystal Palace,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ENG-Premier League,Crystal Palace,shotZone,shotOboxTotal,118,3,4.411484062206,131,4,4.5063869236037135
+ENG-Premier League,Crystal Palace,shotZone,shotPenaltyArea,268,28,41.2452028831467,257,33,39.90761827491224
+ENG-Premier League,Crystal Palace,shotZone,shotSixYardBox,56,9,17.245745945721865,56,12,17.72451250255108
+ENG-Premier League,Crystal Palace,situation,OpenPlay,322,25,43.49538816837594,307,31,42.09062104020268
+ENG-Premier League,Crystal Palace,situation,FromCorner,75,7,11.143980029970407,80,10,12.274651061743498
+ENG-Premier League,Crystal Palace,situation,SetPiece,32,1,2.8037684531882405,37,4,3.329321399331093
+ENG-Premier League,Crystal Palace,situation,Penalty,8,8,6.089350700378418,7,5,5.328181862831116
+ENG-Premier League,Crystal Palace,situation,DirectFreekick,6,0,0.3699455391615629,15,1,1.1157423369586468
+ENG-Premier League,Everton,attackSpeed,Normal,230,26,28.164690436795354,315,29,35.78423136426136
+ENG-Premier League,Everton,attackSpeed,Standard,129,12,15.554749022237957,148,13,18.96426994446665
+ENG-Premier League,Everton,attackSpeed,Slow,36,3,3.4457412026822567,38,2,1.9004392586648464
+ENG-Premier League,Everton,attackSpeed,Fast,28,6,5.387070699594915,30,6,4.884552730247378
+ENG-Premier League,Everton,shotZone,ownGoals,2,2,2.0,1,1,1.0
+ENG-Premier League,Everton,shotZone,shotOboxTotal,131,3,4.155549347400665,175,4,5.105635769665241
+ENG-Premier League,Everton,shotZone,shotPenaltyArea,229,26,27.338597463443875,301,32,38.40125364391133
+ENG-Premier League,Everton,shotZone,shotSixYardBox,61,16,19.05810455046594,54,13,17.02660388406366
+ENG-Premier League,Everton,situation,OpenPlay,294,35,36.997502339072526,383,37,42.569223353173584
+ENG-Premier League,Everton,situation,FromCorner,75,7,8.129430920816958,107,9,12.750240290537477
+ENG-Premier League,Everton,situation,SetPiece,41,3,5.437476536259055,26,1,2.521221554838121
+ENG-Premier League,Everton,situation,DirectFreekick,11,0,0.46550389006733894,11,0,0.648132748901844
+ENG-Premier League,Everton,situation,Penalty,2,2,1.5223376750946045,4,3,3.044675350189209
+ENG-Premier League,Fulham,attackSpeed,Normal,310,27,32.91758344322443,259,27,32.30099809169769
+ENG-Premier League,Fulham,attackSpeed,Standard,122,16,16.178852220997214,120,13,20.903631466440856
+ENG-Premier League,Fulham,attackSpeed,Slow,35,3,3.890195501036942,46,6,6.3086112746968865
+ENG-Premier League,Fulham,attackSpeed,Fast,17,1,1.4400651510804892,26,5,4.702401650138199
+ENG-Premier League,Fulham,shotZone,ownGoals,4,4,4.0,3,3,3.0
+ENG-Premier League,Fulham,shotZone,shotOboxTotal,159,10,5.804279769770801,139,6,4.845358085818589
+ENG-Premier League,Fulham,shotZone,shotPenaltyArea,275,23,31.59542156010866,241,29,35.06211066059768
+ENG-Premier League,Fulham,shotZone,shotSixYardBox,46,10,13.026994986459613,68,13,21.308173736557364
+ENG-Premier League,Fulham,situation,OpenPlay,362,31,38.24784409534186,331,38,43.31201101653278
+ENG-Premier League,Fulham,situation,FromCorner,88,9,10.174256036058068,85,8,14.054479069076478
+ENG-Premier League,Fulham,situation,SetPiece,16,1,1.0763163343071938,21,2,3.248577956110239
+ENG-Premier League,Fulham,situation,DirectFreekick,13,1,1.122435662895441,10,0,0.55589909106493
+ENG-Premier League,Fulham,situation,Penalty,5,5,3.8058441877365112,4,3,3.044675350189209
+ENG-Premier League,Leeds United,attackSpeed,Normal,268,25,33.521509307436645,274,31,31.69926984095946
+ENG-Premier League,Leeds United,attackSpeed,Standard,141,18,20.73020330350846,150,21,21.515204020775855
+ENG-Premier League,Leeds United,attackSpeed,Slow,41,1,3.2800787165760994,38,2,3.919291383586824
+ENG-Premier League,Leeds United,attackSpeed,Fast,27,5,5.460614305920899,16,2,2.1102546881884336
+ENG-Premier League,Leeds United,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ENG-Premier League,Leeds United,shotZone,shotOboxTotal,152,7,4.752948475070298,153,6,4.988326634746045
+ENG-Premier League,Leeds United,shotZone,shotPenaltyArea,270,28,37.776047084480524,256,35,35.369701388292015
+ENG-Premier League,Leeds United,shotZone,shotSixYardBox,54,13,19.463410073891282,67,13,16.885991910472512
+ENG-Premier League,Leeds United,situation,OpenPlay,336,31,42.26220232993364,328,35,37.72881591273472
+ENG-Premier League,Leeds United,situation,FromCorner,95,7,10.524984375573695,109,12,13.608063503168523
+ENG-Premier League,Leeds United,situation,SetPiece,28,2,3.44202415458858,21,1,2.338310996070504
+ENG-Premier League,Leeds United,situation,DirectFreekick,10,3,0.6738808490335941,14,2,1.0018164962530136
+ENG-Premier League,Leeds United,situation,Penalty,8,6,6.0893139243125916,6,6,4.5670130252838135
+ENG-Premier League,Liverpool,attackSpeed,Normal,385,39,45.64137407578528,243,27,31.240164257586002
+ENG-Premier League,Liverpool,attackSpeed,Standard,128,16,13.110881871543825,120,17,14.547015997581184
+ENG-Premier League,Liverpool,attackSpeed,Slow,37,2,4.346685595810413,38,3,2.0779367685317993
+ENG-Premier League,Liverpool,attackSpeed,Fast,36,6,6.705327173694968,33,6,6.979398524388671
+ENG-Premier League,Liverpool,shotZone,ownGoals,2,2,2.0,0,0,0.0
+ENG-Premier League,Liverpool,shotZone,shotOboxTotal,206,7,7.153190647251904,148,11,4.521658094599843
+ENG-Premier League,Liverpool,shotZone,shotPenaltyArea,338,42,45.1195524726063,250,28,35.59135265927762
+ENG-Premier League,Liverpool,shotZone,shotSixYardBox,40,12,15.53152559697628,36,14,14.731504794210196
+ENG-Premier League,Liverpool,situation,OpenPlay,458,47,56.69338684529066,314,36,40.29749955050647
+ENG-Premier League,Liverpool,situation,FromCorner,83,9,8.745845954865217,78,11,8.671896010637283
+ENG-Premier League,Liverpool,situation,SetPiece,25,2,1.8249108577147126,21,2,2.0752560002729297
+ENG-Premier League,Liverpool,situation,DirectFreekick,18,4,1.0177873838692904,17,1,0.7551886364817619
+ENG-Premier League,Liverpool,situation,Penalty,2,1,1.5223376750946045,4,3,3.044675350189209
+ENG-Premier League,Manchester City,attackSpeed,Normal,355,49,53.43171267490834,225,17,28.582776968367398
+ENG-Premier League,Manchester City,attackSpeed,Standard,145,14,16.95622480008751,87,12,11.776829996146262
+ENG-Premier League,Manchester City,attackSpeed,Slow,67,8,8.377043014392257,30,3,2.196512209251523
+ENG-Premier League,Manchester City,attackSpeed,Fast,29,6,5.394855547696352,28,3,6.061859065666795
+ENG-Premier League,Manchester City,shotZone,ownGoals,3,3,3.0,0,0,0.0
+ENG-Premier League,Manchester City,shotZone,shotOboxTotal,165,8,6.266673632897437,108,7,3.8617717502638698
+ENG-Premier League,Manchester City,shotZone,shotPenaltyArea,374,54,58.28774626273662,218,18,28.572742979042232
+ENG-Premier League,Manchester City,shotZone,shotSixYardBox,54,12,16.605416141450405,44,10,16.183463510125875
+ENG-Premier League,Manchester City,situation,OpenPlay,451,63,67.20361123699695,283,23,36.841148243285716
+ENG-Premier League,Manchester City,situation,FromCorner,114,11,11.997574022039771,48,9,7.021237471140921
+ENG-Premier League,Manchester City,situation,SetPiece,14,0,1.0500819189473987,27,1,2.622509017586708
+ENG-Premier League,Manchester City,situation,DirectFreekick,13,0,0.8638935089111328,10,1,0.610745832324028
+ENG-Premier League,Manchester City,situation,Penalty,4,3,3.044675350189209,2,1,1.5223376750946045
+ENG-Premier League,Manchester United,attackSpeed,Normal,382,32,45.73552165552974,255,22,27.19817589689046
+ENG-Premier League,Manchester United,attackSpeed,Standard,148,24,20.51546417362988,124,17,16.46125748474151
+ENG-Premier League,Manchester United,attackSpeed,Slow,38,4,3.4225294585339725,34,4,4.227964282035828
+ENG-Premier League,Manchester United,attackSpeed,Fast,31,9,7.575052233412862,28,7,4.957340467721224
+ENG-Premier League,Manchester United,shotZone,ownGoals,3,3,3.0,2,2,2.0
+ENG-Premier League,Manchester United,shotZone,shotOboxTotal,205,9,6.2732183006592095,144,6,5.267531879246235
+ENG-Premier League,Manchester United,shotZone,shotPenaltyArea,333,44,49.33974694646895,250,33,30.662925858050585
+ENG-Premier League,Manchester United,shotZone,shotSixYardBox,58,13,18.635602273978293,45,9,14.914280394092202
+ENG-Premier League,Manchester United,situation,OpenPlay,451,45,56.73310334747657,317,33,36.38348064664751
+ENG-Premier League,Manchester United,situation,FromCorner,104,14,10.940337779000401,79,11,9.78519921284169
+ENG-Premier League,Manchester United,situation,SetPiece,32,5,4.525218442082405,26,0,2.60458055883646
+ENG-Premier League,Manchester United,situation,DirectFreekick,6,1,0.4828949272632599,15,2,1.0268023628741503
+ENG-Premier League,Manchester United,situation,Penalty,6,4,4.5670130252838135,4,4,3.044675350189209
+ENG-Premier League,Newcastle United,attackSpeed,Normal,278,30,32.39231072599068,301,26,35.58739194646478
+ENG-Premier League,Newcastle United,attackSpeed,Standard,164,19,24.17731070984155,100,19,14.939056659117341
+ENG-Premier League,Newcastle United,attackSpeed,Slow,32,3,2.880774972960353,32,3,3.7056400468572974
+ENG-Premier League,Newcastle United,attackSpeed,Fast,18,1,3.6261397935450077,37,7,6.022845855914056
+ENG-Premier League,Newcastle United,shotZone,ownGoals,0,0,0.0,2,2,2.0
+ENG-Premier League,Newcastle United,shotZone,shotOboxTotal,176,8,6.226855332497507,160,9,5.746552183292806
+ENG-Premier League,Newcastle United,shotZone,shotPenaltyArea,258,33,37.450787770561874,267,29,36.06776781473309
+ENG-Premier League,Newcastle United,shotZone,shotSixYardBox,58,12,19.39889309927821,41,15,16.440614510327578
+ENG-Premier League,Newcastle United,situation,OpenPlay,328,34,38.89922549249604,370,36,45.31587784923613
+ENG-Premier League,Newcastle United,situation,FromCorner,90,9,11.81119417026639,63,11,6.8685598485171795
+ENG-Premier League,Newcastle United,situation,SetPiece,55,4,7.152065564878285,20,2,3.5882655885070562
+ENG-Premier League,Newcastle United,situation,DirectFreekick,13,0,0.6470379494130611,12,1,0.6763870343565941
+ENG-Premier League,Newcastle United,situation,Penalty,6,6,4.5670130252838135,5,5,3.8058441877365112
+ENG-Premier League,Nottingham Forest,attackSpeed,Normal,308,29,30.404919251799583,302,26,36.89369539078325
+ENG-Premier League,Nottingham Forest,attackSpeed,Standard,120,14,13.140617657452822,151,19,24.115212008357048
+ENG-Premier League,Nottingham Forest,attackSpeed,Slow,24,1,1.92155443970114,36,3,3.713404360227287
+ENG-Premier League,Nottingham Forest,attackSpeed,Fast,24,4,4.697894291952252,19,3,3.9856756888329983
+ENG-Premier League,Nottingham Forest,shotZone,ownGoals,1,1,1.0,3,3,3.0
+ENG-Premier League,Nottingham Forest,shotZone,shotOboxTotal,180,6,5.2964378679171205,173,9,6.256721540354192
+ENG-Premier League,Nottingham Forest,shotZone,shotPenaltyArea,254,29,29.131456372328103,285,34,43.032445749267936
+ENG-Premier League,Nottingham Forest,shotZone,shotSixYardBox,41,12,14.737091400660574,47,5,16.418820158578455
+ENG-Premier League,Nottingham Forest,situation,OpenPlay,356,34,37.024367983452976,357,32,44.592775439843535
+ENG-Premier League,Nottingham Forest,situation,FromCorner,80,8,7.98344648629427,93,9,12.613481792621315
+ENG-Premier League,Nottingham Forest,situation,SetPiece,24,2,2.12792656943202,38,4,6.0954155856743455
+ENG-Premier League,Nottingham Forest,situation,DirectFreekick,13,1,0.7457380890846252,14,1,0.8393016047775745
+ENG-Premier League,Nottingham Forest,situation,Penalty,3,3,2.2835065126419067,6,5,4.5670130252838135
+ENG-Premier League,Sunderland,attackSpeed,Normal,226,24,24.304683171212673,330,25,39.563680664636195
+ENG-Premier League,Sunderland,attackSpeed,Standard,108,11,13.165043459273875,142,15,15.519076619297266
+ENG-Premier League,Sunderland,attackSpeed,Slow,47,5,7.647135624662042,46,4,4.310509883332998
+ENG-Premier League,Sunderland,attackSpeed,Fast,18,2,2.4354121554642916,24,4,3.978456100448966
+ENG-Premier League,Sunderland,shotZone,ownGoals,4,4,4.0,2,2,2.0
+ENG-Premier League,Sunderland,shotZone,shotOboxTotal,115,4,3.284035535529256,194,8,5.910029303748161
+ENG-Premier League,Sunderland,shotZone,shotPenaltyArea,242,28,29.867587433196604,292,24,36.0229007685557
+ENG-Premier League,Sunderland,shotZone,shotSixYardBox,38,6,10.400651441887021,54,14,19.438793195411563
+ENG-Premier League,Sunderland,situation,OpenPlay,291,31,34.387230951339006,400,33,47.85264664841816
+ENG-Premier League,Sunderland,situation,FromCorner,52,4,4.599952314980328,94,11,9.57871723268181
+ENG-Premier League,Sunderland,situation,SetPiece,44,3,4.3691362757235765,30,2,2.807043737731874
+ENG-Premier League,Sunderland,situation,DirectFreekick,7,0,0.3901474568992853,15,0,0.8498091362416744
+ENG-Premier League,Sunderland,situation,Penalty,5,4,3.805807411670685,3,2,2.2835065126419067
+ENG-Premier League,Tottenham,attackSpeed,Normal,236,21,26.66361717041582,268,41,31.170622101984918
+ENG-Premier League,Tottenham,attackSpeed,Standard,135,18,15.43518358655274,125,11,16.470048655755818
+ENG-Premier League,Tottenham,attackSpeed,Slow,46,6,4.256949624046683,46,3,4.044451095163822
+ENG-Premier League,Tottenham,attackSpeed,Fast,19,3,2.5791722405701876,26,2,4.441214878112078
+ENG-Premier League,Tottenham,shotZone,ownGoals,1,1,1.0,0,0,0.0
+ENG-Premier League,Tottenham,shotZone,shotOboxTotal,134,6,4.055223572999239,151,13,5.292317074723542
+ENG-Premier League,Tottenham,shotZone,shotPenaltyArea,249,27,26.340534224174917,262,32,33.34072298463434
+ENG-Premier League,Tottenham,shotZone,shotSixYardBox,52,14,17.539164824411273,52,12,17.493296671658754
+ENG-Premier League,Tottenham,situation,OpenPlay,301,30,33.49973903503269,340,46,39.65628807526082
+ENG-Premier League,Tottenham,situation,FromCorner,101,18,13.490571785718203,73,5,9.118034943938255
+ENG-Premier League,Tottenham,situation,SetPiece,22,0,1.2665838282555342,34,2,4.254788703285158
+ENG-Premier League,Tottenham,situation,DirectFreekick,12,0,0.6780279725790024,15,1,0.8137184958904982
+ENG-Premier League,Tottenham,situation,Penalty,0,0,0.0,3,3,2.2835065126419067
+ENG-Premier League,West Ham,attackSpeed,Normal,223,17,24.308788042515516,348,37,43.60418870020658
+ENG-Premier League,West Ham,attackSpeed,Standard,114,18,19.12741182791069,169,22,21.976776763796806
+ENG-Premier League,West Ham,attackSpeed,Slow,35,5,3.0347800217568874,36,3,4.46631954330951
+ENG-Premier League,West Ham,attackSpeed,Fast,33,6,5.762865014374256,15,3,3.000945066101849
+ENG-Premier League,West Ham,shotZone,ownGoals,2,2,2.0,3,3,3.0
+ENG-Premier League,West Ham,shotZone,shotOboxTotal,107,8,3.6763032898306847,174,5,6.00456228852272
+ENG-Premier League,West Ham,shotZone,shotPenaltyArea,239,22,27.937717858236283,316,40,40.62634931039065
+ENG-Premier League,West Ham,shotZone,shotSixYardBox,57,14,18.619823758490384,75,17,23.41731847450137
+ENG-Premier League,West Ham,situation,OpenPlay,291,28,33.10643307864666,399,43,51.07145330961794
+ENG-Premier League,West Ham,situation,FromCorner,80,13,13.500837405212224,113,15,13.572586125694215
+ENG-Premier League,West Ham,situation,SetPiece,26,2,3.01549483044073,34,1,2.150343713350594
+ENG-Premier League,West Ham,situation,DirectFreekick,5,0,0.3275730796158314,15,0,0.9256650619208813
+ENG-Premier League,West Ham,situation,Penalty,3,3,2.2835065126419067,7,6,5.328181862831116
+ENG-Premier League,Wolves,attackSpeed,Normal,201,13,19.022336312569678,293,39,37.51890830602497
+ENG-Premier League,Wolves,attackSpeed,Standard,117,11,17.064342765137553,146,16,21.713327880948782
+ENG-Premier League,Wolves,attackSpeed,Slow,28,1,0.9488215809687972,62,7,7.727997090667486
+ENG-Premier League,Wolves,attackSpeed,Fast,24,2,2.6302932519465685,30,6,6.034603699110448
+ENG-Premier League,Wolves,shotZone,ownGoals,1,1,1.0,4,4,4.0
+ENG-Premier League,Wolves,shotZone,shotOboxTotal,134,6,4.480750948190689,176,9,6.745496827177703
+ENG-Premier League,Wolves,shotZone,shotPenaltyArea,207,14,24.23046325519681,297,42,40.84429336246103
+ENG-Premier League,Wolves,shotZone,shotSixYardBox,28,6,9.954579707235098,54,13,21.40504678711295
+ENG-Premier League,Wolves,situation,OpenPlay,253,16,22.601451145485044,385,52,51.2815090958029
+ENG-Premier League,Wolves,situation,FromCorner,68,6,8.672645480372012,94,9,13.636199302971363
+ENG-Premier League,Wolves,situation,SetPiece,25,2,3.3496664287522435,33,1,3.248515598475933
+ENG-Premier League,Wolves,situation,DirectFreekick,19,0,1.2361866682767868,14,1,1.022805567830801
+ENG-Premier League,Wolves,situation,Penalty,5,3,3.8058441877365112,5,5,3.805807411670685
+ESP-La Liga,Alavés,attackSpeed,Normal,275,20,29.953630565665662,284,37,30.823794526048005
+ESP-La Liga,Alavés,attackSpeed,Standard,130,19,20.63736255839467,144,9,17.003508989699185
+ESP-La Liga,Alavés,attackSpeed,Slow,35,4,4.159360045567155,16,0,1.1531044552102685
+ESP-La Liga,Alavés,attackSpeed,Fast,25,1,2.4329326041042805,31,10,5.633375094737858
+ESP-La Liga,Alavés,shotZone,ownGoals,3,3,3.0,1,1,1.0
+ESP-La Liga,Alavés,shotZone,shotOboxTotal,164,4,4.456846345216036,167,7,5.657646356616169
+ESP-La Liga,Alavés,shotZone,shotPenaltyArea,264,29,36.60546275507659,271,44,37.68548255227506
+ESP-La Liga,Alavés,shotZone,shotSixYardBox,34,8,13.120976673439145,36,4,10.270654156804085
+ESP-La Liga,Alavés,situation,OpenPlay,335,25,36.5459232153371,331,47,37.61027407599613
+ESP-La Liga,Alavés,situation,FromCorner,81,9,10.467762125656009,92,3,9.662553193978965
+ESP-La Liga,Alavés,situation,SetPiece,32,2,4.39740994758904,35,1,2.851506656035781
+ESP-La Liga,Alavés,situation,DirectFreekick,10,1,0.5692472197115421,12,0,0.7730610929429531
+ESP-La Liga,Alavés,situation,Penalty,7,7,5.20294326543808,5,5,3.7163880467414856
+ESP-La Liga,Athletic Club,attackSpeed,Normal,325,26,32.49904629867524,229,37,31.542651435360312
+ESP-La Liga,Athletic Club,attackSpeed,Standard,124,11,17.238006598316133,92,13,12.107470069080591
+ESP-La Liga,Athletic Club,attackSpeed,Slow,46,1,2.768421177752316,17,3,1.1415617251768708
+ESP-La Liga,Athletic Club,attackSpeed,Fast,27,5,5.16196433454752,20,5,5.167787822894752
+ESP-La Liga,Athletic Club,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ESP-La Liga,Athletic Club,shotZone,shotOboxTotal,163,4,4.655883701518178,127,11,4.657174488529563
+ESP-La Liga,Athletic Club,shotZone,shotPenaltyArea,330,30,39.246402335353196,200,33,31.704199774190784
+ESP-La Liga,Athletic Club,shotZone,shotSixYardBox,28,8,12.765152372419834,30,13,12.59809678979218
+ESP-La Liga,Athletic Club,situation,OpenPlay,398,32,40.429431810975075,266,45,37.852000983431935
+ESP-La Liga,Athletic Club,situation,FromCorner,88,4,9.502035123296082,60,6,4.838708863593638
+ESP-La Liga,Athletic Club,situation,SetPiece,28,2,3.153418803587556,19,2,2.4112244388088584
+ESP-La Liga,Athletic Club,situation,Penalty,6,5,4.459537744522095,6,3,4.459665656089783
+ESP-La Liga,Athletic Club,situation,DirectFreekick,2,0,0.12301492691040039,7,2,0.39787111058831215
+ESP-La Liga,Atlético Madrid,attackSpeed,Normal,320,36,47.013283398002386,252,21,28.762439118232578
+ESP-La Liga,Atlético Madrid,attackSpeed,Standard,119,11,13.472740744240582,129,13,17.948570013977587
+ESP-La Liga,Atlético Madrid,attackSpeed,Slow,43,10,6.885006865486503,37,4,3.186929722316563
+ESP-La Liga,Atlético Madrid,attackSpeed,Fast,20,5,5.4104128032922745,23,6,4.23457511048764
+ESP-La Liga,Atlético Madrid,shotZone,ownGoals,4,4,4.0,0,0,0.0
+ESP-La Liga,Atlético Madrid,shotZone,shotOboxTotal,152,8,4.7139789536595345,170,8,5.363415622618049
+ESP-La Liga,Atlético Madrid,shotZone,shotPenaltyArea,296,33,47.48689239192754,237,29,36.78174013085663
+ESP-La Liga,Atlético Madrid,shotZone,shotSixYardBox,50,17,16.58057246543467,34,7,11.987358211539686
+ESP-La Liga,Atlético Madrid,situation,OpenPlay,383,51,59.30870306678116,312,31,36.18394395103678
+ESP-La Liga,Atlético Madrid,situation,FromCorner,89,5,7.635709432885051,75,7,8.125000880099833
+ESP-La Liga,Atlético Madrid,situation,SetPiece,16,1,2.2744300356134772,33,1,4.4665333814918995
+ESP-La Liga,Atlético Madrid,situation,DirectFreekick,10,2,0.5894908383488655,15,0,0.897370096296072
+ESP-La Liga,Atlético Madrid,situation,Penalty,4,3,2.9731104373931885,6,5,4.459665656089783
+ESP-La Liga,Barcelona,attackSpeed,Normal,432,54,63.92992928856984,207,19,31.696012538857758
+ESP-La Liga,Barcelona,attackSpeed,Standard,163,21,21.20349173527211,92,11,13.534000258892775
+ESP-La Liga,Barcelona,attackSpeed,Slow,63,7,7.631082464940846,17,3,1.6772090280428529
+ESP-La Liga,Barcelona,attackSpeed,Fast,35,13,9.249831028282642,31,3,4.750173677690327
+ESP-La Liga,Barcelona,shotZone,ownGoals,1,1,1.0,0,0,0.0
+ESP-La Liga,Barcelona,shotZone,shotOboxTotal,236,15,9.686983663123101,78,3,2.6380999963730574
+ESP-La Liga,Barcelona,shotZone,shotPenaltyArea,403,64,69.0443827426061,240,27,37.748801295645535
+ESP-La Liga,Barcelona,shotZone,shotSixYardBox,53,15,22.28296811133623,29,6,11.27049421146512
+ESP-La Liga,Barcelona,situation,OpenPlay,530,74,80.81084278179333,255,25,38.12339524459094
+ESP-La Liga,Barcelona,situation,FromCorner,104,12,10.364120721817017,60,6,7.000618640333414
+ESP-La Liga,Barcelona,situation,DirectFreekick,27,2,1.7082781288772821,8,0,0.43397289514541626
+ESP-La Liga,Barcelona,situation,SetPiece,22,0,1.6983167910948396,19,1,2.3830206766724586
+ESP-La Liga,Barcelona,situation,Penalty,10,7,7.432776093482971,5,4,3.7163880467414856
+ESP-La Liga,Celta Vigo,attackSpeed,Normal,256,28,34.409967315383255,294,25,32.99684519600123
+ESP-La Liga,Celta Vigo,attackSpeed,Standard,80,14,11.856868321076035,125,17,19.628835879266262
+ESP-La Liga,Celta Vigo,attackSpeed,Fast,25,7,5.153022184036672,17,3,1.9934930950403214
+ESP-La Liga,Celta Vigo,attackSpeed,Slow,23,4,2.541327684186399,42,3,3.7036255476996303
+ESP-La Liga,Celta Vigo,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ESP-La Liga,Celta Vigo,shotZone,shotOboxTotal,133,7,5.302112506702542,169,7,5.085555770434439
+ESP-La Liga,Celta Vigo,shotZone,shotPenaltyArea,225,37,37.252226264216006,271,30,38.16430416982621
+ESP-La Liga,Celta Vigo,shotZone,shotSixYardBox,25,8,10.406846733763814,37,10,14.072939777746797
+ESP-La Liga,Celta Vigo,situation,OpenPlay,304,39,42.10431718360633,353,31,38.69396383874118
+ESP-La Liga,Celta Vigo,situation,FromCorner,59,5,4.828189912252128,73,9,6.672029820270836
+ESP-La Liga,Celta Vigo,situation,Penalty,8,8,5.946220874786377,11,6,8.17592579126358
+ESP-La Liga,Celta Vigo,situation,SetPiece,7,1,0.7244410654529929,26,2,3.8292939634993672
+ESP-La Liga,Celta Vigo,situation,DirectFreekick,6,0,0.3580164685845375,15,0,0.9515863042324781
+ESP-La Liga,Elche,attackSpeed,Normal,270,32,30.552630190737545,342,31,42.38093909993768
+ESP-La Liga,Elche,attackSpeed,Standard,91,10,11.013176823500544,112,14,15.117217073217034
+ESP-La Liga,Elche,attackSpeed,Slow,27,3,4.850564392283559,29,2,2.426393940113485
+ESP-La Liga,Elche,attackSpeed,Fast,22,4,4.277336418628693,41,10,9.822595253586769
+ESP-La Liga,Elche,shotZone,ownGoals,2,2,2.0,0,0,0.0
+ESP-La Liga,Elche,shotZone,shotOboxTotal,123,7,3.726290467195213,181,12,6.657999894581735
+ESP-La Liga,Elche,shotZone,shotPenaltyArea,258,36,35.814764094073325,303,35,47.67931894958019
+ESP-La Liga,Elche,shotZone,shotSixYardBox,27,4,9.152653263881803,40,10,15.409826522693038
+ESP-La Liga,Elche,situation,OpenPlay,319,39,39.6805310016498,412,43,54.62992829363793
+ESP-La Liga,Elche,situation,FromCorner,52,4,4.2523104986175895,69,3,5.116822529584169
+ESP-La Liga,Elche,situation,SetPiece,25,1,2.548260863404721,24,5,4.190471826121211
+ESP-La Liga,Elche,situation,DirectFreekick,9,1,0.49634532630443573,12,0,0.6069794520735741
+ESP-La Liga,Elche,situation,Penalty,5,4,3.7162601351737976,7,6,5.20294326543808
+ESP-La Liga,Espanyol,attackSpeed,Normal,272,24,30.093793677631766,330,32,38.51161489915103
+ESP-La Liga,Espanyol,attackSpeed,Standard,141,13,17.11481837183237,128,15,17.07322308048606
+ESP-La Liga,Espanyol,attackSpeed,Slow,42,1,2.7094870414584875,31,4,4.12734657432884
+ESP-La Liga,Espanyol,attackSpeed,Fast,25,5,3.9858128214254975,31,4,5.672738627530634
+ESP-La Liga,Espanyol,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ESP-La Liga,Espanyol,shotZone,shotOboxTotal,177,5,5.243969906587154,165,9,5.615484232082963
+ESP-La Liga,Espanyol,shotZone,shotPenaltyArea,260,23,31.370858100242913,313,34,41.93735908810049
+ESP-La Liga,Espanyol,shotZone,shotSixYardBox,42,14,16.289083905518055,41,11,16.832079861313105
+ESP-La Liga,Espanyol,situation,OpenPlay,339,30,36.78909354051575,392,40,48.3117001010105
+ESP-La Liga,Espanyol,situation,FromCorner,82,6,6.820112797431648,79,6,9.80316966585815
+ESP-La Liga,Espanyol,situation,SetPiece,39,4,5.516641681082547,29,3,2.379428466781974
+ESP-La Liga,Espanyol,situation,DirectFreekick,15,0,1.0618037581443787,15,1,1.1742369011044502
+ESP-La Liga,Espanyol,situation,Penalty,5,3,3.7162601351737976,5,5,3.7163880467414856
+ESP-La Liga,Getafe,attackSpeed,Normal,191,15,19.37805542210117,228,16,25.98626575805247
+ESP-La Liga,Getafe,attackSpeed,Standard,127,13,12.400029809214175,129,9,13.2888237927109
+ESP-La Liga,Getafe,attackSpeed,Slow,20,1,1.694271792192012,29,4,4.072970020119101
+ESP-La Liga,Getafe,attackSpeed,Fast,12,3,2.241064576432109,36,9,7.686320811510086
+ESP-La Liga,Getafe,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ESP-La Liga,Getafe,shotZone,shotOboxTotal,137,5,4.134925646707416,149,8,5.6751319845207036
+ESP-La Liga,Getafe,shotZone,shotPenaltyArea,182,16,21.865254685282707,243,23,32.511235320940614
+ESP-La Liga,Getafe,shotZone,shotSixYardBox,30,10,8.713241267949343,28,5,10.848013076931238
+ESP-La Liga,Getafe,situation,OpenPlay,223,19,23.31339179072529,293,29,37.745556589681655
+ESP-La Liga,Getafe,situation,FromCorner,75,5,5.986324002966285,72,5,7.16127829067409
+ESP-La Liga,Getafe,situation,SetPiece,42,6,3.0984572200104594,38,3,2.2017435654997826
+ESP-La Liga,Getafe,situation,DirectFreekick,6,0,0.3421381488442421,15,0,0.9526914991438389
+ESP-La Liga,Getafe,situation,Penalty,4,2,2.9731104373931885,4,1,2.9731104373931885
+ESP-La Liga,Girona,attackSpeed,Normal,292,20,33.107161222957075,341,31,40.02697043865919
+ESP-La Liga,Girona,attackSpeed,Standard,98,13,16.080030775628984,139,14,17.238596314564347
+ESP-La Liga,Girona,attackSpeed,Slow,23,4,2.882909226231277,42,5,5.040684114210308
+ESP-La Liga,Girona,attackSpeed,Fast,13,2,1.9865691540762782,31,5,5.100375494919717
+ESP-La Liga,Girona,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ESP-La Liga,Girona,shotZone,shotOboxTotal,150,5,4.81361064966768,178,7,5.692110604606569
+ESP-La Liga,Girona,shotZone,shotPenaltyArea,250,25,37.71742375660688,329,34,43.53136653546244
+ESP-La Liga,Girona,shotZone,shotSixYardBox,25,8,10.525635972619057,45,13,17.183149222284555
+ESP-La Liga,Girona,situation,OpenPlay,328,26,37.97663960326463,414,41,50.168030047789216
+ESP-La Liga,Girona,situation,FromCorner,55,4,5.610326504334807,93,6,9.26397106423974
+ESP-La Liga,Girona,situation,SetPiece,22,2,3.659354385919869,26,2,2.588685441762209
+ESP-La Liga,Girona,situation,DirectFreekick,13,0,0.8641290105879307,14,1,0.9262741524726152
+ESP-La Liga,Girona,situation,Penalty,8,7,5.946220874786377,6,5,4.459665656089783
+ESP-La Liga,Levante,attackSpeed,Normal,270,25,34.16657704021782,383,40,49.45676180301234
+ESP-La Liga,Levante,attackSpeed,Standard,139,17,19.874436196871102,153,14,14.110656001605093
+ESP-La Liga,Levante,attackSpeed,Slow,40,2,2.2247879318892956,30,2,3.0196076086722314
+ESP-La Liga,Levante,attackSpeed,Fast,28,3,4.5490500633604825,21,5,4.486614743247628
+ESP-La Liga,Levante,shotZone,ownGoals,0,0,0.0,3,3,3.0
+ESP-La Liga,Levante,shotZone,shotOboxTotal,173,9,6.172555522527546,208,10,6.886186391115189
+ESP-La Liga,Levante,shotZone,shotPenaltyArea,269,26,40.80823392327875,342,36,47.085515562444925
+ESP-La Liga,Levante,shotZone,shotSixYardBox,35,12,13.834061786532402,34,12,14.10193820297718
+ESP-La Liga,Levante,situation,OpenPlay,338,30,40.940415035467595,434,47,56.9629841549322
+ESP-La Liga,Levante,situation,FromCorner,65,9,8.885512655600905,114,10,8.197852056473494
+ESP-La Liga,Levante,situation,SetPiece,50,5,5.121348745189607,29,1,2.5528300190344453
+ESP-La Liga,Levante,situation,DirectFreekick,18,1,1.4079091399908066,6,0,0.38686348870396614
+ESP-La Liga,Levante,situation,Penalty,6,2,4.459665656089783,4,3,2.9731104373931885
+ESP-La Liga,Mallorca,attackSpeed,Normal,267,29,26.968508205842227,334,33,41.61211085366085
+ESP-La Liga,Mallorca,attackSpeed,Standard,103,12,14.904652550816536,143,15,16.84815643168986
+ESP-La Liga,Mallorca,attackSpeed,Fast,24,4,5.697168850339949,30,6,6.389856431633234
+ESP-La Liga,Mallorca,attackSpeed,Slow,18,2,1.6142905009910464,36,3,3.506783151999116
+ESP-La Liga,Mallorca,shotZone,ownGoals,0,0,0.0,2,2,2.0
+ESP-La Liga,Mallorca,shotZone,shotOboxTotal,135,6,4.590501261409372,203,7,7.0305528356693685
+ESP-La Liga,Mallorca,shotZone,shotPenaltyArea,250,33,33.96826739795506,287,33,40.93447767291218
+ESP-La Liga,Mallorca,shotZone,shotSixYardBox,27,8,10.625851448625326,51,15,18.39187636040151
+ESP-La Liga,Mallorca,situation,OpenPlay,309,35,34.27996755717322,400,42,51.5087504372932
+ESP-La Liga,Mallorca,situation,FromCorner,61,3,5.967555393464863,93,7,7.293487253598869
+ESP-La Liga,Mallorca,situation,SetPiece,20,4,2.9209094820544124,30,1,2.9500663625076413
+ESP-La Liga,Mallorca,situation,DirectFreekick,15,0,0.8132444098591805,12,1,0.6583819407969713
+ESP-La Liga,Mallorca,situation,Penalty,7,5,5.20294326543808,8,6,5.946220874786377
+ESP-La Liga,Osasuna,attackSpeed,Normal,268,20,27.002496810629964,281,28,28.517523345071822
+ESP-La Liga,Osasuna,attackSpeed,Standard,126,17,18.213321235962212,123,16,15.784674802795053
+ESP-La Liga,Osasuna,attackSpeed,Fast,30,5,4.568946516141295,27,4,3.2431215988472104
+ESP-La Liga,Osasuna,attackSpeed,Slow,28,2,3.9058222975581884,43,2,4.185714252758771
+ESP-La Liga,Osasuna,shotZone,ownGoals,2,2,2.0,0,0,0.0
+ESP-La Liga,Osasuna,shotZone,shotOboxTotal,136,8,5.001100246794522,194,11,6.2675191992893815
+ESP-La Liga,Osasuna,shotZone,shotPenaltyArea,281,26,37.26662282831967,253,28,36.20797937270254
+ESP-La Liga,Osasuna,shotZone,shotSixYardBox,33,8,9.42286378517747,27,11,9.255535427480936
+ESP-La Liga,Osasuna,situation,OpenPlay,326,27,35.47726562432945,351,34,35.946359196677804
+ESP-La Liga,Osasuna,situation,FromCorner,70,5,6.5789574617519975,72,6,6.056716021150351
+ESP-La Liga,Osasuna,situation,SetPiece,34,4,4.409116588532925,31,1,2.330637065693736
+ESP-La Liga,Osasuna,situation,DirectFreekick,14,2,1.279026310890913,11,0,0.7078232318162918
+ESP-La Liga,Osasuna,situation,Penalty,8,6,5.946220874786377,9,9,6.689498484134674
+ESP-La Liga,Rayo Vallecano,attackSpeed,Normal,306,24,37.58497321140021,260,21,30.241097376216203
+ESP-La Liga,Rayo Vallecano,attackSpeed,Standard,140,10,13.89163408242166,142,15,17.83404168114066
+ESP-La Liga,Rayo Vallecano,attackSpeed,Fast,52,6,6.7210831651464105,33,4,6.044845970347524
+ESP-La Liga,Rayo Vallecano,attackSpeed,Slow,32,1,2.7365210284478962,31,4,3.8764117350801826
+ESP-La Liga,Rayo Vallecano,shotZone,ownGoals,0,0,0.0,1,1,1.0
+ESP-La Liga,Rayo Vallecano,shotZone,shotOboxTotal,237,4,6.576910755131394,166,4,5.675469977315515
+ESP-La Liga,Rayo Vallecano,shotZone,shotPenaltyArea,255,25,37.45718804374337,267,31,40.18979803472757
+ESP-La Liga,Rayo Vallecano,shotZone,shotSixYardBox,38,12,16.900112688541412,32,8,11.131128750741482
+ESP-La Liga,Rayo Vallecano,situation,OpenPlay,390,31,47.04257740499452,324,29,40.16235508164391
+ESP-La Liga,Rayo Vallecano,situation,FromCorner,88,7,7.57375225238502,82,6,7.832029078155756
+ESP-La Liga,Rayo Vallecano,situation,DirectFreekick,25,0,1.1621971726417542,18,0,1.195690467953682
+ESP-La Liga,Rayo Vallecano,situation,SetPiece,23,0,2.1825742200016975,34,3,2.8602291718125343
+ESP-La Liga,Rayo Vallecano,situation,Penalty,4,3,2.9731104373931885,8,6,5.946092963218689
+ESP-La Liga,Real Betis,attackSpeed,Normal,336,37,36.03799371002242,300,30,30.64184829732403
+ESP-La Liga,Real Betis,attackSpeed,Standard,120,11,12.983825432136655,123,14,16.605729008093476
+ESP-La Liga,Real Betis,attackSpeed,Fast,50,9,11.552875131368637,23,2,3.6726765716448426
+ESP-La Liga,Real Betis,attackSpeed,Slow,34,2,2.81272702338174,22,2,1.0817162413150072
+ESP-La Liga,Real Betis,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ESP-La Liga,Real Betis,shotZone,shotOboxTotal,223,13,7.600432647392154,176,11,5.170817246194929
+ESP-La Liga,Real Betis,shotZone,shotPenaltyArea,286,36,42.37285416573286,256,30,34.94405653234571
+ESP-La Liga,Real Betis,shotZone,shotSixYardBox,30,9,12.414134483784437,35,6,10.887096339836717
+ESP-La Liga,Real Betis,situation,OpenPlay,420,48,50.4035958647728,345,34,35.39624111028388
+ESP-La Liga,Real Betis,situation,FromCorner,74,5,6.400385724380612,73,7,6.955665569752455
+ESP-La Liga,Real Betis,situation,SetPiece,28,2,3.366287313401699,28,2,3.50136393122375
+ESP-La Liga,Real Betis,situation,DirectFreekick,15,1,0.9873195663094521,15,1,0.9457562416791916
+ESP-La Liga,Real Betis,situation,Penalty,3,3,2.2298328280448914,7,4,5.20294326543808
+ESP-La Liga,Real Madrid,attackSpeed,Normal,373,41,42.46743495576084,265,22,27.592245563399047
+ESP-La Liga,Real Madrid,attackSpeed,Standard,187,25,29.232071579433978,88,8,12.309482423588634
+ESP-La Liga,Real Madrid,attackSpeed,Slow,65,5,4.022448542527854,33,2,2.510427698493004
+ESP-La Liga,Real Madrid,attackSpeed,Fast,39,6,6.488355081528425,23,3,3.870370864868164
+ESP-La Liga,Real Madrid,shotZone,ownGoals,0,0,0.0,1,1,1.0
+ESP-La Liga,Real Madrid,shotZone,shotOboxTotal,240,15,9.386191803961992,152,7,5.079637976828963
+ESP-La Liga,Real Madrid,shotZone,shotPenaltyArea,383,52,57.90691199712455,232,20,31.129109150730073
+ESP-La Liga,Real Madrid,shotZone,shotSixYardBox,41,10,14.917206358164549,24,7,9.073779422789812
+ESP-La Liga,Real Madrid,situation,OpenPlay,477,52,52.978238579817116,321,27,33.973044126760215
+ESP-La Liga,Real Madrid,situation,FromCorner,109,7,10.421073350124061,50,1,3.7665285607799888
+ESP-La Liga,Real Madrid,situation,SetPiece,45,6,6.26370364241302,23,1,4.7396066738292575
+ESP-La Liga,Real Madrid,situation,DirectFreekick,19,0,2.1414080560207367,11,2,0.8303646631538868
+ESP-La Liga,Real Madrid,situation,Penalty,14,12,10.40588653087616,4,4,2.9729825258255005
+ESP-La Liga,Real Oviedo,attackSpeed,Normal,254,14,25.427445774897933,342,34,39.61803608108312
+ESP-La Liga,Real Oviedo,attackSpeed,Standard,104,12,13.786226178519428,128,17,17.421905684750527
+ESP-La Liga,Real Oviedo,attackSpeed,Slow,17,0,0.5816197162494063,65,3,5.213574687950313
+ESP-La Liga,Real Oviedo,attackSpeed,Fast,16,1,2.1511115236207843,37,7,6.096693467348814
+ESP-La Liga,Real Oviedo,shotZone,shotOboxTotal,140,2,3.9816005621105433,214,8,7.105360350571573
+ESP-La Liga,Real Oviedo,shotZone,shotPenaltyArea,222,19,26.586372405290604,319,40,45.81841042870656
+ESP-La Liga,Real Oviedo,shotZone,shotSixYardBox,29,6,11.378430225886405,39,13,15.426439141854644
+ESP-La Liga,Real Oviedo,situation,OpenPlay,287,15,28.160177014768124,444,44,50.928304236382246
+ESP-La Liga,Real Oviedo,situation,FromCorner,67,9,8.612054000608623,80,7,8.938303453847766
+ESP-La Liga,Real Oviedo,situation,SetPiece,30,1,2.697389341890812,30,3,2.48103661974892
+ESP-La Liga,Real Oviedo,situation,DirectFreekick,4,0,0.24695000797510147,11,1,0.7997502572834492
+ESP-La Liga,Real Oviedo,situation,Penalty,3,2,2.2298328280448914,7,6,5.202815353870392
+ESP-La Liga,Real Sociedad,attackSpeed,Normal,278,34,32.852578214369714,334,30,37.09387182444334
+ESP-La Liga,Real Sociedad,attackSpeed,Standard,138,18,20.6300868652761,123,21,15.92763180937618
+ESP-La Liga,Real Sociedad,attackSpeed,Slow,28,2,2.476655388250947,37,4,4.136204348877072
+ESP-La Liga,Real Sociedad,attackSpeed,Fast,28,5,6.626711122691631,38,6,7.454244259744883
+ESP-La Liga,Real Sociedad,shotZone,ownGoals,2,2,2.0,3,3,3.0
+ESP-La Liga,Real Sociedad,shotZone,shotOboxTotal,179,11,6.409124089404941,189,4,6.46584303304553
+ESP-La Liga,Real Sociedad,shotZone,shotPenaltyArea,251,37,39.60864463727921,306,40,40.78520461637527
+ESP-La Liga,Real Sociedad,shotZone,shotSixYardBox,40,9,14.568262863904238,34,14,14.360904593020678
+ESP-La Liga,Real Sociedad,situation,OpenPlay,334,41,41.95594472531229,409,40,48.684320433065295
+ESP-La Liga,Real Sociedad,situation,FromCorner,96,8,10.746172091923654,78,12,9.361619419418275
+ESP-La Liga,Real Sociedad,situation,SetPiece,24,1,2.632359522394836,30,4,2.028177049010992
+ESP-La Liga,Real Sociedad,situation,DirectFreekick,9,1,0.5621846783906221,10,0,0.8214472942054272
+ESP-La Liga,Real Sociedad,situation,Penalty,9,8,6.689370572566986,5,5,3.7163880467414856
+ESP-La Liga,Sevilla,attackSpeed,Normal,276,25,24.297612145077437,249,36,36.04979668278247
+ESP-La Liga,Sevilla,attackSpeed,Standard,109,9,10.71588537376374,101,18,17.37234451249242
+ESP-La Liga,Sevilla,attackSpeed,Fast,29,6,4.292808846570551,22,4,6.7992912121117115
+ESP-La Liga,Sevilla,attackSpeed,Slow,26,6,2.9924523141235113,28,2,1.7905195411294699
+ESP-La Liga,Sevilla,shotZone,ownGoals,2,2,2.0,0,0,0.0
+ESP-La Liga,Sevilla,shotZone,shotOboxTotal,162,7,4.560830673668534,118,7,4.224967956542969
+ESP-La Liga,Sevilla,shotZone,shotPenaltyArea,259,33,30.656844777055085,257,44,47.4610743066296
+ESP-La Liga,Sevilla,shotZone,shotSixYardBox,17,4,5.081083228811622,25,9,10.325909685343504
+ESP-La Liga,Sevilla,situation,OpenPlay,331,37,31.5828733057715,299,42,44.63960743602365
+ESP-La Liga,Sevilla,situation,FromCorner,72,2,4.710439998656511,66,4,6.3408976001665
+ESP-La Liga,Sevilla,situation,SetPiece,21,2,0.9476289609447122,17,4,1.624844224192202
+ESP-La Liga,Sevilla,situation,DirectFreekick,10,0,0.5981507580727339,7,1,1.2305489853024483
+ESP-La Liga,Sevilla,situation,Penalty,6,5,4.459665656089783,11,9,8.176053702831268
+ESP-La Liga,Valencia,attackSpeed,Normal,265,25,29.392738259397447,268,31,31.843559846282005
+ESP-La Liga,Valencia,attackSpeed,Standard,128,13,16.19533785432577,123,17,19.25660214573145
+ESP-La Liga,Valencia,attackSpeed,Slow,30,2,2.9842210579663515,33,4,3.9097203984856606
+ESP-La Liga,Valencia,attackSpeed,Fast,27,6,5.736340651288629,26,3,5.082866090349853
+ESP-La Liga,Valencia,shotZone,ownGoals,0,0,0.0,3,3,3.0
+ESP-La Liga,Valencia,shotZone,shotOboxTotal,157,4,5.568830909207463,155,6,5.076331924647093
+ESP-La Liga,Valencia,shotZone,shotPenaltyArea,254,33,36.84311917889863,257,35,38.5284240366891
+ESP-La Liga,Valencia,shotZone,shotSixYardBox,39,9,11.896687734872103,35,11,13.487992519512773
+ESP-La Liga,Valencia,situation,OpenPlay,322,33,38.11329996865243,327,38,40.83614633511752
+ESP-La Liga,Valencia,situation,FromCorner,82,8,6.865813598968089,79,8,7.918889832682908
+ESP-La Liga,Valencia,situation,SetPiece,21,0,1.408515433780849,22,3,4.421869999729097
+ESP-La Liga,Valencia,situation,DirectFreekick,16,0,1.2315103374421597,14,0,0.9696214385330677
+ESP-La Liga,Valencia,situation,Penalty,9,5,6.689498484134674,8,6,5.946220874786377
+ESP-La Liga,Villarreal,attackSpeed,Normal,315,51,49.86170365288854,318,26,31.603174676652998
+ESP-La Liga,Villarreal,attackSpeed,Standard,93,14,12.184806508012116,123,13,17.21733962185681
+ESP-La Liga,Villarreal,attackSpeed,Fast,33,5,7.296562451869249,19,2,2.377943130210042
+ESP-La Liga,Villarreal,attackSpeed,Slow,22,3,2.344214206561446,44,6,5.057685906067491
+ESP-La Liga,Villarreal,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ESP-La Liga,Villarreal,shotZone,shotOboxTotal,138,13,5.365282000042498,196,5,5.922656470444053
+ESP-La Liga,Villarreal,shotZone,shotPenaltyArea,280,45,46.68163855187595,275,32,35.73250750079751
+ESP-La Liga,Villarreal,shotZone,shotSixYardBox,44,14,18.6403662674129,31,8,12.600979363545775
+ESP-La Liga,Villarreal,situation,OpenPlay,370,59,59.50248031131923,381,34,39.03880371293053
+ESP-La Liga,Villarreal,situation,FromCorner,53,6,3.7848771512508392,62,4,5.7073430037125945
+ESP-La Liga,Villarreal,situation,SetPiece,27,0,2.145695765502751,33,1,4.373690276406705
+ESP-La Liga,Villarreal,situation,Penalty,8,8,5.946220874786377,8,7,5.946220874786377
+ESP-La Liga,Villarreal,situation,DirectFreekick,5,0,0.3080127164721489,20,1,1.1900854669511318
+ITA-Serie A,AC Milan,attackSpeed,Normal,301,27,35.214745863340795,274,16,24.822544435504824
+ITA-Serie A,AC Milan,attackSpeed,Standard,123,16,17.797103656455874,102,13,16.41407515667379
+ITA-Serie A,AC Milan,attackSpeed,Slow,48,6,5.93272689729929,43,3,3.538322593551129
+ITA-Serie A,AC Milan,attackSpeed,Fast,30,4,6.791118801571429,19,3,2.6550884302705526
+ITA-Serie A,AC Milan,shotZone,ownGoals,0,0,0.0,1,1,1.0
+ITA-Serie A,AC Milan,shotZone,shotOboxTotal,156,10,5.007790394127369,168,1,4.998757395893335
+ITA-Serie A,AC Milan,shotZone,shotPenaltyArea,292,32,42.27388118673116,230,21,28.8909684214741
+ITA-Serie A,AC Milan,shotZone,shotSixYardBox,54,11,18.45402363780886,39,12,12.54030479863286
+ITA-Serie A,AC Milan,situation,OpenPlay,379,37,47.93859156221151,336,22,31.015955459326506
+ITA-Serie A,AC Milan,situation,FromCorner,77,6,7.732915481552482,62,6,6.979986747726798
+ITA-Serie A,AC Milan,situation,SetPiece,28,3,2.677652597427368,23,2,2.819493541494012
+ITA-Serie A,AC Milan,situation,Penalty,9,7,6.851689517498016,8,5,6.090390682220459
+ITA-Serie A,AC Milan,situation,DirectFreekick,9,0,0.5348460599780083,9,0,0.5242041852325201
+ITA-Serie A,Atalanta,attackSpeed,Normal,357,30,43.494741895236075,267,17,27.87821596302092
+ITA-Serie A,Atalanta,attackSpeed,Standard,137,13,17.649454614147544,127,11,18.401356347836554
+ITA-Serie A,Atalanta,attackSpeed,Fast,39,6,7.145265453495085,21,6,4.354659265838563
+ITA-Serie A,Atalanta,attackSpeed,Slow,31,2,2.5300460010766983,33,2,3.4205777971073985
+ITA-Serie A,Atalanta,shotZone,ownGoals,1,1,1.0,1,1,1.0
+ITA-Serie A,Atalanta,shotZone,shotOboxTotal,192,6,7.362186591140926,167,5,4.969061942771077
+ITA-Serie A,Atalanta,shotZone,shotPenaltyArea,317,33,43.45461419504136,249,24,36.1808561636135
+ITA-Serie A,Atalanta,shotZone,shotSixYardBox,54,11,19.002707177773118,31,6,11.904891267418861
+ITA-Serie A,Atalanta,situation,OpenPlay,427,38,53.17005334980786,321,25,35.65345302596688
+ITA-Serie A,Atalanta,situation,FromCorner,104,8,11.704958356916904,79,5,9.956862590275705
+ITA-Serie A,Atalanta,situation,SetPiece,22,2,3.187346687540412,33,4,4.762898933142424
+ITA-Serie A,Atalanta,situation,DirectFreekick,8,0,0.4732530638575554,11,0,0.6363994833081961
+ITA-Serie A,Atalanta,situation,Penalty,3,3,2.283896505832672,4,2,3.0451953411102295
+ITA-Serie A,Bologna,attackSpeed,Normal,303,29,30.071528783533722,232,24,28.80680494522676
+ITA-Serie A,Bologna,attackSpeed,Standard,135,13,15.569254346191883,109,12,14.919430553913116
+ITA-Serie A,Bologna,attackSpeed,Slow,31,4,5.058371949009597,20,4,4.331090250052512
+ITA-Serie A,Bologna,attackSpeed,Fast,25,3,3.6806174628436565,29,6,4.757646256126463
+ITA-Serie A,Bologna,shotZone,ownGoals,3,3,3.0,1,1,1.0
+ITA-Serie A,Bologna,shotZone,shotOboxTotal,183,8,5.499323396012187,125,8,5.5129985813982785
+ITA-Serie A,Bologna,shotZone,shotPenaltyArea,279,28,34.62129882303998,224,26,33.38497508317232
+ITA-Serie A,Bologna,shotZone,shotSixYardBox,29,10,11.259150322526693,40,11,12.91699834074825
+ITA-Serie A,Bologna,situation,OpenPlay,359,36,38.810518195386976,281,34,37.895541451405734
+ITA-Serie A,Bologna,situation,FromCorner,78,2,5.116806850768626,61,6,8.849854754284024
+ITA-Serie A,Bologna,situation,SetPiece,38,5,4.296535321511328,28,0,2.127842105925083
+ITA-Serie A,Bologna,situation,DirectFreekick,12,1,0.8268203269690275,16,2,0.8965383525937796
+ITA-Serie A,Bologna,situation,Penalty,7,5,5.329091846942902,4,4,3.0451953411102295
+ITA-Serie A,Cagliari,attackSpeed,Normal,227,23,21.220912840683013,281,27,33.379735970404
+ITA-Serie A,Cagliari,attackSpeed,Standard,130,14,17.925173540133983,147,17,17.132981256581843
+ITA-Serie A,Cagliari,attackSpeed,Fast,30,2,4.13123238645494,26,5,6.996982399374247
+ITA-Serie A,Cagliari,attackSpeed,Slow,28,1,1.7994118654169142,36,4,3.5421915715560317
+ITA-Serie A,Cagliari,shotZone,shotOboxTotal,159,4,5.18844426330179,161,8,4.678917380981147
+ITA-Serie A,Cagliari,shotZone,shotPenaltyArea,221,23,26.572782094124705,273,32,35.469708502758294
+ITA-Serie A,Cagliari,shotZone,shotSixYardBox,35,13,13.315504275262356,56,13,20.90326531417668
+ITA-Serie A,Cagliari,situation,OpenPlay,285,26,27.151557092554867,343,36,43.91890994133428
+ITA-Serie A,Cagliari,situation,FromCorner,74,9,11.392997870221734,78,7,10.087056493386626
+ITA-Serie A,Cagliari,situation,SetPiece,39,3,4.160168441478163,50,6,4.7325242618098855
+ITA-Serie A,Cagliari,situation,DirectFreekick,15,0,0.8494095578789711,17,2,0.7908028308302164
+ITA-Serie A,Cagliari,situation,Penalty,2,2,1.5225976705551147,2,2,1.5225976705551147
+ITA-Serie A,Como,attackSpeed,Normal,332,38,37.46901462320238,191,15,21.590023937169462
+ITA-Serie A,Como,attackSpeed,Standard,145,15,22.088893079198897,101,10,14.672464743256569
+ITA-Serie A,Como,attackSpeed,Slow,42,5,4.732593912631273,29,0,2.2506081289611757
+ITA-Serie A,Como,attackSpeed,Fast,32,7,5.8740381971001625,21,4,1.8333564465865493
+ITA-Serie A,Como,shotZone,ownGoals,1,1,1.0,0,0,0.0
+ITA-Serie A,Como,shotZone,shotOboxTotal,186,11,6.566869219765067,119,6,3.688869488425553
+ITA-Serie A,Como,shotZone,shotPenaltyArea,326,44,45.82920693233609,199,21,29.21857320703566
+ITA-Serie A,Como,shotZone,shotSixYardBox,38,9,16.768463660031557,24,2,7.439010560512543
+ITA-Serie A,Como,situation,OpenPlay,406,50,48.07564673293382,241,19,25.673988512717187
+ITA-Serie A,Como,situation,FromCorner,84,5,8.757440094836056,51,2,5.117426020093262
+ITA-Serie A,Como,situation,SetPiece,35,4,6.261114368215203,32,3,4.264184025116265
+ITA-Serie A,Como,situation,DirectFreekick,18,1,0.9799479339271784,12,0,0.7230616863816977
+ITA-Serie A,Como,situation,Penalty,8,5,6.090390682220459,6,5,4.567793011665344
+ITA-Serie A,Cremonese,attackSpeed,Normal,185,12,17.584432931616902,364,37,39.013037983328104
+ITA-Serie A,Cremonese,attackSpeed,Standard,110,12,12.539449818432331,161,12,17.280896889977157
+ITA-Serie A,Cremonese,attackSpeed,Slow,26,2,3.0811185124330223,37,1,3.895149209536612
+ITA-Serie A,Cremonese,attackSpeed,Fast,25,6,4.641856730915606,31,7,8.087930517271161
+ITA-Serie A,Cremonese,shotZone,ownGoals,0,0,0.0,1,1,1.0
+ITA-Serie A,Cremonese,shotZone,shotOboxTotal,138,4,3.859032914508134,203,9,7.085208212025464
+ITA-Serie A,Cremonese,shotZone,shotPenaltyArea,175,22,22.630688602104783,348,39,47.47131616715342
+ITA-Serie A,Cremonese,shotZone,shotSixYardBox,33,6,11.357136476784945,41,8,12.720490220934153
+ITA-Serie A,Cremonese,situation,OpenPlay,236,20,25.30740817496553,432,45,50.99611771013588
+ITA-Serie A,Cremonese,situation,FromCorner,66,7,5.918603568337858,103,6,9.126320697367191
+ITA-Serie A,Cremonese,situation,SetPiece,34,1,3.28357205260545,36,2,2.449417478404939
+ITA-Serie A,Cremonese,situation,DirectFreekick,6,0,0.2920788563787937,16,0,1.1373657025396824
+ITA-Serie A,Cremonese,situation,Penalty,4,4,3.0451953411102295,6,4,4.567793011665344
+ITA-Serie A,Fiorentina,attackSpeed,Normal,290,22,29.866126662120223,297,24,30.18319957330823
+ITA-Serie A,Fiorentina,attackSpeed,Standard,132,11,17.156578875146806,147,18,20.849880476482213
+ITA-Serie A,Fiorentina,attackSpeed,Slow,40,4,2.750623776577413,38,4,4.5373225952498615
+ITA-Serie A,Fiorentina,attackSpeed,Fast,28,4,3.9770221672952175,35,4,4.290919106453657
+ITA-Serie A,Fiorentina,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ITA-Serie A,Fiorentina,shotZone,shotOboxTotal,181,6,6.604006089270115,167,9,5.634709517005831
+ITA-Serie A,Fiorentina,shotZone,shotPenaltyArea,264,27,30.574078977108,309,29,37.500446965917945
+ITA-Serie A,Fiorentina,shotZone,shotSixYardBox,44,7,15.572266414761543,39,10,14.726165268570185
+ITA-Serie A,Fiorentina,situation,OpenPlay,358,30,36.593772605992854,370,32,39.01144127501175
+ITA-Serie A,Fiorentina,situation,FromCorner,70,3,7.271301121450961,84,8,10.166049558669329
+ITA-Serie A,Fiorentina,situation,SetPiece,35,1,3.9219557996839285,45,5,5.247064934112132
+ITA-Serie A,Fiorentina,situation,DirectFreekick,21,1,1.3955289423465729,12,0,0.868972972035408
+ITA-Serie A,Fiorentina,situation,Penalty,6,6,4.567793011665344,6,5,4.567793011665344
+ITA-Serie A,Genoa,attackSpeed,Normal,223,18,22.449914218857884,291,23,31.301904772408307
+ITA-Serie A,Genoa,attackSpeed,Standard,147,17,18.435008123517036,136,21,18.389705488458276
+ITA-Serie A,Genoa,attackSpeed,Slow,41,1,3.1175672272220254,38,3,4.291773537173867
+ITA-Serie A,Genoa,attackSpeed,Fast,23,5,4.7234538700431585,22,4,4.7673746682703495
+ITA-Serie A,Genoa,shotZone,ownGoals,0,0,0.0,2,2,2.0
+ITA-Serie A,Genoa,shotZone,shotOboxTotal,164,8,5.265639989636838,154,4,4.782520689070225
+ITA-Serie A,Genoa,shotZone,shotPenaltyArea,236,25,33.42416466958821,280,32,33.39838036801666
+ITA-Serie A,Genoa,shotZone,shotSixYardBox,34,8,10.036138780415058,51,13,18.569857409223914
+ITA-Serie A,Genoa,situation,OpenPlay,287,24,30.29093531612307,351,30,40.36105297785252
+ITA-Serie A,Genoa,situation,FromCorner,61,2,5.205460590310395,87,12,7.578894540667534
+ITA-Serie A,Genoa,situation,SetPiece,52,8,5.075885529629886,31,2,4.89688821695745
+ITA-Serie A,Genoa,situation,DirectFreekick,25,2,1.3019724860787392,11,0,0.5848308838903904
+ITA-Serie A,Genoa,situation,Penalty,9,5,6.851689517498016,7,7,5.329091846942902
+ITA-Serie A,Inter,attackSpeed,Normal,403,47,51.85150227043778,210,20,20.650681437924504
+ITA-Serie A,Inter,attackSpeed,Standard,163,26,22.512155819684267,77,10,10.189583429135382
+ITA-Serie A,Inter,attackSpeed,Slow,55,8,7.744250818155706,34,2,3.067278515547514
+ITA-Serie A,Inter,attackSpeed,Fast,33,8,9.71616581454873,27,3,3.2669021133333445
+ITA-Serie A,Inter,shotZone,ownGoals,4,4,4.0,1,1,1.0
+ITA-Serie A,Inter,shotZone,shotOboxTotal,184,14,6.282335038296878,136,5,3.850494067184627
+ITA-Serie A,Inter,shotZone,shotPenaltyArea,409,52,60.27682758215815,190,22,23.39026644639671
+ITA-Serie A,Inter,shotZone,shotSixYardBox,57,19,21.264912102371454,21,7,8.93368498235941
+ITA-Serie A,Inter,situation,OpenPlay,491,63,69.31191890314221,271,25,26.984862066805363
+ITA-Serie A,Inter,situation,FromCorner,120,18,15.326318440958858,38,3,3.74834006652236
+ITA-Serie A,Inter,situation,SetPiece,24,2,1.7699403520673513,26,3,2.9049218269065022
+ITA-Serie A,Inter,situation,DirectFreekick,13,1,0.8481040149927139,9,0,0.4911261945962906
+ITA-Serie A,Inter,situation,Penalty,6,5,4.567793011665344,4,4,3.0451953411102295
+ITA-Serie A,Juventus,attackSpeed,Normal,409,36,48.15328454878181,233,22,20.906471537891775
+ITA-Serie A,Juventus,attackSpeed,Standard,148,18,19.22501646913588,105,7,10.809888985008001
+ITA-Serie A,Juventus,attackSpeed,Slow,48,2,4.991868890821934,31,2,3.7312994147650898
+ITA-Serie A,Juventus,attackSpeed,Fast,35,5,6.572138077579439,22,3,2.923371330834925
+ITA-Serie A,Juventus,shotZone,ownGoals,3,3,3.0,2,2,2.0
+ITA-Serie A,Juventus,shotZone,shotOboxTotal,223,8,7.565754042938352,161,6,5.5143354358151555
+ITA-Serie A,Juventus,shotZone,shotPenaltyArea,365,39,50.31672370992601,196,22,22.951321436092257
+ITA-Serie A,Juventus,shotZone,shotSixYardBox,49,11,18.059830233454704,32,4,7.905374396592379
+ITA-Serie A,Juventus,situation,OpenPlay,492,43,59.717291517183185,286,27,27.56114228349179
+ITA-Serie A,Juventus,situation,FromCorner,90,9,8.160533238202333,71,5,6.80874471925199
+ITA-Serie A,Juventus,situation,SetPiece,38,6,6.40707235224545,16,1,0.8951928652822971
+ITA-Serie A,Juventus,situation,DirectFreekick,15,1,0.8509167023003101,15,0,0.8220548946410418
+ITA-Serie A,Juventus,situation,Penalty,5,2,3.806494176387787,3,1,2.283896505832672
+ITA-Serie A,Lazio,attackSpeed,Normal,262,25,27.151901515200734,321,25,30.518585910089314
+ITA-Serie A,Lazio,attackSpeed,Standard,105,7,14.559853062033653,121,12,12.775245741941035
+ITA-Serie A,Lazio,attackSpeed,Slow,31,5,2.9703239034861326,42,3,4.188336208462715
+ITA-Serie A,Lazio,attackSpeed,Fast,20,4,3.489504096098244,22,0,1.9624078311026096
+ITA-Serie A,Lazio,shotZone,ownGoals,1,1,1.0,0,0,0.0
+ITA-Serie A,Lazio,shotZone,shotOboxTotal,163,5,5.035243575461209,179,5,5.23653554264456
+ITA-Serie A,Lazio,shotZone,shotPenaltyArea,216,29,30.234689854085445,290,26,32.57201905641705
+ITA-Serie A,Lazio,shotZone,shotSixYardBox,38,6,11.90164914727211,37,9,11.636021092534065
+ITA-Serie A,Lazio,situation,OpenPlay,313,34,33.61172951478511,385,28,36.66932994965464
+ITA-Serie A,Lazio,situation,FromCorner,53,1,3.8986374214291573,66,6,5.868553025647998
+ITA-Serie A,Lazio,situation,SetPiece,35,2,6.088232953101397,36,2,2.3797845346853137
+ITA-Serie A,Lazio,situation,DirectFreekick,12,0,0.7664885111153126,14,1,0.7204140052199364
+ITA-Serie A,Lazio,situation,Penalty,5,4,3.806494176387787,5,3,3.806494176387787
+ITA-Serie A,Lecce,attackSpeed,Normal,203,14,19.57169063342735,285,26,36.486746383365244
+ITA-Serie A,Lecce,attackSpeed,Standard,120,12,13.563956250436604,142,15,21.362511839717627
+ITA-Serie A,Lecce,attackSpeed,Slow,32,0,1.2184960306622088,27,3,2.9928047084249556
+ITA-Serie A,Lecce,attackSpeed,Fast,18,2,2.932685473933816,29,6,6.966875851154327
+ITA-Serie A,Lecce,shotZone,ownGoals,0,0,0.0,1,1,1.0
+ITA-Serie A,Lecce,shotZone,shotOboxTotal,155,5,4.960956156253815,132,2,4.163504992611706
+ITA-Serie A,Lecce,shotZone,shotPenaltyArea,184,13,19.929928281344473,300,35,44.00966214481741
+ITA-Serie A,Lecce,shotZone,shotSixYardBox,34,10,12.395943950861692,50,12,18.635771645233035
+ITA-Serie A,Lecce,situation,OpenPlay,253,16,23.722872138023376,341,35,46.44642694294453
+ITA-Serie A,Lecce,situation,FromCorner,68,6,7.0993484407663345,99,7,11.347604458220303
+ITA-Serie A,Lecce,situation,SetPiece,30,3,3.863228821195662,28,4,4.817615234293044
+ITA-Serie A,Lecce,situation,DirectFreekick,20,2,1.0787813179194927,9,0,0.6294991355389357
+ITA-Serie A,Lecce,situation,Penalty,2,1,1.5225976705551147,6,4,4.567793011665344
+ITA-Serie A,Napoli,attackSpeed,Normal,330,35,35.676972249522805,230,20,21.873853146564215
+ITA-Serie A,Napoli,attackSpeed,Standard,119,16,17.181434713304043,96,13,15.148507474921644
+ITA-Serie A,Napoli,attackSpeed,Slow,36,2,2.975804221816361,37,0,1.649952300824225
+ITA-Serie A,Napoli,attackSpeed,Fast,17,5,2.3745852513238788,25,3,3.5460224701091647
+ITA-Serie A,Napoli,shotZone,shotOboxTotal,181,11,6.9971452401950955,165,2,5.230263491626829
+ITA-Serie A,Napoli,shotZone,shotPenaltyArea,264,37,32.35749633051455,199,28,29.363555503077805
+ITA-Serie A,Napoli,shotZone,shotSixYardBox,57,10,18.854154865257442,24,6,7.624516397714615
+ITA-Serie A,Napoli,situation,OpenPlay,383,42,41.027361722663045,292,23,27.069827917497605
+ITA-Serie A,Napoli,situation,FromCorner,88,8,10.902177032083273,43,5,3.3508068211376667
+ITA-Serie A,Napoli,situation,SetPiece,13,3,1.6084176916629076,33,1,3.599070397205651
+ITA-Serie A,Napoli,situation,DirectFreekick,13,1,0.8643458131700754,10,0,0.5856419038027525
+ITA-Serie A,Napoli,situation,Penalty,5,4,3.806494176387787,10,7,7.612988352775574
+ITA-Serie A,Parma,attackSpeed,Normal,217,17,19.914377592504025,326,22,35.00096173398197
+ITA-Serie A,Parma,attackSpeed,Standard,131,7,10.993536225520074,128,14,16.926774194464087
+ITA-Serie A,Parma,attackSpeed,Slow,38,3,5.0636478858068585,44,3,3.758512457832694
+ITA-Serie A,Parma,attackSpeed,Fast,20,1,2.400900431908667,40,7,9.564973331056535
+ITA-Serie A,Parma,shotZone,ownGoals,2,2,2.0,1,1,1.0
+ITA-Serie A,Parma,shotZone,shotOboxTotal,181,3,4.874969107098877,189,9,5.868009960278869
+ITA-Serie A,Parma,shotZone,shotPenaltyArea,196,17,25.64323307853192,309,26,42.014802038669586
+ITA-Serie A,Parma,shotZone,shotSixYardBox,27,6,5.854259950108826,39,10,16.36840971838683
+ITA-Serie A,Parma,situation,OpenPlay,275,21,27.37892591021955,410,32,48.324447522871196
+ITA-Serie A,Parma,situation,SetPiece,64,2,5.180447177030146,26,2,3.7315636537969112
+ITA-Serie A,Parma,situation,FromCorner,52,3,3.6390117462724447,82,7,7.774936122819781
+ITA-Serie A,Parma,situation,DirectFreekick,13,0,0.6514796316623688,14,0,0.8524814061820507
+ITA-Serie A,Parma,situation,Penalty,2,2,1.5225976705551147,6,5,4.567793011665344
+ITA-Serie A,Pisa,attackSpeed,Normal,212,12,24.713490935973823,322,40,42.47045155800879
+ITA-Serie A,Pisa,attackSpeed,Standard,106,11,12.37086888588965,151,16,16.748628551140428
+ITA-Serie A,Pisa,attackSpeed,Fast,25,1,4.053320039529353,30,8,5.489279789850116
+ITA-Serie A,Pisa,attackSpeed,Slow,21,2,3.1961104120127857,45,7,4.378907938487828
+ITA-Serie A,Pisa,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ITA-Serie A,Pisa,shotZone,shotOboxTotal,94,2,2.8641294073313475,183,11,5.918338671326637
+ITA-Serie A,Pisa,shotZone,shotPenaltyArea,244,19,30.79553838353604,322,44,44.237710318528116
+ITA-Serie A,Pisa,shotZone,shotSixYardBox,25,4,9.674122482538223,41,14,16.931218847632408
+ITA-Serie A,Pisa,situation,OpenPlay,258,15,31.962921387515962,397,55,52.338639286346734
+ITA-Serie A,Pisa,situation,FromCorner,60,4,4.931004382669926,96,8,9.090490642003715
+ITA-Serie A,Pisa,situation,SetPiece,35,1,1.8545714560896158,34,2,2.2230651741847396
+ITA-Serie A,Pisa,situation,Penalty,7,6,5.329091846942902,6,5,4.567793011665344
+ITA-Serie A,Pisa,situation,DirectFreekick,4,0,0.25620120018720627,15,1,0.8672797232866287
+ITA-Serie A,Roma,attackSpeed,Normal,290,31,37.375444419682026,225,17,26.2602678546682
+ITA-Serie A,Roma,attackSpeed,Standard,154,20,18.38421915564686,100,11,11.807273011188954
+ITA-Serie A,Roma,attackSpeed,Slow,41,4,3.855279757641256,14,0,0.7017292501404881
+ITA-Serie A,Roma,attackSpeed,Fast,16,4,3.5458778589963913,31,3,4.759950990788639
+ITA-Serie A,Roma,shotZone,shotOboxTotal,133,4,6.003432643599808,148,8,5.25537205580622
+ITA-Serie A,Roma,shotZone,shotPenaltyArea,328,42,44.157538804225624,197,17,27.822556702885777
+ITA-Serie A,Roma,shotZone,shotSixYardBox,40,13,12.999849744141102,25,6,10.451292348094285
+ITA-Serie A,Roma,situation,OpenPlay,347,39,44.77660203631967,270,20,31.721948095597327
+ITA-Serie A,Roma,situation,FromCorner,97,13,8.910640540532768,53,6,7.449983985163271
+ITA-Serie A,Roma,situation,SetPiece,31,2,2.7332914490252733,35,3,3.062830897513777
+ITA-Serie A,Roma,situation,DirectFreekick,19,0,1.411195319145918,11,1,0.5331592932343483
+ITA-Serie A,Roma,situation,Penalty,7,5,5.329091846942902,1,1,0.7612988352775574
+ITA-Serie A,Sassuolo,attackSpeed,Normal,252,22,28.691823301371187,373,29,39.87649402581155
+ITA-Serie A,Sassuolo,attackSpeed,Standard,98,15,15.156539854593575,110,14,14.128874603658915
+ITA-Serie A,Sassuolo,attackSpeed,Fast,33,8,4.6846869783475995,26,2,4.098983997944742
+ITA-Serie A,Sassuolo,attackSpeed,Slow,24,1,2.0026538809761405,41,5,5.331486626993865
+ITA-Serie A,Sassuolo,shotZone,ownGoals,1,1,1.0,2,2,2.0
+ITA-Serie A,Sassuolo,shotZone,shotOboxTotal,137,5,4.5198756833560765,199,5,6.5205967696383595
+ITA-Serie A,Sassuolo,shotZone,shotPenaltyArea,239,28,33.81074856966734,316,34,43.553198975510895
+ITA-Serie A,Sassuolo,shotZone,shotSixYardBox,30,12,11.205079762265086,33,9,11.36204350925982
+ITA-Serie A,Sassuolo,situation,OpenPlay,309,31,35.37916416069493,440,36,49.30696465075016
+ITA-Serie A,Sassuolo,situation,FromCorner,54,9,8.200723612681031,62,7,6.13229591678828
+ITA-Serie A,Sassuolo,situation,SetPiece,21,3,2.8806447302922606,25,1,2.522923327051103
+ITA-Serie A,Sassuolo,situation,DirectFreekick,19,1,1.0299761705100536,17,1,0.9058623481541872
+ITA-Serie A,Sassuolo,situation,Penalty,4,2,3.0451953411102295,6,5,4.567793011665344
+ITA-Serie A,Torino,attackSpeed,Normal,288,23,29.722707634791732,311,35,35.87470682989806
+ITA-Serie A,Torino,attackSpeed,Standard,105,13,14.95543709769845,141,14,15.835908632725477
+ITA-Serie A,Torino,attackSpeed,Slow,31,3,4.332867633085698,42,5,3.9039511028677225
+ITA-Serie A,Torino,attackSpeed,Fast,26,5,5.151623608544469,32,9,6.316160552203655
+ITA-Serie A,Torino,shotZone,ownGoals,2,2,2.0,1,1,1.0
+ITA-Serie A,Torino,shotZone,shotOboxTotal,168,6,5.1481127184815705,187,11,6.338266332633793
+ITA-Serie A,Torino,shotZone,shotPenaltyArea,249,30,36.44211106095463,288,34,36.663581950590014
+ITA-Serie A,Torino,shotZone,shotSixYardBox,31,6,10.572412194684148,50,17,17.928878834471107
+ITA-Serie A,Torino,situation,OpenPlay,345,31,39.2071988764219,385,49,46.09481848496944
+ITA-Serie A,Torino,situation,FromCorner,62,7,6.759567464701831,80,10,7.823708757758141
+ITA-Serie A,Torino,situation,SetPiece,27,1,2.4037325559183955,40,0,4.091573415324092
+ITA-Serie A,Torino,situation,DirectFreekick,9,0,0.4630452301353216,17,0,0.8754311185330153
+ITA-Serie A,Torino,situation,Penalty,7,5,5.329091846942902,4,4,3.0451953411102295
+ITA-Serie A,Udinese,attackSpeed,Normal,265,21,27.063195639755577,316,27,36.44701098417863
+ITA-Serie A,Udinese,attackSpeed,Standard,118,15,13.139791142195463,128,16,14.437500673346221
+ITA-Serie A,Udinese,attackSpeed,Slow,33,3,3.7507141600362957,38,3,3.930185475386679
+ITA-Serie A,Udinese,attackSpeed,Fast,23,6,4.8588378094136715,21,2,2.8646452631801367
+ITA-Serie A,Udinese,shotZone,ownGoals,1,1,1.0,0,0,0.0
+ITA-Serie A,Udinese,shotZone,shotOboxTotal,173,4,5.213923412375152,187,7,7.163820676971227
+ITA-Serie A,Udinese,shotZone,shotPenaltyArea,237,26,31.052734909579158,270,30,36.09887126740068
+ITA-Serie A,Udinese,shotZone,shotSixYardBox,28,14,11.545880429446697,46,11,14.416650451719761
+ITA-Serie A,Udinese,situation,OpenPlay,321,30,35.672747609205544,375,32,43.24184172274545
+ITA-Serie A,Udinese,situation,FromCorner,64,8,7.346690708771348,80,6,6.181389877572656
+ITA-Serie A,Udinese,situation,SetPiece,32,1,1.0127708110958338,23,1,1.5947646470740438
+ITA-Serie A,Udinese,situation,DirectFreekick,17,1,0.9738354459404945,18,3,1.3322543017566204
+ITA-Serie A,Udinese,situation,Penalty,5,5,3.806494176387787,7,6,5.329091846942902
+ITA-Serie A,Hellas Verona,attackSpeed,Normal,280,13,25.800892705563456,280,29,29.717002282850444
+ITA-Serie A,Hellas Verona,attackSpeed,Standard,79,6,7.577869133092463,176,21,20.55010581202805
+ITA-Serie A,Hellas Verona,attackSpeed,Fast,37,5,4.147251533344388,26,6,5.388651431538165
+ITA-Serie A,Hellas Verona,attackSpeed,Slow,27,1,1.6948042726144195,35,5,5.357802325859666
+ITA-Serie A,Hellas Verona,shotZone,ownGoals,1,1,1.0,4,4,4.0
+ITA-Serie A,Hellas Verona,shotZone,shotOboxTotal,187,6,5.623752315994352,208,9,8.032340995036066
+ITA-Serie A,Hellas Verona,shotZone,shotPenaltyArea,217,15,25.53050361108035,269,39,35.736018936149776
+ITA-Serie A,Hellas Verona,shotZone,shotSixYardBox,18,3,7.066561717540026,36,9,13.245201921090484
+ITA-Serie A,Hellas Verona,situation,OpenPlay,344,19,31.642948511522263,341,40,40.463456040248275
+ITA-Serie A,Hellas Verona,situation,FromCorner,44,2,3.820551154203713,91,8,8.656382322311401
+ITA-Serie A,Hellas Verona,situation,SetPiece,20,1,0.8527226708829403,53,10,6.395684348419309
+ITA-Serie A,Hellas Verona,situation,DirectFreekick,12,0,0.6206988021731377,27,1,1.6915449649095535
+ITA-Serie A,Hellas Verona,situation,Penalty,3,3,2.283896505832672,5,2,3.806494176387787

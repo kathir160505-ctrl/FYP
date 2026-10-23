@@ -7,7 +7,8 @@ Outputs (data/processed/):
 - team_season.csv  one row per club, the 13 clustering features plus context stats
 - team_half.csv    one row per club per season half (split-half validation)
 - shots.csv        cleaned shot events with canonical club names (shot maps)
-- fyp.sqlite       the same four tables
+- team_breakdowns.csv  Understat attack-speed / shot-zone / situation splits per club
+- fyp.sqlite       the same five tables
 """
 import sqlite3
 from pathlib import Path
@@ -87,8 +88,11 @@ def main() -> None:
     season["fast_attack_shots"] = season["fast_attack_shots_total"] / season["matches"]
     halves = aggregate(tm, ["league", "team", "half"])
     shots = build_shots(teams, tm)
+    breakdowns = pd.read_csv(RAW / "understat" / "team_breakdowns.csv")
+    breakdowns["team"] = breakdowns["team"].map(dict(zip(teams["understat"], teams["team"])))
 
-    tables = {"team_match": tm, "team_season": season, "team_half": halves, "shots": shots}
+    tables = {"team_match": tm, "team_season": season, "team_half": halves, "shots": shots,
+              "team_breakdowns": breakdowns}
     with sqlite3.connect(OUT / "fyp.sqlite") as con:
         for name, df in tables.items():
             df.to_csv(OUT / f"{name}.csv", index=False)

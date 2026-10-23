@@ -55,7 +55,14 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
 - **Split-half:** 80% of clubs keep the same cluster.
 - **League chi-square:** not significant (permutation p = 0.45, Cramér's V = 0.22). This is a real finding, so report it honestly.
 - **App data:** `data/processed/{clusters,cluster_profiles,similar_clubs,model_selection}.csv`.
-- **Next:** Phase 5, the "more attacking" prediction model. Then Phase 6, the Streamlit app.
+## Phases 5–6 done (2026-10-23)
+- **Prediction:** `python -m src.predict.model`. Logistic regression gets AUC 0.805 on the held-out last 30% (CV 0.832; baseline 0.734). The app explains each prediction by grouping coefficient contributions into themes, because raw coefficients flip sign due to collinearity.
+- **App:** run `streamlit run app/streamlit_app.py` (launch config "fyp-dashboard" in `.claude/launch.json`).
+  - Structure: `app/data.py` (cached loaders and prediction), `app/charts.py` (Plotly), `app/ui.py` (CSS and cards), `app/views/*.py` (5 pages, via `st.navigation`).
+  - Theme lives in `.streamlit/config.toml`.
+- **Gotcha:** Streamlit does not hot-reload the modules imported from `app/`. Restart the server after editing `charts.py`, `data.py` or `views`.
+- **Requirements:** `requirements.txt` is the lean app runtime, with scikit-learn pinned for the joblib models. `requirements-dev.txt` is the full pipeline.
+- **Next:** Phase 7, deploy. Create a GitHub repo, push, then Streamlit Community Cloud with main file `app/streamlit_app.py` and Python 3.13.
 
 ## Original feature set (Table 3.1), with candidate sources from before the audit
 | Feature | Candidate source |
