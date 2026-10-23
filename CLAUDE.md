@@ -62,7 +62,11 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
   - Theme lives in `.streamlit/config.toml`.
 - **Gotcha:** Streamlit does not hot-reload the modules imported from `app/`. Restart the server after editing `charts.py`, `data.py` or `views`.
 - **Requirements:** `requirements.txt` is the lean app runtime, with scikit-learn pinned for the joblib models. `requirements-dev.txt` is the full pipeline.
-- **Next:** Phase 7, deploy. Create a GitHub repo, push, then Streamlit Community Cloud with main file `app/streamlit_app.py` and Python 3.13.
+## Phase 7: deploy
+- **GitHub repo (private):** https://github.com/NITIYAHSELVAN/fyp-attacking-philosophies, branch `main`. Pushed 2026-10-24.
+- **GitHub CLI:** installed at `C:\Program Files\GitHub CLI\gh.exe` and logged in as NITIYAHSELVAN.
+- **Streamlit Community Cloud settings:** main file `app/streamlit_app.py`, Python 3.13. The user deploys it on share.streamlit.io.
+- **Verified:** a clean venv with only `requirements.txt` runs all 5 pages via Streamlit AppTest.
 
 ## Original feature set (Table 3.1), with candidate sources from before the audit
 | Feature | Candidate source |
