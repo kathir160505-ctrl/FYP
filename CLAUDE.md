@@ -8,6 +8,26 @@ Source proposal: `C:\Users\I-AM-VENGEANCE\Desktop\fyp1_2240310.pdf` (FYP1 resear
 - **Validation**: unit tests, fixed seeds, bootstrap stability, split-half (first half vs second half of the season), face validity.
 - **RO3**: Web dashboard: team attacking profile, two-team comparison, and a prediction of "which team is more attacking". This is NOT a match winner or score prediction. Use logistic regression or gradient boosting on match-level data. Add disclaimers: data-driven abstraction, probabilistic, not for gambling.
 
+## App vision (user's main goal)
+The user wants a polished, professional-quality Streamlit app. It extends their earlier single-club soccerdata+Streamlit project (Man Utd season analytics) to all 60 clubs. Pages:
+1. **Overview / Style Map**
+   - PCA scatter of the 60 clubs, coloured by cluster, with a league filter.
+   - Cluster "philosophy cards" with evidence-based labels.
+2. **Club Profile** (the core page)
+   - Identity card: cluster label and a percentile radar against all 60 clubs.
+   - Matchweek timelines: rolling xG, possession, shots.
+   - First half vs second half of the season.
+   - Attack-speed and situation breakdowns.
+   - Shot map on a pitch (Understat x/y).
+   - Most similar clubs across leagues (scouting use).
+3. **Head-to-Head**
+   - Overlaid radars, stat bars, the two clusters and recent form.
+   - "More attacking" prediction with probability and reasons. This is NOT a winner or score prediction.
+4. **League Comparison**: cluster share per league, chi-square result, league averages.
+5. **Methodology**: sources, proxies, validity metrics, disclaimers.
+
+Style: dark professional theme, Plotly, custom CSS, consistent club colours.
+
 ## Phase 0 result (done 2026-10-23, see reports/phase0_data_audit.md)
 - **Primary sources:**
   - **Understat** (soccerdata): match xG, goals, deep completions, shots with x/y. Team pages via `/getTeamData/{team}/{season}` give the `attackSpeed` and `shotZone` breakdowns.
