@@ -1,0 +1,61 @@
+league,team,abbr,color,alt_color,logo
+ENG-Premier League,Arsenal,ARS,#e20520,#003399,https://a.espncdn.com/i/teamlogos/soccer/500/359.png
+ENG-Premier League,Aston Villa,AVL,#660e36,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/362.png
+ENG-Premier League,Bournemouth,BOU,#f42727,#B57EDC,https://a.espncdn.com/i/teamlogos/soccer/500/349.png
+ENG-Premier League,Brentford,BRE,#f42727,#0f1c3f,https://a.espncdn.com/i/teamlogos/soccer/500/337.png
+ENG-Premier League,Brighton,BHA,#0606fa,#005F60,https://a.espncdn.com/i/teamlogos/soccer/500/331.png
+ENG-Premier League,Burnley,BUR,#6C1D45,#00FFFF,https://a.espncdn.com/i/teamlogos/soccer/500/379.png
+ENG-Premier League,Chelsea,CHE,#144992,#FFFFFF,https://a.espncdn.com/i/teamlogos/soccer/500/363.png
+ENG-Premier League,Crystal Palace,CRY,#0202fb,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/384.png
+ENG-Premier League,Everton,EVE,#0606fa,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/368.png
+ENG-Premier League,Fulham,FUL,#ffffff,#CC0000,https://a.espncdn.com/i/teamlogos/soccer/500/370.png
+ENG-Premier League,Leeds United,LEE,#ffffff,#FFCD00,https://a.espncdn.com/i/teamlogos/soccer/500/357.png
+ENG-Premier League,Liverpool,LIV,#d11317,#FFFFFF,https://a.espncdn.com/i/teamlogos/soccer/500/364.png
+ENG-Premier League,Manchester City,MNC,#99c5ea,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/382.png
+ENG-Premier League,Manchester United,MAN,#da020e,#4169E1,https://a.espncdn.com/i/teamlogos/soccer/500/360.png
+ENG-Premier League,Newcastle United,NEW,#000000,#0B1B3D,https://a.espncdn.com/i/teamlogos/soccer/500/361.png
+ENG-Premier League,Nottingham Forest,NFO,#c8102e,#1B3624,https://a.espncdn.com/i/teamlogos/soccer/500/393.png
+ENG-Premier League,Sunderland,SUN,#EB172B,#FFB6C1,https://a.espncdn.com/i/teamlogos/soccer/500/366.png
+ENG-Premier League,Tottenham,TOT,#ffffff,#0B1426,https://a.espncdn.com/i/teamlogos/soccer/500/367.png
+ENG-Premier League,West Ham,WHU,#7c2c3b,#F1E7E0,https://a.espncdn.com/i/teamlogos/soccer/500/371.png
+ENG-Premier League,Wolves,WOL,#fdb913,#32A8DD,https://a.espncdn.com/i/teamlogos/soccer/500/380.png
+ESP-La Liga,Alavés,ALA,#0000ff,#FFC0CB,https://a.espncdn.com/i/teamlogos/soccer/500/96.png
+ESP-La Liga,Athletic Club,ATH,#C8142F,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/93.png
+ESP-La Liga,Atlético Madrid,ATM,#ca3624,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/1068.png
+ESP-La Liga,Barcelona,BAR,#990000,#FCE38A,https://a.espncdn.com/i/teamlogos/soccer/500/83.png
+ESP-La Liga,Celta Vigo,CEL,#6cace4,#004996,https://a.espncdn.com/i/teamlogos/soccer/500/85.png
+ESP-La Liga,Elche,ELC,#288A00,#4B2B67,https://a.espncdn.com/i/teamlogos/soccer/500/3751.png
+ESP-La Liga,Espanyol,ESP,#3366CC,#C8142F,https://a.espncdn.com/i/teamlogos/soccer/500/88.png
+ESP-La Liga,Getafe,GET,#0000ff,#7F1734,https://a.espncdn.com/i/teamlogos/soccer/500/2922.png
+ESP-La Liga,Girona,GIR,#C60000,#004996,https://a.espncdn.com/i/teamlogos/soccer/500/9812.png
+ESP-La Liga,Levante,LEV,#C8142F,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/1538.png
+ESP-La Liga,Mallorca,MLL,#C8142F,#ccff00,https://a.espncdn.com/i/teamlogos/soccer/500/84.png
+ESP-La Liga,Osasuna,OSA,#cd0000,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/97.png
+ESP-La Liga,Rayo Vallecano,RAY,#ffffff,#cd0000,https://a.espncdn.com/i/teamlogos/soccer/500/101.png
+ESP-La Liga,Real Betis,BET,#288A00,#0A422D,https://a.espncdn.com/i/teamlogos/soccer/500/244.png
+ESP-La Liga,Real Madrid,RMA,#ffffff,#1B4D3E,https://a.espncdn.com/i/teamlogos/soccer/500/86.png
+ESP-La Liga,Real Oviedo,OVI,#e23627,#ffd200,https://a.espncdn.com/i/teamlogos/soccer/500/92.png
+ESP-La Liga,Real Sociedad,RSO,#3366CC,#000000,https://a.espncdn.com/i/teamlogos/soccer/500/89.png
+ESP-La Liga,Sevilla,SEV,#ffffff,#d81022,https://a.espncdn.com/i/teamlogos/soccer/500/243.png
+ESP-La Liga,Valencia,VAL,#ffffff,#FF6F00,https://a.espncdn.com/i/teamlogos/soccer/500/94.png
+ESP-La Liga,Villarreal,VIL,#ffff00,#6cace4,https://a.espncdn.com/i/teamlogos/soccer/500/102.png
+ITA-Serie A,AC Milan,MIL,#e4002b,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/103.png
+ITA-Serie A,Atalanta,ATA,#1157bf,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/105.png
+ITA-Serie A,Bologna,BOL,#04043d,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/107.png
+ITA-Serie A,Cagliari,CAG,#282846,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/2925.png
+ITA-Serie A,Como,COMO,#4169E1,#FFFFFF,https://a.espncdn.com/i/teamlogos/soccer/500/2572.png
+ITA-Serie A,Cremonese,CRE,#FF0000,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/4050.png
+ITA-Serie A,Fiorentina,FIO,#4c1d84,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/109.png
+ITA-Serie A,Genoa,GEN,#08305d,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/3263.png
+ITA-Serie A,Hellas Verona,VER,#00239c,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/119.png
+ITA-Serie A,Inter,INT,#00239c,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/110.png
+ITA-Serie A,Juventus,JUV,#000000,#E8A2B0,https://a.espncdn.com/i/teamlogos/soccer/500/111.png
+ITA-Serie A,Lazio,LAZ,#74bde7,#FFFFFF,https://a.espncdn.com/i/teamlogos/soccer/500/112.png
+ITA-Serie A,Lecce,LEC,#FCED0B,#08305d,https://a.espncdn.com/i/teamlogos/soccer/500/113.png
+ITA-Serie A,Napoli,NAP,#0677d2,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/114.png
+ITA-Serie A,Parma,PAR,#19161D,#ffdd30,https://a.espncdn.com/i/teamlogos/soccer/500/115.png
+ITA-Serie A,Pisa,PIS,#1a1a1a,#1a1a1a,https://a.espncdn.com/i/teamlogos/soccer/500/3956.png
+ITA-Serie A,Roma,ROMA,#990a2c,#F5F3E5,https://a.espncdn.com/i/teamlogos/soccer/500/104.png
+ITA-Serie A,Sassuolo,SAS,#0fa653,#ADAEB0,https://a.espncdn.com/i/teamlogos/soccer/500/3997.png
+ITA-Serie A,Torino,TOR,#9f0000,#ffffff,https://a.espncdn.com/i/teamlogos/soccer/500/239.png
+ITA-Serie A,Udinese,UDI,#19161D,#0F1C3F,https://a.espncdn.com/i/teamlogos/soccer/500/118.png
