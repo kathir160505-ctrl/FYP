@@ -38,6 +38,15 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
 - **Dropped:** through balls, unless a Kaggle 2025/26 dataset turns up.
 - **Python env:** `.venv` uses Python 3.13 (not 3.12).
 
+## Phases 1–2 done (2026-10-23)
+- **Collect:** run `cd src/collect; python understat.py; python espn.py; python fbref.py; python check_coverage.py`. Raw data goes to `data/raw/`, which is gitignored. ESPN takes about 25 minutes uncached.
+- **Build:** run `python -m src.process.build_dataset` from the project root. This writes `data/processed/{team_match,team_season,team_half,shots}.csv` and `fyp.sqlite`.
+- **Cross-check:** run `python -m src.process.crosscheck`. Output goes to `reports/phase2_crosscheck.md`; r ≥ 0.977 against FBref.
+- **Feature definitions:** `src/process/features.py`, `CLUSTER_FEATURES` (13 features). Club names: `data/reference/teams.csv`.
+- **Gotcha:** a stale `~/soccerdata/data/FBref/seasons_*.html` cache can map "2526" to FBref's current-season URL. `check_coverage.py` guards against this with an MP == 38 check.
+- **Tests:** `python -m pytest tests`.
+- **Next:** Phase 3 EDA notebook, then Phase 4 clustering.
+
 ## Original feature set (Table 3.1), with candidate sources from before the audit
 | Feature | Candidate source |
 |---|---|
