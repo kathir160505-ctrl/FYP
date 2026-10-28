@@ -87,11 +87,13 @@ def render() -> None:
     for col, team in ((c1, a), (c2, b)):
         last = live.recent_results(team)
         with col:
-            with ui.panel(f"{team}: last five matches", "All competitions, live from ESPN · xG and Attacking Index "
-                          "for league matches once the weekly refresh has added them"):
+            with ui.panel(f"{team}: last five matches", "All competitions, live from ESPN · xG: Understat for league "
+                          "matches, our commentary model for the Champions League · cup matches have no xG"):
                 if last.empty:
                     ui.note("Recent results are unavailable right now (no connection to ESPN).")
                     continue
+                um = data.ucl_matches()
+                ucl_xg = {t: g.set_index(g.event_id.astype(str)).xg for t, g in um.groupby("team")}
                 ours = data.history_matches(team)
                 ours = ours.assign(event_id=ours.event_id.astype("Int64").astype(str)).set_index("event_id")
                 st.dataframe(pd.DataFrame({
@@ -99,9 +101,10 @@ def render() -> None:
                     "Competition": last.competition, "Opponent": last.opponent,
                     "H/A": last.home.map({True: "H", False: "A"}),
                     "Result": [f"{r} {g}-{c}" for r, g, c in zip(last.result, last.goals, last.goals_against)],
-                    "xG": pd.to_numeric(last.event_id.map(ours.xg), errors="coerce"),
+                    "xG": pd.to_numeric(last.event_id.map(ours.xg), errors="coerce").fillna(
+                        pd.to_numeric(last.event_id.map(ucl_xg.get(team, pd.Series(dtype=float))), errors="coerce")),
                     "Attacking Index": pd.to_numeric(last.event_id.map(ours.attacking_index), errors="coerce")}),
-                    hide_index=True, width="stretch",
+                    hide_index=True, placeholder="–", width="stretch",
                     column_config={"xG": st.column_config.NumberColumn(format="%.2f"),
                                    "Attacking Index": st.column_config.NumberColumn(format="%+.2f")})
 
@@ -116,7 +119,7 @@ def render() -> None:
                          f"{ra.abbr} possession": m.possessionPct / 100,
                          "More attacking": a if m.attacking_index > o.attacking_index else b})
         with ui.panel("Their 2025/26 meetings"):
-            st.dataframe(pd.DataFrame(rows), hide_index=True, width="stretch", column_config={
+            st.dataframe(pd.DataFrame(rows), hide_index=True, placeholder="–", width="stretch", column_config={
                 f"{ra.abbr} xG": st.column_config.NumberColumn(format="%.2f"),
                 f"{rb.abbr} xG": st.column_config.NumberColumn(format="%.2f"),
                 f"{ra.abbr} possession": st.column_config.NumberColumn(format="percent")})

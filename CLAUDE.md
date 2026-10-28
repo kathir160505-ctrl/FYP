@@ -139,6 +139,19 @@ Phases:
   - The match centre body is a fragment with `run_every=30` while live or within 1 hour of kick-off.
   - "Last 5" uses `live.recent_results(team)`: ESPN `/all/teams/{id}/schedule` across all competitions (friendlies excluded), with team ids from `live.team_ids()`. Used by match-centre form chips and Head-to-head.
   - Not yet seen running during a live game.
+- **Completeness pass (2026-10-28):**
+  - Every `st.dataframe` uses `placeholder="–"`, so no "None" appears in tables.
+  - **Commentary xG** (`src/model/commentary_xg.py`): logistic regression on ESPN commentary shot text (zone, body, assist, situation; penalty = 0.76).
+    - Trained on 2025/26 league shots and scaled to Understat totals.
+    - Tested on 2026/27: AUC 0.753, team-match r = 0.84 vs Understat, MAE 0.40.
+    - Gives xG to every UCL match (`ucl_shots.parquet`, `ucl_xg.csv` → `build_ucl` columns `xg`/`xg_against`).
+    - Commentary team names differ from ESPN's, so they are matched per match by similarity (`side_of`).
+    - The match centre shows a commentary xG race when Understat has no data (UCL, live or this week's games).
+    - Run it before `build_ucl`.
+  - UCL qualifiers: ESPN has `uefa.champions_qual`, but none of our clubs play in them, so they aren't collected.
+  - Photos: `src.collect.photos` (Wikipedia lead images with `pilicense=free`, plus Wikidata name search filtered by footballer and birth year) → `photos_extra.csv` → fallback in `build_players`.
+  - Line-up players (match centre pitch, benches, Clubs tab) link to `players?season&club&player` via `data.player_links()`. The Clubs line-ups now use `pitch.team_pitch` (HTML).
+  - Injuries: `app/injuries.py` (API-Football `/injuries`, leagues 39/140/135/2, cached 6 h). Active only with `API_FOOTBALL_KEY` in `secrets.toml`. Whether the free plan covers the current season is still to be verified with the user's key.
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.

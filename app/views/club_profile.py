@@ -6,7 +6,9 @@ import streamlit as st
 import cabinet
 import charts
 import data
+import injuries
 import live
+import pitch
 import ui
 
 SPEED_ORDER = ["Fast", "Normal", "Standard", "Slow"]
@@ -128,7 +130,7 @@ def render() -> None:
                                                    xG=("xg", "sum")).sort_values("xG", ascending=False).head(10)
                            .reset_index().rename(columns={"player": "Player"}))
                     top["G − xG"] = top.Goals - top.xG
-                    st.dataframe(top, hide_index=True, width="stretch", height=410, column_config={
+                    st.dataframe(top, hide_index=True, placeholder="–", width="stretch", height=410, column_config={
                         "xG": st.column_config.ProgressColumn("xG", format="%.1f", min_value=0,
                                                               max_value=float(top.xG.max())),
                         "G − xG": st.column_config.NumberColumn(format="%+.1f")})
@@ -162,7 +164,7 @@ def render() -> None:
                 "League rank": [row[f + "_lrank"] for f in data.FEATURES],
                 "Percentile (all 60)": [row[f + "_pct"] for f in data.FEATURES],
             })
-            st.dataframe(comp, hide_index=True, width="stretch", column_config={
+            st.dataframe(comp, hide_index=True, placeholder="–", width="stretch", column_config={
                 "League rank": st.column_config.NumberColumn(format="#%d"),
                 "Percentile (all 60)": st.column_config.ProgressColumn(format="%.0f", min_value=0, max_value=100)})
 
@@ -186,7 +188,7 @@ def render() -> None:
                                     "MW 1–19": [data.fmt(f, h.loc["H1", f]) for f in feats],
                                     "MW 20–38": [data.fmt(f, h.loc["H2", f]) for f in feats],
                                     "Change": [h.loc["H2", f] - h.loc["H1", f] for f in feats]})
-                st.dataframe(tbl, hide_index=True, width="stretch", height=455,
+                st.dataframe(tbl, hide_index=True, placeholder="–", width="stretch", height=455,
                              column_config={"Change": st.column_config.NumberColumn(format="%+.2f")})
 
     with tabs[4]:
@@ -257,15 +259,16 @@ def squad_and_lineups(team: str, color: str) -> None:
                 d = xi.assign(jersey=xi.athlete_id.map(jerseys),
                               note=[f"Started {s} of the last {n} league matches" for s, n in
                                     zip(xi.recent_starts, xi.of_matches)])
-                st.plotly_chart(charts.lineup_pitch(d, xi.formation.iloc[0], color), width="stretch",
-                                key=f"xi-{team}", config={"displayModeBar": False})
+                st.markdown(pitch.team_pitch(d.assign(formation=xi.formation.iloc[0]), color, with_events=False,
+                                             links=data.player_links()), unsafe_allow_html=True)
                 ui.note(f"<b>{html.escape(str(xi.formation.iloc[0]))}</b>, the most used shape in the last "
                         f"{int(xi.of_matches.iloc[0])} league matches; each position goes to the player who started "
                         "there most often (recent matches count more). A data-driven guess: injuries, suspensions "
                         "and rotation news are not known to the model.")
     with c2:
         events = (lu.drop_duplicates("event_id").sort_values("date", ascending=False) if len(lu) else lu)
-        with ui.panel("Match line-ups", "Starting XI and substitutes from the ESPN match sheet"):
+        with ui.panel("Match line-ups", "Starting XI and substitutes from the ESPN match sheet · click a player "
+                      "for his profile"):
             if events.empty:
                 ui.note("No line-ups recorded for this club this season yet.")
             else:
@@ -273,18 +276,22 @@ def squad_and_lineups(team: str, color: str) -> None:
                           zip(events.event_id, events.date, events.competition_name, events.home_away, events.opponent)}
                 ev = st.selectbox("Match", list(labels), format_func=labels.get, key=f"lineup-{team}")
                 m = lu[lu.event_id == ev]
-                start = m[m.starter]
-                d = start.assign(note=[("Goal " * int(g or 0) + ("· subbed off " + s if o and s else "")).strip()
-                                       for g, o, s in zip(start.goals, start.subbed_out, start.sub_minute)])
-                st.plotly_chart(charts.lineup_pitch(d, start.formation.iloc[0], color), width="stretch",
-                                key=f"lu-{team}-{ev}", config={"displayModeBar": False})
-                subs = m[~m.starter & m.subbed_in.fillna(False).astype(bool)]
-                bench = m[~m.starter & ~m.subbed_in.fillna(False).astype(bool)]
-                ui.note(f"<b>{html.escape(str(start.formation.iloc[0]))}</b> · Came on: "
-                        + (", ".join(f"{html.escape(n)} ({html.escape(str(t))})" for n, t in
-                                     zip(subs.player, subs.sub_minute.fillna(""))) or "none")
-                        + " · Unused: " + (", ".join(html.escape(n) for n in bench.player) or "none"))
+                start = m[m.starter].assign(sub_minute=lambda d: d.sub_minute.fillna("").astype(str),
+                                            subbed_out=lambda d: d.subbed_out.fillna(False).astype(bool))
+                links = data.player_links()
+                st.markdown(pitch.team_pitch(start, color, links=links), unsafe_allow_html=True)
+                sheet = m.assign(starter=m.starter.fillna(False).astype(bool),
+                                 subbed_in=m.subbed_in.fillna(False).astype(bool),
+                                 sub_minute=m.sub_minute.fillna("").astype(str))
+                st.markdown(pitch.bench(sheet, team, start.formation.iloc[0], None, color, links),
+                            unsafe_allow_html=True)
 
+    inj = injuries.for_club(team)
+    if len(inj):
+        with ui.panel("Injuries and suspensions", "API-Football · refreshed every six hours"):
+            st.dataframe(pd.DataFrame({"Player": inj.player, "Status": inj.type, "Reason": inj.reason,
+                                       "Next fixture": inj.fixture_date.dt.tz_convert(live.LOCAL_TZ).dt.strftime("%d %b")}),
+                         hide_index=True, placeholder="–", width="stretch")
     with ui.panel("Squad", "All players used in the league this season · click a photo to enlarge it"):
         ps = data.players()
         ps = ps[(ps.team == team) & (ps.season == ps[ps.team == team].season.max())]
@@ -295,7 +302,7 @@ def squad_and_lineups(team: str, color: str) -> None:
             "Age": ps.age, "Nation": ps.nation.fillna("").astype(str).str.split().str[-1].str.upper(),
             "Apps": ps.matches, "Starts": ps.starts, "Minutes": ps.minutes, "Goals": ps.goals,
             "Assists": ps.assists, "xG": ps.xg, "xA": ps.xa}),
-            hide_index=True, width="stretch", height=min(700, 35 * (len(ps) + 1) + 3), column_config={
+            hide_index=True, placeholder="–", width="stretch", height=min(700, 35 * (len(ps) + 1) + 3), column_config={
                 "": st.column_config.ImageColumn(width="small"),
                 "Age": st.column_config.NumberColumn(format="%d"),
                 "Starts": st.column_config.NumberColumn(format="%d"),
@@ -326,7 +333,7 @@ def champions_league(team: str, color: str) -> None:
     c1, c2 = st.columns([1, 1.15], gap="medium")
     with c1:
         with ui.panel("In Europe vs in the league", f"{data.season_label(pick)} per-match averages, both from ESPN "
-                      "(the Champions League has no xG)"):
+                      "(xG: our commentary model for the UCL, Understat for the league)"):
             v = data.ucl_vs_league()
             v = v[(v.team == team) & (v.season == pick)]
             if len(v):
@@ -346,10 +353,13 @@ def champions_league(team: str, color: str) -> None:
             st.dataframe(pd.DataFrame({
                 "Date": m.date.dt.strftime("%d %b %Y"), "Stage": stage, "": m.is_home.map({True: "H", False: "A"}),
                 "Opponent": m.opponent, "Score": [f"{g}–{a}" for g, a in zip(m.goals, m.goals_against)],
-                "Result": m.result, "Possession": m.possessionPct / 100, "Shots": m.totalShots,
+                "Result": m.result, "xG": m.xg, "xG against": m.xg_against,
+                "Possession": m.possessionPct / 100, "Shots": m.totalShots,
                 "On target": m.shotsOnTarget}),
-                hide_index=True, width="stretch", height=min(390, 35 * (len(m) + 1) + 3),
-                column_config={"Possession": st.column_config.NumberColumn(format="percent")})
+                hide_index=True, placeholder="–", width="stretch", height=min(390, 35 * (len(m) + 1) + 3),
+                column_config={"Possession": st.column_config.NumberColumn(format="percent"),
+                               "xG": st.column_config.NumberColumn(format="%.2f", help="Commentary-model xG"),
+                               "xG against": st.column_config.NumberColumn(format="%.2f")})
 
 
 def legacy(team: str, color: str) -> None:
@@ -394,7 +404,7 @@ def legacy(team: str, color: str) -> None:
                                                  Latest=("season", "last")).reindex(data.TROPHY_COLORS).dropna()
                        .reset_index())
                 cab.insert(0, "Trophy", cab.pop("category").map(data.TROPHY_LABELS))
-                st.dataframe(cab, hide_index=True, width="stretch", column_config={
+                st.dataframe(cab, hide_index=True, placeholder="–", width="stretch", column_config={
                     "Won": st.column_config.NumberColumn(format="%d")})
             else:
                 ui.note("No major trophies recorded.")
@@ -419,7 +429,7 @@ def legacy(team: str, color: str) -> None:
                                        "From": tbl.start.dt.strftime("%b %Y"),
                                        "To": tbl.end.dt.strftime("%b %Y").fillna("present"),
                                        "Tenure": tbl.days.map(tenure)}),
-                         hide_index=True, width="stretch", height=420)
+                         hide_index=True, placeholder="–", width="stretch", height=420)
     with c2:
         with ui.panel("Manager records in our data", "League matches from 2025/26 onwards · Attacking Index is the "
                       "within-league match z-score used across the app"):
@@ -429,7 +439,7 @@ def legacy(team: str, color: str) -> None:
                     "W-D-L": [f"{w}-{d}-{l}" for w, d, l in zip(rec.wins, rec.draws, rec.losses)],
                     "Points / match": rec.ppg, "xG": rec.xg, "xG against": rec.xg_against,
                     "Possession": rec.possession / 100, "Attacking Index": rec.attacking_index}),
-                    hide_index=True, width="stretch", column_config={
+                    hide_index=True, placeholder="–", width="stretch", column_config={
                         "Points / match": st.column_config.ProgressColumn(format="%.2f", min_value=0, max_value=3),
                         "xG": st.column_config.NumberColumn(format="%.2f"),
                         "xG against": st.column_config.NumberColumn(format="%.2f"),
@@ -489,7 +499,7 @@ def season_by_season(team: str, color: str) -> None:
                     ("Deep completions", "deep_completions", "%.1f"), ("Box presence %", "box_shot_share", "%.1f")]
             cols = {data.season_label(s): [fmt % r[c] if pd.notna(r[c]) else "–" for _, c, fmt in rows]
                     for s, r in h.set_index("season").iterrows()}
-            st.dataframe(pd.DataFrame({"Metric": [n for n, _, _ in rows], **cols}), hide_index=True, width="stretch")
+            st.dataframe(pd.DataFrame({"Metric": [n for n, _, _ in rows], **cols}), hide_index=True, placeholder="–", width="stretch")
 
     seasons = h.season.tolist()[::-1]
     pick = st.segmented_control("Week by week", seasons, default=seasons[0], format_func=data.season_label,

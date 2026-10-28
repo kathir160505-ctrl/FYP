@@ -23,18 +23,19 @@ def short_name(name: str) -> str:
 
 def player_icons(r) -> str:
     """Goals, own goals, assists and cards for one player row (from mc.lineups)."""
-    out = repeat("goal", r.goals, 13, "Goal") + repeat("own_goal", r.own_goals, 13, "Own goal")
-    out += repeat("assist", r.assists, 13, "Assist")
-    if r.red and r.yellow:
+    n = lambda col: int(getattr(r, col, 0) or 0) if getattr(r, col, 0) == getattr(r, col, 0) else 0  # noqa: E731
+    out = repeat("goal", n("goals"), 13, "Goal") + repeat("own_goal", n("own_goals"), 13, "Own goal")
+    out += repeat("assist", n("assists"), 13, "Assist")
+    if n("red") and n("yellow"):
         out += icon("second_yellow", 13, "Second yellow")
-    elif r.red:
+    elif n("red"):
         out += icon("red", 13, "Red card")
-    elif r.yellow:
+    elif n("yellow"):
         out += icon("yellow", 13, "Yellow card")
     return out
 
 
-def _token(r, x: float, y: float, color: str, with_events: bool) -> str:
+def _token(r, x: float, y: float, color: str, with_events: bool, links: dict | None = None) -> str:
     left, top = x / 68 * 100, (105 - y) / 105 * 100
     events = player_icons(r) if with_events else ""
     off = (f'<span class="pl-off">{icon("sub_out", 11, "Substituted")}{html.escape(str(r.sub_minute))}</span>'
@@ -42,14 +43,17 @@ def _token(r, x: float, y: float, color: str, with_events: bool) -> str:
     tip = html.escape(f"{r.player} · {getattr(r, 'position', '') or ''}"
                       + (f" · {r.note}" if isinstance(getattr(r, "note", None), str) and r.note else ""))
     number = html.escape(str(r.jersey)) if isinstance(getattr(r, "jersey", None), str) and r.jersey else ""
-    return (f'<div class="pl" style="left:{left:.1f}%;top:{top:.1f}%" title="{tip}">'
+    url = (links or {}).get(str(getattr(r, "athlete_id", "")))
+    tag, attrs = ("a", f' href="{html.escape(url)}" target="_self"') if url else ("div", "")
+    return (f'<{tag} class="pl{" link" if url else ""}" style="left:{left:.1f}%;top:{top:.1f}%" '
+            f'title="{tip}{" · open profile" if url else ""}"{attrs}>'
             f'<div class="pl-num" style="background:{color}">{number}'
             f'{f"<span class=pl-ev>{events}</span>" if events else ""}{off}</div>'
-            f'<div class="pl-name">{html.escape(short_name(r.player))}</div></div>')
+            f'<div class="pl-name">{html.escape(short_name(r.player))}</div></{tag}>')
 
 
 def pitch(home: pd.DataFrame | None, away: pd.DataFrame | None, home_color: str, away_color: str,
-          with_events: bool = True) -> str:
+          with_events: bool = True, links: dict | None = None) -> str:
     """Home XI in the bottom half attacking up, away XI in the top half attacking down."""
     tokens = []
     for xi, color, side in ((home, home_color, "home"), (away, away_color, "away")):
@@ -59,21 +63,37 @@ def pitch(home: pd.DataFrame | None, away: pd.DataFrame | None, home_color: str,
         for r in d.itertuples():
             y = r.y * 0.46 + 2.5 if side == "home" else 102.5 - r.y * 0.46
             x = r.x if side == "home" else 68 - r.x
-            tokens.append(_token(r, x, y, color, with_events))
+            tokens.append(_token(r, x, y, color, with_events, links))
     return ('<div class="pitch"><div class="pitch-lines"><i class="half"></i><i class="circle"></i><i class="spot"></i>'
             '<i class="box top"></i><i class="six top"></i><i class="box bottom"></i><i class="six bottom"></i></div>'
             + "".join(tokens) + "</div>")
 
 
-def bench(df: pd.DataFrame, team: str, formation: str, crest: str | None, color: str) -> str:
+def team_pitch(xi: pd.DataFrame, color: str, with_events: bool = True, links: dict | None = None) -> str:
+    """One XI over the full pitch, attacking upwards (club pages)."""
+    d = formation_layout(xi, xi.formation.iloc[0] if "formation" in xi else None)
+    tokens = [_token(r, r.x, r.y * 0.92 + 4, color, with_events, links) for r in d.itertuples()]
+    return ('<div class="pitch"><div class="pitch-lines"><i class="half"></i><i class="circle"></i><i class="spot"></i>'
+            '<i class="box top"></i><i class="six top"></i><i class="box bottom"></i><i class="six bottom"></i></div>'
+            + "".join(tokens) + "</div>")
+
+
+def bench(df: pd.DataFrame, team: str, formation: str, crest: str | None, color: str,
+          links: dict | None = None) -> str:
     """Substitutes used (green arrow, minute, their goals/assists/cards) in one row, then the unused names."""
     subs = df[~df.starter]
     used = subs[subs.subbed_in].copy()
     used["m"] = used.sub_minute.str.extract(r"(\d+)").astype(float)
+    links = links or {}
+
+    def name(r) -> str:
+        url = links.get(str(r.athlete_id))
+        return (f'<a href="{html.escape(url)}" target="_self">{html.escape(r.player)}</a>' if url
+                else html.escape(r.player))
     chips = "".join(f'<span class="sub-chip">{icon("sub_in", 12, "Came on")}<b>{html.escape(str(r.sub_minute))}</b>'
-                    f'{html.escape(r.player)}{player_icons(r)}</span>'
+                    f'{name(r)}{player_icons(r)}</span>'
                     for r in used.sort_values("m").itertuples())
-    unused = ", ".join(html.escape(n) for n in subs[~subs.subbed_in].player)
+    unused = ", ".join(name(r) for r in subs[~subs.subbed_in].itertuples())
     logo = f'<img src="{html.escape(crest)}" alt="">' if crest else ""
     return (f'<div class="bench"><div class="bench-head" style="--c:{color}">{logo}<b>{html.escape(team)}</b>'
             f'<span>{html.escape(str(formation or ""))}</span></div>'

@@ -24,7 +24,7 @@ STAGE_NAMES = {"league-phase": "League phase", "knockout-round-playoffs": "Knock
                "round-of-16": "Round of 16", "quarterfinals": "Quarter-final", "semifinals": "Semi-final",
                "final": "Final", "winner": "Winner"}
 # Per-match style stats shared by the UCL and the league data (ESPN definitions on both sides).
-COMPARE = {"possession": "Possession %", "pass_accuracy": "Pass accuracy %", "passes_completed": "Passes completed",
+COMPARE = {"xg": "xG", "possession": "Possession %", "pass_accuracy": "Pass accuracy %", "passes_completed": "Passes completed",
            "long_ball_share": "Long-ball share %", "crosses": "Crosses", "shots": "Shots", "shots_on_target": "Shots on target",
            "goals": "Goals", "goals_against": "Goals against", "points_per_match": "Points per match"}
 
@@ -64,7 +64,8 @@ def per_match(g: pd.DataFrame) -> pd.Series:
         "shots_on_target": g.shotsOnTarget.sum() / n,
         "goals": g.goals.sum() / n,
         "goals_against": g.goals_against.sum() / n,
-        "points_per_match": g.points.sum() / n})
+        "points_per_match": g.points.sum() / n,
+        "xg": g.xg.mean() if "xg" in g and g.xg.notna().any() else np.nan})
 
 
 def ucl_season(m: pd.DataFrame) -> pd.DataFrame:
@@ -88,7 +89,8 @@ def ucl_season(m: pd.DataFrame) -> pd.DataFrame:
 
 
 def league_espn(names: set) -> pd.DataFrame:
-    """The same per-match ESPN stats for our UCL clubs' league seasons."""
+    """The same per-match ESPN stats for our UCL clubs' league seasons (xG from Understat, on the same scale as the
+    commentary model, which is calibrated to it)."""
     tm = pd.read_parquet(HIST / "team_match.parquet")
     tm = tm[tm.team.isin(names) & ~tm.espn_missing]
     tm = tm.rename(columns={"goals": "goals", "goals_against": "goals_against"})
@@ -101,6 +103,15 @@ def main() -> None:
     raw = pd.concat([pd.read_csv(p).assign(season=int(p.parent.name)) for p in sorted(RAW.glob("*/ucl_stats.csv"))],
                     ignore_index=True)
     m = team_rows(raw, names)
+    # Champions League xG from the commentary model (src.model.commentary_xg); Understat has no UCL data.
+    cx = OUT / "ucl_xg.csv"
+    if cx.exists():
+        x = pd.read_csv(cx, dtype={"event_id": str}).rename(columns={"cxg": "xg"})[["event_id", "espn_team", "xg"]]
+        m = m.assign(event_id=m.event_id.astype(str)).merge(x, on=["event_id", "espn_team"], how="left")
+        opp = x.rename(columns={"espn_team": "opponent_espn", "xg": "xg_against"})
+        m = m.merge(opp, on=["event_id", "opponent_espn"], how="left")
+        m.loc[m.xg.isna() & m.xg_against.notna(), "xg"] = 0.0  # a side with no recorded shot
+        m.loc[m.xg_against.isna() & m.xg.notna(), "xg_against"] = 0.0
     s = ucl_season(m)
     ours = s[s.ours]
     lg = league_espn(set(ours.team))
@@ -111,7 +122,7 @@ def main() -> None:
     long["label"] = long.stat.map(COMPARE)
     long["diff"] = long.ucl - long.league
     cols = ["season", "date", "stage", "event_id", "team", "ours", "opponent", "is_home", "goals", "goals_against",
-            "points", "result", "won_final", "possessionPct", "accuratePasses", "totalPasses", "totalLongBalls",
+            "points", "result", "won_final", "xg", "xg_against", "possessionPct", "accuratePasses", "totalPasses", "totalLongBalls",
             "totalCrosses", "totalShots", "shotsOnTarget", "wonCorners", "saves", "logo"]
     m[cols].sort_values(["season", "date", "team"]).to_csv(OUT / "ucl_match.csv", index=False, encoding="utf-8")
     s.to_csv(OUT / "ucl_season.csv", index=False, encoding="utf-8")

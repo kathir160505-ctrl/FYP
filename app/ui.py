@@ -247,6 +247,12 @@ a.fx:hover .mc { color: var(--accent); }
   padding: .05rem .35rem; white-space: nowrap; }
 .tn .tag.inj { background: #FEE2E2; color: #991B1B; } .tn .tag.sus { background: #FEF3C7; color: #92400E; }
 .tn .tag.out { background: var(--surface-2); color: var(--muted); border: 1px solid var(--border); }
+a.pl { text-decoration: none !important; cursor: pointer; }
+a.pl:hover .pl-num { transform: scale(1.12); box-shadow: 0 0 0 3px rgba(255,255,255,.55); }
+a.pl:hover .pl-name { background: #fff; color: #0B0D10; }
+.pl-num { transition: transform .12s; }
+.sub-chip a, .unused a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--faint); }
+.sub-chip a:hover, .unused a:hover { color: var(--accent); }
 </style>
 """
 

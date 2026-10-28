@@ -94,7 +94,7 @@ def render() -> None:
             if sim.empty:
                 ui.note("Not enough minutes for a comparison.")
             else:
-                st.dataframe(sim, hide_index=True, width="stretch", height=390, column_config={
+                st.dataframe(sim, hide_index=True, placeholder="–", width="stretch", height=390, column_config={
                     "": st.column_config.ImageColumn(width="small"),
                     "Similarity": st.column_config.ProgressColumn(format="%.0f", min_value=0, max_value=100)})
 
@@ -111,7 +111,7 @@ def render() -> None:
                 "Position": m.position.fillna(""), "Sub": m.sub_minute.fillna(""),
                 "Goals": m.goals, "Assists": m.assists, "Shots": m.shots,
                 "Cards": [("🟥" if r else "") + ("🟨" if y else "") for y, r in zip(m.yellow.fillna(0), m.red.fillna(0))]}),
-                hide_index=True, width="stretch", height=min(420, 35 * (len(m) + 1) + 3))
+                hide_index=True, placeholder="–", width="stretch", height=min(420, 35 * (len(m) + 1) + 3))
 
     leaders(p[p.season == row.season])
     ui.note("Sources: Understat (attacking stats, xG model), FBref (tackles won, interceptions, crosses, goalkeeping), "
@@ -149,7 +149,7 @@ def leaders(p: pd.DataFrame) -> None:
         top = d.dropna(subset=[col]).nlargest(15, col)
         st.dataframe(pd.DataFrame({"": data.photos(top), "Player": top.name, "Club": top.team, "League": top.league_name,
                                    "Position": top.group, "Minutes": top.minutes, label: top[col]}),
-                     hide_index=True, width="stretch", height=560, column_config={
+                     hide_index=True, placeholder="–", width="stretch", height=560, column_config={
                          "": st.column_config.ImageColumn(width="small"),
                          label: st.column_config.ProgressColumn(format="%.1f" if col in ("xg", "xa", "xg_chain") else "%d",
                                                                 min_value=0, max_value=float(top[col].max() or 1))})

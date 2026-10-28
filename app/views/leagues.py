@@ -38,7 +38,7 @@ def render() -> None:
                     "philosophy appears in every league, and style varies more <i>within</i> leagues than between them.")
             st.write("")
             xt = share.pivot(index="cluster", columns="league_name", values="n").reindex(data.CLUSTER_ORDER).fillna(0)
-            st.dataframe(xt.astype(int).reset_index().rename(columns={"cluster": "Style"}), hide_index=True,
+            st.dataframe(xt.astype(int).reset_index().rename(columns={"cluster": "Style"}), hide_index=True, placeholder="–",
                          width="stretch")
 
     with ui.panel("Feature by league", "Each dot is a club, coloured by its attacking philosophy · hover for names"):
@@ -50,7 +50,7 @@ def render() -> None:
         with c2:
             top = df.sort_values(feat, ascending=False).head(10)
             st.dataframe(pd.DataFrame({"": top.logo, "Club": top.team, "League": top.league_name,
-                                       data.SHORT_LABELS[feat]: top[feat]}), hide_index=True, width="stretch",
+                                       data.SHORT_LABELS[feat]: top[feat]}), hide_index=True, placeholder="–", width="stretch",
                          height=388, column_config={
                              "": st.column_config.ImageColumn(width="small"),
                              data.SHORT_LABELS[feat]: st.column_config.ProgressColumn(
@@ -83,7 +83,7 @@ def render() -> None:
                     "GF": t.GF, "GA": t.GA, "xG / match": t.xg, "Possession": t.possession / 100,
                     "Shots / match": t.shots, "Long-ball share": t.long_ball_share / 100,
                     "Unique": t.dbscan_outlier.map({True: "★", False: ""})}),
-                    hide_index=True, width="stretch", height=738, column_config={
+                    hide_index=True, placeholder="–", width="stretch", height=738, column_config={
                         "": st.column_config.ImageColumn(width="small"),
                         "xG / match": st.column_config.ProgressColumn(format="%.2f", min_value=0,
                                                                       max_value=float(df.xg.max())),
@@ -128,7 +128,7 @@ def europe(hist: pd.DataFrame) -> None:
                                                    stage_rank=("stage_rank", "max"))
                    .reset_index().rename(columns={"league_name": "League"}))
             tbl["Furthest"] = tbl.pop("stage_rank").map(dict(enumerate(STAGE_ORDER)))
-            st.dataframe(tbl, hide_index=True, width="stretch", column_config={
+            st.dataframe(tbl, hide_index=True, placeholder="–", width="stretch", column_config={
                 "Pts / match": st.column_config.NumberColumn(format="%.2f")})
         with ui.panel("By attacking style", "Same clubs, grouped by their league style that season"):
             v = data.ucl_vs_league()
@@ -138,7 +138,7 @@ def europe(hist: pd.DataFrame) -> None:
                            **{"Possession vs league": ("poss_change", "mean")})
                       .reindex([c for c in data.CLUSTER_ORDER if c in set(o.cluster)]).reset_index()
                       .rename(columns={"cluster": "Style"}))
-            st.dataframe(st_tbl, hide_index=True, width="stretch", column_config={
+            st.dataframe(st_tbl, hide_index=True, placeholder="–", width="stretch", column_config={
                 "Pts / match": st.column_config.NumberColumn(format="%.2f"),
                 "Possession vs league": st.column_config.NumberColumn(format="%+.1f pp")})
             ui.note("Possession vs league: percentage-point change from the same club's league average that season.")

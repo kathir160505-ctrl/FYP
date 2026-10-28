@@ -48,7 +48,7 @@ def render() -> None:
     c1, c2 = st.columns([1.2, 1], gap="medium")
     with c1:
         with ui.panel("Features and data sources", "Proposal Table 3.1 mapped to the free 2025/26 data"):
-            st.dataframe(SOURCES, hide_index=True, width="stretch", height=530)
+            st.dataframe(SOURCES, hide_index=True, placeholder="–", width="stretch", height=530)
     with c2:
         with ui.panel("Design choices"):
             ui.callout("League and season are grouping variables only. They are never clustering inputs, so clubs are "
@@ -83,7 +83,7 @@ def render() -> None:
                    "k ≥ 3, k = 4 is the most stable under bootstrap resampling and sits at the elbow of the within-cluster "
                    "sum of squares. Silhouettes of 0.25–0.40 indicate overlapping styles on a continuum, which is typical "
                    "of team-level style data.")
-        st.dataframe(sel, hide_index=True, width="stretch", column_config={
+        st.dataframe(sel, hide_index=True, placeholder="–", width="stretch", column_config={
             c: st.column_config.NumberColumn(format="%.3f") for c in ("silhouette", "davies_bouldin", "bootstrap_ari")}
             | {"calinski_harabasz": st.column_config.NumberColumn(format="%.1f"),
                "inertia": st.column_config.NumberColumn(format="%.1f")})
@@ -100,7 +100,7 @@ def render() -> None:
     with c1:
         with ui.panel("Prediction model", f"Trained on matches before {pm['cutoff']}, tested on the final 30% of the season"):
             m = pd.DataFrame(pm["metrics"])
-            st.dataframe(m, hide_index=True, width="stretch", column_config={
+            st.dataframe(m, hide_index=True, placeholder="–", width="stretch", column_config={
                 c: st.column_config.NumberColumn(format="%.3f") for c in m.columns if c != "model"})
             ui.note("Target: the match-level Attacking Index (xG, shots, deep completions, box shots, possession), "
                     "not the result.")

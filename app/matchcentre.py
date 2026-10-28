@@ -2,6 +2,7 @@
 events, the key-event timeline, team stats and video, plus Understat xG/shots when the match is in our data.
 Highlights come from YouTube when a YouTube Data API key is configured (see highlights())."""
 import os
+import sys
 from datetime import datetime, timezone
 
 import pandas as pd
@@ -10,6 +11,9 @@ import streamlit as st
 
 import data
 import live
+
+sys.path.insert(0, str(data.ROOT))  # src.model.commentary_xg
+import joblib  # noqa: E402
 
 STAT_ROWS = [("possessionPct", "Possession %"), ("totalShots", "Shots"), ("shotsOnTarget", "Shots on target"),
              ("totalPasses", "Passes"), ("passPct", "Pass accuracy"), ("totalCrosses", "Crosses"),
@@ -281,3 +285,24 @@ def previous_match_news(team: str, before: str) -> dict:
         sent_off = mine[mine.kind.isin(["red", "second_yellow"])].player.tolist()
     return {"opponent": last.opponent, "date": last.date, "competition": last.competition_name,
             "injured": injured, "sent_off": sent_off}
+
+
+@st.cache_resource
+def commentary_model() -> dict | None:
+    path = data.MODELS / "commentary_xg.joblib"
+    return joblib.load(path) if path.exists() else None
+
+
+def commentary_shots(s: dict, h: dict) -> pd.DataFrame:
+    """Shots parsed from ESPN's commentary with our commentary-model xG, in the shape charts.xg_race expects.
+    Works for any competition and while a match is live (Understat covers only the three leagues, weekly)."""
+    from src.model.commentary_xg import predict, shots_from_summary, side_of
+    model = commentary_model()
+    shots = shots_from_summary(s)
+    if model is None or shots.empty:
+        return pd.DataFrame()
+    shots["xg"] = predict(model, shots)
+    side = side_of(shots, h["home"]["espn"], h["away"]["espn"])
+    shots["team"] = side.map({"home": h["home"]["team"], "away": h["away"]["team"]})
+    shots["result"] = shots.goal.map({True: "Goal", False: ""})
+    return shots.dropna(subset=["team", "minute"])

@@ -10,6 +10,7 @@ import streamlit as st
 
 import charts
 import data
+import injuries
 import live
 import matchcentre as mc
 import pitch
@@ -84,15 +85,18 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
     hl, ha = lu.get("home"), lu.get("away")
     c1, c2 = st.columns([1.05, 1], gap="medium")
     with c1:
-        with ui.panel("Line-ups", f"{home['team']} at the bottom, {away['team']} at the top · hover a player"):
+        with ui.panel("Line-ups", f"{home['team']} at the bottom, {away['team']} at the top · click a player "
+                      "for his profile"):
             if hl is None or hl.empty:
                 ui.note("Line-ups are not available for this match yet.")
             else:
+                links = data.player_links()
                 st.markdown(LEGEND + pitch.pitch(hl[hl.starter], ha[ha.starter] if ha is not None else None,
-                                                 home["color"], away["color"]), unsafe_allow_html=True)
-                benches = pitch.bench(hl, home["team"], hl.formation.iloc[0], home.get("logo"), home["color"])
+                                                 home["color"], away["color"], links=links), unsafe_allow_html=True)
+                benches = pitch.bench(hl, home["team"], hl.formation.iloc[0], home.get("logo"), home["color"], links)
                 if ha is not None and len(ha):
-                    benches += pitch.bench(ha, away["team"], ha.formation.iloc[0], away.get("logo"), away["color"])
+                    benches += pitch.bench(ha, away["team"], ha.formation.iloc[0], away.get("logo"), away["color"],
+                                           links)
                 st.markdown(benches, unsafe_allow_html=True)
     with c2:
         with ui.panel("Highlights"):
@@ -112,11 +116,8 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
                             f'<span>{html.escape(away["team"])}{pitch._crest(away)}</span></div>'
                             + pitch.stats_rows(stats, home["color"], away["color"]), unsafe_allow_html=True)
     with c2:
-        with ui.panel("Expected goals race", "Understat shot xG, cumulative · stars are goals"):
-            if shots.empty:
-                ui.note("Understat covers the three leagues only; xG appears once the weekly refresh has added "
-                        "this match (Champions League matches have no xG).")
-            else:
+        if not shots.empty:
+            with ui.panel("Expected goals race", "Understat shot xG, cumulative · stars are goals"):
                 xg = tm.set_index("team").xg
                 st.plotly_chart(charts.xg_race(shots, home["team"], away["team"], home["color"], away["color"]),
                                 width="stretch", key=f"xg-{event}")
@@ -125,6 +126,21 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
                 ui.note(f"Match xG {html.escape(home['team'])} {xg.get(home['team'], float('nan')):.2f} – "
                         f"{xg.get(away['team'], float('nan')):.2f} {html.escape(away['team'])}"
                         + (f" · More attacking side by our Attacking Index: <b>{html.escape(more)}</b>" if more else ""))
+        else:
+            cs = mc.commentary_shots(s, h)
+            with ui.panel("Expected goals race", "Commentary xG (our model on ESPN's shot descriptions), cumulative · "
+                          "stars are goals"):
+                if cs.empty:
+                    ui.note("No shot commentary available for this match yet.")
+                else:
+                    st.plotly_chart(charts.xg_race(cs, home["team"], away["team"], home["color"], away["color"]),
+                                    width="stretch", key=f"cxg-{event}")
+                    tot = cs.groupby("team").xg.sum()
+                    ui.note(f"xG {html.escape(home['team'])} {tot.get(home['team'], 0):.2f} – "
+                            f"{tot.get(away['team'], 0):.2f} {html.escape(away['team'])} · Understat does not cover the "
+                            "Champions League and adds league games weekly, so this uses our commentary model. It "
+                            "tracks Understat's match xG closely (r = 0.84 on 2026/27 league matches) but is an "
+                            "estimate.")
         with ui.panel("Team news", "Absences from this match sheet"):
             for side, t, sheet in (("home", home, hl), ("away", away, ha)):
                 on = set(sheet.athlete_id) if sheet is not None and len(sheet) else set()
@@ -137,6 +153,21 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
             ui.note("“Not in squad”: players with at least three league appearances this season who were not on the "
                     "team sheet. ESPN does not say why (injury, suspension, illness or selection).")
     news_block(s, home["team"], away["team"])
+
+
+def injury_rows(club: str) -> list[tuple[str, str, str]]:
+    """API-Football listings for a club: (tag class, label, 'Player (reason)')."""
+    rows = []
+    for r in injuries.for_club(club).itertuples():
+        reason = str(r.reason or "")
+        if r.type == "Questionable":
+            kind, label = "out", "Doubtful"
+        elif any(k in reason.lower() for k in ("card", "suspend")):
+            kind, label = "sus", "Suspended"
+        else:
+            kind, label = "inj", "Injured"
+        rows.append((kind, label, f"{r.player} ({reason})" if reason else r.player))
+    return rows
 
 
 def team_news_block(team: str, rows: list[tuple[str, str, str]]) -> None:
@@ -203,11 +234,11 @@ def pre_match(s: dict, h: dict) -> None:
     with c1:
         title = "Confirmed line-ups" if confirmed else "Probable line-ups"
         sub = ("From the ESPN team sheet" if confirmed else
-               "Most-used recent formation and starters, last 5 league matches · hover a player")
+               "Most-used recent formation and starters, last 5 league matches · click a player for his profile")
         with ui.panel(title, sub):
             if frames:
                 st.markdown(pitch.pitch(frames.get("home"), frames.get("away"), home["color"], away["color"],
-                                        with_events=False), unsafe_allow_html=True)
+                                        with_events=False, links=data.player_links()), unsafe_allow_html=True)
                 missing = [t["team"] for side, t in (("home", home), ("away", away)) if side not in frames]
                 if missing:
                     ui.note(f"No probable XI for {html.escape(', '.join(missing))}: only clubs from the three leagues "
@@ -237,17 +268,22 @@ def pre_match(s: dict, h: dict) -> None:
                 cells = "".join(f'<span class="fchip {r}" title="{html.escape(txt)}">{r}</span>' for r, txt in chips)
                 st.markdown(f'<div class="form-row"><b>{html.escape(t["team"])}</b>{cells or "<span class=muted>–</span>"}</div>',
                             unsafe_allow_html=True)
-        with ui.panel("Team news", "From each club's previous match"):
+        has_key = bool(injuries.api_key())
+        with ui.panel("Team news", "Injuries and suspensions (API-Football) and notes from each club's previous match"
+                      if has_key else "From each club's previous match"):
             for t in (home, away):
                 prev = mc.previous_match_news(t["team"], h["date"].isoformat())
-                rows = []
+                rows = injury_rows(t["team"])
                 if prev:
                     ctx = f"vs {prev['opponent']}, {prev['date']:%d %b}"
                     rows += [("inj", "Injury doubt", f"{n} (went off injured {ctx})") for n in prev["injured"]]
                     rows += [("sus", "Suspended", f"{n} (sent off {ctx})") for n in prev["sent_off"]]
                 team_news_block(t["team"], rows)
-            ui.note("Based on the previous match sheet only (players who went off injured or were sent off). "
-                    "Long-term injuries and accumulated-yellow bans are not in the free data.")
+            if has_key:
+                ui.note("Injury list: API-Football, refreshed every six hours. Previous-match notes: ESPN.")
+            else:
+                ui.note("Based on the previous match sheet only (players who went off injured or were sent off). "
+                        "Add a free API-Football key to show full injury and suspension lists.")
     if both:
         with ui.panel("Season so far", "Per-match averages, 2026/27 league matches"):
             rows = [("Attacking Index", "attacking_index_season", "%+.2f"), ("xG", "xg_season", "%.2f"),
@@ -257,5 +293,5 @@ def pre_match(s: dict, h: dict) -> None:
             st.dataframe(pd.DataFrame({"Metric": [r[0] for r in rows],
                                        home["team"]: [r[2] % form.loc[home["team"], r[1]] for r in rows],
                                        away["team"]: [r[2] % form.loc[away["team"], r[1]] for r in rows]}),
-                         hide_index=True, width="stretch")
+                         hide_index=True, placeholder="–", width="stretch")
     news_block(s, home["team"], away["team"])

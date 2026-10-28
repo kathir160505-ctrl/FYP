@@ -229,6 +229,18 @@ def probable_xi() -> pd.DataFrame:
     return pd.read_csv(PLAYERS / "probable_xi.csv", dtype={"athlete_id": str}, parse_dates=["last_match"])
 
 
+@st.cache_data
+def player_links() -> dict:
+    """ESPN athlete id -> Players page URL for that player's latest season and club."""
+    from urllib.parse import urlencode
+    if not players_ready():
+        return {}
+    p = players().dropna(subset=["athlete_id"]).sort_values(["season", "minutes"])
+    p = p.drop_duplicates("athlete_id", keep="last")
+    return {a: "players?" + urlencode({"season": int(s), "club": t, "player": n})
+            for a, s, t, n in zip(p.athlete_id, p.season, p.team, p["name"])}
+
+
 def initials(name: str) -> str:
     parts = [p for p in str(name).split() if p[:1].isalpha()]
     return (parts[0][0] + (parts[-1][0] if len(parts) > 1 else "")).upper() if parts else "?"

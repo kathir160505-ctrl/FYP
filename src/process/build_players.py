@@ -189,8 +189,20 @@ def add_photos(players: pd.DataFrame, report: dict) -> pd.DataFrame:
             cand = cand[cand.born_year == year] if pd.notna(year) else cand[unique.loc[cand.index]]
             if len(cand) == 1:
                 players.loc[i, ["wikidata", "photo"]] = [cand.p.iloc[0], cand.img.iloc[0]]
+    # Second pass (src.collect.photos): Wikipedia lead images and Wikidata name-search matches.
+    extra_path = RAW / "photos_extra.csv"
+    if extra_path.exists():
+        extra = pd.read_csv(extra_path)
+        by_q = extra.drop_duplicates("wikidata").set_index("wikidata").photo
+        by_name = extra.dropna(subset=["name"]).drop_duplicates("name").set_index("name")
+        miss = players.photo.isna()
+        players.loc[miss, "photo"] = players.loc[miss, "wikidata"].map(by_q)
+        miss = players.photo.isna() & players.wikidata.isna()
+        players.loc[miss, "wikidata"] = players.loc[miss, "name"].map(by_name.wikidata)
+        players.loc[miss, "photo"] = players.loc[miss, "name"].map(by_name.photo)
     # Commons "Special:FilePath" URLs redirect to the full file; ask for a 240px thumbnail instead.
-    players["photo"] = players.photo.where(players.photo.isna(), players.photo.astype(str) + "?width=240")
+    filepath = players.photo.astype(str).str.contains("Special:FilePath", na=False) & ~players.photo.astype(str).str.contains("width=")
+    players.loc[filepath, "photo"] = players.loc[filepath, "photo"] + "?width=240"
     report["photos"] = int(players.photo.notna().sum())
     return players
 
