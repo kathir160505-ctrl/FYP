@@ -115,10 +115,15 @@ def render() -> None:
 - **Champions League.** ESPN match stats (possession, passing, crosses, shots) from the league phase onwards;
   qualifiers are not included. Understat has no Champions League data, so there is no xG, and comparisons with
   the league use ESPN figures on both sides.
+- **Players.** Attacking stats from Understat, tackles won, interceptions and goalkeeping from FBref, line-ups
+  from ESPN match sheets; players are matched across sources by club and name (96% FBref, 98% ESPN). Percentiles
+  compare players of the same position group with at least 30% of their club's minutes. The probable XI is a
+  data-driven guess from recent starts and does not know about injuries or suspensions. Photos are freely licensed
+  images from Wikimedia Commons (via Wikidata); players without one are shown with their initials.
 - **Honours and managers.** From Wikidata (community-maintained, CC0). Each trophy is counted once per season;
   revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
   League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
   left out because Wikidata records too few of them.
-- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN. Non-commercial academic use.
+- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
 """)
     ui.footer()

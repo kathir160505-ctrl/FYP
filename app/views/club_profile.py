@@ -3,8 +3,10 @@ import html
 import pandas as pd
 import streamlit as st
 
+import cabinet
 import charts
 import data
+import live
 import ui
 
 SPEED_ORDER = ["Fast", "Normal", "Standard", "Slow"]
@@ -84,7 +86,8 @@ def render() -> None:
     tabs = st.tabs([":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
                     ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
                     ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27",
-                    ":material/star: Champions League", ":material/emoji_events: Honours & managers"])
+                    ":material/star: Champions League", ":material/groups: Squad & line-ups",
+                    ":material/emoji_events: Honours & managers"])
 
     with tabs[0]:
         with ui.panel("Match Attacking Index", "Within-league z-score of xG, shots, deep completions, box shots and "
@@ -214,8 +217,91 @@ def render() -> None:
     with tabs[6]:
         champions_league(team, row.color)
     with tabs[7]:
+        squad_and_lineups(team, row.color)
+    with tabs[8]:
         legacy(team, row.color)
     ui.footer()
+
+
+def next_fixture(team: str):
+    fx = live.fixtures()
+    if fx.empty:
+        return None
+    up = fx[(fx.state == "pre") & ((fx.home == team) | (fx.away == team))]
+    return up.iloc[0] if len(up) else None
+
+
+def squad_and_lineups(team: str, color: str) -> None:
+    if not data.players_ready():
+        ui.note("Squad and line-up data is still being prepared (run src.collect.players, then "
+                "src.process.build_players).")
+        return
+    xi = data.probable_xi()
+    xi = xi[xi.team == team].sort_values("formation_place")
+    lu = data.lineups(team)
+    lu = lu[lu.season == lu.season.max()] if len(lu) else lu
+    c1, c2 = st.columns(2, gap="medium")
+    with c1:
+        nxt = next_fixture(team)
+        if nxt is not None:
+            opp = nxt.away if nxt.home == team else nxt.home
+            title = f"Probable XI vs {opp}"
+            sub = f"{nxt.league} · {nxt.local.strftime('%a %d %b, %H:%M')} MYT"
+        else:
+            title, sub = "Probable XI", "Next fixture not yet scheduled"
+        with ui.panel(title, sub):
+            if xi.empty:
+                ui.note("No line-ups recorded for this club this season yet.")
+            else:
+                jerseys = lu.drop_duplicates("athlete_id").set_index("athlete_id").jersey if len(lu) else {}
+                d = xi.assign(jersey=xi.athlete_id.map(jerseys),
+                              note=[f"Started {s} of the last {n} league matches" for s, n in
+                                    zip(xi.recent_starts, xi.of_matches)])
+                st.plotly_chart(charts.lineup_pitch(d, xi.formation.iloc[0], color), width="stretch",
+                                key=f"xi-{team}", config={"displayModeBar": False})
+                ui.note(f"<b>{html.escape(str(xi.formation.iloc[0]))}</b>, the most used shape in the last "
+                        f"{int(xi.of_matches.iloc[0])} league matches; each position goes to the player who started "
+                        "there most often (recent matches count more). A data-driven guess: injuries, suspensions "
+                        "and rotation news are not known to the model.")
+    with c2:
+        events = (lu.drop_duplicates("event_id").sort_values("date", ascending=False) if len(lu) else lu)
+        with ui.panel("Match line-ups", "Starting XI and substitutes from the ESPN match sheet"):
+            if events.empty:
+                ui.note("No line-ups recorded for this club this season yet.")
+            else:
+                labels = {e: f"{d:%d %b} · {c} · {'vs' if h == 'home' else 'at'} {o}" for e, d, c, h, o in
+                          zip(events.event_id, events.date, events.competition_name, events.home_away, events.opponent)}
+                ev = st.selectbox("Match", list(labels), format_func=labels.get, key=f"lineup-{team}")
+                m = lu[lu.event_id == ev]
+                start = m[m.starter]
+                d = start.assign(note=[("Goal " * int(g or 0) + ("· subbed off " + s if o and s else "")).strip()
+                                       for g, o, s in zip(start.goals, start.subbed_out, start.sub_minute)])
+                st.plotly_chart(charts.lineup_pitch(d, start.formation.iloc[0], color), width="stretch",
+                                key=f"lu-{team}-{ev}", config={"displayModeBar": False})
+                subs = m[~m.starter & m.subbed_in.fillna(False).astype(bool)]
+                bench = m[~m.starter & ~m.subbed_in.fillna(False).astype(bool)]
+                ui.note(f"<b>{html.escape(str(start.formation.iloc[0]))}</b> · Came on: "
+                        + (", ".join(f"{html.escape(n)} ({html.escape(str(t))})" for n, t in
+                                     zip(subs.player, subs.sub_minute.fillna(""))) or "none")
+                        + " · Unused: " + (", ".join(html.escape(n) for n in bench.player) or "none"))
+
+    with ui.panel("Squad", "All players used in the league this season · click a photo to enlarge it"):
+        ps = data.players()
+        ps = ps[(ps.team == team) & (ps.season == ps[ps.team == team].season.max())]
+        ps = ps.assign(g_order=ps.group.map({g: i for i, g in enumerate(["Goalkeeper", "Defender", "Midfielder", "Forward"])}))
+        ps = ps.sort_values(["g_order", "minutes"], ascending=[True, False])
+        st.dataframe(pd.DataFrame({
+            "": data.photos(ps), "#": ps.jersey.fillna(""), "Player": ps.name, "Position": ps.group,
+            "Age": ps.age, "Nation": ps.nation.fillna("").astype(str).str.split().str[-1].str.upper(),
+            "Apps": ps.matches, "Starts": ps.starts, "Minutes": ps.minutes, "Goals": ps.goals,
+            "Assists": ps.assists, "xG": ps.xg, "xA": ps.xa}),
+            hide_index=True, width="stretch", height=min(700, 35 * (len(ps) + 1) + 3), column_config={
+                "": st.column_config.ImageColumn(width="small"),
+                "Age": st.column_config.NumberColumn(format="%d"),
+                "Starts": st.column_config.NumberColumn(format="%d"),
+                "xG": st.column_config.NumberColumn(format="%.1f"),
+                "xA": st.column_config.NumberColumn(format="%.1f")})
+        ui.note("Player pages: open <b>Players</b> in the top menu. Photos from Wikimedia Commons where available.")
 
 
 def champions_league(team: str, color: str) -> None:
@@ -289,6 +375,11 @@ def legacy(team: str, color: str) -> None:
              ("Second-tier titles", f"{counts.get('Second-tier title', 0)}", last_won(h, "Second-tier title"),
               data.TROPHY_COLORS["Second-tier title"])])
 
+    meta = data.clubs().set_index("team")
+    crest = meta.logo.get(team) if team in meta.index else None
+    st.markdown(cabinet.cabinet_html(h, data.TROPHY_LABELS, list(data.TROPHY_COLORS), team, crest, color),
+                unsafe_allow_html=True)
+    st.write("")
     c1, c2 = st.columns([1.3, 1], gap="medium")
     with c1:
         with ui.panel("Trophies by decade", "Hover a bar for the seasons"):

@@ -243,3 +243,30 @@ def footer() -> None:
         "La Liga and Serie A seasons; Matchday uses live 2026/27 data. Attacking profiles are a data-driven abstraction of "
         "attacking play only, not a full description of a team's tactics. Predictions are probabilistic estimates of "
         "attacking style, not match results, and are not intended for betting.</div>", unsafe_allow_html=True)
+
+
+def player_header(p, crest: str | None, color: str) -> None:
+    """Player identity card: Commons photo (or initials), name, club, position and key facts."""
+    if isinstance(p.photo, str) and p.photo:
+        face = (f'<img src="{html.escape(p.photo)}" alt="" style="width:96px;height:96px;border-radius:50%;'
+                f'object-fit:cover;object-position:top;border:3px solid {color};background:#E5E7EB">')
+    else:
+        from data import initials
+        face = (f'<div style="width:96px;height:96px;border-radius:50%;background:{color};color:#fff;display:flex;'
+                f'align-items:center;justify-content:center;font:800 2.2rem var(--cond)">{initials(p["name"])}</div>')
+    crest_img = f'<img src="{html.escape(crest)}" alt="" style="width:22px;height:22px;vertical-align:-5px">' if crest else ""
+    facts = [f for f in (
+        p.group,
+        f"#{p.jersey}" if isinstance(p.jersey, str) and p.jersey else "",
+        f"Age {int(p.age)}" if p.age == p.age else "",
+        str(p.nation).split()[-1].upper() if isinstance(p.nation, str) else "") if f]
+    st.markdown(
+        f'''<div class="club-head" style="--club:{color}">{face}
+        <div><div class="name">{html.escape(p["name"])}</div>
+        <div class="meta">{crest_img} {html.escape(p.team)} · {html.escape(p.league_name)} {p.season_label}</div>
+        <div class="meta">{" · ".join(html.escape(f) for f in facts)}</div></div>
+        <div class="stats">
+          <div><div class="v">{int(p.minutes):,}</div><div class="l">Minutes</div></div>
+          <div><div class="v">{int(p.goals)}</div><div class="l">Goals</div></div>
+          <div><div class="v">{int(p.assists)}</div><div class="l">Assists</div></div>
+        </div></div>''', unsafe_allow_html=True)

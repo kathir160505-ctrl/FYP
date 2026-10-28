@@ -1,0 +1,661 @@
+team,formation,formation_place,athlete_id,player,position_abbr,position,recent_starts,of_matches,last_match
+AC Milan,3-4-2-1,1,189026,Mike Maignan,G,Goalkeeper,5,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,2,236210,Fikayo Tomori,RM,Right Midfielder,1,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,3,345637,Davide Bartesaghi,LM,Left Midfielder,1,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,4,388239,Sankhoun Diawara,CD-L,Center Left Defender,1,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,5,290375,Strahinja Pavlovic,CD,Center Defender,5,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,6,309570,Koni De Winter,CD-R,Center Right Defender,4,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,7,76762,Luka Modric,CM-R,Center Right Midfielder,4,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,8,303973,Ardon Jashari,CM-L,Center Left Midfielder,1,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,9,288896,Gonçalo Ramos,F,Forward,5,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,10,322771,Omari Hutchinson,CF-R,Center Right Forward,1,5,2026-10-25 19:45:00
+AC Milan,3-4-2-1,11,225607,Christian Pulisic,CF-L,Center Left Forward,4,5,2026-10-25 19:45:00
+Alavés,5-3-2,1,200910,Antonio Sivera,G,Goalkeeper,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,2,262491,Nahuel Tenaglia,RB,Right Back,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,3,345991,Abde Rebbach,LB,Left Back,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,4,318084,Nicolás Valentini,CD-L,Center Left Defender,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,5,149306,Ville Koski,CD,Center Defender,4,5,2026-10-23 19:00:00
+Alavés,5-3-2,6,176312,Jonny,CD-R,Center Right Defender,3,5,2026-10-23 19:00:00
+Alavés,5-3-2,7,106326,Pablo Ibáñez,CM-R,Center Right Midfielder,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,8,265997,Antonio Blanco,CM,Center Midfielder,4,5,2026-10-23 19:00:00
+Alavés,5-3-2,9,198832,Mariano Díaz,CF-L,Center Left Forward,2,5,2026-10-23 19:00:00
+Alavés,5-3-2,10,207236,Lucas Boyé,CF-R,Center Right Forward,5,5,2026-10-23 19:00:00
+Alavés,5-3-2,11,233802,Carles Aleñá,CM-L,Center Left Midfielder,2,5,2026-10-23 19:00:00
+Arsenal,4-2-3-1,1,196176,David Raya,G,Goalkeeper,5,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,2,241077,Ben White,RB,Right Back,4,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,3,298329,Riccardo Calafiori,LB,Left Back,4,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,4,218522,Bruno Guimarães,LM,Left Midfielder,2,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,5,231859,Ezri Konsa,CD-R,Center Right Defender,5,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,6,236322,Gabriel Magalhães,CD-L,Center Left Defender,5,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,7,280555,Bukayo Saka,AM-R,Attacking Midfielder Right,4,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,8,238262,Declan Rice,RM,Right Midfielder,5,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,9,231182,Kai Havertz,F,Forward,4,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,10,203669,Martin Ødegaard,AM,Attacking Midfielder,5,5,2026-10-24 14:00:00
+Arsenal,4-2-3-1,11,251400,Eberechi Eze,AM-L,Attacking Midfielder Left,2,5,2026-10-24 14:00:00
+Aston Villa,4-2-3-1,1,265958,Zion Suzuki,G,Goalkeeper,5,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,2,234698,Matty Cash,RB,Right Back,3,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,3,281125,Ian Maatsen,LB,Left Back,2,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,4,301524,João Gomes,LM,Left Midfielder,4,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,5,204679,Victor Lindelöf,CD-R,Center Right Defender,5,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,6,181312,Tyrone Mings,CD-L,Center Left Defender,3,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,7,382839,Alysson,AM-R,Attacking Midfielder Right,2,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,8,250936,Boubacar Kamara,RM,Right Midfielder,5,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,9,308524,Nicolas Jackson,F,Forward,5,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,10,386992,Johan Manzambi,AM,Attacking Midfielder,4,5,2026-10-24 11:30:00
+Aston Villa,4-2-3-1,11,214375,Emiliano Buendía,AM-L,Attacking Midfielder Left,4,5,2026-10-24 11:30:00
+Atalanta,4-3-3,1,284804,Marco Carnesecchi,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Atalanta,4-3-3,2,268452,Raoul Bellanova,RB,Right Back,5,5,2026-10-25 14:00:00
+Atalanta,4-3-3,3,303988,Lorenzo Bernasconi,LB,Left Back,2,5,2026-10-25 14:00:00
+Atalanta,4-3-3,4,278210,Éderson,CM,Center Midfielder,5,5,2026-10-25 14:00:00
+Atalanta,4-3-3,5,99909,Thomas Kristensen,CD-R,Center Right Defender,4,5,2026-10-25 14:00:00
+Atalanta,4-3-3,6,170553,Sead Kolasinac,CD-L,Center Left Defender,2,5,2026-10-25 14:00:00
+Atalanta,4-3-3,7,303296,Lazar Samardzic,RM,Right Midfielder,3,5,2026-10-25 14:00:00
+Atalanta,4-3-3,8,189668,Mario Pasalic,LM,Left Midfielder,1,5,2026-10-25 14:00:00
+Atalanta,4-3-3,9,258158,Nikola Krstovic,F,Forward,4,5,2026-10-25 14:00:00
+Atalanta,4-3-3,10,296319,Charles De Ketelaere,RF,Right Forward,5,5,2026-10-25 14:00:00
+Atalanta,4-3-3,11,118279,Jon Rowe,LF,Left Forward,5,5,2026-10-25 14:00:00
+Athletic Club,4-2-3-1,1,222375,Unai Simón,G,Goalkeeper,5,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,2,362572,Hugo Rincón,RB,Right Back,3,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,3,133768,Yuri Berchiche,LB,Left Back,4,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,4,377792,Mikel Jauregizar,LM,Left Midfielder,2,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,5,217225,Yeray,CD-R,Center Right Defender,2,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,6,159317,Aymeric Laporte,CD-L,Center Left Defender,4,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,7,209579,Álex Berenguer,AM-R,Attacking Midfielder Right,3,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,8,157708,Iñigo Ruiz de Galarreta,RM,Right Midfielder,5,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,9,393762,Maroan Sannadi,F,Forward,2,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,10,276996,Robert Navarro,AM,Attacking Midfielder,4,5,2026-10-25 13:00:00
+Athletic Club,4-2-3-1,11,312146,Nico Williams,AM-L,Attacking Midfielder Left,3,5,2026-10-25 13:00:00
+Atlético Madrid,4-4-2,1,149622,Jan Oblak,G,Goalkeeper,5,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,2,332613,Marc Pubill,RB,Right Back,3,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,3,368593,Daniel Martinez,LB,Left Back,1,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,4,336634,Pablo Barrios,CM-R,Center Right Midfielder,3,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,5,96970,Cristian Romero,CD-R,Center Right Defender,4,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,6,257786,Dávid Hancko,CD-L,Center Left Defender,3,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,7,323838,Giuliano Simeone,RM,Right Midfielder,3,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,8,274911,Morten Hjulmand,CM-L,Center Left Midfielder,2,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,9,274197,Lee Kang-In,CF-L,Center Left Forward,4,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,10,273499,Jonathan David,CF-R,Center Right Forward,4,5,2026-10-24 19:00:00
+Atlético Madrid,4-4-2,11,229645,Ademola Lookman,LM,Left Midfielder,4,5,2026-10-24 19:00:00
+Barcelona,4-3-3,1,297362,Joan García,G,Goalkeeper,4,5,2026-10-25 20:00:00
+Barcelona,4-3-3,2,403582,Xavi Espart,RB,Right Back,3,5,2026-10-25 20:00:00
+Barcelona,4-3-3,3,176399,João Cancelo,LB,Left Back,3,5,2026-10-25 20:00:00
+Barcelona,4-3-3,4,231828,Rodri,CM,Center Midfielder,5,5,2026-10-25 20:00:00
+Barcelona,4-3-3,5,368992,Pau Cubarsí,CD-R,Center Right Defender,3,5,2026-10-25 20:00:00
+Barcelona,4-3-3,6,312015,Gerard Martín,CD-L,Center Left Defender,4,5,2026-10-25 20:00:00
+Barcelona,4-3-3,7,354334,Fermín López,RM,Right Midfielder,3,5,2026-10-25 20:00:00
+Barcelona,4-3-3,8,250465,Pedri,LM,Left Midfielder,4,5,2026-10-25 20:00:00
+Barcelona,4-3-3,9,231050,Raphinha,F,Forward,3,5,2026-10-25 20:00:00
+Barcelona,4-3-3,10,362150,Lamine Yamal,RF,Right Forward,5,5,2026-10-25 20:00:00
+Barcelona,4-3-3,11,268782,Anthony Gordon,LF,Left Forward,3,5,2026-10-25 20:00:00
+Bologna,3-4-3,1,179358,Lukasz Skorupski,G,Goalkeeper,3,5,2026-10-24 13:00:00
+Bologna,3-4-3,2,291560,Nadir Zortea,RM,Right Midfielder,4,5,2026-10-24 13:00:00
+Bologna,3-4-3,3,261616,Juan Miranda,LM,Left Midfielder,5,5,2026-10-24 13:00:00
+Bologna,3-4-3,4,304222,Arthur Theate,CD-L,Center Left Defender,4,5,2026-10-24 13:00:00
+Bologna,3-4-3,5,250707,Nicoló,CD,Center Defender,3,5,2026-10-24 13:00:00
+Bologna,3-4-3,6,91873,Matteo Darmian,CD-R,Center Right Defender,3,5,2026-10-24 13:00:00
+Bologna,3-4-3,7,202429,Lewis Ferguson,CM-R,Center Right Midfielder,5,5,2026-10-24 13:00:00
+Bologna,3-4-3,8,276654,Tommaso Pobega,CM-L,Center Left Midfielder,5,5,2026-10-24 13:00:00
+Bologna,3-4-3,9,238407,Jens Odgaard,F,Forward,1,5,2026-10-24 13:00:00
+Bologna,3-4-3,10,180956,Federico Bernardeschi,CF-R,Center Right Forward,4,5,2026-10-24 13:00:00
+Bologna,3-4-3,11,287790,Nicolò Cambiaghi,CF-L,Center Left Forward,5,5,2026-10-24 13:00:00
+Bournemouth,4-2-3-1,1,289824,Djordje Petrovic,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,2,122268,Adam Smith,RB,Right Back,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,3,305684,Adrien Truffert,LB,Left Back,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,4,223452,Lewis Cook,LM,Left Midfielder,2,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,5,279155,James Hill,CD-R,Center Right Defender,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,6,346588,António Silva,CD-L,Center Left Defender,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,7,357719,Rayan,AM-R,Attacking Midfielder Right,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,8,222776,Tyler Adams,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,9,102368,Evanilson,F,Forward,5,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,10,245916,Justin Kluivert,AM,Attacking Midfielder,2,5,2026-10-25 14:00:00
+Bournemouth,4-2-3-1,11,243364,Marcus Tavernier,AM-L,Attacking Midfielder Left,5,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,1,275599,Caoimhín Kelleher,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,2,356640,Michael Kayode,RB,Right Back,4,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,3,284490,Keane Lewis-Potter,LB,Left Back,5,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,4,225564,Vitaly Janelt,LM,Left Midfielder,4,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,5,270507,Sepp van den Berg,CD-R,Center Right Defender,2,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,6,206173,Kristoffer Ajer,CD-L,Center Left Defender,5,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,7,315530,Dango Ouattara,AM-R,Attacking Midfielder Right,2,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,8,342029,Yehor Yarmoliuk,RM,Right Midfielder,4,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,9,301894,Igor Thiago,F,Forward,5,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,10,227472,Mathias Jensen,AM,Attacking Midfielder,2,5,2026-10-25 14:00:00
+Brentford,4-2-3-1,11,310958,Kevin Schade,AM-L,Attacking Midfielder Left,4,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,1,291609,Bart Verbruggen,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,2,238318,Ferdi Kadioglu,RB,Right Back,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,3,216017,Olivier Boscagli,LB,Left Back,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,4,387489,Chema Andrés,LM,Left Midfielder,4,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,5,364962,Luka Vuskovic,CD-R,Center Right Defender,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,6,147106,Lewis Dunk,CD-L,Center Left Defender,3,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,7,192278,Diego Gómez,AM-R,Attacking Midfielder Right,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,8,132659,Pascal Gross,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,9,387655,Charalambos Kostoulas,F,Forward,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,10,304242,Yasin Ayari,AM,Attacking Midfielder,5,5,2026-10-25 14:00:00
+Brighton,4-2-3-1,11,301327,Maxim De Cuyper,AM-L,Attacking Midfielder Left,5,5,2026-10-25 14:00:00
+Cagliari,4-3-2-1,1,278987,Elia Caprile,G,Goalkeeper,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,2,332684,Zé Pedro,RB,Right Back,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,3,322913,Adam Obert,LB,Left Back,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,4,202332,Harry Winks,CM,Center Midfielder,4,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,5,196901,Yerry Mina,CD-R,Center Right Defender,4,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,6,361506,Juan Rodríguez,CD-L,Center Left Defender,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,7,6729,Alessandro Romano,CM-L,Center Left Midfielder,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,8,272745,Michel Adopo,CM-R,Center Right Midfielder,5,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,9,418819,Paul Mendy,F,Forward,4,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,10,345390,Yanis Massolin,CF-R,Center Right Forward,2,5,2026-10-27 19:45:00
+Cagliari,4-3-2-1,11,290545,Daniel Maldini,CF-L,Center Left Forward,4,5,2026-10-27 19:45:00
+Celta Vigo,3-4-3,1,144720,Andrei Radu,G,Goalkeeper,5,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,2,331586,Javi Rueda,RM,Right Midfielder,4,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,3,231838,Javi Galán,LM,Left Midfielder,2,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,4,146127,Marcos Alonso,CD-L,Center Left Defender,3,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,5,384643,Yoel Lago,CD,Center Defender,5,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,6,376147,Javi Rodríguez,CD-R,Center Right Defender,2,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,7,297829,Ilaix Moriba,CM-R,Center Right Midfielder,5,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,8,240235,Aleix Febas,CM-L,Center Left Midfielder,2,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,9,138448,Pablo Durán,F,Forward,2,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,10,324811,Hugo Gonzalez,CF-R,Center Right Forward,3,5,2026-10-25 15:15:00
+Celta Vigo,3-4-3,11,188391,Hugo Álvarez,CF-L,Center Left Forward,5,5,2026-10-25 15:15:00
+Chelsea,3-4-2-1,1,158626,Emiliano Martínez,G,Goalkeeper,4,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,2,256115,Pedro Neto,RM,Right Midfielder,5,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,3,300331,Pep Chavarría,LM,Left Midfielder,2,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,4,296410,Levi Colwill,CD-L,Center Left Defender,5,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,5,265918,Maxence Lacroix,CD,Center Defender,4,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,6,368317,Josh Acheampong,CD-R,Center Right Defender,3,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,7,127262,Jordan Henderson,CM-R,Center Right Midfielder,4,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,8,289877,Moisés Caicedo,CM-L,Center Left Midfielder,3,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,9,265653,Morgan Rogers,F,Forward,5,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,10,296395,Cole Palmer,CF-R,Center Right Forward,5,5,2026-10-24 16:30:00
+Chelsea,3-4-2-1,11,376274,Geovany Quenda,CF-L,Center Left Forward,1,5,2026-10-24 16:30:00
+Como,4-2-3-1,1,214740,Jean Butez,G,Goalkeeper,4,5,2026-10-27 19:45:00
+Como,4-2-3-1,2,297084,Yan Couto,RB,Right Back,4,5,2026-10-27 19:45:00
+Como,4-2-3-1,3,192146,Álex Valle,LB,Left Back,3,5,2026-10-27 19:45:00
+Como,4-2-3-1,4,264211,Luis Milla,LM,Left Midfielder,3,5,2026-10-27 19:45:00
+Como,4-2-3-1,5,380318,Jacobo Ramón,CD-R,Center Right Defender,3,5,2026-10-27 19:45:00
+Como,4-2-3-1,6,175887,Marc-Oliver Kempf,CD-L,Center Left Defender,3,5,2026-10-27 19:45:00
+Como,4-2-3-1,7,291285,Lucas Da Cunha,AM-R,Attacking Midfielder Right,5,5,2026-10-27 19:45:00
+Como,4-2-3-1,8,309241,Máximo Perrone,RM,Right Midfielder,3,5,2026-10-27 19:45:00
+Como,4-2-3-1,9,262071,Anastasios Douvikas,F,Forward,5,5,2026-10-27 19:45:00
+Como,4-2-3-1,10,337970,Nico Paz,AM,Attacking Midfielder,4,5,2026-10-27 19:45:00
+Como,4-2-3-1,11,265912,Maxence Caqueret,AM-L,Attacking Midfielder Left,4,5,2026-10-27 19:45:00
+Coventry City,4-2-3-1,1,307069,Carl Rushworth,G,Goalkeeper,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,2,281139,Milan van Ewijk,RB,Right Back,4,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,3,206172,Jay Da Silva,LB,Left Back,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,4,191337,Matt Grimes,LM,Left Midfielder,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,5,303931,Bobby Thomas,CD-R,Center Right Defender,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,6,241093,Ethan Pinnock,CD-L,Center Left Defender,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,7,302002,Tatsuhiro Sakamoto,AM-R,Attacking Midfielder Right,2,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,8,387659,Caleb Yirenkyi,RM,Right Midfielder,4,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,9,366817,Sidiki Cherif,F,Forward,3,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,10,286967,Jack Rudoni,AM,Attacking Midfielder,5,5,2026-10-24 14:00:00
+Coventry City,4-2-3-1,11,240495,Brandon Thomas-Asante,AM-L,Attacking Midfielder Left,4,5,2026-10-24 14:00:00
+Crystal Palace,3-4-2-1,1,195738,Walter Benítez,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,2,332648,Anan Khalaili,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,3,300853,Tyrick Mitchell,LM,Left Midfielder,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,4,386252,Jaydee Canvot,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,5,272585,Chris Richards,CD,Center Defender,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,6,197399,Jefferson Lerma,CD-R,Center Right Defender,1,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,7,333419,Adam Wharton,CM-R,Center Right Midfielder,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,8,282230,Quinten Timber,CM-L,Center Left Midfielder,4,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,9,252747,Jørgen Strand Larsen,F,Forward,4,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,10,219362,Daichi Kamada,CF-R,Center Right Forward,5,5,2026-10-25 14:00:00
+Crystal Palace,3-4-2-1,11,297370,Yéremy Pino,CF-L,Center Left Forward,5,5,2026-10-25 14:00:00
+Deportivo La Coruña,4-4-2,1,300926,Leo Román,G,Goalkeeper,5,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,2,157568,Ximo Navarro,RB,Right Back,3,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,3,275924,Giacomo Quagliata,LB,Left Back,4,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,4,297353,Mario Soriano Carreno,CM-R,Center Right Midfielder,4,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,5,188398,José María Giménez,CD-R,Center Right Defender,5,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,6,3102992,Bright Ede,CD-L,Center Left Defender,3,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,7,324166,Luismi Cruz,RM,Right Midfielder,3,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,8,331742,Diego Villares,CM-L,Center Left Midfielder,3,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,9,414299,Bil Nsongo,CF-L,Center Left Forward,5,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,10,312392,Yeremay Hernández,CF-R,Center Right Forward,4,5,2026-10-24 19:00:00
+Deportivo La Coruña,4-4-2,11,279609,Riki Rodríguez,LM,Left Midfielder,3,5,2026-10-24 19:00:00
+Elche,4-3-3,1,173749,Matías Dituro,G,Goalkeeper,5,5,2026-10-24 12:00:00
+Elche,4-3-3,2,371608,Buba Sangaré,RB,Right Back,4,5,2026-10-24 12:00:00
+Elche,4-3-3,3,323286,Roy Revivo,LB,Left Back,5,5,2026-10-24 12:00:00
+Elche,4-3-3,4,421310,Javier Morcillo,CM,Center Midfielder,4,5,2026-10-24 12:00:00
+Elche,4-3-3,5,318181,Federico Redondo,CD-R,Center Right Defender,3,5,2026-10-24 12:00:00
+Elche,4-3-3,6,265995,Víctor Chust,CD-L,Center Left Defender,5,5,2026-10-24 12:00:00
+Elche,4-3-3,7,273424,Gonzalo Villar,RM,Right Midfielder,5,5,2026-10-24 12:00:00
+Elche,4-3-3,8,190291,Thomas Lemar,LM,Left Midfielder,4,5,2026-10-24 12:00:00
+Elche,4-3-3,9,301684,Fer Niño,F,Forward,3,5,2026-10-24 12:00:00
+Elche,4-3-3,10,320648,Lucas Cepeda,RF,Right Forward,3,5,2026-10-24 12:00:00
+Elche,4-3-3,11,297358,Germán Valera,LF,Left Forward,5,5,2026-10-24 12:00:00
+Espanyol,4-2-3-1,1,307419,Ángel Fortuño,G,Goalkeeper,3,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,2,310682,Omar El Hilali,RB,Right Back,4,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,3,346210,Quilindschy Hartman,LB,Left Back,3,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,4,260242,Pol Lozano,LM,Left Midfielder,3,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,5,277314,Vanja Drkusic,CD-R,Center Right Defender,2,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,6,133259,Leandro Cabrera,CD-L,Center Left Defender,5,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,7,367946,Javi Hernandez,AM-R,Attacking Midfielder Right,5,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,8,255272,Edu Expósito,RM,Right Midfielder,4,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,9,318773,Roberto Fernández,F,Forward,5,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,10,355902,Cala,AM,Attacking Midfielder,2,5,2026-10-24 14:15:00
+Espanyol,4-2-3-1,11,311571,Bryan Zaragoza,AM-L,Attacking Midfielder Left,4,5,2026-10-24 14:15:00
+Everton,4-2-3-1,1,159443,Jordan Pickford,G,Goalkeeper,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,2,214402,Ainsley Maitland-Niles,RB,Right Back,4,5,2026-10-24 14:00:00
+Everton,4-2-3-1,3,262594,Vitaliy Mykolenko,LB,Left Back,4,5,2026-10-24 14:00:00
+Everton,4-2-3-1,4,276220,James Garner,LM,Left Midfielder,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,5,155226,James Tarkowski,CD-R,Center Right Defender,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,6,286965,Jarrad Branthwaite,CD-L,Center Left Defender,4,5,2026-10-24 14:00:00
+Everton,4-2-3-1,7,291307,Brennan Johnson,AM-R,Attacking Midfielder Right,4,5,2026-10-24 14:00:00
+Everton,4-2-3-1,8,378458,Harrison Armstrong,RM,Right Midfielder,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,9,301166,Thierno Barry,F,Forward,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,10,252389,Kiernan Dewsbury-Hall,AM,Attacking Midfielder,5,5,2026-10-24 14:00:00
+Everton,4-2-3-1,11,172850,Jack Grealish,AM-L,Attacking Midfielder Left,3,5,2026-10-24 14:00:00
+Fiorentina,4-2-3-1,1,108482,David de Gea,G,Goalkeeper,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,2,367861,Álex Jiménez,RB,Right Back,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,3,364156,Viery,LB,Left Back,3,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,4,276254,Nicolò Fagioli,LM,Left Midfielder,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,5,310216,Radu Dragusin,CD-R,Center Right Defender,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,6,255650,Marin Pongracic,CD-L,Center Left Defender,2,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,7,376473,Franco Mastantuono,AM-R,Attacking Midfielder Right,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,8,360061,Cher Ndour,RM,Right Midfielder,5,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,9,289511,Beto,F,Forward,2,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,10,262591,Pedro Gonçalves,AM,Attacking Midfielder,1,5,2026-10-25 11:30:00
+Fiorentina,4-2-3-1,11,367743,Alieu Njie,AM-L,Attacking Midfielder Left,4,5,2026-10-25 11:30:00
+Frosinone,4-2-3-1,1,325056,Lorenzo Palmisani,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,2,315213,Anthony Oyono,RB,Right Back,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,3,346974,Gabriele Bracaglia,LB,Left Back,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,4,346840,Patrizio Masini,LM,Left Midfielder,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,5,352751,Gabriele Calvani,CD-R,Center Right Defender,4,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,6,333598,Giorgio Cittadini,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,7,356536,Farès Ghedjemis,AM-R,Attacking Midfielder Right,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,8,236038,Giacomo Calo,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,9,319265,Antonio Raimondo,F,Forward,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,10,238296,Romano Schmid,AM,Attacking Midfielder,5,5,2026-10-25 14:00:00
+Frosinone,4-2-3-1,11,360714,Giorgi Kvernadze,AM-L,Attacking Midfielder Left,5,5,2026-10-25 14:00:00
+Fulham,4-2-3-1,1,153765,Bernd Leno,G,Goalkeeper,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,2,197163,Timothy Castagne,RB,Right Back,4,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,3,222396,Antonee Robinson,LB,Left Back,4,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,4,324164,Shea Charles,LM,Left Midfielder,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,5,313230,David Affengruber,CD-R,Center Right Defender,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,6,263110,Calvin Bassey,CD-L,Center Left Defender,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,7,307111,Oscar Bobb,AM-R,Attacking Midfielder Right,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,8,218998,Sander Berge,RM,Right Midfielder,4,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,9,87297,Gonzalo García,F,Forward,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,10,409541,Josh King,AM,Attacking Midfielder,5,5,2026-10-24 14:00:00
+Fulham,4-2-3-1,11,175063,Alex Iwobi,AM-L,Attacking Midfielder Left,5,5,2026-10-24 14:00:00
+Genoa,3-4-2-1,1,205653,Justin Bijlow,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,2,324256,Mikael Ellertsson,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,3,306935,Mario Mitaj,LM,Left Midfielder,1,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,4,259975,Johan Vásquez,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,5,281736,Leo Østigard,CD,Center Defender,5,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,6,364761,Alessandro Marcandalli,CD-R,Center Right Defender,3,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,7,257058,Hamed Traoré,CM-R,Center Right Midfielder,2,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,8,418840,Samuel Wiafe,CM-L,Center Left Midfielder,2,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,9,275444,Milutin Osmajic,F,Forward,5,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,10,261054,Junior Messias,CF-R,Center Right Forward,4,5,2026-10-25 14:00:00
+Genoa,3-4-2-1,11,130036,Stephan El Shaarawy,CF-L,Center Left Forward,3,5,2026-10-25 14:00:00
+Getafe,5-4-1,1,196339,David Soria,G,Goalkeeper,5,5,2026-10-25 13:00:00
+Getafe,5-4-1,2,125749,Kiko Femenía,RB,Right Back,3,5,2026-10-25 13:00:00
+Getafe,5-4-1,3,173247,Johan Mojica,LB,Left Back,4,5,2026-10-25 13:00:00
+Getafe,5-4-1,4,395479,Jean Ives Valou,CD-L,Center Left Defender,2,5,2026-10-25 13:00:00
+Getafe,5-4-1,5,136673,Nemanja Gudelj,CD,Center Defender,5,5,2026-10-25 13:00:00
+Getafe,5-4-1,6,168531,Dani Carvajal,CD-R,Center Right Defender,2,5,2026-10-25 13:00:00
+Getafe,5-4-1,7,309838,Ramón Terrats,RM,Right Midfielder,4,5,2026-10-25 13:00:00
+Getafe,5-4-1,8,307186,Francho Serrano,CM-R,Center Right Midfielder,4,5,2026-10-25 13:00:00
+Getafe,5-4-1,9,310259,Ivan Azón,F,Forward,4,5,2026-10-25 13:00:00
+Getafe,5-4-1,10,357147,Mario Martín,CM-L,Center Left Midfielder,4,5,2026-10-25 13:00:00
+Getafe,5-4-1,11,284854,Martín Satriano,LM,Left Midfielder,4,5,2026-10-25 13:00:00
+Hull City,5-4-1,1,284199,Konstantinos Tzolakis,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,2,231826,Lewie Coyle,RB,Right Back,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,3,243576,Ryan Giles,LB,Left Back,4,5,2026-10-25 14:00:00
+Hull City,5-4-1,4,392320,Lucas Herrington,CD-L,Center Left Defender,3,5,2026-10-25 14:00:00
+Hull City,5-4-1,5,168424,John Egan,CD,Center Defender,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,6,178051,Semi Ajayi,CD-R,Center Right Defender,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,7,320417,Mohamed Belloumi,RM,Right Midfielder,4,5,2026-10-25 14:00:00
+Hull City,5-4-1,8,153613,Matt Crooks,CM-R,Center Right Midfielder,4,5,2026-10-25 14:00:00
+Hull City,5-4-1,9,193010,Oliver McBurnie,F,Forward,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,10,249851,Regan Slater,CM-L,Center Left Midfielder,5,5,2026-10-25 14:00:00
+Hull City,5-4-1,11,250478,Sorba Thomas,LM,Left Midfielder,3,5,2026-10-25 14:00:00
+Inter,3-5-2,1,240533,Josep Martínez,G,Goalkeeper,4,5,2026-10-25 11:30:00
+Inter,3-5-2,2,319167,Andy Diouf,RM,Right Midfielder,4,5,2026-10-25 11:30:00
+Inter,3-5-2,3,194748,Federico Dimarco,LM,Left Midfielder,3,5,2026-10-25 11:30:00
+Inter,3-5-2,4,249280,Alessandro Bastoni,CD-L,Center Left Defender,4,5,2026-10-25 11:30:00
+Inter,3-5-2,5,214562,Manuel Akanji,CD,Center Defender,4,5,2026-10-25 11:30:00
+Inter,3-5-2,6,266660,Yann Bisseck,CD-R,Center Right Defender,4,5,2026-10-25 11:30:00
+Inter,3-5-2,7,204441,Nicolò Barella,CM-R,Center Right Midfielder,4,5,2026-10-25 11:30:00
+Inter,3-5-2,8,147625,Henrikh Mkhitaryan,CM-L,Center Left Midfielder,3,5,2026-10-25 11:30:00
+Inter,3-5-2,9,362674,Pio Esposito,CF-L,Center Left Forward,4,5,2026-10-25 11:30:00
+Inter,3-5-2,10,217331,Marcus Thuram,CF-R,Center Right Forward,5,5,2026-10-25 11:30:00
+Inter,3-5-2,11,170785,Hakan Çalhanoglu,AM,Attacking Midfielder,2,5,2026-10-25 11:30:00
+Ipswich Town,4-2-3-1,1,168746,Christian Walton,G,Goalkeeper,4,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,2,336794,Abdoul Ouattara,RB,Right Back,4,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,3,283086,Leif Davis,LB,Left Back,5,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,4,256607,Florentino,LM,Left Midfielder,3,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,5,230963,Issa Diop,CD-R,Center Right Defender,5,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,6,243440,Dara O'Shea,CD-L,Center Left Defender,5,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,7,318680,Fatawu Issahaku,AM-R,Attacking Midfielder Right,3,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,8,222300,Sasa Lukic,RM,Right Midfielder,3,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,9,322654,Emersonn,F,Forward,5,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,10,20975,Julio Enciso,AM,Attacking Midfielder,5,5,2026-10-23 19:00:00
+Ipswich Town,4-2-3-1,11,295370,Jaden Philogene,AM-L,Attacking Midfielder Left,2,5,2026-10-23 19:00:00
+Juventus,4-2-3-1,1,204082,Guglielmo Vicario,G,Goalkeeper,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,2,290129,Pierre Kalulu,RB,Right Back,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,3,271873,Zeki Çelik,LB,Left Back,4,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,4,297337,Pape Matar Sarr,LM,Left Midfielder,2,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,5,258307,Bremer,CD-R,Center Right Defender,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,6,227697,Jhon Lucumí,CD-L,Center Left Defender,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,7,312659,Francisco Conceição,AM-R,Attacking Midfielder Right,3,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,8,320074,Douglas Luiz,RM,Right Midfielder,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,9,252971,Randal Kolo Muani,F,Forward,5,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,10,256715,Weston McKennie,AM,Attacking Midfielder,4,5,2026-10-25 17:00:00
+Juventus,4-2-3-1,11,391034,Kerim Alajbegovic,AM-L,Attacking Midfielder Left,3,5,2026-10-25 17:00:00
+Lazio,4-3-3,1,265140,Christos Mandas,G,Goalkeeper,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,2,330041,Romano Floriani,RB,Right Back,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,3,288901,Nuno Tavares,LB,Left Back,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,4,345323,Reda Belahyane,CM,Center Midfielder,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,5,305552,Josip Sutalo,CD-R,Center Right Defender,4,5,2026-10-27 17:30:00
+Lazio,4-3-3,6,333311,Oliver Provstgaard,CD-L,Center Left Defender,4,5,2026-10-27 17:30:00
+Lazio,4-3-3,7,250850,Davide Frattesi,RM,Right Midfielder,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,8,282228,Kenneth Taylor,LM,Left Midfielder,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,9,323113,Tijjani Noslin,F,Forward,5,5,2026-10-27 17:30:00
+Lazio,4-3-3,10,291550,Gustav Isaksen,RF,Right Forward,4,5,2026-10-27 17:30:00
+Lazio,4-3-3,11,204669,Mattia Zaccagni,LF,Left Forward,5,5,2026-10-27 17:30:00
+Lecce,4-3-3,1,177812,Wladimiro Falcone,G,Goalkeeper,5,5,2026-10-25 17:00:00
+Lecce,4-3-3,2,344844,Danilo Veiga,RB,Right Back,5,5,2026-10-25 17:00:00
+Lecce,4-3-3,3,277441,Antonino Gallo,LB,Left Back,5,5,2026-10-25 17:00:00
+Lecce,4-3-3,4,334793,Oumar Ngom,CM,Center Midfielder,2,5,2026-10-25 17:00:00
+Lecce,4-3-3,5,318604,Kialonda Gaspar,CD-R,Center Right Defender,3,5,2026-10-25 17:00:00
+Lecce,4-3-3,6,379865,Tiago Gabriel,CD-L,Center Left Defender,4,5,2026-10-25 17:00:00
+Lecce,4-3-3,7,223947,Lassana Coulibaly,RM,Right Midfielder,4,5,2026-10-25 17:00:00
+Lecce,4-3-3,8,241405,Youssef Maleh,LM,Left Midfielder,5,5,2026-10-25 17:00:00
+Lecce,4-3-3,9,259744,Willem Geubbels,F,Forward,2,5,2026-10-25 17:00:00
+Lecce,4-3-3,10,286582,Konan N’Dri,RF,Right Forward,3,5,2026-10-25 17:00:00
+Lecce,4-3-3,11,330550,Amar Ahmed,LF,Left Forward,3,5,2026-10-25 17:00:00
+Leeds United,3-4-2-1,1,307118,James Trafford,G,Goalkeeper,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,2,243408,Jayden Bogle,RM,Right Midfielder,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,3,250166,Gabriel Gudmundsson,LM,Left Midfielder,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,4,318390,Tarik Muharemovic,CD-L,Center Left Defender,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,5,212237,Nico Elvedi,CD,Center Defender,4,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,6,231863,James Justin,CD-R,Center Right Defender,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,7,241317,Ethan Ampadu,CM-R,Center Right Midfielder,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,8,253173,Ao Tanaka,CM-L,Center Left Midfielder,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,9,197717,Dominic Calvert-Lewin,F,Forward,5,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,10,304802,Anton Stach,CF-R,Center Right Forward,4,5,2026-10-25 16:30:00
+Leeds United,3-4-2-1,11,270641,Noah Okafor,CF-L,Center Left Forward,4,5,2026-10-25 16:30:00
+Levante,4-4-2,1,141438,Mathew Ryan,G,Goalkeeper,5,5,2026-10-25 17:30:00
+Levante,4-4-2,2,186024,Jeremy Toljan,RB,Right Back,3,5,2026-10-25 17:30:00
+Levante,4-4-2,3,300985,Manu Sánchez,LB,Left Back,5,5,2026-10-25 17:30:00
+Levante,4-4-2,4,317784,Jon Ander Olasagasti,CM-R,Center Right Midfielder,4,5,2026-10-25 17:30:00
+Levante,4-4-2,5,150451,Aïssa Mandi,CD-R,Center Right Defender,3,5,2026-10-25 17:30:00
+Levante,4-4-2,6,407397,Ifeanyi Ndukwe,CD-L,Center Left Defender,4,5,2026-10-25 17:30:00
+Levante,4-4-2,7,267591,Roger Brugué,RM,Right Midfielder,5,5,2026-10-25 17:30:00
+Levante,4-4-2,8,362752,Dani Requena,CM-L,Center Left Midfielder,3,5,2026-10-25 17:30:00
+Levante,4-4-2,9,342136,Petar Ratkov,CF-L,Center Left Forward,2,5,2026-10-25 17:30:00
+Levante,4-4-2,10,311054,Iván Romero,CF-R,Center Right Forward,5,5,2026-10-25 17:30:00
+Levante,4-4-2,11,339195,Thiago Fernández,LM,Left Midfielder,4,5,2026-10-25 17:30:00
+Liverpool,4-2-3-1,1,196876,Alisson Becker,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,2,270821,Ronald Araujo,RB,Right Back,5,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,3,323110,Milos Kerkez,LB,Left Back,4,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,4,249299,Alexis Mac Allister,LM,Left Midfielder,4,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,5,355980,Jérémy Jacquet,CD-R,Center Right Defender,5,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,6,157892,Virgil van Dijk,CD-L,Center Left Defender,5,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,7,397545,Víctor Muñoz,AM-R,Attacking Midfielder Right,3,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,8,274632,Ryan Gravenberch,RM,Right Midfielder,3,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,9,235662,Alexander Isak,F,Forward,4,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,10,303748,Florian Wirtz,AM,Attacking Midfielder,5,5,2026-10-25 14:00:00
+Liverpool,4-2-3-1,11,328238,Bradley Barcola,AM-L,Attacking Midfielder Left,5,5,2026-10-25 14:00:00
+Manchester City,4-2-3-1,1,217092,Gianluigi Donnarumma,G,Goalkeeper,5,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,2,303785,Matheus Nunes,RB,Right Back,4,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,3,299910,Josko Gvardiol,LB,Left Back,3,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,4,285450,Enzo Fernández,LM,Left Midfielder,4,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,5,234878,Rúben Dias,CD-R,Center Right Defender,5,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,6,265907,Marc Guéhi,CD-L,Center Left Defender,5,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,7,268641,Iliman Ndiaye,AM-R,Attacking Midfielder Right,4,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,8,238472,Elliot Anderson,RM,Right Midfielder,4,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,9,253989,Erling Haaland,F,Forward,5,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,10,298008,Rayan Cherki,AM,Attacking Midfielder,4,5,2026-10-24 11:30:00
+Manchester City,4-2-3-1,11,283672,Jérémy Doku,AM-L,Attacking Midfielder Left,2,5,2026-10-24 11:30:00
+Manchester United,4-2-3-1,1,301425,Senne Lammens,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,2,340206,Leny Yoro,RB,Right Back,3,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,3,238902,Diogo Dalot,LB,Left Back,4,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,4,338814,Carlos Baleba,LM,Left Midfielder,2,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,5,157073,Harry Maguire,CD-R,Center Right Defender,5,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,6,233937,Lisandro Martínez,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,7,291630,Amad Diallo,AM-R,Attacking Midfielder Right,3,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,8,314858,Andrey Santos,RM,Right Midfielder,2,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,9,271170,Bryan Mbeumo,F,Forward,5,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,10,193297,Youri Tielemans,AM,Attacking Midfielder,5,5,2026-10-25 14:00:00
+Manchester United,4-2-3-1,11,231167,Mason Mount,AM-L,Attacking Midfielder Left,1,5,2026-10-25 14:00:00
+Monza,3-4-2-1,1,301377,Noel Törnqvist,G,Goalkeeper,4,5,2026-10-23 18:45:00
+Monza,3-4-2-1,2,248440,Samuele Birindelli,RM,Right Midfielder,5,5,2026-10-23 18:45:00
+Monza,3-4-2-1,3,259871,Ricardo Mangas,LM,Left Midfielder,5,5,2026-10-23 18:45:00
+Monza,3-4-2-1,4,301278,Andrea Carboni,CD-L,Center Left Defender,5,5,2026-10-23 18:45:00
+Monza,3-4-2-1,5,367635,Lorenzo Lucchesi,CD,Center Defender,4,5,2026-10-23 18:45:00
+Monza,3-4-2-1,6,390673,Eddy Kouadio,CD-R,Center Right Defender,4,5,2026-10-23 18:45:00
+Monza,3-4-2-1,7,376261,Manga Foe Ondoa,CM-R,Center Right Midfielder,2,5,2026-10-23 18:45:00
+Monza,3-4-2-1,8,362776,Ebenezer Akinsanmiro,CM-L,Center Left Midfielder,5,5,2026-10-23 18:45:00
+Monza,3-4-2-1,9,384482,Gustavo Varela,F,Forward,5,5,2026-10-23 18:45:00
+Monza,3-4-2-1,10,235453,Dany Mota,CF-R,Center Right Forward,2,5,2026-10-23 18:45:00
+Monza,3-4-2-1,11,355359,Jay Robinson,CF-L,Center Left Forward,4,5,2026-10-23 18:45:00
+Málaga,4-1-4-1,1,240624,Alfonso Herrero,G,Goalkeeper,5,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,2,331785,Carlos Puga,RB,Right Back,3,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,3,376166,Rafa Garrido,LB,Left Back,4,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,4,292225,Ramón Enríquez,DM,Defensive Midfielder,1,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,5,319783,Ángel Recio,CD-R,Center Right Defender,5,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,6,192430,Einar Galilea,CD-L,Center Left Defender,2,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,7,297828,David Larrubia,RM,Right Midfielder,5,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,8,324098,Carlos Dotor,CM-R,Center Right Midfielder,4,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,9,373542,Adrián Niño,F,Forward,2,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,10,331533,Daniel Lorenzo,CM-L,Center Left Midfielder,3,5,2026-10-23 19:00:00
+Málaga,4-1-4-1,11,180444,Joaquín Muñoz,LM,Left Midfielder,2,5,2026-10-23 19:00:00
+Napoli,4-2-3-1,1,219531,Vanja Milinkovic-Savic,G,Goalkeeper,2,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,2,155904,Giovanni Di Lorenzo,RB,Right Back,5,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,3,234881,Mathías Olivera,LB,Left Back,2,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,4,188412,Stanislav Lobotka,LM,Left Midfielder,4,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,5,205576,Amir Rrahmani,CD-R,Center Right Defender,4,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,6,297360,Rafa Marín,CD-L,Center Left Defender,4,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,7,188306,Matteo Politano,AM-R,Attacking Midfielder Right,3,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,8,274217,Billy Gilmour,RM,Right Midfielder,3,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,9,309273,Rasmus Højlund,F,Forward,4,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,10,134947,Kevin De Bruyne,AM,Attacking Midfielder,4,5,2026-10-24 16:00:00
+Napoli,4-2-3-1,11,255344,Noa Lang,AM-L,Attacking Midfielder Left,3,5,2026-10-24 16:00:00
+Newcastle United,4-2-3-1,1,319267,Lukás Hornícek,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,2,349078,Lewis Miley,RB,Right Back,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,3,106139,Lewis Hall,LB,Left Back,5,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,4,202232,Joelinton,LM,Left Midfielder,2,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,5,303444,Malick Thiaw,CD-R,Center Right Defender,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,6,274633,Sven Botman,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,7,172836,Jacob Murphy,AM-R,Attacking Midfielder Right,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,8,323986,Nico González,RM,Right Midfielder,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,9,224077,Yoane Wissa,F,Forward,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,10,259517,Joe Willock,AM,Attacking Midfielder,4,5,2026-10-25 14:00:00
+Newcastle United,4-2-3-1,11,243386,Harvey Barnes,AM-L,Attacking Midfielder Left,5,5,2026-10-25 14:00:00
+Nottingham Forest,3-4-2-1,1,179497,Matz Sels,G,Goalkeeper,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,2,146679,Daniel Muñoz,RM,Right Midfielder,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,3,291638,Neco Williams,LM,Left Midfielder,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,4,338894,Murillo,CD-L,Center Left Defender,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,5,343964,Ousmane Diomande,CD,Center Defender,4,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,6,338876,Jair Paula,CD-R,Center Right Defender,3,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,7,298518,James McAtee,CM-R,Center Right Midfielder,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,8,238886,Xaver Schlager,CM-L,Center Left Midfielder,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,9,307114,Liam Delap,F,Forward,5,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,10,243396,Morgan Gibbs-White,CF-R,Center Right Forward,4,5,2026-10-23 19:00:00
+Nottingham Forest,3-4-2-1,11,275842,Dan Ndoye,CF-L,Center Left Forward,5,5,2026-10-23 19:00:00
+Osasuna,5-4-1,1,144759,Aitor Fernández,G,Goalkeeper,5,5,2026-10-26 20:00:00
+Osasuna,5-4-1,2,380918,Iñigo Arguibide,RB,Right Back,3,5,2026-10-26 20:00:00
+Osasuna,5-4-1,3,193943,Diego Rico,LB,Left Back,1,5,2026-10-26 20:00:00
+Osasuna,5-4-1,4,415867,Unai Santos,CD-L,Center Left Defender,3,5,2026-10-26 20:00:00
+Osasuna,5-4-1,5,264175,Alejandro Catena,CD,Center Defender,4,5,2026-10-26 20:00:00
+Osasuna,5-4-1,6,381628,Asier Osambela,CD-R,Center Right Defender,2,5,2026-10-26 20:00:00
+Osasuna,5-4-1,7,178328,Rubén García,RM,Right Midfielder,4,5,2026-10-26 20:00:00
+Osasuna,5-4-1,8,286176,Jon Moncayola,CM-R,Center Right Midfielder,4,5,2026-10-26 20:00:00
+Osasuna,5-4-1,9,207288,Ante Budimir,F,Forward,4,5,2026-10-26 20:00:00
+Osasuna,5-4-1,10,359154,Iker Muñoz,CM-L,Center Left Midfielder,2,5,2026-10-26 20:00:00
+Osasuna,5-4-1,11,209580,Enrique Barja,LM,Left Midfielder,1,5,2026-10-26 20:00:00
+Parma,3-4-2-1,1,290792,Edoardo Corvi,G,Goalkeeper,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,2,272694,Enrico Del Prato,RM,Right Midfielder,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,3,261274,Emanuele Valeri,LM,Left Midfielder,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,4,308939,Franco Carboni,CD-L,Center Left Defender,1,5,2026-10-24 18:45:00
+Parma,3-4-2-1,5,366526,Mariano Troilo,CD,Center Defender,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,6,196860,Diego Carlos,CD-R,Center Right Defender,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,7,276653,Adrián Bernabé,CM-R,Center Right Midfielder,1,5,2026-10-24 18:45:00
+Parma,3-4-2-1,8,316609,Mandela Keita,CM-L,Center Left Midfielder,5,5,2026-10-24 18:45:00
+Parma,3-4-2-1,9,301980,José Romero,F,Forward,3,5,2026-10-24 18:45:00
+Parma,3-4-2-1,10,323118,Giovanni Fabbian,CF-R,Center Right Forward,2,5,2026-10-24 18:45:00
+Parma,3-4-2-1,11,287430,El Bilal Toure,CF-L,Center Left Forward,5,5,2026-10-24 18:45:00
+Racing Santander,4-1-4-1,1,323970,Julen Agirrezabala,G,Goalkeeper,5,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,2,300471,Alvaro Mantilla,RB,Right Back,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,3,178237,Jorge Salinas,LB,Left Back,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,4,107960,Matteo Prati,DM,Defensive Midfielder,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,5,282672,Pablo Ramon,CD-R,Center Right Defender,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,6,333927,Jeanuël Belocian,CD-L,Center Left Defender,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,7,125383,Sergio Canales,RM,Right Midfielder,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,8,330545,Iván Martín,CM-R,Center Right Midfielder,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,9,390389,Yassir Zabiri,F,Forward,4,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,10,286604,André Almeida,CM-L,Center Left Midfielder,3,5,2026-10-24 14:15:00
+Racing Santander,4-1-4-1,11,284699,Iñigo Vicente,LM,Left Midfielder,4,5,2026-10-24 14:15:00
+Rayo Vallecano,4-2-3-1,1,207834,Emil Audero,G,Goalkeeper,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,2,158151,Iván Balliu,RB,Right Back,2,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,3,277292,Adrià Pedrosa,LB,Left Back,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,4,203711,Unai López,LM,Left Midfielder,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,5,140754,Florian Lejeune,CD-R,Center Right Defender,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,6,265996,Mujaid Sadick,CD-L,Center Left Defender,4,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,7,260740,Jorge de Frutos,AM-R,Attacking Midfielder Right,3,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,8,294228,Pathé Ciss,RM,Right Midfielder,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,9,276652,Sergio Camello,F,Forward,5,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,10,264078,Pedro Díaz,AM,Attacking Midfielder,3,5,2026-10-24 12:00:00
+Rayo Vallecano,4-2-3-1,11,125200,Álvaro García,AM-L,Attacking Midfielder Left,5,5,2026-10-24 12:00:00
+Real Betis,4-2-3-1,1,283892,Álvaro Valles,G,Goalkeeper,5,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,2,178978,Héctor Bellerín,RB,Right Back,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,3,213050,Fran García,LB,Left Back,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,4,202717,Dani Ceballos,LM,Left Midfielder,2,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,5,181530,Diego Llorente,CD-R,Center Right Defender,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,6,301526,Natan,CD-L,Center Left Defender,4,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,7,281558,Antony,AM-R,Attacking Midfielder Right,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,8,242008,Marc Roca,RM,Right Midfielder,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,9,336809,Cucho Hernández,F,Forward,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,10,143564,Isco,AM,Attacking Midfielder,3,5,2026-10-25 15:15:00
+Real Betis,4-2-3-1,11,300912,Abde Ezzalzouli,AM-L,Attacking Midfielder Left,5,5,2026-10-25 15:15:00
+Real Madrid,4-2-3-1,1,134283,Thibaut Courtois,G,Goalkeeper,4,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,2,235818,Federico Valverde,RB,Right Back,5,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,3,259910,Marc Cucurella,LB,Left Back,4,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,4,265919,Aurélien Tchouaméni,LM,Left Midfielder,5,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,5,251634,Ibrahima Konaté,CD-R,Center Right Defender,5,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,6,356000,Dean Huijsen,CD-L,Center Left Defender,4,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,7,310452,Arda Güler,AM-R,Attacking Midfielder Right,5,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,8,199833,Bernardo Silva,RM,Right Midfielder,1,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,9,231388,Kylian Mbappé,F,Forward,5,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,10,291281,Jude Bellingham,AM,Attacking Midfielder,4,5,2026-10-25 20:00:00
+Real Madrid,4-2-3-1,11,402479,Yan Diomande,AM-L,Attacking Midfielder Left,4,5,2026-10-25 20:00:00
+Real Sociedad,4-4-2,1,217319,Álex Remiro,G,Goalkeeper,5,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,2,363039,Héctor Fort,RB,Right Back,2,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,3,265993,Sergio Gómez,LB,Left Back,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,4,388601,Jon Gorrotxategi,CM-R,Center Right Midfielder,3,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,5,366885,Jon Martín,CD-R,Center Right Defender,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,6,355433,Mamadou Sarr,CD-L,Center Left Defender,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,7,306263,Luka Sucic,RM,Right Midfielder,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,8,235072,Carlos Soler,CM-L,Center Left Midfielder,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,9,341367,Orri Óskarsson,CF-L,Center Left Forward,2,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,10,229018,Mikel Oyarzabal,CF-R,Center Right Forward,4,5,2026-10-25 17:30:00
+Real Sociedad,4-4-2,11,213141,Gonçalo Guedes,LM,Left Midfielder,4,5,2026-10-25 17:30:00
+Roma,3-4-2-1,1,206587,Pierluigi Gollini,G,Goalkeeper,4,5,2026-10-27 19:45:00
+Roma,3-4-2-1,2,409371,Emanuele Lulli,RM,Right Midfielder,2,5,2026-10-27 19:45:00
+Roma,3-4-2-1,3,297300,Devyne Rensch,LM,Left Midfielder,2,5,2026-10-27 19:45:00
+Roma,3-4-2-1,4,222529,Mario Hermoso,CD-L,Center Left Defender,3,5,2026-10-27 19:45:00
+Roma,3-4-2-1,5,242593,Evan Ndicka,CD,Center Defender,4,5,2026-10-27 19:45:00
+Roma,3-4-2-1,6,212597,Gianluca Mancini,CD-R,Center Right Defender,4,5,2026-10-27 19:45:00
+Roma,3-4-2-1,7,146335,Marten de Roon,CM-R,Center Right Midfielder,4,5,2026-10-27 19:45:00
+Roma,3-4-2-1,8,285226,Manu Koné,CM-L,Center Left Midfielder,2,5,2026-10-27 19:45:00
+Roma,3-4-2-1,9,250284,Santiago Castro,F,Forward,2,5,2026-10-27 19:45:00
+Roma,3-4-2-1,10,164839,Paulo Dybala,CF-R,Center Right Forward,2,5,2026-10-27 19:45:00
+Roma,3-4-2-1,11,387204,Rodrigo Mora,CF-L,Center Left Forward,1,5,2026-10-27 19:45:00
+Sassuolo,4-2-3-1,1,261399,Stefano Turati,G,Goalkeeper,2,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,2,292199,Ignace van der Brempt,RB,Right Back,3,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,3,290418,Josh Doig,LB,Left Back,4,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,4,384170,Darryl Bakola,LM,Left Midfielder,5,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,5,291729,Cas Odenthal,CD-R,Center Right Defender,2,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,6,194766,Duje Caleta-Car,CD-L,Center Left Defender,5,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,7,173817,Domenico Berardi,AM-R,Attacking Midfielder Right,5,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,8,347408,Luca Lipani,RM,Right Midfielder,1,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,9,286929,Sebastiano Esposito,F,Forward,4,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,10,284212,Kristian Thorstvedt,AM,Attacking Midfielder,3,5,2026-10-27 17:30:00
+Sassuolo,4-2-3-1,11,272719,Armand Laurienté,AM-L,Attacking Midfielder Left,4,5,2026-10-27 17:30:00
+Sevilla,4-2-3-1,1,159135,Odisseas Vlachodimos,G,Goalkeeper,5,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,2,279738,Juan Iglesias,RB,Right Back,5,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,3,222037,Gabriel Suazo,LB,Left Back,5,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,4,277307,Youssouf Fofana,LM,Left Midfielder,5,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,5,332246,Andrés Castrín,CD-R,Center Right Defender,5,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,6,334163,Enrique Salas,CD-L,Center Left Defender,4,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,7,375514,Miguel Sierra,AM-R,Attacking Midfielder Right,3,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,8,258923,Giorgi Kochorashvili,RM,Right Midfielder,2,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,9,322993,Robbie Ure,F,Forward,3,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,10,347359,Peque,AM,Attacking Midfielder,1,5,2026-10-26 20:00:00
+Sevilla,4-2-3-1,11,288900,Felix Correia,AM-L,Attacking Midfielder Left,5,5,2026-10-26 20:00:00
+Sunderland,4-2-3-1,1,301449,Robin Roefs,G,Goalkeeper,5,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,2,290207,Trai Hume,RB,Right Back,3,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,3,230081,Reinildo Mandava,LB,Left Back,4,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,4,340240,Noah Sadiki,LM,Left Midfielder,5,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,5,214188,Nordi Mukiele,CD-R,Center Right Defender,5,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,6,191574,Luke O'Nien,CD-L,Center Left Defender,1,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,7,166473,Thomas Meunier,AM-R,Attacking Midfielder Right,3,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,8,149981,Granit Xhaka,RM,Right Midfielder,5,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,9,282229,Brian Brobbey,F,Forward,3,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,10,288340,Enzo Le Fée,AM,Attacking Midfielder,5,5,2026-10-25 16:30:00
+Sunderland,4-2-3-1,11,318090,Nilson Angulo,AM-L,Attacking Midfielder Left,4,5,2026-10-25 16:30:00
+Torino,3-5-2,1,252406,Lucas Perri,G,Goalkeeper,5,5,2026-10-27 19:45:00
+Torino,3-5-2,2,364590,Rafik Belghali,RM,Right Midfielder,4,5,2026-10-27 19:45:00
+Torino,3-5-2,3,403148,Alessio Cacciamani,LM,Left Midfielder,5,5,2026-10-27 19:45:00
+Torino,3-5-2,4,367168,Pietro Comuzzo,CD-L,Center Left Defender,4,5,2026-10-27 19:45:00
+Torino,3-5-2,5,239120,Adrian Ismajli,CD,Center Defender,4,5,2026-10-27 19:45:00
+Torino,3-5-2,6,274258,Saúl Coco,CD-R,Center Right Defender,5,5,2026-10-27 19:45:00
+Torino,3-5-2,7,206378,Nikola Vlasic,CM-R,Center Right Midfielder,4,5,2026-10-27 19:45:00
+Torino,3-5-2,8,305589,Kian Fitz-Jim,CM-L,Center Left Midfielder,3,5,2026-10-27 19:45:00
+Torino,3-5-2,9,213725,Ché Adams,CF-L,Center Left Forward,4,5,2026-10-27 19:45:00
+Torino,3-5-2,10,189974,Giovanni Simeone,CF-R,Center Right Forward,5,5,2026-10-27 19:45:00
+Torino,3-5-2,11,290592,Daniel Bragança,AM,Attacking Midfielder,4,5,2026-10-27 19:45:00
+Tottenham,4-2-3-1,1,324393,Antonín Kinsky,G,Goalkeeper,5,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,2,328050,Archie Gray,RB,Right Back,4,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,3,104943,Andy Robertson,LB,Left Back,4,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,4,261047,Sandro Tonali,LM,Left Midfielder,5,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,5,282583,Jan Paul van Hecke,CD-R,Center Right Defender,5,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,6,296512,Micky van de Ven,CD-L,Center Left Defender,4,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,7,266599,Mohammed Kudus,AM-R,Attacking Midfielder Right,3,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,8,346820,Mateus Fernandes,RM,Right Midfielder,3,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,9,194115,Dominic Solanke,F,Forward,4,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,10,194450,James Maddison,AM,Attacking Midfielder,2,5,2026-10-24 16:30:00
+Tottenham,4-2-3-1,11,325042,Mathys Tel,AM-L,Attacking Midfielder Left,1,5,2026-10-24 16:30:00
+Udinese,3-4-2-1,1,295476,Maduka Okoye,G,Goalkeeper,5,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,2,221436,Mërgim Vojvoda,RM,Right Midfielder,5,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,3,193919,Hassane Kamara,LM,Left Midfielder,5,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,4,242601,Enzo Ebosse,CD-L,Center Left Defender,4,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,5,150081,Christian Kabasele,CD,Center Defender,3,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,6,342837,James Abankwah,CD-R,Center Right Defender,4,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,7,237055,Jesper Karlström,CM-R,Center Right Midfielder,5,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,8,306579,Oier Zarraga,CM-L,Center Left Midfielder,2,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,9,233654,Keinan Davis,F,Forward,4,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,10,270817,Jurgen Ekkelenkamp,CF-R,Center Right Forward,5,5,2026-10-25 19:45:00
+Udinese,3-4-2-1,11,258933,Giorgi Chakvetadze,CF-L,Center Left Forward,3,5,2026-10-25 19:45:00
+Valencia,4-2-3-1,1,165334,Stole Dimitrievski,G,Goalkeeper,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,2,222661,Pablo Maffeo,RB,Right Back,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,3,178747,José Gayà,LB,Left Back,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,4,212185,Guido Rodríguez,LM,Left Midfielder,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,5,330552,César Tárrega,CD-R,Center Right Defender,2,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,6,282086,Justin de Haas,CD-L,Center Left Defender,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,7,253763,Dani Raba,AM-R,Attacking Midfielder Right,2,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,8,231603,Pepelu,RM,Right Midfielder,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,9,267477,Hugo Duro,F,Forward,4,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,10,16340,Javi Guerra,AM,Attacking Midfielder,5,5,2026-10-24 16:30:00
+Valencia,4-2-3-1,11,231618,Arnaut Danjuma,AM-L,Attacking Midfielder Left,4,5,2026-10-24 16:30:00
+Venezia,3-5-2,1,289560,Filip Stankovic,G,Goalkeeper,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,2,346916,Antoine Hainaut,RM,Right Midfielder,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,3,181192,Ridgeciano Haps,LM,Left Midfielder,3,5,2026-10-25 14:00:00
+Venezia,3-5-2,4,170663,Juan Jesus,CD-L,Center Left Defender,4,5,2026-10-25 14:00:00
+Venezia,3-5-2,5,186457,Matías Moreno,CD,Center Defender,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,6,328300,Redouane Halhal,CD-R,Center Right Defender,3,5,2026-10-25 14:00:00
+Venezia,3-5-2,7,276636,Enrique Perez,CM-R,Center Right Midfielder,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,8,221057,Toma Basic,CM-L,Center Left Midfielder,3,5,2026-10-25 14:00:00
+Venezia,3-5-2,9,288472,Akor Adams,CF-L,Center Left Forward,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,10,265926,John Yeboah,CF-R,Center Right Forward,5,5,2026-10-25 14:00:00
+Venezia,3-5-2,11,275015,Simon Sohm,AM,Attacking Midfielder,5,5,2026-10-25 14:00:00
+Villarreal,4-4-2,1,119620,Péter Gulácsi,G,Goalkeeper,5,5,2026-10-24 16:30:00
+Villarreal,4-4-2,2,248276,Alex Freeman,RB,Right Back,5,5,2026-10-24 16:30:00
+Villarreal,4-4-2,3,289072,Sergi Cardona,LB,Left Back,4,5,2026-10-24 16:30:00
+Villarreal,4-4-2,4,415438,Carlos Macià,CM-R,Center Right Midfielder,2,5,2026-10-24 16:30:00
+Villarreal,4-4-2,5,242710,Juan Foyth,CD-R,Center Right Defender,3,5,2026-10-24 16:30:00
+Villarreal,4-4-2,6,337011,Renato Veiga,CD-L,Center Left Defender,4,5,2026-10-24 16:30:00
+Villarreal,4-4-2,7,331047,Ilias Akhomach,RM,Right Midfielder,5,5,2026-10-24 16:30:00
+Villarreal,4-4-2,8,255889,Pape Gueye,CM-L,Center Left Midfielder,3,5,2026-10-24 16:30:00
+Villarreal,4-4-2,9,192133,Ayoze Pérez,CF-L,Center Left Forward,5,5,2026-10-24 16:30:00
+Villarreal,4-4-2,10,156172,Gerard Moreno,CF-R,Center Right Forward,1,5,2026-10-24 16:30:00
+Villarreal,4-4-2,11,284769,Tajon Buchanan,LM,Left Midfielder,3,5,2026-10-24 16:30:00

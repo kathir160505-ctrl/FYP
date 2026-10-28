@@ -349,3 +349,79 @@ def europe_vs_dominance(s: pd.DataFrame) -> go.Figure:
     fig.update_xaxes(title="League attacking dominance (PC1)  →")
     fig.update_yaxes(title="Champions League points per match", range=[-0.1, 3.1])
     return _layout(fig, height=440)
+
+
+# ESPN position codes -> (depth from own goal, lateral position from left -1 to right +1)
+POSITION_XY = {"G": (0, 0), "SW": (0.8, 0), "CD": (1, 0), "CD-L": (1, -0.35), "CD-R": (1, 0.35),
+               "LB": (1, -1), "RB": (1, 1), "DM": (2, 0), "CM": (3, 0), "CM-L": (3, -0.35), "CM-R": (3, 0.35),
+               "M": (3, 0), "LM": (3.5, -1), "RM": (3.5, 1), "AM": (4, 0), "AM-L": (4, -0.5), "AM-R": (4, 0.5),
+               "LF": (5, -0.8), "RF": (5, 0.8), "F": (5, 0), "CF": (5, 0), "CF-L": (5, -0.3), "CF-R": (5, 0.3),
+               "RCF": (5, 0.3)}
+
+
+def formation_layout(xi: pd.DataFrame, formation: str | None) -> pd.DataFrame:
+    """Pitch coordinates for a starting XI: lines from the formation string, order within a line from the
+    ESPN position codes (depth, then left to right)."""
+    xi = xi.copy()
+    xy = xi.position_abbr.map(lambda a: POSITION_XY.get(a, (3, 0)))
+    xi["depth"], xi["lat"] = [d for d, _ in xy], [l for _, l in xy]
+    gk = xi[xi.depth == 0].head(1)
+    out = xi.drop(gk.index).sort_values(["depth", "lat"])
+    try:
+        lines = [int(n) for n in str(formation).split("-")]
+        assert sum(lines) == len(out)
+    except (ValueError, AssertionError):
+        lines = [len(g) for _, g in out.groupby("depth")]
+    rows, start = [], 0
+    for li, n in enumerate(lines):
+        line = out.iloc[start:start + n].sort_values("lat")
+        start += n
+        y = 14 + (li + 1) * (84 / (len(lines) + 0.4))
+        xs = [34] if n == 1 else list(np.linspace(9 if n > 3 else 14, 59 if n > 3 else 54, n))
+        rows.append(line.assign(x=xs, y=y))
+    gk = gk.assign(x=34, y=7)
+    return pd.concat([gk, *rows])
+
+
+def lineup_pitch(xi: pd.DataFrame, formation: str | None, color: str, height: int = 520) -> go.Figure:
+    """One team's XI on a vertical full pitch, attacking upwards. xi: player, position_abbr, jersey, note."""
+    d = formation_layout(xi, formation)
+    line = dict(color=PITCH_LINE, width=1.3)
+    fig = go.Figure()
+    fig.update_layout(shapes=[
+        dict(type="rect", x0=0, y0=0, x1=68, y1=105, line=line),
+        dict(type="line", x0=0, y0=52.5, x1=68, y1=52.5, line=line),
+        dict(type="circle", x0=34 - 9.15, y0=52.5 - 9.15, x1=34 + 9.15, y1=52.5 + 9.15, line=line),
+        dict(type="rect", x0=34 - 20.16, y0=0, x1=34 + 20.16, y1=16.5, line=line),
+        dict(type="rect", x0=34 - 9.16, y0=0, x1=34 + 9.16, y1=5.5, line=line),
+        dict(type="rect", x0=34 - 20.16, y0=105 - 16.5, x1=34 + 20.16, y1=105, line=line),
+        dict(type="rect", x0=34 - 9.16, y0=105 - 5.5, x1=34 + 9.16, y1=105, line=line)])
+    jersey = d.get("jersey", pd.Series("", index=d.index)).fillna("").astype(str)
+    note = d.get("note", pd.Series("", index=d.index)).fillna("")
+    surname = d.player.map(lambda n: n.split()[-1] if len(n) > 14 else n)
+    fig.add_trace(go.Scatter(
+        x=d.x, y=d.y, mode="markers+text", text=jersey, textfont=dict(color="#FFFFFF", size=12, family=FONT),
+        marker=dict(size=30, color=color, line=dict(width=2, color="#FFFFFF")),
+        customdata=np.stack([d.player, d.get("position", d.position_abbr), note], axis=1),
+        hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]}<extra></extra>",
+        showlegend=False))
+    fig.add_trace(go.Scatter(x=d.x, y=d.y - 5.6, mode="text", text=surname, hoverinfo="skip", showlegend=False,
+                             textfont=dict(color="#FFFFFF", size=11, family=FONT)))
+    fig.update_xaxes(range=[-2, 70], visible=False, constrain="domain")
+    fig.update_yaxes(range=[-3, 108], visible=False, scaleanchor="x", scaleratio=1, constrain="domain")
+    return _layout(fig, height=height, plot_bgcolor="#1E6B45", margin=dict(l=4, r=4, t=4, b=4))
+
+
+def player_radar(labels: list[str], values: list[float], color: str, height: int = 420) -> go.Figure:
+    """Percentile wedges (0-100) for one player against players in the same position group."""
+    v = [0 if pd.isna(x) else float(x) for x in values]
+    fig = go.Figure(go.Barpolar(
+        r=v, theta=labels, marker=dict(color=[_rgba(color, 0.35 + 0.6 * x / 100) for x in v],
+                                       line=dict(color="#FFFFFF", width=1.5)),
+        customdata=[("–" if pd.isna(x) else f"{x:.0f}") for x in values],
+        hovertemplate="%{theta}: %{customdata}th percentile<extra></extra>"))
+    fig.update_layout(polar=dict(bgcolor=BG, domain=dict(x=[0.08, 0.92], y=[0.06, 0.94]), hole=0.08,
+                                 radialaxis=dict(range=[0, 100], tickvals=[25, 50, 75], gridcolor=GRID,
+                                                 tickfont=dict(size=9, color=MUTED), showline=False),
+                                 angularaxis=dict(gridcolor=GRID, tickfont=dict(size=11, color=TEXT))))
+    return _layout(fig, height=height, showlegend=False, margin=dict(l=40, r=40, t=24, b=24))

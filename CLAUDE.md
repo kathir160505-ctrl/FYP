@@ -99,9 +99,21 @@ Phases:
     - Clubs has a "Champions League" tab.
     - Leagues has an "In the Champions League" section (league PC1 vs UCL points per match; tables by league and by style).
   - 2025/26 finding: our clubs average about 4.5 percentage points less possession in the UCL than in their league; league PC1 vs UCL points per match r = 0.27 (n = 15). PSG won 2025/26 against Arsenal.
-- **C. Player profiles.**
-  - All players of the three leagues: attacking (Understat) plus defensive and GK (FBref), per season.
-  - Position-peer percentile radars and squad tables. Name matching between Understat and FBref is needed.
+- **C. DONE (2026-10-28): players, line-ups, probable XI, trophy cabinet.**
+  - Collect with `python -m src.collect.players` (`--current` refreshes only this season). FBref is slow, about 1–3 minutes per page.
+  - Build with `python -m src.process.build_players`. Output goes to `data/processed/players/{players.csv, lineups.parquet, probable_xi.csv}`. Both are part of `src.refresh`.
+  - Base: Understat player-club-seasons. FBref and ESPN are matched by club and normalised name (`norm` folds Ø/ß/æ etc.; fuzzy match ≥ 0.8 and unambiguous): 96% / 98%.
+  - Line-ups are parsed from the cached ESPN summaries (`rosters`: formation, formationPlace, position abbreviations, subs).
+  - Probable XI: the most used formation in the last 5 league matches, then the most frequent recency-weighted starter per slot.
+  - Pitch layout: formation lines plus ESPN position codes (`charts.POSITION_XY`).
+  - Photos: ESPN headshots are 404, so photos come from Wikidata P18 (Commons, `?width=240`).
+    - First matched by club (P54) and name, then by exact name and birth year.
+    - Coverage is 59% of all players, 71% of regulars. Otherwise an initials avatar (`data.avatar`).
+  - App:
+    - a Players page (card, percentile wedges, similar players, match log, leaders);
+    - a Clubs "Squad & line-ups" tab (probable XI vs the next ESPN fixture, any match's line-up, squad table);
+    - a drawn SVG trophy cabinet (`app/cabinet.py`) on Honours. It's drawn, not photographed, because of image rights.
+  - Promoted clubs' crests come from `data/live/team_meta.csv` (merged into `data.history()`).
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
   - Club → QID mapping: `data/reference/clubs_wikidata.csv`.

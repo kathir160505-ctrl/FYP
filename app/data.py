@@ -142,10 +142,13 @@ def season_label(season: int) -> str:
 
 @st.cache_data
 def history() -> pd.DataFrame:
-    """One row per club-season (2014/15 → current), styles projected with the 2025/26 model."""
+    """One row per club-season (2025/26 → current), styles projected with the 2025/26 model."""
     h = pd.read_csv(HIST / "team_season.csv")
     h["league_name"] = h["league"].map(LEAGUES)
-    meta = pd.read_csv(REF / "team_meta.csv")[["team", "logo", "color"]]
+    # Thesis clubs first; promoted clubs' crests and colours come from the live ESPN metadata.
+    live_meta = ROOT / "data" / "live" / "team_meta.csv"
+    meta = pd.concat([pd.read_csv(REF / "team_meta.csv"), *([pd.read_csv(live_meta)] if live_meta.exists() else [])])
+    meta = meta.drop_duplicates("team")[["team", "logo", "color"]]
     h = h.merge(meta, on="team", how="left")
     h["color"] = h["color"].fillna("#6B7280").map(readable)
     return h.sort_values(["season", "league", "position"]).reset_index(drop=True)
@@ -184,6 +187,67 @@ def ucl_seasons() -> pd.DataFrame:
 @st.cache_data
 def ucl_vs_league() -> pd.DataFrame:
     return pd.read_csv(UCL / "ucl_vs_league.csv")
+
+
+PLAYERS = PROC / "players"
+POSITION_GROUPS = ["Forward", "Midfielder", "Defender", "Goalkeeper"]
+# Radar metrics per position group: (column, label). Percentiles are within the group and season.
+PLAYER_RADAR = {
+    "outfield": [("np_xg_p90", "Non-penalty xG"), ("shots_p90", "Shots"), ("goals_p90", "Goals"),
+                 ("xa_p90", "Expected assists"), ("key_passes_p90", "Key passes"), ("xg_chain_p90", "xG chain"),
+                 ("xg_buildup_p90", "xG build-up"), ("crosses_p90", "Crosses"), ("tackles_won_p90", "Tackles won"),
+                 ("interceptions_p90", "Interceptions")],
+    "Goalkeeper": [("saves_p90", "Saves"), ("save_pct", "Save %"), ("xg_buildup_p90", "xG build-up"),
+                   ("interceptions_p90", "Interceptions")],
+}
+
+
+def players_ready() -> bool:
+    """Player data is built by src.process.build_players; the pages degrade gracefully until it exists."""
+    return all((PLAYERS / f).exists() for f in ("players.csv", "lineups.parquet", "probable_xi.csv"))
+
+
+@st.cache_data
+def players() -> pd.DataFrame:
+    p = pd.read_csv(PLAYERS / "players.csv", dtype={"athlete_id": str, "jersey": str})
+    p["league_name"] = p["league"].map(LEAGUES)
+    return p
+
+
+@st.cache_data
+def lineups(team: str) -> pd.DataFrame:
+    return pd.read_parquet(PLAYERS / "lineups.parquet", filters=[("team", "==", team)])
+
+
+@st.cache_data
+def player_matches(athlete_id: str) -> pd.DataFrame:
+    return pd.read_parquet(PLAYERS / "lineups.parquet", filters=[("athlete_id", "==", athlete_id)])
+
+
+@st.cache_data
+def probable_xi() -> pd.DataFrame:
+    return pd.read_csv(PLAYERS / "probable_xi.csv", dtype={"athlete_id": str}, parse_dates=["last_match"])
+
+
+def initials(name: str) -> str:
+    parts = [p for p in str(name).split() if p[:1].isalpha()]
+    return (parts[0][0] + (parts[-1][0] if len(parts) > 1 else "")).upper() if parts else "?"
+
+
+def avatar(name: str, color: str = "#6B7280") -> str:
+    """An initials badge as an SVG data URI, for players without a free photo."""
+    from urllib.parse import quote
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><circle cx="32" cy="32" r="32" '
+           f'fill="{color}"/><text x="32" y="41" font-family="Arial" font-size="24" font-weight="700" '
+           f'fill="#fff" text-anchor="middle">{initials(name)}</text></svg>')
+    return "data:image/svg+xml;utf8," + quote(svg)
+
+
+def photos(df: pd.DataFrame, color: str | None = None) -> pd.Series:
+    """Photo URL per player row, falling back to an initials avatar in the club (or given) colour."""
+    colors = history().drop_duplicates("team").set_index("team").color
+    return pd.Series([ph if isinstance(ph, str) and ph else avatar(n, color or colors.get(t, "#6B7280"))
+                      for ph, n, t in zip(df.photo, df["name"], df.team)], index=df.index)
 
 
 LEGACY = PROC / "legacy"
