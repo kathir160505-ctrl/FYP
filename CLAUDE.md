@@ -90,9 +90,15 @@ Phases:
   - Styles are projected with the unchanged 2025/26 model; 2025/26 reproduces the thesis data exactly.
   - App: season selector on Overview, a "2025/26 vs 2026/27" tab on Clubs, and the style mix per season on Leagues.
   - Weekly refresh of everything: `python -m src.refresh`.
-- **B. Champions League.**
-  - ESPN UCL fixtures, results and news in Matchday.
-  - UCL match stats for the 60 clubs (no xG; documented).
+- **B. DONE (2026-10-28): Champions League.**
+  - Collect with `python -m src.collect.ucl` (ESPN `uefa.champions`, league phase to the final; qualifiers are a separate ESPN competition and are not included). Build with `python -m src.process.build_ucl`. Output goes to `data/processed/ucl/`. Both are part of `src.refresh`.
+  - Data notes: `season.year` is the start year; the stage is in `season.slug`. A drawn final is decided via ESPN's `winner` flag.
+  - UCL vs league comparisons use ESPN stats on both sides; there is no xG.
+  - App:
+    - Matchday includes UCL fixtures and news. The attacking edge is only shown when both clubs are ours.
+    - Clubs has a "Champions League" tab.
+    - Leagues has an "In the Champions League" section (league PC1 vs UCL points per match; tables by league and by style).
+  - 2025/26 finding: our clubs average about 4.5 percentage points less possession in the UCL than in their league; league PC1 vs UCL points per match r = 0.27 (n = 15). PSG won 2025/26 against Arsenal.
 - **C. Player profiles.**
   - All players of the three leagues: attacking (Understat) plus defensive and GK (FBref), per season.
   - Position-peer percentile radars and squad tables. Name matching between Understat and FBref is needed.

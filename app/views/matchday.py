@@ -7,7 +7,7 @@ import data
 import live
 import ui
 
-LEAGUE_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A"}
+LEAGUE_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A", "Champions League": "UCL"}
 
 
 def _team(name: str, logo: str, side: str) -> str:
@@ -19,7 +19,10 @@ def _team(name: str, logo: str, side: str) -> str:
 def _edge(r, form: pd.DataFrame) -> str:
     """Attacking-edge bar: P(home side shows the more attacking style), from 2026/27 form."""
     if form.empty or r.home not in form.index or r.away not in form.index:
-        return '<div class="edge"><div class="cap">Attacking edge</div><div class="note">Not enough data yet</div></div>'
+        known = set(live.club_names().values())
+        why = ("Only for clubs from the three leagues" if r.home not in known or r.away not in known
+               else "Not enough data yet")
+        return f'<div class="edge"><div class="cap">Attacking edge</div><div class="note">{why}</div></div>'
     p = data.predict_more_attacking(r.home, r.away, "A", form)["prob"]
     away_color = r.away_color if _distinct(r.home_color, r.away_color) else "#9CA3AF"
     return (f'<div class="edge"><div class="cap">Attacking edge</div><div class="bar">'
@@ -75,7 +78,8 @@ def render() -> None:
     if updated is not None:
         meta += f'<br>Form data: {updated.tz_convert(live.LOCAL_TZ).strftime("%d %b, %H:%M")}'
     ui.page_header("Matchday · 2026/27", "Matchday centre",
-                   "Upcoming fixtures, live scores and recent results across the three leagues, with a model estimate of "
+                   "Upcoming fixtures, live scores and recent results across the three leagues and the Champions League, "
+                   "with a model estimate of "
                    "which side is likely to show the more attacking style. Latest headlines on the right.", meta=meta)
 
     leagues = st.pills("League", ["All leagues", *live.LEAGUE_CODES], default="All leagues",
@@ -105,7 +109,8 @@ def render() -> None:
                     ui.callout("<b>Attacking edge</b> is the model's probability that each side shows the more attacking "
                                "style (xG, shots, deep completions, box shots and possession) in that match, based on its "
                                "2026/27 season-to-date and last-five-match profile plus home advantage. It does <b>not</b> "
-                               "predict the winner or the score, and is not intended for betting.")
+                               "predict the winner or the score, and is not intended for betting. For Champions League ties between "
+                               "two of our clubs it uses each side's domestic form, so treat it as a rougher guide.")
             with t2:
                 if results.empty:
                     ui.note("No results in the last 7 days.")

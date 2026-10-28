@@ -112,6 +112,9 @@ def render() -> None:
   could not be measured.
 - **Small sample.** 60 clubs, one season: clusters describe tendencies on a continuum, not fixed identities.
 - **Probabilistic.** Predictions estimate attacking style, not match results, and must not be used for betting.
+- **Champions League.** ESPN match stats (possession, passing, crosses, shots) from the league phase onwards;
+  qualifiers are not included. Understat has no Champions League data, so there is no xG, and comparisons with
+  the league use ESPN figures on both sides.
 - **Honours and managers.** From Wikidata (community-maintained, CC0). Each trophy is counted once per season;
   revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
   League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are

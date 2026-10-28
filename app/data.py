@@ -166,6 +166,26 @@ def history_league_season(league: str, season: int) -> pd.DataFrame:
     return tm
 
 
+UCL = PROC / "ucl"
+
+
+@st.cache_data
+def ucl_matches() -> pd.DataFrame:
+    return pd.read_csv(UCL / "ucl_match.csv", parse_dates=["date"])
+
+
+@st.cache_data
+def ucl_seasons() -> pd.DataFrame:
+    s = pd.read_csv(UCL / "ucl_season.csv")
+    s["league_name"] = s["league"].map(LEAGUES)
+    return s
+
+
+@st.cache_data
+def ucl_vs_league() -> pd.DataFrame:
+    return pd.read_csv(UCL / "ucl_vs_league.csv")
+
+
 LEGACY = PROC / "legacy"
 # Trophy categories shown in the app, in display order (super cups are excluded: Wikidata lists too few).
 TROPHY_COLORS = {"League title": "#B45309", "Domestic cup": "#1D4ED8", "League Cup": "#0F766E",

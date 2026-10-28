@@ -1,4 +1,5 @@
-"""Live 2026/27 data for the Matchday page: ESPN news and fixtures (fetched at view time, cached) and the
+"""Live 2026/27 data for the Matchday page: ESPN news and fixtures for the three leagues and the Champions League
+(fetched at view time, cached) and the
 current-season form table written by `python -m src.collect.live`."""
 import json
 from datetime import datetime, timedelta, timezone
@@ -11,7 +12,7 @@ from data import REF, ROOT, readable
 
 LIVE = ROOT / "data" / "live"
 API = "https://site.api.espn.com/apis/site/v2/sports/soccer"
-LEAGUE_CODES = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1"}
+LEAGUE_CODES = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1", "Champions League": "uefa.champions"}
 LOCAL_TZ = timezone(timedelta(hours=8), "MYT")
 
 
