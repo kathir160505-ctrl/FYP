@@ -5,3 +5,4 @@ __pycache__/
 data/raw/
 .env
 downloaded_files/
+.streamlit/secrets.toml

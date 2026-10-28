@@ -8,7 +8,7 @@ st.set_page_config(page_title="Tactical Profiles · Attacking Styles", page_icon
                    layout="wide", initial_sidebar_state="collapsed")
 
 import ui  # noqa: E402
-from views import club_profile, head_to_head, leagues, matchday, methodology, players, style_map  # noqa: E402
+from views import club_profile, head_to_head, leagues, match, matchday, methodology, players, style_map  # noqa: E402
 
 ui.inject_css()
 st.logo(str(ASSETS / "logo.svg"), size="large")
@@ -21,6 +21,7 @@ pages = [
     st.Page(head_to_head.render, title="Head-to-head", icon=":material/compare_arrows:", url_path="head-to-head"),
     st.Page(leagues.render, title="Leagues", icon=":material/public:", url_path="leagues"),
     st.Page(methodology.render, title="Methodology", icon=":material/science:", url_path="methodology"),
+    st.Page(match.render, title="Match centre", icon=":material/sports_soccer:", url_path="match", visibility="hidden"),
 ]
 
 st.navigation(pages, position="top").run()

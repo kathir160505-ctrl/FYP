@@ -47,9 +47,11 @@ def _fixture_rows(df: pd.DataFrame, form: pd.DataFrame, with_edge: bool) -> str:
                 mid = f'<div class="mid">{r.home_score} – {r.away_score}<div class="live" style="justify-content:center">{html.escape(r.status)}</div></div>'
             else:
                 mid = f'<div class="mid">{r.home_score} – {r.away_score}<div class="note" style="font-family:Inter">{html.escape(r.status)}</div></div>'
-            right = _edge(r, form) if with_edge else '<div></div>'
-            out.append(f'<div class="fx"><div class="lg">{LEAGUE_SHORT[r.league]}</div>{_team(r.home, r.home_logo, "home")}'
-                       f'{mid}{_team(r.away, r.away_logo, "away")}{right}</div>')
+            right = _edge(r, form) if with_edge else '<div class="mc">Line-ups · stats · highlights ›</div>'
+            href = f"match?event={r.id}&code={live.LEAGUE_CODES[r.league]}"  # relative, so it works under a sub-path
+            out.append(f'<a class="fx" href="{href}" target="_self" title="Open the match centre">'
+                       f'<div class="lg">{LEAGUE_SHORT[r.league]}</div>{_team(r.home, r.home_logo, "home")}'
+                       f'{mid}{_team(r.away, r.away_logo, "away")}{right}</a>')
     return "".join(out)
 
 
@@ -106,6 +108,8 @@ def render() -> None:
                 else:
                     st.markdown(_fixture_rows(upcoming, form, with_edge=True), unsafe_allow_html=True)
                     st.write("")
+                    ui.note("Click any match to open its match centre: probable line-ups, form and the attacking "
+                            "edge explained.")
                     ui.callout("<b>Attacking edge</b> is the model's probability that each side shows the more attacking "
                                "style (xG, shots, deep completions, box shots and possession) in that match, based on its "
                                "2026/27 season-to-date and last-five-match profile plus home advantage. It does <b>not</b> "

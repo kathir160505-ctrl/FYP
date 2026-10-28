@@ -147,6 +147,36 @@ h1, h2, h3, h4 { letter-spacing: 0; color: var(--ink); }
   .club-head { grid-template-columns: auto 1fr; }
   .club-head .stats { grid-column: 1 / -1; text-align:left; }
 }
+a.fx { text-decoration: none !important; color: inherit; cursor: pointer; transition: background .12s; }
+a.fx:hover { background: #FFF5F5; }
+a.fx:hover .mc { color: var(--accent); }
+.fx .mc { font-size: 0.64rem; color: var(--faint); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+/* Match centre */
+.sc { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 8px;
+  padding: 0.9rem 1.2rem 1.1rem; margin-bottom: 0.9rem; }
+.sc-meta { text-align:center; color: var(--muted); font-size: 0.82rem; margin-bottom: 0.5rem; }
+.sc-row { display:grid; grid-template-columns: 1fr auto 1fr; align-items:center; gap: 1.4rem; }
+.sc-team { display:flex; align-items:center; gap: 0.8rem; font-family: var(--cond); font-weight: 800; font-size: 2rem;
+  text-transform: uppercase; color: var(--ink); line-height: 1; }
+.sc-team.home { justify-content: flex-end; text-align: right; }
+.sc-team img { width: 64px; height: 64px; object-fit: contain; }
+.sc-mid { text-align: center; min-width: 140px; }
+.sc-score { font-family: var(--cond); font-weight: 800; font-size: 3rem; color: var(--ink); line-height: 1; }
+.sc-status { color: var(--muted); font-size: 0.8rem; font-weight: 600; margin-top: .25rem; }
+.evs { display:flex; flex-direction:column; gap: 0.3rem; }
+.ev { display:flex; align-items:center; gap: 0.5rem; font-size: 0.86rem; padding: 0.3rem 0.5rem; border-radius: 4px; background: var(--surface-2); }
+.ev.away { flex-direction: row-reverse; text-align: right; }
+.ev-min { font-weight: 800; color: var(--muted); min-width: 2.8rem; font-variant-numeric: tabular-nums; }
+.ev.away .ev-min { text-align: right; }
+.ev-who { font-weight: 700; color: var(--ink); }
+.ev-sub { color: var(--muted); font-size: 0.8rem; }
+.form-row { display:flex; align-items:center; gap: .35rem; margin: .3rem 0; }
+.form-row b { min-width: 9.5rem; }
+.chip { display:inline-flex; width: 1.6rem; height: 1.6rem; align-items:center; justify-content:center; border-radius: 4px;
+  color: #fff; font-weight: 800; font-size: .78rem; cursor: default; }
+.chip.W { background: #16A34A; } .chip.D { background: #9CA3AF; } .chip.L { background: #DC2626; }
+.vids { display:flex; flex-direction:column; gap: .45rem; }
+.vids a { font-weight: 700; color: var(--accent); text-decoration: none; }
 </style>
 """
 

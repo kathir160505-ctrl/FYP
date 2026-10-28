@@ -425,3 +425,84 @@ def player_radar(labels: list[str], values: list[float], color: str, height: int
                                                  tickfont=dict(size=9, color=MUTED), showline=False),
                                  angularaxis=dict(gridcolor=GRID, tickfont=dict(size=11, color=TEXT))))
     return _layout(fig, height=height, showlegend=False, margin=dict(l=40, r=40, t=24, b=24))
+
+
+def _full_pitch_shapes() -> list[dict]:
+    line = dict(color=PITCH_LINE, width=1.3)
+    return [dict(type="rect", x0=0, y0=0, x1=68, y1=105, line=line),
+            dict(type="line", x0=0, y0=52.5, x1=68, y1=52.5, line=line),
+            dict(type="circle", x0=34 - 9.15, y0=52.5 - 9.15, x1=34 + 9.15, y1=52.5 + 9.15, line=line),
+            dict(type="rect", x0=34 - 20.16, y0=0, x1=34 + 20.16, y1=16.5, line=line),
+            dict(type="rect", x0=34 - 9.16, y0=0, x1=34 + 9.16, y1=5.5, line=line),
+            dict(type="rect", x0=34 - 20.16, y0=105 - 16.5, x1=34 + 20.16, y1=105, line=line),
+            dict(type="rect", x0=34 - 9.16, y0=105 - 5.5, x1=34 + 9.16, y1=105, line=line)]
+
+
+def match_pitch(home: pd.DataFrame | None, away: pd.DataFrame | None, home_color: str, away_color: str,
+                height: int = 760) -> go.Figure:
+    """Both XIs on one pitch: home in the bottom half attacking up, away in the top half attacking down.
+    Each frame needs player, position_abbr and formation; optional jersey, badges (icons) and note (hover)."""
+    fig = go.Figure()
+    fig.update_layout(shapes=_full_pitch_shapes())
+    for xi, color, side in ((home, home_color, "home"), (away, away_color, "away")):
+        if xi is None or xi.empty:
+            continue
+        d = formation_layout(xi, xi.formation.iloc[0] if "formation" in xi else None)
+        # formation_layout spans the full length; squeeze each team into its own half.
+        y = d.y * 0.47 + 1 if side == "home" else 104 - d.y * 0.47
+        x = d.x if side == "home" else 68 - d.x
+        jersey = d.get("jersey", pd.Series("", index=d.index)).fillna("").astype(str)
+        badges = d.get("badges", pd.Series("", index=d.index)).fillna("")
+        note = d.get("note", pd.Series("", index=d.index)).fillna("")
+        surname = d.player.map(lambda n: n.split()[-1] if len(n) > 13 else n)
+        fig.add_trace(go.Scatter(
+            x=x, y=y, mode="markers+text", text=jersey, textfont=dict(color="#FFFFFF", size=11, family=FONT),
+            marker=dict(size=26, color=color, line=dict(width=2, color="#FFFFFF")), showlegend=False,
+            customdata=np.stack([d.player, d.get("position", d.position_abbr), badges, note], axis=1),
+            hovertemplate="<b>%{customdata[0]}</b><br>%{customdata[1]}<br>%{customdata[2]} %{customdata[3]}"
+                          "<extra></extra>"))
+        fig.add_trace(go.Scatter(x=x, y=y - 3.9, mode="text", text=surname, hoverinfo="skip", showlegend=False,
+                                 textfont=dict(color="#FFFFFF", size=10, family=FONT)))
+        fig.add_trace(go.Scatter(x=x, y=y + 3.9, mode="text", text=badges, hoverinfo="skip", showlegend=False,
+                                 textfont=dict(size=11)))
+    fig.update_xaxes(range=[-2, 70], visible=False, constrain="domain")
+    fig.update_yaxes(range=[-2, 107], visible=False, scaleanchor="x", scaleratio=1, constrain="domain")
+    return _layout(fig, height=height, plot_bgcolor="#1E6B45", margin=dict(l=4, r=4, t=4, b=4))
+
+
+def match_stats(stats: pd.DataFrame, home: str, away: str, home_color: str, away_color: str) -> go.Figure:
+    """Share of each stat for the two teams, ESPN style: home bar from the left, away bar from the right."""
+    d = stats.iloc[::-1]
+    total = (d.home + d.away).replace(0, 1)
+    fmt_v = lambda v, s: f"{v:.0f}%" if "%" in s or s == "Pass accuracy" else f"{v:.0f}"  # noqa: E731
+    fig = go.Figure()
+    fig.add_trace(go.Bar(y=d.stat, x=d.home / total * 100, orientation="h", marker_color=home_color, name=home,
+                         text=[fmt_v(v, s) for v, s in zip(d.home, d.stat)], textposition="inside",
+                         insidetextanchor="start", hovertemplate="%{y}: %{text}<extra>" + home + "</extra>"))
+    fig.add_trace(go.Bar(y=d.stat, x=d.away / total * 100, orientation="h", marker_color=away_color, name=away,
+                         text=[fmt_v(v, s) for v, s in zip(d.away, d.stat)], textposition="inside",
+                         insidetextanchor="end", hovertemplate="%{y}: %{text}<extra>" + away + "</extra>"))
+    fig.update_layout(barmode="stack", bargap=0.35, uniformtext=dict(minsize=10, mode="show"))
+    fig.update_traces(textfont=dict(color="#FFFFFF", size=12))
+    fig.update_xaxes(visible=False, range=[0, 100])
+    return _layout(fig, height=max(260, 34 * len(d)), margin=dict(l=8, r=8, t=30, b=8))
+
+
+def xg_race(shots: pd.DataFrame, home: str, away: str, home_color: str, away_color: str) -> go.Figure:
+    """Cumulative shot xG by minute for both sides, goals marked."""
+    fig = go.Figure()
+    for team, color in ((home, home_color), (away, away_color)):
+        d = shots[shots.team == team].sort_values("minute")
+        xs = [0, *d.minute.tolist(), max(95, int(shots.minute.max() or 90) + 2)]
+        ys = [0, *d.xg.cumsum().tolist()]
+        ys.append(ys[-1])
+        fig.add_trace(go.Scatter(x=xs, y=ys, mode="lines", line=dict(color=color, width=3, shape="hv"), name=team,
+                                 hovertemplate="%{x}': %{y:.2f} xG<extra>" + team + "</extra>"))
+        g = d[d.result == "Goal"]
+        if len(g):
+            fig.add_trace(go.Scatter(x=g.minute, y=d.xg.cumsum()[g.index], mode="markers", showlegend=False,
+                                     marker=dict(size=13, color="#FACC15", symbol="star", line=dict(width=1, color=color)),
+                                     customdata=g.player, hovertemplate="⚽ %{customdata} %{x}'<extra></extra>"))
+    fig.update_xaxes(title="Minute", dtick=15)
+    fig.update_yaxes(title="Cumulative xG", rangemode="tozero")
+    return _layout(fig, height=320)

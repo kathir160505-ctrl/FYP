@@ -114,6 +114,16 @@ Phases:
     - a Clubs "Squad & line-ups" tab (probable XI vs the next ESPN fixture, any match's line-up, squad table);
     - a drawn SVG trophy cabinet (`app/cabinet.py`) on Honours. It's drawn, not photographed, because of image rights.
   - Promoted clubs' crests come from `data/live/team_meta.csv` (merged into `data.history()`).
+- **Match centre (2026-10-28):** a hidden page `match?event=<ESPN id>&code=<league code>`, opened by clicking a Matchday fixture row (`a.fx`).
+  - Data layer is `app/matchcentre.py`, using the live ESPN summary (cached 10 minutes).
+  - Past matches:
+    - both XIs on one pitch (`charts.match_pitch`) with ⚽/👟/🟨/🟥/▼ badges from roster stats;
+    - key events (scorer plus assister);
+    - ESPN stat bars;
+    - Understat xG race when the event is in `team_match.parquet`.
+  - Upcoming matches: confirmed ESPN line-ups if published, else the probable XI; attacking edge plus theme reasons; form chips; season table.
+  - Highlights are played when `YOUTUBE_API_KEY` is in `.streamlit/secrets.toml` (gitignored; see `secrets.example.toml`). The YouTube search must name both clubs plus "highlight". Without a key, a YouTube search link is shown, plus ESPN clip links.
+  - Similar kit colours: the away side switches to its ESPN alternate colour.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
   - Club → QID mapping: `data/reference/clubs_wikidata.csv`.
