@@ -15,8 +15,15 @@ STAT_ROWS = [("possessionPct", "Possession %"), ("totalShots", "Shots"), ("shots
              ("totalPasses", "Passes"), ("passPct", "Pass accuracy"), ("totalCrosses", "Crosses"),
              ("wonCorners", "Corners"), ("totalTackles", "Tackles"), ("interceptions", "Interceptions"),
              ("saves", "Saves"), ("foulsCommitted", "Fouls"), ("offsides", "Offsides")]
-EVENT_ICONS = {"Goal": "⚽", "Own Goal": "⚽", "Penalty - Scored": "⚽", "Yellow Card": "🟨", "Red Card": "🟥",
-               "Substitution": "🔄", "Penalty - Missed": "❌", "Penalty - Saved": "🧤"}
+# ESPN key-event type -> our event kind (icons in icons.py). Goal variants: header, volley, free-kick.
+EVENT_KINDS = {"Goal": "goal", "Goal - Header": "goal", "Goal - Volley": "goal", "Goal - Free-kick": "goal",
+               "Penalty - Scored": "goal", "Own Goal": "own_goal", "Yellow Card": "yellow", "Red Card": "red",
+               "Substitution": "sub", "Penalty - Missed": "penalty_miss", "Penalty - Saved": "penalty_miss",
+               "Penalty - Hit Woodwork": "penalty_miss", "Halftime": "ht", "End Regular Time": "ft"}
+# Broadcasters and league channels preferred for highlights over re-uploads.
+OFFICIAL_CHANNELS = ("bein sports", "tnt sports", "cbs sports", "sky sports", "dazn", "espn", "nbc sports",
+                     "premier league", "laliga", "serie a", "uefa", "stadium astro", "optus sport", "movistar",
+                     "sportmediaset", "amazon prime video sport", "canal+", "viaplay", "fox sports", "paramount+")
 
 
 @st.cache_data(ttl=600, show_spinner=False)
@@ -73,32 +80,37 @@ def lineups(s: dict) -> dict[str, pd.DataFrame]:
                          "goals": int(st_.get("totalGoals") or 0), "assists": int(st_.get("goalAssists") or 0),
                          "own_goals": int(st_.get("ownGoals") or 0), "yellow": int(st_.get("yellowCards") or 0),
                          "red": int(st_.get("redCards") or 0), "saves": int(st_.get("saves") or 0)})
-        df = pd.DataFrame(rows)
-        if len(df):
-            df["badges"] = [badges(r) for r in df.itertuples()]
-        out[side.get("homeAway")] = df.assign(formation=side.get("formation"))
+        out[side.get("homeAway")] = pd.DataFrame(rows).assign(formation=side.get("formation"))
     return out
 
 
-def badges(r) -> str:
-    """Icons for one player: a ball per goal, a boot per assist, cards, and the minute he went off."""
-    icons = "⚽" * r.goals + "🔴" * r.own_goals + "👟" * r.assists + "🟨" * min(r.yellow, 1) + "🟥" * r.red
-    if r.starter and r.subbed_out and r.sub_minute:
-        icons += f" ▼{r.sub_minute}"
-    if not r.starter and r.subbed_in and r.sub_minute:
-        icons += f" ▲{r.sub_minute}"
-    return icons
-
-
-def key_events(s: dict) -> pd.DataFrame:
-    rows = []
+def key_events(s: dict, home_espn: str) -> pd.DataFrame:
+    """Goals (with assister and running score), cards, substitutions, penalties and the half/full-time markers."""
+    rows, score = [], [0, 0]
+    yellows: dict[str, int] = {}
     for k in s.get("keyEvents", []):
-        kind = k.get("type", {}).get("text", "")
-        if kind not in EVENT_ICONS:
+        kind = EVENT_KINDS.get(k.get("type", {}).get("text", ""))
+        if not kind:
             continue
         who = [p.get("athlete", {}).get("displayName", "") for p in k.get("participants", [])]
-        rows.append({"minute": k.get("clock", {}).get("displayValue", ""), "type": kind, "icon": EVENT_ICONS[kind],
-                     "team": k.get("team", {}).get("displayName", ""), "who": who, "text": k.get("text", "")})
+        team = k.get("team", {}).get("displayName", "")
+        side = "home" if team == home_espn else ("away" if team else "")
+        row = {"minute": k.get("clock", {}).get("displayValue", ""), "kind": kind, "side": side,
+               "player": who[0] if who else "", "other": who[1] if len(who) > 1 else "",
+               "text": k.get("text", ""), "score": "", "injury": False}
+        if kind in ("goal", "own_goal"):
+            # ESPN files an own goal under the team that benefited
+            score[0 if side == "home" else 1] += 1
+            row["score"] = f"{score[0]}–{score[1]}"
+            if kind == "own_goal":
+                row["other"] = ""
+        elif kind == "yellow" and row["player"]:
+            yellows[row["player"]] = yellows.get(row["player"], 0) + 1
+            if yellows[row["player"]] == 2:
+                row["kind"] = "second_yellow"
+        elif kind == "sub":  # ESPN lists the player coming on first
+            row["injury"] = "injur" in row["text"].lower()
+        rows.append(row)
     return pd.DataFrame(rows)
 
 
@@ -155,12 +167,16 @@ def highlights(home: str, away: str, kickoff: str) -> dict | None:
         resp.raise_for_status()
     except requests.RequestException:
         return None
+    import html as _html
+    hits = []
     for item in resp.json().get("items", []):
-        title = fold(item["snippet"]["title"])
+        raw = _html.unescape(item["snippet"]["title"])
+        title, channel = fold(raw), item["snippet"]["channelTitle"]
         if names_in(home, title) and names_in(away, title) and "highlight" in title:
-            return {"id": item["id"]["videoId"], "title": item["snippet"]["title"],
-                    "channel": item["snippet"]["channelTitle"]}
-    return None
+            official = any(c in fold(channel) for c in OFFICIAL_CHANNELS)
+            hits.append((not official, len(hits), {"id": item["id"]["videoId"], "title": raw, "channel": channel,
+                                                    "official": official}))
+    return min(hits, key=lambda h: h[:2])[2] if hits else None
 
 
 ALIASES = {"Manchester United": ["man utd", "man united"], "Manchester City": ["man city"],
@@ -202,3 +218,61 @@ def form_chips(team: str, before: datetime, n: int = 5) -> list[tuple[str, str]]
 
 def now() -> datetime:
     return datetime.now(timezone.utc)
+
+
+def related_news(s: dict, home: str, away: str, limit: int = 6) -> list[dict]:
+    """The match report plus ESPN articles that mention either club (the summary feed is only loosely related)."""
+    out, seen = [], set()
+    rep = s.get("article") or {}
+    if rep.get("headline") and rep.get("links", {}).get("web", {}).get("href"):
+        out.append({"headline": rep["headline"], "link": rep["links"]["web"]["href"], "report": True,
+                    "image": next((i.get("url") for i in rep.get("images", []) if i.get("url")), None),
+                    "published": pd.to_datetime(rep.get("published"), utc=True, errors="coerce")})
+        seen.add(rep["links"]["web"]["href"])
+    keys = [w for t in (home, away) for w in [fold(t), *ALIASES.get(t, []),
+            *[x for x in fold(t).split() if x not in GENERIC and len(x) > 3]]]
+    for a in s.get("news", {}).get("articles", []):
+        link = a.get("links", {}).get("web", {}).get("href")
+        text = fold(f"{a.get('headline', '')} {a.get('description', '')}")
+        if not link or link in seen or not any(k in text for k in keys):
+            continue
+        seen.add(link)
+        out.append({"headline": a.get("headline", ""), "link": link, "report": False,
+                    "image": next((i.get("url") for i in a.get("images", []) if i.get("url")), None),
+                    "published": pd.to_datetime(a.get("published"), utc=True, errors="coerce")})
+    return out[:limit]
+
+
+def squad_absentees(team: str, on_sheet: set, min_apps: int = 3) -> list[str]:
+    """Players who have played for the club this season (at least min_apps league matches) but are not on the
+    match sheet. The source does not say why: injury, suspension, illness or selection."""
+    if not data.players_ready():
+        return []
+    p = data.players()
+    p = p[(p.team == team) & (p.season == p.season.max()) & (p.matches >= min_apps)].dropna(subset=["athlete_id"])
+    return p[~p.athlete_id.isin(on_sheet)].sort_values("minutes", ascending=False)["name"].tolist()
+
+
+@st.cache_data(ttl=1800, show_spinner=False)
+def previous_match_news(team: str, before: str) -> dict:
+    """From the club's last recorded match before `before`: who went off injured and who was sent off."""
+    if not data.players_ready():
+        return {}
+    lu = data.lineups(team)
+    lu = lu[lu.date < pd.Timestamp(before).tz_convert(None)]
+    if lu.empty:
+        return {}
+    last = lu.sort_values("date").iloc[-1]
+    code = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1",
+            "Champions League": "uefa.champions"}.get(last.competition_name, "eng.1")
+    s = summary(code, str(last.event_id))
+    side = last.home_away
+    home_espn = next((r["team"]["displayName"] for r in s.get("rosters", []) if r.get("homeAway") == "home"), "")
+    ev = key_events(s, home_espn) if s else pd.DataFrame()
+    injured, sent_off = [], []
+    if len(ev):
+        mine = ev[ev.side == side]
+        injured = mine[(mine.kind == "sub") & mine.injury].other.tolist()
+        sent_off = mine[mine.kind.isin(["red", "second_yellow"])].player.tolist()
+    return {"opponent": last.opponent, "date": last.date, "competition": last.competition_name,
+            "injured": injured, "sent_off": sent_off}

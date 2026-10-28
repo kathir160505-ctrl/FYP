@@ -124,6 +124,15 @@ Phases:
   - Upcoming matches: confirmed ESPN line-ups if published, else the probable XI; attacking edge plus theme reasons; form chips; season table.
   - Highlights are played when `YOUTUBE_API_KEY` is in `.streamlit/secrets.toml` (gitignored; see `secrets.example.toml`). The YouTube search must name both clubs plus "highlight". Without a key, a YouTube search link is shown, plus ESPN clip links.
   - Similar kit colours: the away side switches to its ESPN alternate colour.
+  - Redesign (user feedback: emoji looked "AI", not professional):
+    - Line-ups, subs, stats and the timeline are now plain HTML/CSS in `app/pitch.py`, with SVG icons from `app/icons.py` (no emoji).
+    - Subs show as one row per team (green arrow plus minute). Stats are rows: value | label | value plus a split bar.
+    - The timeline has home events on the left and away on the right, with running-score badges and HT/FT dividers.
+  - The YouTube key is configured (the user's own key, in the gitignored `secrets.toml`). Official broadcaster channels are preferred (`OFFICIAL_CHANNELS`).
+  - News: the ESPN match `article` plus summary `news` filtered to stories that mention either club.
+  - Team news: ESPN soccer injury fields are empty, and FotMob/Transfermarkt are off-limits, so no injury list. Instead:
+    - "went off injured" comes from substitution text, and "suspended" from a red card in the previous match;
+    - "not in squad" = players with at least 3 apps this season who are missing from the sheet (the reason is unknown, and the page says so).
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
   - Club → QID mapping: `data/reference/clubs_wikidata.csv`.
