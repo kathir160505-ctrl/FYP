@@ -102,7 +102,9 @@ def render() -> None:
         with c1:
             st.plotly_chart(charts.shot_map(f, row.color), width="stretch")
             st.markdown('<div class="note">Marker size = xG. Gold stars are goals. Own goals excluded. '
-                        "Shot data: Understat.</div>", unsafe_allow_html=True)
+                        "Shot data: Understat. xG here is the sum of individual shots. The match and season xG "
+                        "elsewhere use Understat's match figure, which counts a rebound sequence as one chance "
+                        "(at most 1.0 xG), so it can be slightly lower.</div>", unsafe_allow_html=True)
         with c2:
             st.markdown("**Top shooters** (selection above)")
             if len(f):

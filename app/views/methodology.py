@@ -93,6 +93,9 @@ def render() -> None:
 - **Attacking play only.** Defensive organisation, pressing and individual players are outside the scope.
 - **Proxies.** Progressive passes, counter-attacks and penalty-box touches are measured through the closest free
   equivalents. Through balls could not be measured for 2025/26.
+- **Two xG totals.** Club and match xG use Understat's match figure, which combines shots from the same
+  rebound sequence (1 − Π(1 − xGᵢ), so one chance is at most 1.0 xG). Shot maps sum individual shots, which
+  is 1.5% higher for the median club (at most 4.1%).
 - **Small sample.** 60 clubs, one season. Clusters describe tendencies on a continuum, not fixed identities.
 - **Predictions are probabilistic** estimates of attacking style. They are not match results and must not be used for betting.
 - **Attribution.** Data from Understat, ESPN and FBref; club crests via ESPN. Used for non-commercial academic research.

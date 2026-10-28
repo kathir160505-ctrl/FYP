@@ -66,7 +66,9 @@ SHEETS = {
             "date": "Kick-off date and time", "matchweek": "The club's match number (1-38)", "half": "H1 = matchweeks 1-19, H2 = 20-38",
             "team": "Club", "opponent": "Opponent", "is_home": "TRUE if the club played at home",
             "goals": "Goals scored", "goals_against": "Goals conceded", "points": "League points from the match",
-            "xg": "Expected goals (Understat)", "np_xg": "Non-penalty xG", "xg_against": "xG conceded",
+            "xg": "Expected goals, Understat match figure: shots in one rebound sequence are combined as "
+                  "1 - (1 - xG1)(1 - xG2)..., so it can be slightly below the sum of the Shots sheet",
+            "np_xg": "Non-penalty xG", "xg_against": "xG conceded",
             "deep_completions": "Passes completed within ~20 m of goal", "ppda": "Passes allowed per defensive action",
             "shots": "Shots (Understat, own goals excluded)", "shots_on_target": "Goals + saved shots (Understat)",
             "box_shots": "Shots from inside the penalty area",
