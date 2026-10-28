@@ -133,6 +133,13 @@ Phases:
   - Team news: ESPN soccer injury fields are empty, and FotMob/Transfermarkt are off-limits, so no injury list. Instead:
     - "went off injured" comes from substitution text, and "suspended" from a red card in the previous match;
     - "not in squad" = players with at least 3 apps this season who are missing from the sheet (the reason is unknown, and the page says so).
+- **Real time (2026-10-28):**
+  - Scoreboards and match summaries are cached for 30 s.
+  - Matchday's board is an `st.fragment` with `run_every=60`.
+  - The match centre body is a fragment with `run_every=30` while live or within 1 hour of kick-off.
+  - "Last 5" uses `live.recent_results(team)`: ESPN `/all/teams/{id}/schedule` across all competitions (friendlies excluded), with team ids from `live.team_ids()`. Used by match-centre form chips and Head-to-head.
+  - Not yet seen running during a live game.
+- **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
   - Club → QID mapping: `data/reference/clubs_wikidata.csv`.

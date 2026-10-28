@@ -86,9 +86,14 @@ def render() -> None:
 
     leagues = st.pills("League", ["All leagues", *live.LEAGUE_CODES], default="All leagues",
                        label_visibility="collapsed") or "All leagues"
-    with st.spinner("Loading fixtures and news…"):
-        fx = live.fixtures()
-        nw = live.news()
+    st.fragment(lambda: board(leagues), run_every=60)()
+    ui.footer()
+
+
+def board(leagues: str) -> None:
+    """Fixtures, live scores, results and news; re-runs every minute (ESPN scoreboards are cached for 30 s)."""
+    fx = live.fixtures()  # no spinner: this re-runs every minute and is usually served from the cache
+    nw = live.news()
     if leagues != "All leagues":
         fx = fx[fx.league == leagues] if not fx.empty else fx
         nw = nw[nw.league == leagues] if not nw.empty else nw
@@ -125,4 +130,4 @@ def render() -> None:
     with right:
         ui.section("Latest news")
         _news(nw, limit=9)
-    ui.footer()
+

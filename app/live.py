@@ -44,7 +44,7 @@ def news(limit_per_league: int = 12) -> pd.DataFrame:
     return df.drop_duplicates("link").sort_values("published", ascending=False).reset_index(drop=True)
 
 
-@st.cache_data(ttl=300, show_spinner=False)
+@st.cache_data(ttl=30, show_spinner=False)  # short: live scores and minutes
 def _scoreboard(code: str, month: str) -> list[dict]:
     try:
         return _get(f"{API}/{code}/scoreboard?dates={month}").get("events", [])
@@ -112,3 +112,66 @@ def time_ago(ts: pd.Timestamp) -> str:
     if mins < 60 * 24:
         return f"{mins // 60}h ago"
     return f"{mins // (60 * 24)}d ago"
+
+
+@st.cache_data(ttl=24 * 3600, show_spinner=False)
+def team_ids() -> dict:
+    """Our club name -> ESPN team id, from the three league team lists."""
+    names, out = club_names(), {}
+    for code in ("eng.1", "esp.1", "ita.1"):
+        try:
+            teams = _get(f"{API}/{code}/teams").get("sports", [{}])[0].get("leagues", [{}])[0].get("teams", [])
+        except requests.RequestException:
+            continue
+        for t in teams:
+            out[names.get(t["team"]["displayName"], t["team"]["displayName"])] = t["team"]["id"]
+    return out
+
+
+def _score(c: dict):
+    s = c.get("score")
+    s = s.get("displayValue", s.get("value")) if isinstance(s, dict) else s
+    try:
+        return int(float(s))
+    except (TypeError, ValueError):
+        return None
+
+
+@st.cache_data(ttl=300, show_spinner=False)
+def recent_results(team: str, before: str | None = None, n: int = 5) -> pd.DataFrame:
+    """A club's latest completed competitive matches in every competition (friendlies excluded), newest first.
+    Live from ESPN's team schedule, so it includes this week's league, cup and Champions League games."""
+    tid = team_ids().get(team)
+    if not tid:
+        return pd.DataFrame()
+    try:
+        events = _get(f"{API}/all/teams/{tid}/schedule").get("events", [])
+    except requests.RequestException:
+        return pd.DataFrame()
+    cutoff = pd.Timestamp(before) if before else pd.Timestamp.now(tz="UTC")
+    rows = []
+    for e in events:
+        comp = e["competitions"][0]
+        league = e.get("league", {})
+        if "friendly" in league.get("slug", "") or not comp["status"]["type"].get("completed"):
+            continue
+        date = pd.to_datetime(e["date"], utc=True)
+        if date >= cutoff:
+            continue
+        me = next((c for c in comp["competitors"] if c["team"]["id"] == tid), None)
+        opp = next((c for c in comp["competitors"] if c["team"]["id"] != tid), None)
+        if not me or not opp:
+            continue
+        gf, ga = _score(me), _score(opp)
+        if gf is None or ga is None:
+            continue
+        result = "W" if gf > ga else "L" if gf < ga else "D"  # a tie settled on penalties counts as a draw
+        slug = league.get("slug", "")
+        tidy = {v: k for k, v in LEAGUE_CODES.items()}  # "LALIGA", "UEFA Champions League" -> our names
+        rows.append({"date": date, "competition": tidy.get(slug, league.get("abbreviation") or league.get("name", "")),
+                     "code": league.get("slug", ""), "event_id": e["id"], "home": me.get("homeAway") == "home",
+                     "opponent": club_names().get(opp["team"]["displayName"], opp["team"]["displayName"]),
+                     "opponent_logo": next((l.get("href") for l in opp["team"].get("logos", [])), None),
+                     "goals": gf, "goals_against": ga, "result": result})
+    df = pd.DataFrame(rows)
+    return df.sort_values("date", ascending=False).head(n).reset_index(drop=True) if len(df) else df

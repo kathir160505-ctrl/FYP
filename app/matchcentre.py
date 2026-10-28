@@ -26,7 +26,7 @@ OFFICIAL_CHANNELS = ("bein sports", "tnt sports", "cbs sports", "sky sports", "d
                      "sportmediaset", "amazon prime video sport", "canal+", "viaplay", "fox sports", "paramount+")
 
 
-@st.cache_data(ttl=600, show_spinner=False)
+@st.cache_data(ttl=30, show_spinner=False)  # short: live matches change every minute
 def summary(code: str, event_id: str) -> dict:
     try:
         resp = requests.get(f"{live.API}/{code}/summary?event={event_id}", timeout=20)
@@ -208,12 +208,17 @@ def espn_videos(s: dict) -> list[dict]:
             for v in s.get("videos", []) if v.get("links", {}).get("web", {}).get("href")]
 
 
-def form_chips(team: str, before: datetime, n: int = 5) -> list[tuple[str, str]]:
-    """Last n league results before a date: (result, 'H 2-1 Opponent')."""
+def form_chips(team: str, before, n: int = 5) -> list[tuple[str, str]]:
+    """Last n competitive results before a date, oldest first: (result, 'Premier League · H 2-1 Opponent · 24 Oct').
+    Live from ESPN in every competition; falls back to our league data if ESPN is unreachable."""
+    r = live.recent_results(team, pd.Timestamp(before).isoformat(), n)
+    if len(r):
+        return [(x.result, f"{x.competition} · {'H' if x.home else 'A'} {x.goals}-{x.goals_against} {x.opponent} · "
+                           f"{x.date:%d %b}") for x in r.iloc[::-1].itertuples()]
     tm = data.history_matches(team)
-    tm = tm[pd.to_datetime(tm.date) < pd.Timestamp(before).tz_localize(None)].sort_values("date").tail(n)
-    return [(r.result, f"{'H' if r.is_home else 'A'} {int(r.goals)}-{int(r.goals_against)} {r.opponent}")
-            for r in tm.itertuples()]
+    tm = tm[pd.to_datetime(tm.date) < pd.Timestamp(before).tz_convert(None)].sort_values("date").tail(n)
+    return [(x.result, f"{'H' if x.is_home else 'A'} {int(x.goals)}-{int(x.goals_against)} {x.opponent}")
+            for x in tm.itertuples()]
 
 
 def now() -> datetime:

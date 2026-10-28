@@ -172,9 +172,9 @@ a.fx:hover .mc { color: var(--accent); }
 .ev-sub { color: var(--muted); font-size: 0.8rem; }
 .form-row { display:flex; align-items:center; gap: .35rem; margin: .3rem 0; }
 .form-row b { min-width: 9.5rem; }
-.chip { display:inline-flex; width: 1.6rem; height: 1.6rem; align-items:center; justify-content:center; border-radius: 4px;
+.fchip { display:inline-flex; width: 1.6rem; height: 1.6rem; align-items:center; justify-content:center; border-radius: 4px;
   color: #fff; font-weight: 800; font-size: .78rem; cursor: default; }
-.chip.W { background: #16A34A; } .chip.D { background: #9CA3AF; } .chip.L { background: #DC2626; }
+.fchip.W { background: #16A34A; } .fchip.D { background: #9CA3AF; } .fchip.L { background: #DC2626; }
 .vids { display:flex; flex-direction:column; gap: .45rem; }
 .vids a { font-weight: 700; color: var(--accent); text-decoration: none; }
 /* Match centre: pitch */

@@ -29,13 +29,25 @@ def render() -> None:
         ui.callout("This match could not be loaded from ESPN right now. Try again shortly.", warn=True)
         return
     h = mc.header(s)
+    # Live, or kicking off within the hour: refresh score, minute, events, line-ups and stats every 30 seconds.
+    soon = h["state"] == "pre" and pd.notna(h["date"]) and h["date"] - pd.Timestamp.now(tz="UTC") < pd.Timedelta(hours=1)
+    live_now = h["state"] == "in" or soon
+    st.fragment(lambda: match_body(code, event), run_every=30 if live_now else None)()
+    ui.footer()
+
+
+def match_body(code: str, event: str) -> None:
+    s = mc.summary(code, event)
+    h = mc.header(s)
     ev = mc.key_events(s, h["home"]["espn"])
     scoreboard(h, CODE_NAMES.get(code, ""), ev)
+    if h["state"] == "in":
+        ui.note(f'<span class="live">Live</span> Updates every 30 seconds · last update '
+                f'{pd.Timestamp.now(tz=live.LOCAL_TZ):%H:%M:%S} MYT')
     if h["state"] == "pre":
         pre_match(s, h)
     else:
         post_match(s, h, ev, event)
-    ui.footer()
 
 
 def scoreboard(h: dict, comp: str, ev: pd.DataFrame) -> None:
@@ -218,10 +230,11 @@ def pre_match(s: dict, h: dict) -> None:
                         "advantage). Probabilistic, not for betting.")
             else:
                 ui.note("Only available when both clubs play in the three leagues.")
-        with ui.panel("Recent form", "Last five league matches · hover for the score"):
+        with ui.panel("Recent form", "Last five competitive matches, all competitions · oldest to newest · hover for "
+                      "the score"):
             for t in (home, away):
-                chips = mc.form_chips(t["team"], h["date"]) if t["team"] in set(data.history().team) else []
-                cells = "".join(f'<span class="chip {r}" title="{html.escape(txt)}">{r}</span>' for r, txt in chips)
+                chips = mc.form_chips(t["team"], h["date"]) if t["team"] in live.team_ids() else []
+                cells = "".join(f'<span class="fchip {r}" title="{html.escape(txt)}">{r}</span>' for r, txt in chips)
                 st.markdown(f'<div class="form-row"><b>{html.escape(t["team"])}</b>{cells or "<span class=muted>–</span>"}</div>',
                             unsafe_allow_html=True)
         with ui.panel("Team news", "From each club's previous match"):

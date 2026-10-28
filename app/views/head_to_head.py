@@ -5,6 +5,7 @@ import streamlit as st
 
 import charts
 import data
+import live
 import ui
 
 
@@ -84,15 +85,23 @@ def render() -> None:
     tm = data.team_matches()
     c1, c2 = st.columns(2, gap="medium")
     for col, team in ((c1, a), (c2, b)):
-        last = tm[tm.team == team].sort_values("matchweek").tail(5)
+        last = live.recent_results(team)
         with col:
-            with ui.panel(f"{team}: last five matches",
-                          f"Average Attacking Index {last.attacking_index.mean():+.2f} "
-                          f"(season {tm[tm.team == team].attacking_index.mean():+.2f})"):
+            with ui.panel(f"{team}: last five matches", "All competitions, live from ESPN · xG and Attacking Index "
+                          "for league matches once the weekly refresh has added them"):
+                if last.empty:
+                    ui.note("Recent results are unavailable right now (no connection to ESPN).")
+                    continue
+                ours = data.history_matches(team)
+                ours = ours.assign(event_id=ours.event_id.astype("Int64").astype(str)).set_index("event_id")
                 st.dataframe(pd.DataFrame({
-                    "MW": last.matchweek, "Opponent": last.opponent, "H/A": last.is_home.map({True: "H", False: "A"}),
+                    "Date": last.date.dt.tz_convert(live.LOCAL_TZ).dt.strftime("%d %b"),
+                    "Competition": last.competition, "Opponent": last.opponent,
+                    "H/A": last.home.map({True: "H", False: "A"}),
                     "Result": [f"{r} {g}-{c}" for r, g, c in zip(last.result, last.goals, last.goals_against)],
-                    "xG": last.xg, "Attacking Index": last.attacking_index}), hide_index=True, width="stretch",
+                    "xG": pd.to_numeric(last.event_id.map(ours.xg), errors="coerce"),
+                    "Attacking Index": pd.to_numeric(last.event_id.map(ours.attacking_index), errors="coerce")}),
+                    hide_index=True, width="stretch",
                     column_config={"xG": st.column_config.NumberColumn(format="%.2f"),
                                    "Attacking Index": st.column_config.NumberColumn(format="%+.2f")})
 
