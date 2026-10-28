@@ -268,7 +268,7 @@ def pre_match(s: dict, h: dict) -> None:
                 cells = "".join(f'<span class="fchip {r}" title="{html.escape(txt)}">{r}</span>' for r, txt in chips)
                 st.markdown(f'<div class="form-row"><b>{html.escape(t["team"])}</b>{cells or "<span class=muted>–</span>"}</div>',
                             unsafe_allow_html=True)
-        has_key = bool(injuries.api_key())
+        has_key = injuries.available()
         with ui.panel("Team news", "Injuries and suspensions (API-Football) and notes from each club's previous match"
                       if has_key else "From each club's previous match"):
             for t in (home, away):
@@ -282,8 +282,10 @@ def pre_match(s: dict, h: dict) -> None:
             if has_key:
                 ui.note("Injury list: API-Football, refreshed every six hours. Previous-match notes: ESPN.")
             else:
-                ui.note("Based on the previous match sheet only (players who went off injured or were sent off). "
-                        "Add a free API-Football key to show full injury and suspension lists.")
+                why = ("the API-Football key's plan does not cover the current season" if injuries.api_key()
+                       else "no injury source is configured")
+                ui.note("Based on the previous match sheet only (players who went off injured or were sent off); "
+                        f"full injury and suspension lists are not shown because {why}.")
     if both:
         with ui.panel("Season so far", "Per-match averages, 2026/27 league matches"):
             rows = [("Attacking Index", "attacking_index_season", "%+.2f"), ("xG", "xg_season", "%.2f"),

@@ -5,6 +5,8 @@ import os
 import sys
 from datetime import datetime, timezone
 
+import re
+
 import pandas as pd
 import requests
 import streamlit as st
@@ -199,7 +201,8 @@ def names_in(team: str, title: str) -> bool:
     """Whether a video title mentions the club: full name, a known alias, or a distinctive word of its name."""
     words = [w for w in fold(team).replace("-", " ").split() if w not in GENERIC and len(w) > 2]
     options = [fold(team), *ALIASES.get(team, []), *words]
-    return any(o in title for o in options)
+    # Whole words only: "ham" (West Ham) must not match "Southampton".
+    return any(re.search(rf"(?<![a-z]){re.escape(o)}(?![a-z])", title) for o in options)
 
 
 def youtube_search_url(home: str, away: str, date: pd.Timestamp) -> str:

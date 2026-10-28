@@ -151,7 +151,11 @@ Phases:
   - UCL qualifiers: ESPN has `uefa.champions_qual`, but none of our clubs play in them, so they aren't collected.
   - Photos: `src.collect.photos` (Wikipedia lead images with `pilicense=free`, plus Wikidata name search filtered by footballer and birth year) → `photos_extra.csv` → fallback in `build_players`.
   - Line-up players (match centre pitch, benches, Clubs tab) link to `players?season&club&player` via `data.player_links()`. The Clubs line-ups now use `pitch.team_pitch` (HTML).
-  - Injuries: `app/injuries.py` (API-Football `/injuries`, leagues 39/140/135/2, cached 6 h). Active only with `API_FOOTBALL_KEY` in `secrets.toml`. Whether the free plan covers the current season is still to be verified with the user's key.
+  - Injuries: `app/injuries.py` (API-Football `/injuries`, leagues 39/140/135/2, cached 6 h). Active only with `API_FOOTBALL_KEY` in `secrets.toml`. Checked 2026-10-28 with the user's key: the **Free plan returns "Free plans do not have access to this season, try from 2022 to 2024."**
+    - So there is no current-season injury data unless the user upgrades.
+    - `injuries.access_error()` (1 request, cached 6 h) detects this, and the app falls back to match-sheet team news with an explanatory note.
+    - Parsing and club mapping were verified on 2024/25 (EPL 3,168 listings; all 20 EPL clubs mapped).
+  - `matchcentre.names_in` now matches whole words only. "ham" (West Ham) used to match "Southampton", which affected injury mapping and highlight matching. Exact accent-folded names win first (`Atletico Madrid` → `Atlético Madrid`).
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.

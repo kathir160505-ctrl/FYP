@@ -34,6 +34,26 @@ def season_year() -> int:
 
 
 @st.cache_data(ttl=6 * 3600, show_spinner=False)
+def access_error() -> str | None:
+    """None when the key can read this season's injuries; otherwise API-Football's reason (e.g. the free plan only
+    covers past seasons). One request, cached for six hours."""
+    key = api_key()
+    if not key:
+        return "no key"
+    try:
+        body = requests.get(f"{BASE}/injuries", params={"league": LEAGUE_IDS["Premier League"], "season": season_year()},
+                            headers={"x-apisports-key": key}, timeout=20).json()
+    except (requests.RequestException, ValueError):
+        return "API-Football is unreachable"
+    errors = body.get("errors")
+    return "; ".join(str(v) for v in errors.values()) if isinstance(errors, dict) and errors else (str(errors) if errors else None)
+
+
+def available() -> bool:
+    return access_error() is None
+
+
+@st.cache_data(ttl=6 * 3600, show_spinner=False)
 def league_injuries(league_id: int, season: int) -> pd.DataFrame:
     key = api_key()
     if not key:
@@ -60,6 +80,9 @@ def _our_team(name: str) -> str:
     ours = set(live.club_names().values())
     if name in ours:
         return name
+    exact = [t for t in ours if fold(t) == fold(name)]  # 'Atletico Madrid' -> 'Atlético Madrid'
+    if len(exact) == 1:
+        return exact[0]
     hits = [t for t in ours if names_in(t, fold(name)) or names_in(name, fold(t))]
     return hits[0] if len(hits) == 1 else name
 
@@ -67,7 +90,7 @@ def _our_team(name: str) -> str:
 @st.cache_data(ttl=6 * 3600, show_spinner=False)
 def current() -> pd.DataFrame:
     """Each player's latest listing across the four competitions, for fixtures from the last week onwards."""
-    if not api_key():
+    if not available():
         return pd.DataFrame()
     frames = [league_injuries(lid, season_year()).assign(competition=comp) for comp, lid in LEAGUE_IDS.items()]
     df = pd.concat([f for f in frames if len(f)], ignore_index=True) if any(len(f) for f in frames) else pd.DataFrame()
