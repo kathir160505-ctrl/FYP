@@ -9,7 +9,14 @@ The project groups all 60 Premier League, La Liga and Serie A clubs by **how the
 - **Club Profile:** for each club, a percentile radar, a matchweek timeline, a shot map, attack-speed breakdowns, first-half vs second-half comparison and similar clubs across leagues.
 - **Head-to-Head:** compares two clubs and estimates which will show the more attacking style. This is not a result prediction.
 - **League Comparison:** the style mix per league, with a chi-square and permutation test.
+- **Matchday:** live 2026/27 fixtures, scores and results with an "attacking edge" estimate per match, plus the latest football news (ESPN).
 - **Methodology:** sources, features, PCA, model selection, validation and limitations.
+
+To refresh the current-season form behind the Matchday predictions:
+
+```bash
+python -m src.collect.live
+```
 
 ## Run the dashboard
 

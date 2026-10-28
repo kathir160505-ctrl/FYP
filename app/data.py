@@ -22,10 +22,10 @@ LEAGUE_SYMBOLS = {"Premier League": "circle", "La Liga": "diamond", "Serie A": "
 
 CLUSTER_ORDER = ["Dominant Possession", "Controlled Build-up", "Direct & Cross-Oriented", "Long-Ball Low Block"]
 CLUSTER_COLORS = {
-    "Dominant Possession": "#38bdf8",
-    "Controlled Build-up": "#a78bfa",
-    "Direct & Cross-Oriented": "#f59e0b",
-    "Long-Ball Low Block": "#f43f5e",
+    "Dominant Possession": "#1D4ED8",
+    "Controlled Build-up": "#7C3AED",
+    "Direct & Cross-Oriented": "#EA580C",
+    "Long-Ball Low Block": "#0F766E",
 }
 
 SHORT_LABELS = {
@@ -58,14 +58,16 @@ def fmt(feature: str, value: float) -> str:
     return f"{value:.2f}"
 
 
-def _readable(color: str) -> str:
-    """Club colours that are too dark for the dark theme are lightened."""
-    c = color.lstrip("#")
+def readable(color: str) -> str:
+    """Club colours too pale for the white theme (white, yellow, sky blue) are darkened."""
+    c = str(color).lstrip("#")
+    if len(c) != 6:
+        return "#374151"
     r, g, b = (int(c[i:i + 2], 16) for i in (0, 2, 4))
     lum = 0.2126 * r + 0.7152 * g + 0.0722 * b
-    if lum >= 60:
+    if lum <= 170:
         return f"#{c}"
-    mix = lambda v: int(v + (255 - v) * 0.55)  # noqa: E731
+    mix = lambda v: int(v * 0.45)  # noqa: E731
     return f"#{mix(r):02x}{mix(g):02x}{mix(b):02x}"
 
 
@@ -83,7 +85,7 @@ def clubs() -> pd.DataFrame:
           .merge(meta.drop(columns="league"), on="team").merge(record.reset_index(), on="team"))
     df["league_name"] = df["league"].map(LEAGUES)
     df["position"] = df.groupby("league")["Pts"].rank(ascending=False, method="first").astype(int)
-    df["color"] = df["color"].map(_readable)
+    df["color"] = df["color"].map(readable)
     for f in FEATURES:
         df[f"{f}_pct"] = df[f].rank(pct=True) * 100
         df[f"{f}_lrank"] = df.groupby("league")[f].rank(ascending=False, method="min").astype(int)
@@ -151,12 +153,14 @@ PREDICTION_THEMES = {
 }
 
 
-def predict_more_attacking(team_a: str, team_b: str, venue: str) -> dict:
+def predict_more_attacking(team_a: str, team_b: str, venue: str, form: pd.DataFrame | None = None) -> dict:
     """P(team A shows the more attacking style), with contributions grouped by theme.
 
     venue: "A" (A at home), "B" (B at home) or "N" (neutral, average of both).
+    form: club inputs indexed by team; defaults to end-of-2025/26 form, the Matchday page passes 2026/27 form.
     """
-    pm, form = predict_model(), team_form()
+    pm = predict_model()
+    form = team_form() if form is None else form
     model, feats, stats = pm["model"], pm["features"], pm["history_stats"]
     base = {}
     for s in stats:

@@ -16,10 +16,10 @@ def render() -> None:
     share = (df.groupby(["league_name", "cluster"]).size().rename("n").reset_index()
              .assign(share=lambda d: d.n / d.groupby("league_name").n.transform("sum") * 100))
     verdict = "is" if test["p_permutation"] < 0.05 else "is not"
-    ui.kpis([("χ² statistic", f"{test['chi2']:.2f}", f"{test['dof']} degrees of freedom", "#38BDF8"),
-             ("Permutation p-value", f"{test['p_permutation']:.2f}", "10,000 permutations", "#6366F1"),
-             ("Cramér's V", f"{test['cramers_v']:.2f}", "effect size (0 none, 1 perfect)", "#A78BFA"),
-             ("Result", "Not significant" if verdict == "is not" else "Significant", "at the 5% level", "#F59E0B")])
+    ui.kpis([("χ² statistic", f"{test['chi2']:.2f}", f"{test['dof']} degrees of freedom", "#0B0D10"),
+             ("Permutation p-value", f"{test['p_permutation']:.2f}", "10,000 permutations", "#0B0D10"),
+             ("Cramér's V", f"{test['cramers_v']:.2f}", "effect size (0 none, 1 perfect)", "#0B0D10"),
+             ("Result", "Not significant" if verdict == "is not" else "Significant", "at the 5% level", "#D50000")])
 
     c1, c2 = st.columns([1.4, 1], gap="medium")
     with c1:

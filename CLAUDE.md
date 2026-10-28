@@ -64,6 +64,18 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
   - Theme lives in `.streamlit/config.toml`.
 - **Gotcha:** Streamlit does not hot-reload the modules imported from `app/`. Restart the server after editing `charts.py`, `data.py` or `views`.
 - **Requirements:** `requirements.txt` is the lean app runtime, with scikit-learn pinned for the joblib models. `requirements-dev.txt` is the full pipeline.
+## UI and Matchday (2026-10-28)
+- **Workflow:** the user wants to build and test locally first; commit locally and push only when asked.
+- **Theme:** white sports-media look in the style of ESPN, DAZN and OneFootball.
+  - Light theme in `.streamlit/config.toml`; Barlow Condensed headings; one red accent (#D50000); no gradients.
+  - Top navigation via `st.navigation(position="top")`.
+- **Matchday page** (`app/views/matchday.py`, data layer `app/live.py`):
+  - ESPN news and fixtures are fetched at view time and cached for 5–15 minutes. Times are shown in MYT (UTC+8).
+  - Attacking-edge predictions use `data/live/team_form.csv`, which is current-season form.
+- **Refresh current-season form:** run `python -m src.collect.live`. The first run takes about 10 minutes; later runs are incremental. Outputs go to `data/live/`.
+  - Promoted clubs are mapped in `data/reference/teams_promoted_2627.csv`.
+- **Dev preview:** launch config `fyp-dashboard-dev` uses port 8510, so it doesn't clash with the user's own server on 8501.
+
 ## Phase 7: deploy
 - **GitHub repo (private):** https://github.com/NITIYAHSELVAN/fyp-attacking-philosophies, branch `main`. Pushed 2026-10-24.
 - **GitHub CLI:** installed at `C:\Program Files\GitHub CLI\gh.exe` and logged in as NITIYAHSELVAN.

@@ -39,7 +39,7 @@ def render() -> None:
     st.query_params["a"] = a
 
     ra, rb = df.set_index("team").loc[a], df.set_index("team").loc[b]
-    color_b = rb.color if _distinct(ra.color, rb.color) else "#E2E8F0"
+    color_b = rb.color if _distinct(ra.color, rb.color) else "#111418"
 
     left, mid, right = st.columns([1, 1.7, 1], gap="medium")
     _side(left, df[df.team == a].iloc[0], "Club A")

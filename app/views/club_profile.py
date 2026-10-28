@@ -174,7 +174,7 @@ def render() -> None:
                 pct = {half: [data.percent_rank(all_h[all_h.half == half][f], h.loc[half, f]) if f in feats else 50
                               for f in data.FEATURES] for half in ("H1", "H2")}
                 st.plotly_chart(charts.radar([
-                    {"name": "Matchweeks 1–19", "values": pct["H1"], "color": "#94A3B8", "fill": False},
+                    {"name": "Matchweeks 1–19", "values": pct["H1"], "color": "#9CA3AF", "fill": False},
                     {"name": "Matchweeks 20–38", "values": pct["H2"], "color": row.color}], height=420), width="stretch")
         with c2:
             with ui.panel("Change by metric", f"Style: {row.cluster_h1} → {row.cluster_h2}"):
@@ -205,6 +205,6 @@ def render() -> None:
             other = df.set_index("team").loc[pick]
             st.plotly_chart(charts.radar([
                 {"name": team, "values": [row[f"{f}_pct"] for f in data.FEATURES], "color": row.color},
-                {"name": pick, "values": [other[f"{f}_pct"] for f in data.FEATURES], "color": "#E2E8F0", "fill": False}],
+                {"name": pick, "values": [other[f"{f}_pct"] for f in data.FEATURES], "color": "#111418", "fill": False}],
                 height=420), width="stretch")
     ui.footer()

@@ -41,7 +41,7 @@ def render() -> None:
 
     cols = st.columns(3, gap="small")
     for i, (num, title, text) in enumerate(PIPELINE):
-        cols[i % 3].markdown(f'<div class="card" style="margin-bottom:0.75rem"><div class="note" style="color:#38BDF8;'
+        cols[i % 3].markdown(f'<div class="card" style="margin-bottom:0.75rem"><div class="note" style="color:#D50000;'
                              f'font-weight:700;letter-spacing:0.1em">STEP {num}</div><h4 style="margin-top:0.2rem">{title}</h4>'
                              f'<p>{text}</p></div>', unsafe_allow_html=True)
 
@@ -64,7 +64,7 @@ def render() -> None:
         with ui.panel("Explained variance", f"{cm['explained_variance'].sum():.1%} retained in "
                       f"{len(cm['explained_variance'])} components"):
             ev = cm["explained_variance"]
-            fig = go.Figure(go.Bar(x=[f"PC{i + 1}" for i in range(len(ev))], y=ev * 100, marker_color="#3B82F6",
+            fig = go.Figure(go.Bar(x=[f"PC{i + 1}" for i in range(len(ev))], y=ev * 100, marker_color="#0B0D10",
                                    text=[f"{v:.1%}" for v in ev], textposition="outside"))
             fig.update_yaxes(title="% of variance")
             st.plotly_chart(charts._layout(fig, height=360), width="stretch")
@@ -91,10 +91,10 @@ def render() -> None:
     sh = cm["split_half"]
     final = sel[(sel.algorithm == "KMeans") & (sel.k == 4)].iloc[0]
     st.write("")
-    ui.kpis([("Bootstrap stability", f"{final.bootstrap_ari:.2f}", "mean ARI over 200 resamples", "#38BDF8"),
-             ("Split-half agreement", f"{sh['same_cluster_h1_h2']:.0%}", "clubs in the same style both halves", "#6366F1"),
-             ("Silhouette", f"{final.silhouette:.3f}", "K-means, k = 4", "#A78BFA"),
-             ("Davies–Bouldin", f"{final.davies_bouldin:.2f}", "lower is better", "#F59E0B")])
+    ui.kpis([("Bootstrap stability", f"{final.bootstrap_ari:.2f}", "mean ARI over 200 resamples", "#0B0D10"),
+             ("Split-half agreement", f"{sh['same_cluster_h1_h2']:.0%}", "clubs in the same style both halves", "#0B0D10"),
+             ("Silhouette", f"{final.silhouette:.3f}", "K-means, k = 4", "#0B0D10"),
+             ("Davies–Bouldin", f"{final.davies_bouldin:.2f}", "lower is better", "#0B0D10")])
 
     c1, c2 = st.columns([1.3, 1], gap="medium")
     with c1:

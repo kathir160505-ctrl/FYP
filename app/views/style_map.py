@@ -24,12 +24,12 @@ def render() -> None:
                    "given in advance.",
                    meta="Season <b>2025/26</b><br>Premier League · La Liga · Serie A")
     ui.kpis([
-        ("Clubs analysed", "60", "20 per league", "#38BDF8"),
-        ("Matches", "1,140", "complete league season", "#6366F1"),
-        ("Shots", f"{len(data.shots()):,}", "with location and xG", "#A78BFA"),
-        ("Attacking styles", str(df.cluster.nunique()), "found by K-means clustering", "#F59E0B"),
+        ("Clubs analysed", "60", "20 per league", "#0B0D10"),
+        ("Matches", "1,140", "complete league season", "#0B0D10"),
+        ("Shots", f"{len(data.shots()):,}", "with location and xG", "#0B0D10"),
+        ("Attacking styles", str(df.cluster.nunique()), "found by K-means clustering", "#D50000"),
         ("Variance captured", f"{cm['explained_variance'].sum():.0%}", f"by {cm['n_components']} principal components",
-         "#22C55E"),
+         "#0B0D10"),
     ])
 
     c1, c2 = st.columns([3, 1], gap="medium")

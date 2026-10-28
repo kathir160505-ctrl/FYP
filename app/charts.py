@@ -6,10 +6,10 @@ import plotly.graph_objects as go
 from data import CLUSTER_COLORS, CLUSTER_ORDER, FEATURES, LEAGUE_SYMBOLS, SHORT_LABELS, fmt
 
 BG = "rgba(0,0,0,0)"
-GRID = "rgba(148,163,184,0.10)"
-TEXT = "#C3CAD8"
-MUTED = "#6B7487"
-PITCH_LINE = "rgba(226,232,240,0.55)"
+GRID = "#EEF0F3"
+TEXT = "#2B313A"
+MUTED = "#6B7280"
+PITCH_LINE = "rgba(255,255,255,0.75)"
 FONT = "Inter, Segoe UI, sans-serif"
 
 
@@ -17,13 +17,13 @@ def _layout(fig: go.Figure, height: int = 420, **kw) -> go.Figure:
     layout = dict(
         height=height, paper_bgcolor=BG, plot_bgcolor=BG, font=dict(color=TEXT, family=FONT, size=12),
         margin=dict(l=8, r=8, t=36, b=8),
-        hoverlabel=dict(bgcolor="#0D1424", bordercolor="#2B3648", font=dict(color="#F1F5F9", family=FONT, size=12)),
+        hoverlabel=dict(bgcolor="#FFFFFF", bordercolor="#CDD2D9", font=dict(color="#0B0D10", family=FONT, size=12)),
         legend=dict(bgcolor="rgba(0,0,0,0)", orientation="h", yanchor="bottom", y=1.01, x=0, font=dict(size=11)),
         modebar=dict(bgcolor="rgba(0,0,0,0)", color=MUTED, activecolor=TEXT))
     fig.update_layout(**{**layout, **kw})
-    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="rgba(148,163,184,0.18)",
+    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="#D5D9DF",
                      tickfont=dict(color=MUTED, size=11), title_font=dict(color=MUTED, size=12))
-    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="rgba(148,163,184,0.18)",
+    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="#D5D9DF",
                      tickfont=dict(color=MUTED, size=11), title_font=dict(color=MUTED, size=12))
     return fig
 
@@ -38,11 +38,11 @@ def style_map(df: pd.DataFrame, highlight: list[str] | None = None, explained: t
                 continue
             fig.add_trace(go.Scatter(
                 x=d.PC1, y=d.PC2, mode="markers+text", text=d.abbr, textposition="top center",
-                textfont=dict(size=9, color="#7C879B"), name=cluster, legendgroup=cluster,
+                textfont=dict(size=9, color="#5B6472"), name=cluster, legendgroup=cluster,
                 showlegend=league == "Premier League",
                 marker=dict(size=12, symbol=symbol, color=CLUSTER_COLORS[cluster],
                             line=dict(width=[3 if t in highlight else 0.5 for t in d.team],
-                                      color=["#ffffff" if t in highlight else "#0b1020" for t in d.team]),
+                                      color=["#0B0D10" if t in highlight else "#FFFFFF" for t in d.team]),
                             opacity=[1.0 if (not highlight or t in highlight) else 0.35 for t in d.team]),
                 customdata=np.stack([d.team, d.league_name, d.cluster, d.possession, d.xg, d.shots, d.long_ball_share], axis=1),
                 hovertemplate="<b>%{customdata[0]}</b> · %{customdata[1]}<br>%{customdata[2]}<br>"
@@ -61,7 +61,7 @@ def radar(series: list[dict], height: int = 430) -> go.Figure:
         r = list(s["values"]) + [s["values"][0]]
         fig.add_trace(go.Scatterpolar(
             r=r, theta=theta, name=s["name"], line=dict(color=s["color"], width=2.5, dash=s.get("dash", "solid")),
-            fill="toself" if s.get("fill", True) else "none", fillcolor=_rgba(s["color"], 0.18),
+            fill="toself" if s.get("fill", True) else "none", fillcolor=_rgba(s["color"], 0.14),
             hovertemplate="%{theta}: %{r:.0f}th percentile<extra>" + s["name"] + "</extra>"))
     fig.update_layout(polar=dict(bgcolor=BG, domain=dict(x=[0.08, 0.92], y=[0.06, 0.94]),
                                  radialaxis=dict(range=[0, 100], tickvals=[25, 50, 75], gridcolor=GRID,
@@ -79,7 +79,7 @@ def _rgba(hex_color: str, alpha: float) -> str:
 def timeline(tm: pd.DataFrame, color: str) -> go.Figure:
     """Attacking Index per matchweek, bars coloured by result, with a 5-match rolling line."""
     tm = tm.sort_values("matchweek")
-    res_color = {"W": "#22c55e", "D": "#94a3b8", "L": "#ef4444"}
+    res_color = {"W": "#16A34A", "D": "#9CA3AF", "L": "#DC2626"}
     fig = go.Figure()
     fig.add_trace(go.Bar(
         x=tm.matchweek, y=tm.attacking_index, marker_color=[res_color[r] for r in tm.result], opacity=0.55,
@@ -103,7 +103,7 @@ def xg_flow(tm: pd.DataFrame, color: str) -> go.Figure:
     fig.add_trace(go.Scatter(x=tm.matchweek, y=tm.xg.rolling(5, min_periods=1).mean(), name="xG for (5-match avg)",
                              line=dict(color=color, width=3, shape="spline"), fill="tozeroy", fillcolor=_rgba(color, 0.12)))
     fig.add_trace(go.Scatter(x=tm.matchweek, y=tm.xg_against.rolling(5, min_periods=1).mean(),
-                             name="xG against (5-match avg)", line=dict(color="#f87171", width=2, dash="dot", shape="spline")))
+                             name="xG against (5-match avg)", line=dict(color="#DC2626", width=2, dash="dot", shape="spline")))
     fig.update_xaxes(title="Matchweek", dtick=2)
     fig.update_yaxes(title="xG per match")
     return _layout(fig, height=320)
@@ -135,22 +135,22 @@ def _half_pitch(fig: go.Figure) -> None:
 def shot_map(shots: pd.DataFrame, color: str) -> go.Figure:
     fig = go.Figure()
     _half_pitch(fig)
-    for is_goal, name, c, sym in ((False, "No goal", _rgba(color, 0.35), "circle"), (True, "Goal", "#facc15", "star")):
+    for is_goal, name, c, sym in ((False, "No goal", "rgba(255,255,255,0.55)", "circle"), (True, "Goal", "#FACC15", "star")):
         d = shots[(shots.result == "Goal") == is_goal]
         fig.add_trace(go.Scatter(
             x=d.location_y * 68, y=d.location_x * 105, mode="markers", name=name,
-            marker=dict(size=5 + d.xg * 28, color=c, symbol=sym, line=dict(width=0.8, color="#0b1020")),
+            marker=dict(size=5 + d.xg * 28, color=c, symbol=sym, line=dict(width=0.8, color="#0B3B26")),
             customdata=np.stack([d.player, d.opponent, d.minute, d.xg, d.situation, d.result, d.matchweek], axis=1),
             hovertemplate="<b>%{customdata[0]}</b> vs %{customdata[1]} (MW %{customdata[6]}, %{customdata[2]}')<br>"
                           "%{customdata[5]} · xG %{customdata[3]:.2f} · %{customdata[4]}<extra></extra>"))
-    return _layout(fig, height=470, plot_bgcolor="#0f3d2e", legend=dict(orientation="h", y=-0.04, x=0.5, xanchor="center"))
+    return _layout(fig, height=470, plot_bgcolor="#1E6B45", legend=dict(orientation="h", y=-0.04, x=0.5, xanchor="center"))
 
 
 def stacked_share(df: pd.DataFrame, x: str, y: str, colors: dict, order: list, height: int = 300) -> go.Figure:
     fig = go.Figure()
     for cat in order:
         d = df[df[y] == cat]
-        fig.add_trace(go.Bar(x=d[x], y=d["share"], name=cat, marker_color=colors.get(cat, "#64748b"),
+        fig.add_trace(go.Bar(x=d[x], y=d["share"], name=cat, marker_color=colors.get(cat, "#6B7280"),
                              text=[f"{v:.0f}%" if v >= 6 else "" for v in d["share"]], textposition="inside",
                              customdata=d["n"], hovertemplate="%{x}<br>" + cat + ": %{y:.1f}% (%{customdata})<extra></extra>"))
     fig.update_layout(barmode="stack")
@@ -183,11 +183,11 @@ def gauge_bar(prob: float, name_a: str, name_b: str, color_a: str, color_b: str)
     fig.add_trace(go.Bar(x=[(1 - prob) * 100], y=[""], orientation="h", marker_color=color_b, name=name_b,
                          text=f"{1 - prob:.0%}  {name_b}", textposition="inside", insidetextanchor="end",
                          hovertemplate=f"{name_b}: {1 - prob:.1%}<extra></extra>"))
-    fig.add_vline(x=50, line=dict(color="#e2e8f0", width=1, dash="dot"))
+    fig.add_vline(x=50, line=dict(color="#0B0D10", width=1, dash="dot"))
     fig.update_layout(barmode="stack", showlegend=False, uniformtext=dict(minsize=12, mode="show"))
     fig.update_xaxes(range=[0, 100], visible=False)
     fig.update_yaxes(visible=False)
-    fig.update_traces(textfont=dict(size=15, color="#0b1020"))
+    fig.update_traces(textfont=dict(size=14, color="#FFFFFF", family="Barlow Condensed, Arial Narrow, sans-serif"))
     return _layout(fig, height=90, margin=dict(l=0, r=0, t=0, b=0))
 
 
@@ -221,12 +221,12 @@ def league_box(df: pd.DataFrame, feature: str) -> go.Figure:
     for i, league in enumerate(leagues):
         d = df[df.league_name == league]
         fig.add_trace(go.Box(x=[i] * len(d), y=d[feature], boxpoints=False, width=0.55, showlegend=False,
-                             line=dict(color="#94a3b8"), fillcolor="rgba(148,163,184,0.08)", hoverinfo="skip"))
+                             line=dict(color="#9CA3AF"), fillcolor="rgba(156,163,175,0.08)", hoverinfo="skip"))
     for cluster in CLUSTER_ORDER:
         d = df[df.cluster == cluster]
         x = d.league_name.map({lg: i for i, lg in enumerate(leagues)}) + rng.uniform(-0.18, 0.18, len(d))
         fig.add_trace(go.Scatter(x=x, y=d[feature], mode="markers", name=cluster,
-                                 marker=dict(size=9, color=CLUSTER_COLORS[cluster], line=dict(width=0.6, color="#0b1020")),
+                                 marker=dict(size=9, color=CLUSTER_COLORS[cluster], line=dict(width=0.6, color="#FFFFFF")),
                                  text=d.team, hovertemplate="%{text}: %{y:.2f}<extra>" + cluster + "</extra>"))
     fig.update_xaxes(tickvals=list(range(3)), ticktext=leagues, range=[-0.6, 2.6])
     return _layout(fig, height=400)
@@ -239,6 +239,6 @@ def model_selection_chart(sel: pd.DataFrame, final_k: int) -> go.Figure:
     km = sel[sel.algorithm == "KMeans"]
     fig.add_trace(go.Scatter(x=km.k, y=km.bootstrap_ari, mode="lines+markers", name="KMeans bootstrap stability (ARI)",
                              line=dict(dash="dot")))
-    fig.add_vline(x=final_k, line=dict(color="#e2e8f0", dash="dash"), annotation_text=f"chosen k = {final_k}")
+    fig.add_vline(x=final_k, line=dict(color="#0B0D10", dash="dash"), annotation_text=f"chosen k = {final_k}")
     fig.update_xaxes(title="number of clusters k", dtick=1)
     return _layout(fig, height=340)
