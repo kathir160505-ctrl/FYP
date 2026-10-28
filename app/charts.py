@@ -6,21 +6,25 @@ import plotly.graph_objects as go
 from data import CLUSTER_COLORS, CLUSTER_ORDER, FEATURES, LEAGUE_SYMBOLS, SHORT_LABELS, fmt
 
 BG = "rgba(0,0,0,0)"
-GRID = "rgba(148,163,184,0.15)"
-TEXT = "#cbd5e1"
-MUTED = "#64748b"
+GRID = "rgba(148,163,184,0.10)"
+TEXT = "#C3CAD8"
+MUTED = "#6B7487"
 PITCH_LINE = "rgba(226,232,240,0.55)"
+FONT = "Inter, Segoe UI, sans-serif"
 
 
 def _layout(fig: go.Figure, height: int = 420, **kw) -> go.Figure:
     layout = dict(
-        height=height, paper_bgcolor=BG, plot_bgcolor=BG, font=dict(color=TEXT, family="Inter, sans-serif", size=12),
-        margin=dict(l=10, r=10, t=40, b=10), hoverlabel=dict(bgcolor="#0f172a", bordercolor="#334155",
-                                                             font=dict(color="#e2e8f0")),
-        legend=dict(bgcolor="rgba(0,0,0,0)", orientation="h", y=-0.12))
+        height=height, paper_bgcolor=BG, plot_bgcolor=BG, font=dict(color=TEXT, family=FONT, size=12),
+        margin=dict(l=8, r=8, t=36, b=8),
+        hoverlabel=dict(bgcolor="#0D1424", bordercolor="#2B3648", font=dict(color="#F1F5F9", family=FONT, size=12)),
+        legend=dict(bgcolor="rgba(0,0,0,0)", orientation="h", yanchor="bottom", y=1.01, x=0, font=dict(size=11)),
+        modebar=dict(bgcolor="rgba(0,0,0,0)", color=MUTED, activecolor=TEXT))
     fig.update_layout(**{**layout, **kw})
-    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID)
-    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID)
+    fig.update_xaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="rgba(148,163,184,0.18)",
+                     tickfont=dict(color=MUTED, size=11), title_font=dict(color=MUTED, size=12))
+    fig.update_yaxes(gridcolor=GRID, zerolinecolor=GRID, linecolor="rgba(148,163,184,0.18)",
+                     tickfont=dict(color=MUTED, size=11), title_font=dict(color=MUTED, size=12))
     return fig
 
 
@@ -34,9 +38,9 @@ def style_map(df: pd.DataFrame, highlight: list[str] | None = None, explained: t
                 continue
             fig.add_trace(go.Scatter(
                 x=d.PC1, y=d.PC2, mode="markers+text", text=d.abbr, textposition="top center",
-                textfont=dict(size=9, color="#94a3b8"), name=cluster, legendgroup=cluster,
+                textfont=dict(size=9, color="#7C879B"), name=cluster, legendgroup=cluster,
                 showlegend=league == "Premier League",
-                marker=dict(size=13, symbol=symbol, color=CLUSTER_COLORS[cluster],
+                marker=dict(size=12, symbol=symbol, color=CLUSTER_COLORS[cluster],
                             line=dict(width=[3 if t in highlight else 0.5 for t in d.team],
                                       color=["#ffffff" if t in highlight else "#0b1020" for t in d.team]),
                             opacity=[1.0 if (not highlight or t in highlight) else 0.35 for t in d.team]),
@@ -44,9 +48,9 @@ def style_map(df: pd.DataFrame, highlight: list[str] | None = None, explained: t
                 hovertemplate="<b>%{customdata[0]}</b> · %{customdata[1]}<br>%{customdata[2]}<br>"
                               "Possession %{customdata[3]:.1f}% · xG %{customdata[4]:.2f} · Shots %{customdata[5]:.1f}"
                               "<br>Long-ball share %{customdata[6]:.1f}%<extra></extra>"))
-    fig.update_xaxes(title=f"← reactive · Attacking dominance (PC1, {explained[0]:.0%}) · dominant →")
-    fig.update_yaxes(title=f"← efficient finishing · PC2 ({explained[1]:.0%}) · crossing volume →")
-    return _layout(fig, height=560)
+    fig.update_xaxes(title=f"Attacking dominance (PC1, {explained[0]:.0%} of variance)  →", zeroline=True)
+    fig.update_yaxes(title=f"Finishing efficiency  ↔  crossing volume (PC2, {explained[1]:.0%})", zeroline=True)
+    return _layout(fig, height=540)
 
 
 def radar(series: list[dict], height: int = 430) -> go.Figure:
@@ -59,10 +63,12 @@ def radar(series: list[dict], height: int = 430) -> go.Figure:
             r=r, theta=theta, name=s["name"], line=dict(color=s["color"], width=2.5, dash=s.get("dash", "solid")),
             fill="toself" if s.get("fill", True) else "none", fillcolor=_rgba(s["color"], 0.18),
             hovertemplate="%{theta}: %{r:.0f}th percentile<extra>" + s["name"] + "</extra>"))
-    fig.update_layout(polar=dict(bgcolor=BG, radialaxis=dict(range=[0, 100], tickvals=[25, 50, 75], gridcolor=GRID,
-                                                             tickfont=dict(size=9, color=MUTED), showline=False),
+    fig.update_layout(polar=dict(bgcolor=BG, domain=dict(x=[0.08, 0.92], y=[0.06, 0.94]),
+                                 radialaxis=dict(range=[0, 100], tickvals=[25, 50, 75], gridcolor=GRID,
+                                                 tickfont=dict(size=9, color=MUTED), showline=False),
                                  angularaxis=dict(gridcolor=GRID, tickfont=dict(size=11, color=TEXT))))
-    return _layout(fig, height=height, showlegend=len(series) > 1)
+    return _layout(fig, height=height, showlegend=len(series) > 1, margin=dict(l=40, r=40, t=24, b=24),
+                   legend=dict(orientation="h", yanchor="top", y=-0.02, x=0.5, xanchor="center", font=dict(size=11)))
 
 
 def _rgba(hex_color: str, alpha: float) -> str:

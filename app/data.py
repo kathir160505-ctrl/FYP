@@ -27,12 +27,6 @@ CLUSTER_COLORS = {
     "Direct & Cross-Oriented": "#f59e0b",
     "Long-Ball Low Block": "#f43f5e",
 }
-CLUSTER_ICONS = {
-    "Dominant Possession": "🎯",
-    "Controlled Build-up": "🧩",
-    "Direct & Cross-Oriented": "⚡",
-    "Long-Ball Low Block": "🧱",
-}
 
 SHORT_LABELS = {
     "possession": "Possession",
