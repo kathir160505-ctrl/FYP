@@ -7,7 +7,18 @@ import data
 import ui
 
 
+def season_view(season: int, current) -> "pd.DataFrame":
+    """Club rows for another season, in the columns the style map and cards use."""
+    h = data.history()
+    h = h[(h.season == season) & h.cluster.notna()].copy()
+    abbr = dict(zip(current.team, current.abbr))
+    h["abbr"] = [abbr.get(t, t[:3].upper()) for t in h.team]
+    h["matches"] = h["played"]
+    return h
+
+
 def _crest_strip(members, limit: int = 8) -> str:
+    members = members[members.logo.notna()] if "logo" in members else members
     imgs = "".join(f'<img src="{r.logo}" title="{html.escape(r.team)}" style="width:26px;height:26px;'
                    f'object-fit:contain;margin:0 4px 4px 0">' for r in members.head(limit).itertuples())
     more = f'<span class="note" style="vertical-align:top;line-height:26px">+{len(members) - limit}</span>' \
@@ -18,19 +29,33 @@ def _crest_strip(members, limit: int = 8) -> str:
 def render() -> None:
     df = data.clubs()
     cm = data.cluster_model()
-    ui.page_header("Overview", "How Europe's top three leagues attack",
-                   "Unsupervised machine learning groups all 60 clubs by <b>how</b> they attack, using possession, "
-                   "passing directness, chance creation, xG, counter-attacks and box presence, with no style labels "
-                   "given in advance.",
-                   meta="Season <b>2025/26</b><br>Premier League · La Liga · Serie A")
+    seasons = data.seasons()
+    c_head, c_season = st.columns([4, 1], vertical_alignment="bottom")
+    season = c_season.selectbox("Season", seasons, index=seasons.index(data.THESIS_SEASON),
+                                format_func=lambda s: data.season_label(s) + (" · thesis" if s == data.THESIS_SEASON else ""))
+    is_thesis = season == data.THESIS_SEASON
+    if not is_thesis:
+        df = season_view(season, df)
+    with c_head:
+        ui.page_header("Overview", "How Europe's top three leagues attack",
+                       "Unsupervised machine learning groups every club by <b>how</b> it attacks, using possession, "
+                       "passing directness, chance creation, xG, counter-attacks and box presence, with no style labels "
+                       "given in advance.",
+                       meta=f"Season <b>{data.season_label(season)}</b><br>Premier League · La Liga · Serie A")
+    played = df["matches"].sum() // 2 if "matches" in df else 1140
     ui.kpis([
-        ("Clubs analysed", "60", "20 per league", "#0B0D10"),
-        ("Matches", "1,140", "complete league season", "#0B0D10"),
-        ("Shots", f"{len(data.shots()):,}", "with location and xG", "#0B0D10"),
+        ("Clubs analysed", f"{len(df)}", "20 per league", "#0B0D10"),
+        ("Matches", f"{played:,}", "league matches this season", "#0B0D10"),
+        ("Seasons covered", f"{len(seasons)}", f"{data.season_label(min(seasons))} to {data.season_label(max(seasons))}",
+         "#0B0D10"),
         ("Attacking styles", str(df.cluster.nunique()), "found by K-means clustering", "#D50000"),
         ("Variance captured", f"{cm['explained_variance'].sum():.0%}", f"by {cm['n_components']} principal components",
          "#0B0D10"),
     ])
+    if not is_thesis:
+        ui.callout(f"{data.season_label(season)} is shown through the 2025/26 model: the same scaling, principal "
+                   "components and style centres, so positions and styles are directly comparable across seasons."
+                   + (" The season is still in progress." if season == max(seasons) else ""))
 
     c1, c2 = st.columns([3, 1], gap="medium")
     with c2:
@@ -44,7 +69,8 @@ def render() -> None:
                     "difference.<br><b>Vertical:</b> crossing volume versus finishing efficiency.<br><br>"
                     "Markers: ● Premier League · ◆ La Liga · ■ Serie A")
     with c1:
-        with ui.panel("Attacking style map", "All 60 clubs on the first two principal components, coloured by style"):
+        with ui.panel("Attacking style map", f"All {len(df)} clubs of {data.season_label(season)} on the first two "
+                      "principal components, coloured by style"):
             st.plotly_chart(charts.style_map(df[df.league_name.isin(leagues)], highlight,
                                              tuple(cm["explained_variance"][:2])), width="stretch")
 
@@ -68,6 +94,9 @@ def render() -> None:
             <div>{_crest_strip(members)}</div></div>''',
             unsafe_allow_html=True)
 
+    if not is_thesis:
+        ui.footer()
+        return
     uniq = df[df.dbscan_outlier].sort_values("uniqueness", ascending=False)
     st.write("")
     with ui.panel("Statistically unique clubs",

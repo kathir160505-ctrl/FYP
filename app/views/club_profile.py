@@ -83,7 +83,7 @@ def render() -> None:
     st.write("")
     tabs = st.tabs([":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
                     ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
-                    ":material/hub: Similar clubs"])
+                    ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27"])
 
     with tabs[0]:
         with ui.panel("Match Attacking Index", "Within-league z-score of xG, shots, deep completions, box shots and "
@@ -207,4 +207,58 @@ def render() -> None:
                 {"name": team, "values": [row[f"{f}_pct"] for f in data.FEATURES], "color": row.color},
                 {"name": pick, "values": [other[f"{f}_pct"] for f in data.FEATURES], "color": "#111418", "fill": False}],
                 height=420), width="stretch")
+
+    with tabs[5]:
+        season_by_season(team, row.color)
     ui.footer()
+
+
+def season_by_season(team: str, color: str) -> None:
+    hist = data.history()
+    h = hist[hist.team == team].sort_values("season")
+    if h.empty:
+        ui.note("No multi-season history for this club yet.")
+        return
+    last, now = h.iloc[0], h.iloc[-1]
+    if len(h) > 1:
+        same = last.cluster == now.cluster
+        ui.callout(f"<b>{data.season_label(now.season)} so far ({int(now.played)} matches):</b> "
+                   f"{ui.cluster_badge(now.cluster)} "
+                   + ("the same attacking style as last season." if same else
+                      f"a change from last season's {ui.cluster_badge(last.cluster)}.")
+                   + " Both seasons are assigned with the 2025/26 model (same scaling, components and style centres), "
+                     "so they are directly comparable.", warn=not same)
+    c1, c2 = st.columns([1, 1.1], gap="medium")
+    with c1:
+        with ui.panel("Style by season", "Each square is a season; the number is the league position "
+                      "(current position for a season in progress)"):
+            st.plotly_chart(charts.style_timeline(h), width="stretch", config={"displayModeBar": False})
+    with c2:
+        with ui.panel("Last season vs this season", "Per-match averages"):
+            rows = [("League position", "position", "%d"), ("Points per match", "points_per_match", "%.2f"),
+                    ("xG", "xg", "%.2f"), ("Goals", "goals", "%.2f"), ("Shots", "shots", "%.1f"),
+                    ("Possession %", "possession", "%.1f"), ("Long-ball share %", "long_ball_share", "%.1f"),
+                    ("Deep completions", "deep_completions", "%.1f"), ("Box presence %", "box_shot_share", "%.1f")]
+            cols = {data.season_label(s): [fmt % r[c] if pd.notna(r[c]) else "–" for _, c, fmt in rows]
+                    for s, r in h.set_index("season").iterrows()}
+            st.dataframe(pd.DataFrame({"Metric": [n for n, _, _ in rows], **cols}), hide_index=True, width="stretch")
+
+    seasons = h.season.tolist()[::-1]
+    pick = st.segmented_control("Week by week", seasons, default=seasons[0], format_func=data.season_label,
+                                key="club_hist_season") or seasons[0]
+    tm = data.history_matches(team)
+    tm = tm[tm.season == pick]
+    league = h.loc[h.season == pick, "league"].iloc[0]
+    hist_all = data.history_league_season(league, pick)
+    avg = hist_all.groupby("matchweek").points.mean().cumsum()
+    c1, c2 = st.columns(2, gap="medium")
+    with c1:
+        with ui.panel(f"Points race · {data.season_label(pick)}", "Cumulative points by matchweek against the league average"):
+            st.plotly_chart(charts.points_race(tm, color, avg), width="stretch")
+    with c2:
+        with ui.panel(f"Attacking Index · {data.season_label(pick)}", "Match by match, bars coloured by result"):
+            if tm.attacking_index.notna().any():
+                st.plotly_chart(charts.timeline(tm.dropna(subset=["attacking_index"]), color), width="stretch",
+                                key=f"hist-timeline-{pick}")
+            else:
+                ui.note("Possession data is missing for this season, so the Attacking Index is unavailable.")

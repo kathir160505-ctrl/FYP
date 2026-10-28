@@ -84,10 +84,12 @@ Data checks are done for all of these:
 - Wikidata SPARQL gives managers with tenures (P286 + P580/P582) and honours (P1346 on season editions, which need de-duplication).
 
 Phases:
-- **A. Multi-season history, 2014/15 → 2026/27, week by week.**
-  - Collect all seasons. The ESPN first run is long, so run it overnight; it is cached afterwards.
-  - Fit the clustering on pooled seasons so styles are comparable across years.
-  - Add a season selector, style-evolution timelines and a weekly refresh.
+- **A. DONE (2026-10-28): seasons 2025/26 and 2026/27 only.** The user does NOT want older seasons; by "history" they mean club honours (Phase D).
+  - Collect with `python -m src.collect.history` (`FIRST_SEASON = "2526"`), then build with `python -m src.process.build_history`. Output goes to `data/processed/history/`.
+  - Club names are matched automatically per season (by date + score).
+  - Styles are projected with the unchanged 2025/26 model; 2025/26 reproduces the thesis data exactly.
+  - App: season selector on Overview, a "2025/26 vs 2026/27" tab on Clubs, and the style mix per season on Leagues.
+  - Weekly refresh of everything: `python -m src.refresh`.
 - **B. Champions League.**
   - ESPN UCL fixtures, results and news in Matchday.
   - UCL match stats for the 60 clubs (no xG; documented).

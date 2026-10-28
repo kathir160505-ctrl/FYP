@@ -232,6 +232,56 @@ def league_box(df: pd.DataFrame, feature: str) -> go.Figure:
     return _layout(fig, height=400)
 
 
+def style_timeline(h: pd.DataFrame) -> go.Figure:
+    """One square per season on the row of the style the club played (projected with the 2025/26 model)."""
+    h = h.sort_values("season")
+    fig = go.Figure()
+    for cluster in CLUSTER_ORDER:
+        d = h[h.cluster == cluster]
+        fig.add_trace(go.Scatter(
+            x=d.season_label, y=[cluster] * len(d), mode="markers+text", name=cluster, showlegend=False,
+            text=[f"{p:.0f}" for p in d.position], textfont=dict(color="#FFFFFF", size=11, family=FONT),
+            marker=dict(symbol="square", size=30, color=CLUSTER_COLORS[cluster],
+                        opacity=[0.45 + 0.55 * min(max(c, 0), 1) for c in d.style_confidence.fillna(0)]),
+            customdata=np.stack([d.league_name, d.pts, d.position, d.style_confidence.fillna(0)], axis=1),
+            hovertemplate="<b>%{x}</b> · %{customdata[0]}<br>" + cluster +
+                          "<br>Finished %{customdata[2]} · %{customdata[1]} pts<br>Style confidence %{customdata[3]:.0%}<extra></extra>"))
+    fig.update_yaxes(categoryorder="array", categoryarray=CLUSTER_ORDER[::-1], showgrid=False)
+    fig.update_xaxes(type="category", categoryorder="array", categoryarray=list(h.season_label), showgrid=False)
+    return _layout(fig, height=250, margin=dict(l=8, r=8, t=10, b=8))
+
+
+def points_race(tm: pd.DataFrame, color: str, league_avg: pd.Series | None = None) -> go.Figure:
+    tm = tm.sort_values("matchweek")
+    fig = go.Figure()
+    if league_avg is not None:
+        fig.add_trace(go.Scatter(x=league_avg.index, y=league_avg.values, name="League average", mode="lines",
+                                 line=dict(color="#9CA3AF", width=2, dash="dot")))
+    fig.add_trace(go.Scatter(
+        x=tm.matchweek, y=tm.points.cumsum(), name="Points", mode="lines+markers", line=dict(color=color, width=3),
+        marker=dict(size=6, color=[{"W": "#16A34A", "D": "#9CA3AF", "L": "#DC2626"}[r] for r in tm.result]),
+        customdata=np.stack([tm.opponent, tm.is_home.map({True: "H", False: "A"}), tm.goals, tm.goals_against], axis=1),
+        hovertemplate="MW %{x} · %{customdata[1]} vs %{customdata[0]} %{customdata[2]}-%{customdata[3]}<br>"
+                      "%{y} points<extra></extra>"))
+    fig.update_xaxes(title="Matchweek", dtick=2)
+    fig.update_yaxes(title="Cumulative points")
+    return _layout(fig, height=330)
+
+
+def league_style_trend(h: pd.DataFrame, league: str) -> go.Figure:
+    d = h[h.league_name == league]
+    share = (d.groupby(["season_label", "cluster"]).size() / d.groupby("season_label").size() * 100).rename("share").reset_index()
+    fig = go.Figure()
+    for cluster in CLUSTER_ORDER:
+        c = share[share.cluster == cluster]
+        fig.add_trace(go.Bar(x=c.season_label, y=c.share, name=cluster, marker_color=CLUSTER_COLORS[cluster],
+                             hovertemplate="%{x}<br>" + cluster + ": %{y:.0f}%<extra></extra>"))
+    fig.update_layout(barmode="stack", bargap=0.15)
+    fig.update_xaxes(type="category", tickangle=-45)
+    fig.update_yaxes(title="% of clubs", range=[0, 100])
+    return _layout(fig, height=330)
+
+
 def model_selection_chart(sel: pd.DataFrame, final_k: int) -> go.Figure:
     fig = go.Figure()
     for alg, g in sel.groupby("algorithm"):

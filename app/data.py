@@ -131,6 +131,45 @@ def model_selection() -> pd.DataFrame:
     return pd.read_csv(PROC / "model_selection.csv")
 
 
+HIST = PROC / "history"
+THESIS_SEASON = 2526
+
+
+def season_label(season: int) -> str:
+    s = f"{int(season):04d}"
+    return f"20{s[:2]}/{s[2:]}"
+
+
+@st.cache_data
+def history() -> pd.DataFrame:
+    """One row per club-season (2014/15 → current), styles projected with the 2025/26 model."""
+    h = pd.read_csv(HIST / "team_season.csv")
+    h["league_name"] = h["league"].map(LEAGUES)
+    meta = pd.read_csv(REF / "team_meta.csv")[["team", "logo", "color"]]
+    h = h.merge(meta, on="team", how="left")
+    h["color"] = h["color"].fillna("#6B7280").map(readable)
+    return h.sort_values(["season", "league", "position"]).reset_index(drop=True)
+
+
+@st.cache_data
+def history_matches(team: str) -> pd.DataFrame:
+    tm = pd.read_parquet(HIST / "team_match.parquet", filters=[("team", "==", team)])
+    tm["date"] = pd.to_datetime(tm["date"])
+    tm["result"] = tm["points"].map({3: "W", 1: "D", 0: "L"})
+    return tm
+
+
+@st.cache_data
+def history_league_season(league: str, season: int) -> pd.DataFrame:
+    tm = pd.read_parquet(HIST / "team_match.parquet", columns=["league", "season", "team", "matchweek", "points"],
+                         filters=[("league", "==", league), ("season", "==", season)])
+    return tm
+
+
+def seasons() -> list[int]:
+    return sorted(history()["season"].unique().tolist(), reverse=True)
+
+
 @st.cache_resource
 def cluster_model() -> dict:
     return joblib.load(MODELS / "cluster_model.joblib")
