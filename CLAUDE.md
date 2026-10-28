@@ -76,6 +76,33 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
   - Promoted clubs are mapped in `data/reference/teams_promoted_2627.csv`.
 - **Dev preview:** launch config `fyp-dashboard-dev` uses port 8510, so it doesn't clash with the user's own server on 8501.
 
+## Feature roadmap (agreed 2026-10-28; build one at a time, then deploy on Azure)
+Data checks are done for all of these:
+- Understat has seasons back to 2014/15.
+- ESPN has UCL box stats (no xG) and historical league matches.
+- Understat player attacking stats are available. FBref player misc gives defensive stats (Int, TklW); FBref keeper gives GK stats.
+- Wikidata SPARQL gives managers with tenures (P286 + P580/P582) and honours (P1346 on season editions, which need de-duplication).
+
+Phases:
+- **A. Multi-season history, 2014/15 → 2026/27, week by week.**
+  - Collect all seasons. The ESPN first run is long, so run it overnight; it is cached afterwards.
+  - Fit the clustering on pooled seasons so styles are comparable across years.
+  - Add a season selector, style-evolution timelines and a weekly refresh.
+- **B. Champions League.**
+  - ESPN UCL fixtures, results and news in Matchday.
+  - UCL match stats for the 60 clubs (no xG; documented).
+- **C. Player profiles.**
+  - All players of the three leagues: attacking (Understat) plus defensive and GK (FBref), per season.
+  - Position-peer percentile radars and squad tables. Name matching between Understat and FBref is needed.
+- **D. Manager and club legacy.**
+  - Wikidata managers and honours (curated competition list).
+  - Manager record and attacking style under each manager, computed from our match data.
+- **E. Azure deployment.**
+  - Dockerfile, then Azure Container Apps or App Service, plus a scheduled job for refreshes and storage for data.
+  - Budget is about RM600/month.
+
+The thesis core stays the 2025/26 analysis from the proposal; these are app extensions.
+
 ## Phase 7: deploy
 - **GitHub repo (private):** https://github.com/NITIYAHSELVAN/fyp-attacking-philosophies, branch `main`. Pushed 2026-10-24.
 - **GitHub CLI:** installed at `C:\Program Files\GitHub CLI\gh.exe` and logged in as NITIYAHSELVAN.
