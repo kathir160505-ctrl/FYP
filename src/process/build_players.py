@@ -224,12 +224,17 @@ def add_rates(p: pd.DataFrame) -> pd.DataFrame:
     return p
 
 
-def probable_xi(lu: pd.DataFrame, last_n: int = 5) -> pd.DataFrame:
-    """Most likely XI per club: the most-used recent formation, then the most frequent starter in each slot."""
+def probable_xi(lu: pd.DataFrame, last_n: int = 5, backups: int = 3) -> pd.DataFrame:
+    """Most likely XI per club: the most-used recent formation, then the most frequent starter in each slot (rank 1).
+    Ranks 2+ are that slot's replacements if the first choice is injured or suspended: players who started in the
+    same slot, then in the same position, over the last 10 league matches (recent matches weigh more)."""
     league = lu[(lu.competition != "uefa.champions") & lu.starter & (lu.season == lu.season.max())]
     rows = []
     for team, g in league.groupby("team"):
-        recent_events = g.sort_values("date").event_id.unique()[-last_n:]
+        all_events = g.sort_values("date").event_id.unique()
+        wide = g[g.event_id.isin(all_events[-10:])]
+        wide = wide.assign(w=wide.event_id.map({e: i + 1 for i, e in enumerate(all_events[-10:])}))
+        recent_events = all_events[-last_n:]
         r = g[g.event_id.isin(recent_events)]
         forms = r.drop_duplicates("event_id").sort_values("date").formation
         formation = forms.value_counts().index[0] if len(forms) else None
@@ -250,10 +255,23 @@ def probable_xi(lu: pd.DataFrame, last_n: int = 5) -> pd.DataFrame:
             c = cands.iloc[0]
             taken.add(c.athlete_id)
             starts = int(r[(r.athlete_id == c.athlete_id)].event_id.nunique())
-            rows.append({"team": team, "formation": formation, "formation_place": int(place),
+            rows.append({"team": team, "formation": formation, "formation_place": int(place), "rank": 1,
                          "athlete_id": c.athlete_id, "player": c.player, "position_abbr": c.position_abbr,
                          "position": c.position, "recent_starts": starts, "of_matches": len(recent_events),
                          "last_match": r.date.max()})
+            slot = wide[(wide.formation_place == place) | (wide.position_abbr == c.position_abbr)]
+            score = (slot.assign(same=(slot.formation_place == place) * 100)  # same slot first, then same position
+                     .groupby(["athlete_id", "player"]).agg(s=("w", "sum"), same=("same", "max"),
+                                                            position_abbr=("position_abbr", "last"),
+                                                            position=("position", "last"))
+                     .assign(order=lambda d: d.same + d.s).sort_values("order", ascending=False).reset_index())
+            score = score[score.athlete_id != c.athlete_id].head(backups)
+            for k, b in enumerate(score.itertuples(), start=2):
+                rows.append({"team": team, "formation": formation, "formation_place": int(place), "rank": k,
+                             "athlete_id": b.athlete_id, "player": b.player, "position_abbr": c.position_abbr,
+                             "position": c.position, "recent_starts": int(wide[wide.athlete_id == b.athlete_id]
+                                                                         .event_id.nunique()),
+                             "of_matches": min(10, len(all_events)), "last_match": r.date.max()})
     return pd.DataFrame(rows)
 
 

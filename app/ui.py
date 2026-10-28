@@ -253,6 +253,18 @@ a.pl:hover .pl-name { background: #fff; color: #0B0D10; }
 .pl-num { transition: transform .12s; }
 .sub-chip a, .unused a { color: inherit; text-decoration: none; border-bottom: 1px dotted var(--faint); }
 .sub-chip a:hover, .unused a:hover { color: var(--accent); }
+.inj-list { display: flex; flex-direction: column; }
+.inj { display: flex; align-items: center; gap: .8rem; padding: .55rem 0; border-bottom: 1px solid var(--border); }
+.inj:last-child { border-bottom: none; }
+.inj-face { position: relative; flex: none; width: 46px; height: 46px; }
+.inj-face img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; object-position: top;
+  background: var(--surface-2); border: 1px solid var(--border); }
+.inj-badge { position: absolute; right: -3px; bottom: -3px; background: #fff; border-radius: 4px; line-height: 0; padding: 1px; }
+.inj-name { font-weight: 700; color: var(--ink); font-size: .95rem; }
+.inj-name a { color: inherit; text-decoration: none; } .inj-name a:hover { color: var(--accent); }
+.inj-name span { font-weight: 500; color: var(--muted); font-size: .85rem; }
+.inj-status { font-size: .84rem; color: var(--muted); margin-top: 1px; }
+.inj-status.injured { color: #B91C1C; } .inj-status.suspended { color: #B91C1C; } .inj-status.doubtful { color: #B45309; }
 </style>
 """
 

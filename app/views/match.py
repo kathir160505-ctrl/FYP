@@ -141,33 +141,44 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
                             "Champions League and adds league games weekly, so this uses our commentary model. It "
                             "tracks Understat's match xG closely (r = 0.84 on 2026/27 league matches) but is an "
                             "estimate.")
-        with ui.panel("Team news", "Absences from this match sheet"):
-            for side, t, sheet in (("home", home, hl), ("away", away, ha)):
-                on = set(sheet.athlete_id) if sheet is not None and len(sheet) else set()
-                injured = ev[(ev.kind == "sub") & ev.injury & (ev.side == side)] if len(ev) else ev
-                rows = [("inj", "Went off injured", f"{r.other} ({r.minute})") for r in injured.itertuples()]
-                missing = mc.squad_absentees(t["team"], on) if on else []
-                if missing:
-                    rows.append(("out", "Not in squad", ", ".join(missing)))
-                team_news_block(t["team"], rows)
-            ui.note("“Not in squad”: players with at least three league appearances this season who were not on the "
-                    "team sheet. ESPN does not say why (injury, suspension, illness or selection).")
+        notes = {}
+        for side, t, sheet in (("home", home, hl), ("away", away, ha)):
+            on = set(sheet.athlete_id) if sheet is not None and len(sheet) else set()
+            injured = ev[(ev.kind == "sub") & ev.injury & (ev.side == side)] if len(ev) else ev
+            rows = [("inj", "Went off injured", f"{r.other} ({r.minute})") for r in injured.itertuples()]
+            missing = mc.squad_absentees(t["team"], on) if on else []
+            if missing:
+                rows.append(("out", "Not in squad", ", ".join(missing)))
+            notes[side] = rows
+        injuries_panel(home, away, notes)
+        ui.note("“Not in squad”: players with at least three league appearances this season who were not on the "
+                "team sheet; ESPN does not say why.")
     news_block(s, home["team"], away["team"])
 
 
-def injury_rows(club: str) -> list[tuple[str, str, str]]:
-    """API-Football listings for a club: (tag class, label, 'Player (reason)')."""
-    rows = []
-    for r in injuries.for_club(club).itertuples():
-        reason = str(r.reason or "")
-        if r.type == "Questionable":
-            kind, label = "out", "Doubtful"
-        elif any(k in reason.lower() for k in ("card", "suspend")):
-            kind, label = "sus", "Suspended"
-        else:
-            kind, label = "inj", "Injured"
-        rows.append((kind, label, f"{r.player} ({reason})" if reason else r.player))
-    return rows
+def injuries_panel(home: dict, away: dict, notes: dict[str, list]) -> None:
+    """Injuries and suspensions per team (tabs, as on Google's match pages) from the injuries module, followed by
+    the notes we derive from ESPN match sheets. notes: {"home": rows, "away": rows} for team_news_block."""
+    lists = {side: injuries.for_club(t["team"]) for side, t in (("home", home), ("away", away))}
+    sources = sorted({x for df in lists.values() if len(df) for x in df.source.unique()})
+    sub = (f"Current list from {', '.join(sources)}" if sources else
+           "From the match sheets (no current injury list for these clubs)")
+    with ui.panel("Injuries and suspensions", sub):
+        tabs = st.tabs([home["team"], away["team"]])
+        links = data.player_links()
+        for tab, side, t in zip(tabs, ("home", "away"), (home, away)):
+            with tab:
+                if len(lists[side]):
+                    st.markdown(pitch.injury_list(lists[side], t["color"], links, data.avatar), unsafe_allow_html=True)
+                elif not notes.get(side):
+                    st.markdown('<div class="muted">No injury list for this club (only the Premier League has a free '
+                                'source).</div>', unsafe_allow_html=True)
+                if notes.get(side):
+                    team_news_block("From the match sheet" if len(lists[side]) else t["team"], notes[side])
+        if sources:
+            ui.note(f"Status, reason and expected return from {', '.join(sources)}"
+                    + (" (the Premier League's official fantasy data, updated during the week)"
+                       if "Fantasy Premier League" in sources else "") + ".")
 
 
 def team_news_block(team: str, rows: list[tuple[str, str, str]]) -> None:
@@ -223,18 +234,20 @@ def pre_match(s: dict, h: dict) -> None:
         if confirmed:
             frames[side] = lu[side][lu[side].starter]
         elif len(xi) and t["team"] in set(xi.team):
-            x = xi[xi.team == t["team"]]
+            x = data.probable_lineup(t["team"], injuries.unavailable_ids(t["team"]))
             shirts = data.players().dropna(subset=["athlete_id"]).sort_values("season").drop_duplicates(
                 "athlete_id", keep="last").set_index("athlete_id").jersey
-            frames[side] = x.assign(jersey=x.athlete_id.map(shirts), note=[f"started {a} of the last {b} league matches"
-                                                                          for a, b in zip(x.recent_starts, x.of_matches)])
+            doubt = injuries.doubts(t["team"])
+            frames[side] = x.assign(jersey=x.athlete_id.map(shirts),
+                                    note=[f"{n} · {doubt[a]}" if a in doubt else n for a, n in zip(x.athlete_id, x.note)])
     form = live.form()
     both = not form.empty and home["team"] in form.index and away["team"] in form.index
     c1, c2 = st.columns([1.05, 1], gap="medium")
     with c1:
         title = "Confirmed line-ups" if confirmed else "Probable line-ups"
         sub = ("From the ESPN team sheet" if confirmed else
-               "Most-used recent formation and starters, last 5 league matches · click a player for his profile")
+               "Most-used recent formation and starters, last 5 league matches, without injured or suspended "
+               "players · click a player for his profile")
         with ui.panel(title, sub):
             if frames:
                 st.markdown(pitch.pitch(frames.get("home"), frames.get("away"), home["color"], away["color"],
@@ -268,24 +281,16 @@ def pre_match(s: dict, h: dict) -> None:
                 cells = "".join(f'<span class="fchip {r}" title="{html.escape(txt)}">{r}</span>' for r, txt in chips)
                 st.markdown(f'<div class="form-row"><b>{html.escape(t["team"])}</b>{cells or "<span class=muted>–</span>"}</div>',
                             unsafe_allow_html=True)
-        has_key = injuries.available()
-        with ui.panel("Team news", "Injuries and suspensions (API-Football) and notes from each club's previous match"
-                      if has_key else "From each club's previous match"):
-            for t in (home, away):
-                prev = mc.previous_match_news(t["team"], h["date"].isoformat())
-                rows = injury_rows(t["team"])
-                if prev:
-                    ctx = f"vs {prev['opponent']}, {prev['date']:%d %b}"
-                    rows += [("inj", "Injury doubt", f"{n} (went off injured {ctx})") for n in prev["injured"]]
-                    rows += [("sus", "Suspended", f"{n} (sent off {ctx})") for n in prev["sent_off"]]
-                team_news_block(t["team"], rows)
-            if has_key:
-                ui.note("Injury list: API-Football, refreshed every six hours. Previous-match notes: ESPN.")
-            else:
-                why = ("the API-Football key's plan does not cover the current season" if injuries.api_key()
-                       else "no injury source is configured")
-                ui.note("Based on the previous match sheet only (players who went off injured or were sent off); "
-                        f"full injury and suspension lists are not shown because {why}.")
+        notes = {}
+        for side, t in (("home", home), ("away", away)):
+            prev = mc.previous_match_news(t["team"], h["date"].isoformat())
+            rows = []
+            if prev:
+                ctx = f"vs {prev['opponent']}, {prev['date']:%d %b}"
+                rows += [("inj", "Injury doubt", f"{n} (went off injured {ctx})") for n in prev["injured"]]
+                rows += [("sus", "Suspended", f"{n} (sent off {ctx})") for n in prev["sent_off"]]
+            notes[side] = rows
+        injuries_panel(home, away, notes)
     if both:
         with ui.panel("Season so far", "Per-match averages, 2026/27 league matches"):
             rows = [("Attacking Index", "attacking_index_season", "%+.2f"), ("xG", "xg_season", "%.2f"),

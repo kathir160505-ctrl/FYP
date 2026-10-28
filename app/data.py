@@ -225,8 +225,40 @@ def player_matches(athlete_id: str) -> pd.DataFrame:
 
 
 @st.cache_data
+def probable_candidates() -> pd.DataFrame:
+    """Probable XI with ranked replacements per slot (rank 1 = first choice), from src.process.build_players."""
+    df = pd.read_csv(PLAYERS / "probable_xi.csv", dtype={"athlete_id": str}, parse_dates=["last_match"])
+    return df if "rank" in df else df.assign(rank=1)
+
+
 def probable_xi() -> pd.DataFrame:
-    return pd.read_csv(PLAYERS / "probable_xi.csv", dtype={"athlete_id": str}, parse_dates=["last_match"])
+    df = probable_candidates()
+    return df[df["rank"] == 1]
+
+
+def probable_lineup(team: str, unavailable: dict[str, str] | None = None) -> pd.DataFrame:
+    """The club's probable XI without unavailable players (athlete_id -> reason): each slot takes its best available
+    candidate. Rows that changed carry a note naming the player they replace."""
+    c = probable_candidates()
+    c = c[c.team == team].sort_values(["formation_place", "rank"])
+    unavailable = unavailable or {}
+    taken, rows = set(), []
+    for place, g in c.groupby("formation_place", sort=True):
+        first = g.iloc[0]
+        pick = next((r for r in g.itertuples() if r.athlete_id not in unavailable and r.athlete_id not in taken), None)
+        if pick is None:  # nobody available for this slot: keep the first choice, flagged
+            pick = first
+        taken.add(pick.athlete_id)
+        row = pick._asdict() if hasattr(pick, "_asdict") else pick.to_dict()
+        row.pop("Index", None)
+        if row["athlete_id"] != first.athlete_id:
+            row["note"] = f"in for {first.player} ({unavailable.get(first.athlete_id, 'unavailable')})"
+        elif first.athlete_id in unavailable:
+            row["note"] = f"{unavailable[first.athlete_id]}, no recent replacement"
+        else:
+            row["note"] = f"started {row['recent_starts']} of the last {row['of_matches']} league matches"
+        rows.append(row)
+    return pd.DataFrame(rows)
 
 
 @st.cache_data

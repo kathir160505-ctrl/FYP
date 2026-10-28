@@ -124,6 +124,10 @@ def render() -> None:
   revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
   League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
   left out because Wikidata records too few of them.
-- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
+- **Injuries.** Premier League injury, suspension and doubt lists come from the official Fantasy Premier League
+  data feed (status, reason, expected return, chance of playing), refreshed every 30 minutes; the probable XI leaves
+  out players marked unavailable. La Liga and Serie A have no free equivalent, so their team news comes from match
+  sheets.
+- **Attribution.** Data from Understat, ESPN, FBref, Wikidata and Fantasy Premier League; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
 """)
     ui.footer()

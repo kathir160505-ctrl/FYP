@@ -155,6 +155,13 @@ Phases:
     - So there is no current-season injury data unless the user upgrades.
     - `injuries.access_error()` (1 request, cached 6 h) detects this, and the app falls back to match-sheet team news with an explanatory note.
     - Parsing and club mapping were verified on 2024/25 (EPL 3,168 listings; all 20 EPL clubs mapped).
+  - **Premier League injuries come from the FPL feed** (`fantasy.premierleague.com/api/bootstrap-static/`, public, no key, cached 30 min; `injuries.fpl()`).
+    - Statuses i/s/d/n are used; "u" means left the club or on loan.
+    - Players are linked to ours by club and name across both seasons (85% linked).
+    - Shown Google-style (`pitch.injury_list`) in the match centre's "Injuries and suspensions" tabs (pre- and post-match) and on the Clubs squad tab.
+    - The probable XI is availability-aware: `build_players.probable_xi` stores rank 1 plus up to 3 replacements per slot (same slot, then same position, last 10 matches); `data.probable_lineup(team, injuries.unavailable_ids(team))` picks the best available.
+    - Doubts at 25% or less count as out.
+    - La Liga and Serie A have no free source.
   - `matchcentre.names_in` now matches whole words only. "ham" (West Ham) used to match "Southampton", which affected injury mapping and highlight matching. Exact accent-folded names win first (`Atletico Madrid` → `Atlético Madrid`).
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**

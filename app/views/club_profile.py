@@ -238,8 +238,8 @@ def squad_and_lineups(team: str, color: str) -> None:
         ui.note("Squad and line-up data is still being prepared (run src.collect.players, then "
                 "src.process.build_players).")
         return
-    xi = data.probable_xi()
-    xi = xi[xi.team == team].sort_values("formation_place")
+    xi = data.probable_lineup(team, injuries.unavailable_ids(team)) if team in set(data.probable_xi().team) \
+        else pd.DataFrame()
     lu = data.lineups(team)
     lu = lu[lu.season == lu.season.max()] if len(lu) else lu
     c1, c2 = st.columns(2, gap="medium")
@@ -256,9 +256,7 @@ def squad_and_lineups(team: str, color: str) -> None:
                 ui.note("No line-ups recorded for this club this season yet.")
             else:
                 jerseys = lu.drop_duplicates("athlete_id").set_index("athlete_id").jersey if len(lu) else {}
-                d = xi.assign(jersey=xi.athlete_id.map(jerseys),
-                              note=[f"Started {s} of the last {n} league matches" for s, n in
-                                    zip(xi.recent_starts, xi.of_matches)])
+                d = xi.assign(jersey=xi.athlete_id.map(jerseys))
                 st.markdown(pitch.team_pitch(d.assign(formation=xi.formation.iloc[0]), color, with_events=False,
                                              links=data.player_links()), unsafe_allow_html=True)
                 ui.note(f"<b>{html.escape(str(xi.formation.iloc[0]))}</b>, the most used shape in the last "
@@ -288,10 +286,8 @@ def squad_and_lineups(team: str, color: str) -> None:
 
     inj = injuries.for_club(team)
     if len(inj):
-        with ui.panel("Injuries and suspensions", "API-Football · refreshed every six hours"):
-            st.dataframe(pd.DataFrame({"Player": inj.player, "Status": inj.type, "Reason": inj.reason,
-                                       "Next fixture": inj.fixture_date.dt.tz_convert(live.LOCAL_TZ).dt.strftime("%d %b")}),
-                         hide_index=True, placeholder="–", width="stretch")
+        with ui.panel("Injuries and suspensions", f"Current list from {', '.join(sorted(set(inj.source)))}"):
+            st.markdown(pitch.injury_list(inj, color, data.player_links(), data.avatar), unsafe_allow_html=True)
     with ui.panel("Squad", "All players used in the league this season · click a photo to enlarge it"):
         ps = data.players()
         ps = ps[(ps.team == team) & (ps.season == ps[ps.team == team].season.max())]
