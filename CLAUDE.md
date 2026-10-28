@@ -96,9 +96,18 @@ Phases:
 - **C. Player profiles.**
   - All players of the three leagues: attacking (Understat) plus defensive and GK (FBref), per season.
   - Position-peer percentile radars and squad tables. Name matching between Understat and FBref is needed.
-- **D. Manager and club legacy.**
-  - Wikidata managers and honours (curated competition list).
-  - Manager record and attacking style under each manager, computed from our match data.
+- **D. DONE (2026-10-28): honours and managers.**
+  - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
+  - Club → QID mapping: `data/reference/clubs_wikidata.csv`.
+  - Honours: competition QID → category map. Only season items and finals count, never single matches; one trophy per club, category and season.
+  - Old First Division after 1992 and "Segunda/Serie B" labels count as second-tier titles.
+  - Super cups are excluded (Wikidata has about 1/3 of them).
+  - Hand fixes are in `data/reference/legacy_corrections.csv` (revoked titles, missing finals) and `manager_corrections.csv`.
+  - Check: 95/95 published counts (league, domestic cup, European Cup, UEFA Cup) match up to 2024/25. See `reports/phaseD_legacy_check.md`.
+  - Managers: Wikidata dates can be month- or year-precision. End dates are extended to the end of the period, then capped at today.
+  - Matches go to the latest spell that started before them.
+  - The build prints "check <club>" when a current-season club's latest match isn't credited to its current manager; fix that via `manager_corrections.csv`.
+  - App: "Honours & managers" tab on Clubs, and a note on Methodology.
 - **E. Azure deployment.**
   - Dockerfile, then Azure Container Apps or App Service, plus a scheduled job for refreshes and storage for data.
   - Budget is about RM600/month.

@@ -83,7 +83,8 @@ def render() -> None:
     st.write("")
     tabs = st.tabs([":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
                     ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
-                    ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27"])
+                    ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27",
+                    ":material/emoji_events: Honours & managers"])
 
     with tabs[0]:
         with ui.panel("Match Attacking Index", "Within-league z-score of xG, shots, deep completions, box shots and "
@@ -210,7 +211,113 @@ def render() -> None:
 
     with tabs[5]:
         season_by_season(team, row.color)
+    with tabs[6]:
+        legacy(team, row.color)
     ui.footer()
+
+
+def legacy(team: str, color: str) -> None:
+    info = data.club_info().set_index("team")
+    if team in info.index:
+        i = info.loc[team]
+        facts = [f"Founded <b>{int(i.founded)}</b>" if pd.notna(i.founded) else "",
+                 f"<b>{html.escape(i.stadium)}</b>" + (f" ({int(i.capacity):,} seats)" if pd.notna(i.capacity) else "")
+                 if pd.notna(i.stadium) else "",
+                 html.escape(i.city) if pd.notna(i.city) else "",
+                 f"Nicknames: {html.escape(i.nicknames)}" if isinstance(i.nicknames, str) and i.nicknames else ""]
+        ui.callout(" · ".join(f for f in facts if f))
+
+    h = data.honours()
+    h = h[h.team == team]
+    counts = h.category.value_counts()
+    european = sum(counts.get(c, 0) for c in ("European Cup", "UEFA Cup", "Cup Winners' Cup", "Conference League"))
+    ui.kpis([("League titles", f"{counts.get('League title', 0)}", last_won(h, "League title"), data.TROPHY_COLORS["League title"]),
+             ("Domestic cups", f"{counts.get('Domestic cup', 0)}", last_won(h, "Domestic cup"), data.TROPHY_COLORS["Domestic cup"]),
+             ("European Cups", f"{counts.get('European Cup', 0)}", last_won(h, "European Cup"), data.TROPHY_COLORS["European Cup"]),
+             ("Major European", f"{european}", "European Cup, UEFA Cup/Europa, Cup Winners', Conference",
+              data.TROPHY_COLORS["UEFA Cup"]),
+             ("Second-tier titles", f"{counts.get('Second-tier title', 0)}", last_won(h, "Second-tier title"),
+              data.TROPHY_COLORS["Second-tier title"])])
+
+    c1, c2 = st.columns([1.3, 1], gap="medium")
+    with c1:
+        with ui.panel("Trophies by decade", "Hover a bar for the seasons"):
+            if len(h):
+                st.plotly_chart(charts.trophies_by_decade(h), width="stretch", key=f"trophies-{team}")
+            else:
+                ui.note("No major trophies recorded.")
+    with c2:
+        with ui.panel("Trophy cabinet"):
+            if len(h):
+                cab = (h.groupby("category").agg(Won=("season", "size"), First=("season", "first"),
+                                                 Latest=("season", "last")).reindex(data.TROPHY_COLORS).dropna()
+                       .reset_index())
+                cab.insert(0, "Trophy", cab.pop("category").map(data.TROPHY_LABELS))
+                st.dataframe(cab, hide_index=True, width="stretch", column_config={
+                    "Won": st.column_config.NumberColumn(format="%d")})
+            else:
+                ui.note("No major trophies recorded.")
+
+    m = data.managers()
+    m = m[m.team == team]
+    rec = data.manager_records()
+    rec = rec[rec.team == team]
+    c1, c2 = st.columns([1, 1.3], gap="medium")
+    with c1:
+        with ui.panel("Managers", "Head coaches, most recent first"):
+            cur = m[m.current]
+            if len(cur):
+                c = cur.iloc[0]
+                ui.callout(f"<b>Current manager: {html.escape(c.manager)}</b>"
+                           + (f" ({html.escape(c.nationality)})" if isinstance(c.nationality, str) and c.nationality else "")
+                           + f" · in charge since {c.start:%d %b %Y} ({tenure(c.days)})")
+            else:
+                ui.callout("No current head coach is recorded (the post may be vacant or held by a caretaker).", warn=True)
+            tbl = m.head(15)
+            st.dataframe(pd.DataFrame({"Manager": tbl.manager, "Nationality": tbl.nationality.fillna(""),
+                                       "From": tbl.start.dt.strftime("%b %Y"),
+                                       "To": tbl.end.dt.strftime("%b %Y").fillna("present"),
+                                       "Tenure": tbl.days.map(tenure)}),
+                         hide_index=True, width="stretch", height=420)
+    with c2:
+        with ui.panel("Manager records in our data", "League matches from 2025/26 onwards · Attacking Index is the "
+                      "within-league match z-score used across the app"):
+            if len(rec):
+                st.dataframe(pd.DataFrame({
+                    "Manager": rec.manager, "Matches": rec.matches,
+                    "W-D-L": [f"{w}-{d}-{l}" for w, d, l in zip(rec.wins, rec.draws, rec.losses)],
+                    "Points / match": rec.ppg, "xG": rec.xg, "xG against": rec.xg_against,
+                    "Possession": rec.possession / 100, "Attacking Index": rec.attacking_index}),
+                    hide_index=True, width="stretch", column_config={
+                        "Points / match": st.column_config.ProgressColumn(format="%.2f", min_value=0, max_value=3),
+                        "xG": st.column_config.NumberColumn(format="%.2f"),
+                        "xG against": st.column_config.NumberColumn(format="%.2f"),
+                        "Possession": st.column_config.NumberColumn(format="percent"),
+                        "Attacking Index": st.column_config.NumberColumn(format="%+.2f")})
+                if len(rec) > 1:
+                    best = rec.loc[rec.attacking_index.idxmax()]
+                    ui.note(f"Most attacking spell in our data: <b>{html.escape(best.manager)}</b> "
+                            f"(Attacking Index {best.attacking_index:+.2f} over {best.matches} matches). "
+                            "Short spells are noisy; compare managers with at least 10 matches.")
+            else:
+                ui.note("No manager could be matched to this club's matches.")
+
+    ui.note(f"Honours and managers: Wikidata (CC0), retrieved {data.legacy_retrieved()}. Super cups are not shown "
+            "because Wikidata lists too few of them. Hand corrections (revoked titles, missing finals and spells) are "
+            "listed in data/reference; league titles, domestic cups and European trophies match published totals for "
+            "all 95 checked club counts (reports/phaseD_legacy_check.md).")
+
+
+def last_won(h: pd.DataFrame, category: str) -> str:
+    won = h[h.category == category]
+    return f"latest {won.season.iloc[-1]}" if len(won) else "none recorded"
+
+
+def tenure(days: int) -> str:
+    years, months = divmod(round(days / 30.44), 12)
+    if years:
+        return f"{years} yr {months} mo" if months else f"{years} yr"
+    return f"{months} mo" if months else f"{days} days"
 
 
 def season_by_season(team: str, color: str) -> None:

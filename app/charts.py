@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 
-from data import CLUSTER_COLORS, CLUSTER_ORDER, FEATURES, LEAGUE_SYMBOLS, SHORT_LABELS, fmt
+from data import CLUSTER_COLORS, CLUSTER_ORDER, FEATURES, LEAGUE_SYMBOLS, SHORT_LABELS, TROPHY_COLORS, TROPHY_LABELS, fmt
 
 BG = "rgba(0,0,0,0)"
 GRID = "#EEF0F3"
@@ -292,3 +292,23 @@ def model_selection_chart(sel: pd.DataFrame, final_k: int) -> go.Figure:
     fig.add_vline(x=final_k, line=dict(color="#0B0D10", dash="dash"), annotation_text=f"chosen k = {final_k}")
     fig.update_xaxes(title="number of clusters k", dtick=1)
     return _layout(fig, height=340)
+
+
+def trophies_by_decade(h: pd.DataFrame) -> go.Figure:
+    """Stacked bars of trophies won per decade, one colour per trophy category."""
+    h = h.assign(decade=(h.end_year - 1) // 10 * 10)
+    decades = list(range(int(h.decade.min()), int(h.decade.max()) + 10, 10))
+    fig = go.Figure()
+    for cat, color in TROPHY_COLORS.items():
+        n = h[h.category == cat].groupby("decade").size().reindex(decades, fill_value=0)
+        if not n.any():
+            continue
+        seasons = h[h.category == cat].groupby("decade").season.agg(", ".join).reindex(decades, fill_value="")
+        fig.add_trace(go.Bar(x=[f"{d}s" for d in decades], y=n.values, name=TROPHY_LABELS[cat], marker_color=color,
+                             customdata=seasons.values,
+                             hovertemplate="%{x} · " + TROPHY_LABELS[cat] + ": %{y}<br>%{customdata}<extra></extra>"))
+    fig.update_layout(barmode="stack", bargap=0.25)
+    fig.update_xaxes(type="category")
+    fig.update_yaxes(title="Trophies", tickformat="d", rangemode="tozero")
+    return _layout(fig, height=360, legend=dict(orientation="v", x=1.01, xanchor="left", y=1, yanchor="top",
+                                                font=dict(size=11), bgcolor="rgba(0,0,0,0)"))

@@ -112,6 +112,10 @@ def render() -> None:
   could not be measured.
 - **Small sample.** 60 clubs, one season: clusters describe tendencies on a continuum, not fixed identities.
 - **Probabilistic.** Predictions estimate attacking style, not match results, and must not be used for betting.
-- **Attribution.** Data from Understat, ESPN and FBref; crests via ESPN. Non-commercial academic use.
+- **Honours and managers.** From Wikidata (community-maintained, CC0). Each trophy is counted once per season;
+  revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
+  League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
+  left out because Wikidata records too few of them.
+- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN. Non-commercial academic use.
 """)
     ui.footer()

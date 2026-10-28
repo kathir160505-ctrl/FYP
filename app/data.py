@@ -166,6 +166,43 @@ def history_league_season(league: str, season: int) -> pd.DataFrame:
     return tm
 
 
+LEGACY = PROC / "legacy"
+# Trophy categories shown in the app, in display order (super cups are excluded: Wikidata lists too few).
+TROPHY_COLORS = {"League title": "#B45309", "Domestic cup": "#1D4ED8", "League Cup": "#0F766E",
+                 "European Cup": "#D50000", "UEFA Cup": "#EA580C", "Cup Winners' Cup": "#7C3AED",
+                 "Conference League": "#16A34A", "UEFA Super Cup": "#6B7280", "World club title": "#0B0D10",
+                 "Second-tier title": "#9CA3AF"}
+TROPHY_LABELS = {"League title": "League titles", "Domestic cup": "Domestic cups", "League Cup": "League Cups",
+                 "European Cup": "European Cups", "UEFA Cup": "UEFA Cup / Europa League",
+                 "Cup Winners' Cup": "Cup Winners' Cups", "Conference League": "Conference League",
+                 "UEFA Super Cup": "UEFA Super Cups", "World club title": "World club titles",
+                 "Second-tier title": "Second-tier titles"}
+
+
+@st.cache_data
+def honours() -> pd.DataFrame:
+    return pd.read_csv(LEGACY / "honours.csv")
+
+
+@st.cache_data
+def managers() -> pd.DataFrame:
+    return pd.read_csv(LEGACY / "managers.csv", parse_dates=["start", "end", "born"])
+
+
+@st.cache_data
+def manager_records() -> pd.DataFrame:
+    return pd.read_csv(LEGACY / "manager_records.csv", parse_dates=["first_match", "last_match"])
+
+
+@st.cache_data
+def club_info() -> pd.DataFrame:
+    return pd.read_csv(LEGACY / "club_info.csv")
+
+
+def legacy_retrieved() -> str:
+    return pd.Timestamp((LEGACY / "retrieved.txt").read_text(encoding="utf-8").strip()).strftime("%d %b %Y")
+
+
 def seasons() -> list[int]:
     return sorted(history()["season"].unique().tolist(), reverse=True)
 

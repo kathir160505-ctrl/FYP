@@ -5,6 +5,7 @@ Run from the project root:  python -m src.refresh
 1. Re-collect the current season for all three leagues (Understat + ESPN; past seasons are untouched).
 2. Rebuild the multi-season tables and re-project styles (data/processed/history/).
 3. Rebuild current-season form for the Matchday predictions (data/live/).
+4. Re-query Wikidata for honours and managers, then rebuild data/processed/legacy/ (manager records use step 2).
 
 The 2025/26 thesis dataset and models are never modified by this script.
 """
@@ -18,6 +19,8 @@ STEPS = [
     ["-m", "src.collect.history", "--current"],
     ["-m", "src.process.build_history"],
     ["-m", "src.collect.live"],
+    ["-m", "src.collect.legacy"],
+    ["-m", "src.process.build_legacy"],
 ]
 
 
