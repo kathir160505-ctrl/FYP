@@ -9,12 +9,18 @@ import json
 
 import pandas as pd
 import soccerdata as sd
+import soccerdata.understat as sd_understat
 from soccerdata.understat import UNDERSTAT_URL
 
 from config import LEAGUES, RAW, SEASON, UNDERSTAT_SEASON, log_step
 
 OUT = RAW / "understat"
 BLOCKS = ("attackSpeed", "shotZone", "situation")
+
+# soccerdata's label maps miss raw Understat values, which then come out blank:
+# headers ("Head"), "OtherBodyPart" (it expects "OtherBodyParts") and penalties ("Penalty").
+sd_understat.SHOT_BODY_PARTS.update({"Head": "Head", "OtherBodyPart": "Other"})
+sd_understat.SHOT_SITUATIONS.update({"Penalty": "Penalty"})
 
 
 def team_breakdowns(us: sd.Understat, league: str, teams: list[str]) -> pd.DataFrame:

@@ -45,6 +45,8 @@ Style: dark professional theme, Plotly, custom CSS, consistent club colours.
 - **Feature definitions:** `src/process/features.py`, `CLUSTER_FEATURES` (13 features). Club names: `data/reference/teams.csv`.
 - **Gotcha:** a stale `~/soccerdata/data/FBref/seasons_*.html` cache can map "2526" to FBref's current-season URL. `check_coverage.py` guards against this with an MP == 38 check.
 - **Tests:** `python -m pytest tests`.
+- **Gotcha:** soccerdata's Understat label maps miss the raw values "Head", "OtherBodyPart" and "Penalty", which would leave those shots with blank labels. `src/collect/understat.py` patches the maps before reading. Fixed 2026-10-28; shot counts and xG were never affected.
+- **Excel export:** run `python -m src.process.export_excel`. It writes `data/FYP_dataset_2025-26.xlsx`, a README/data-dictionary sheet plus 5 data sheets.
 ## Phases 3–4 done (2026-10-23)
 - **Run:** `python -m src.model.eda`, then `python -m src.model.clustering`. Reports are `reports/phase3_eda.md` and `reports/phase4_clustering.md`; figures are in `reports/figures/`.
 - **Model:** StandardScaler → PCA with 4 components (Kaiser rule, 87.4% variance) → KMeans k = 4 (seed 42). Saved to `models/cluster_model.joblib`.
