@@ -148,11 +148,11 @@ Phases:
 - **Proposal alignment (2026-10-31):**
   - The Methodology page lists the proposal's 12 research-process stages (FYP1 Figure 3.1), each with what we did.
   - It also has a Face validity panel; see `reports/phase4_face_validity.md`. Average finish by style: 3.9 / 7.7 / 12.7 / 16.9.
-- **Thesis mode (2026-10-31): the user wants the app minimal and inside the proposal's scope.**
-  - `data.EXTENSIONS` reads `SHOW_EXTENSIONS` (secrets.toml or env). It is **off by default**: five pages (Overview, Clubs, Head-to-head, Leagues, Methodology) with 2025/26 data only.
-  - On, it adds Matchday, Players, the match centre, the 2026/27 views and the Clubs extension tabs (2025/26 vs 2026/27, Squad & line-ups, Honours & managers).
+- **Extensions switch (2026-10-31): ON by default.** The user was upset when thesis mode hid Players, Matchday, line-ups and highlights. They had only asked to remove the UCL. **Never hide or remove features unless explicitly asked.**
+  - `data.EXTENSIONS` reads `SHOW_EXTENSIONS` (secrets.toml or env). It is on unless it is set to false.
+  - False leaves only the five proposal pages (Overview, Clubs, Head-to-head, Leagues, Methodology) with 2025/26 data, as an option for formal presentations.
   - Head-to-head's last five shows 2025/26 matches in thesis mode and live ESPN results with extensions.
-  - Don't add features: the user worries examiners will question out-of-scope work.
+  - Don't add new features without being asked: the user worries about out-of-scope questions, but wants the existing ones kept.
   - Methodology "From raw data to results" panel: the data at each step (match rows → 60×13 features → z-scores → PCA scores + cluster) with downloads. Re-predicting with the saved pipeline matches the stored clusters 100%.
   - Reproducibility checked 2026-10-31: re-running build_dataset, eda, clustering and predict reproduced every CSV, report, figure and model byte for byte. Only `fyp.sqlite` changes bytes, not content.
   - Handover: `FYP_Project_Handover.docx` (where it is, how to run it, the requirements table). The viva study guide is a Claude doc.

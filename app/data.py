@@ -132,15 +132,16 @@ def model_selection() -> pd.DataFrame:
 
 
 def _show_extensions() -> bool:
-    """Extensions beyond the FYP1 proposal (Matchday, Players, match centre, 2026/27, honours) are hidden unless
-    SHOW_EXTENSIONS = true is set in .streamlit/secrets.toml or the environment. Off = the thesis system only."""
+    """Matchday, Players, match centre, line-ups, 2026/27 and honours are shown by default. Setting
+    SHOW_EXTENSIONS = false in .streamlit/secrets.toml (or the environment) hides them, leaving only the five
+    pages the FYP1 proposal describes."""
     import os
     try:
         value = st.secrets.get("SHOW_EXTENSIONS", None)
     except Exception:  # no secrets file
         value = None
     value = os.environ.get("SHOW_EXTENSIONS", value)
-    return str(value).strip().lower() in ("1", "true", "yes", "on")
+    return value is None or str(value).strip().lower() not in ("0", "false", "no", "off")
 
 
 EXTENSIONS = _show_extensions()
