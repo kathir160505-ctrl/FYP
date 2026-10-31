@@ -176,6 +176,12 @@ Phases:
 The thesis core stays the 2025/26 analysis from the proposal; these are app extensions.
 
 ## Phase 7: deploy
+- **LIVE (2026-10-31): https://fyp-attacking-philosophies.streamlit.app** (Streamlit Community Cloud, private repo, YouTube key in the Streamlit secrets).
+  - All 7 pages checked live, plus a match centre with highlights. The inner app is at `/~/+/<page>`, because the outer page wraps it in an iframe.
+- **Weekly refresh:** `.github/workflows/refresh.yml` (GitHub Actions, Tuesdays 04:00 MYT; also "Run workflow" by hand).
+  - Runs `src.refresh`, then the tests, then commits the data, which triggers a Streamlit redeploy.
+  - The small raw tables (`data/raw/history`, `players`, `legacy`, ~22 MB) are tracked so a fresh runner can rebuild. The ESPN and live page caches use actions/cache.
+  - Optional steps (live, players, photos, legacy) don't fail the run.
 - **GitHub repo (private):** https://github.com/NITIYAHSELVAN/fyp-attacking-philosophies, branch `main`. Pushed 2026-10-24.
 - **GitHub CLI:** installed at `C:\Program Files\GitHub CLI\gh.exe` and logged in as NITIYAHSELVAN.
 - **Streamlit Community Cloud settings:** main file `app/streamlit_app.py`, Python 3.13. The user deploys it on share.streamlit.io.
