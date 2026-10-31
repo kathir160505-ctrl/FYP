@@ -128,6 +128,13 @@ def main() -> None:
                     print(f"FBref {t} {season}: {len(df):,} rows", flush=True)
                 break
     lu = lineups()
+    # Keep line-ups parsed earlier for matches whose ESPN page is not cached here (a fresh machine, e.g. the
+    # scheduled GitHub Actions refresh, has only the pages it downloads itself).
+    old_path = OUT / "lineups.csv"
+    if old_path.exists():
+        old = pd.read_csv(old_path, dtype={"athlete_id": str, "jersey": str, "formation_place": str})
+        old = old[~old.event_id.isin(lu.event_id) & old.competition.isin([v[1] for v in LEAGUES.values()])]
+        lu = pd.concat([old, lu], ignore_index=True)
     lu.to_csv(OUT / "lineups.csv", index=False, encoding="utf-8")
     print(f"Lineups: {lu.event_id.nunique():,} matches, {len(lu):,} player rows", flush=True)
     clubs = pd.read_csv(ROOT / "data" / "reference" / "clubs_wikidata.csv")

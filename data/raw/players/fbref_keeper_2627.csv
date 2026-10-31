@@ -1,0 +1,85 @@
+league,season,team,player,nation,pos,age,born,Playing Time_MP,Playing Time_Starts,Playing Time_Min,Playing Time_90s,Performance_GA,Performance_GA90,Performance_SoTA,Performance_Saves,Performance_Save%,Performance_W,Performance_D,Performance_L,Performance_CS,Performance_CS%,Penalty Kicks_PKatt,Penalty Kicks_PKA,Penalty Kicks_PKsv,Penalty Kicks_PKm,Penalty Kicks_Save%
+ENG-Premier League,2627,Arsenal,David Raya,ESP,GK,31-043,1995,8,8,720,8.0,5,0.62,22,17,77.3,7,0,1,5,62.5,1,0,1,0,100.0
+ENG-Premier League,2627,Aston Villa,Marco Bizot,NED,GK,35-232,1991,1,1,90,1.0,4,4.0,7,3,42.9,0,0,1,0,0.0,0,0,0,0,
+ENG-Premier League,2627,Aston Villa,Zion Suzuki,JPN,GK,24-068,2002,7,7,630,7.0,8,1.14,33,25,75.8,3,2,2,2,28.6,0,0,0,0,
+ENG-Premier League,2627,Bournemouth,Đorđe Petrović,SRB,GK,27-020,1999,8,8,720,8.0,13,1.62,28,15,53.6,2,3,3,2,25.0,0,0,0,0,
+ENG-Premier League,2627,Brentford,Caoimhín Kelleher,IRL,GK,27-339,1998,8,8,720,8.0,9,1.13,35,26,74.3,2,5,1,2,25.0,2,2,0,0,0.0
+ENG-Premier League,2627,Brighton,Bart Verbruggen,NED,GK,24-071,2002,8,8,720,8.0,7,0.87,26,19,73.1,5,1,2,5,62.5,0,0,0,0,
+ENG-Premier League,2627,Chelsea,Emiliano Martínez,ARG,GK,34-056,1992,6,6,524,5.8,11,1.89,36,25,69.4,3,1,2,1,16.7,0,0,0,0,
+ENG-Premier League,2627,Chelsea,Mike Penders,BEL,GK,21-089,2005,2,1,106,1.2,2,1.7,6,4,66.7,0,0,1,1,100.0,0,0,0,0,
+ENG-Premier League,2627,Chelsea,Robert Sánchez,ESP,GK,28-344,1997,1,1,90,1.0,2,2.0,6,4,66.7,1,0,0,0,0.0,0,0,0,0,
+ENG-Premier League,2627,Coventry City,Carl Rushworth,ENG,GK,25-118,2001,8,8,720,8.0,15,1.87,32,17,53.1,2,0,6,1,12.5,1,1,0,0,0.0
+ENG-Premier League,2627,Crystal Palace,Dean Henderson,ENG,GK,29-230,1997,3,3,270,3.0,8,2.67,20,12,60.0,1,0,2,0,0.0,0,0,0,0,
+ENG-Premier League,2627,Crystal Palace,Walter Benítez,ARG,GK,33-282,1993,5,5,450,5.0,11,2.2,25,14,56.0,1,1,3,1,20.0,0,0,0,0,
+ENG-Premier League,2627,Everton,Jordan Pickford,ENG,GK,32-235,1994,8,8,720,8.0,9,1.13,32,23,71.9,2,4,2,3,37.5,0,0,0,0,
+ENG-Premier League,2627,Fulham,Bernd Leno,GER,GK,34-238,1992,8,8,720,8.0,10,1.25,31,21,67.7,2,2,4,3,37.5,0,0,0,0,
+ENG-Premier League,2627,Hull City,Kostas Tzolakis,GRE,GK,23-354,2002,8,8,720,8.0,8,1.0,38,30,78.9,2,4,2,3,37.5,1,0,1,0,100.0
+ENG-Premier League,2627,Ipswich Town,Christian Walton,ENG,GK,30-353,1995,4,4,360,4.0,6,1.5,17,11,64.7,1,1,2,0,0.0,0,0,0,0,
+ENG-Premier League,2627,Ipswich Town,Kjell Scherpen,NED,GK,26-278,2000,4,4,360,4.0,10,2.5,25,15,60.0,2,0,2,0,0.0,1,1,0,0,0.0
+ENG-Premier League,2627,Leeds United,James Trafford,ENG,GK,24-018,2002,8,8,720,8.0,6,0.75,36,28,83.3,2,5,1,3,37.5,0,0,0,0,
+ENG-Premier League,2627,Liverpool,Alisson,BRA,GK,34-026,1992,8,8,720,8.0,8,1.0,25,17,68.0,4,3,1,4,50.0,1,1,0,0,0.0
+ENG-Premier League,2627,Manchester City,Gianluigi Donnarumma,ITA,GK,27-245,1999,8,8,720,8.0,9,1.13,30,21,70.0,7,0,1,3,37.5,1,1,0,0,0.0
+ENG-Premier League,2627,Manchester Utd,Senne Lammens,BEL,GK,24-113,2002,8,8,720,8.0,13,1.62,35,22,62.9,1,4,3,0,0.0,0,0,0,0,
+ENG-Premier League,2627,Newcastle,Lukáš Horníček,CZE,GK,24-107,2002,8,8,720,8.0,14,1.75,41,27,65.9,3,2,3,2,25.0,2,2,0,0,0.0
+ENG-Premier League,2627,Nottingham,Matz Sels,BEL,GK,34-244,1992,8,8,720,8.0,10,1.25,27,17,63.0,1,3,4,1,12.5,0,0,0,0,
+ENG-Premier League,2627,Sunderland,Robin Roefs,NED,GK,23-284,2003,8,8,720,8.0,14,1.75,29,15,51.7,1,2,5,2,25.0,1,1,0,0,0.0
+ENG-Premier League,2627,Tottenham,Antonín Kinský,CZE,GK,23-229,2003,8,8,720,8.0,10,1.25,29,19,65.5,2,3,3,3,37.5,1,0,0,1,
+ESP-La Liga,2627,Alavés,Antonio Sivera,ESP,GK,30-078,1996,10,10,900,10.0,11,1.1,41,30,73.2,3,3,4,3,30.0,2,1,1,0,50.0
+ESP-La Liga,2627,Athletic Club,Unai Simón,ESP,GK,29-139,1997,9,9,810,9.0,9,1.0,34,25,73.5,3,3,3,5,55.6,1,1,0,0,0.0
+ESP-La Liga,2627,Atlético Madrid,Jan Oblak,SVN,GK,33-294,1993,10,10,900,10.0,8,0.8,33,25,75.8,8,1,1,5,50.0,3,3,0,0,0.0
+ESP-La Liga,2627,Barcelona,Dominik Livaković,CRO,GK,31-292,1995,1,1,90,1.0,1,1.0,3,2,66.7,1,0,0,0,0.0,0,0,0,0,
+ESP-La Liga,2627,Barcelona,Joan García,ESP,GK,25-177,2001,9,9,765,8.5,9,1.06,27,18,66.7,8,0,1,4,44.4,0,0,0,0,
+ESP-La Liga,2627,Barcelona,Wojciech Szczęsny,POL,GK,36-193,1990,1,0,45,0.5,1,2.0,1,0,0.0,0,0,0,0,,0,0,0,0,
+ESP-La Liga,2627,Celta Vigo,Ionuț Radu,ROU,GK,29-153,1997,10,10,900,10.0,7,0.7,40,33,82.5,2,6,2,5,50.0,1,1,0,0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Leo Román,ESP,GK,26-114,2000,10,10,900,10.0,13,1.3,43,30,69.8,2,5,3,0,0.0,1,1,0,0,0.0
+ESP-La Liga,2627,Elche,Matías Dituro,ARG,GK,39-173,1987,10,10,900,10.0,17,1.7,45,28,62.2,2,4,4,3,30.0,2,1,0,1,0.0
+ESP-La Liga,2627,Espanyol,Fortuño,ESP,GK,25-023,2001,3,3,270,3.0,4,1.33,22,18,81.8,0,1,2,0,0.0,0,0,0,0,
+ESP-La Liga,2627,Espanyol,Marko Dmitrović,SRB,GK,34-277,1992,7,7,630,7.0,10,1.43,32,22,68.8,2,1,4,2,28.6,0,0,0,0,
+ESP-La Liga,2627,Getafe,David Soria,ESP,GK,33-207,1993,10,10,900,10.0,15,1.5,46,31,67.4,2,3,5,2,20.0,2,1,1,0,50.0
+ESP-La Liga,2627,Levante,Mathew Ryan,AUS,GK,34-203,1992,10,10,900,10.0,19,1.9,50,31,62.0,2,4,4,2,20.0,3,2,1,0,33.3
+ESP-La Liga,2627,Málaga,Alfonso Herrero,ESP,GK,32-190,1994,10,10,900,10.0,19,1.9,56,37,66.1,0,5,5,1,10.0,1,1,0,0,0.0
+ESP-La Liga,2627,Osasuna,Aitor Fernández,ESP,GK,35-178,1991,5,5,450,5.0,12,2.4,29,17,58.6,1,1,3,1,20.0,1,1,0,0,0.0
+ESP-La Liga,2627,Osasuna,Sergio Herrera,ESP,GK,33-145,1993,5,5,450,5.0,8,1.6,14,6,42.9,2,1,2,2,40.0,0,0,0,0,
+ESP-La Liga,2627,Racing Sant,Julen Agirrezabala,ESP,GK,25-306,2000,10,10,900,10.0,26,2.6,60,34,56.7,3,2,5,0,0.0,5,4,1,0,20.0
+ESP-La Liga,2627,Rayo Vallecano,Augusto Batalla,ARG,GK,30-181,1996,2,2,149,1.7,2,1.21,5,3,60.0,0,1,1,0,0.0,2,2,0,0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Dani Cárdenas,ESP,GK,29-214,1997,3,2,211,2.3,8,3.41,16,8,50.0,1,0,1,0,0.0,0,0,0,0,
+ESP-La Liga,2627,Rayo Vallecano,Emil Audero,IDN,GK,29-283,1997,5,5,450,5.0,10,2.0,31,21,67.7,1,2,2,0,0.0,3,3,0,0,0.0
+ESP-La Liga,2627,Real Betis,Álvaro Vallés,ESP,GK,29-095,1997,10,10,900,10.0,14,1.4,56,42,75.0,6,2,2,5,50.0,1,0,1,0,100.0
+ESP-La Liga,2627,Real Madrid,Andriy Lunin,UKR,GK,27-259,1999,1,1,90,1.0,1,1.0,6,5,83.3,1,0,0,0,0.0,0,0,0,0,
+ESP-La Liga,2627,Real Madrid,Thibaut Courtois,BEL,GK,34-170,1992,9,9,810,9.0,9,1.0,38,29,76.3,7,0,2,2,22.2,1,1,0,0,0.0
+ESP-La Liga,2627,Real Sociedad,Unai Marrero,ESP,GK,25-019,2001,1,1,90,1.0,2,2.0,10,8,80.0,1,0,0,0,0.0,0,0,0,0,
+ESP-La Liga,2627,Real Sociedad,Álex Remiro,ESP,GK,31-218,1995,9,9,810,9.0,16,1.78,50,34,68.0,5,1,3,1,11.1,2,2,0,0,0.0
+ESP-La Liga,2627,Sevilla,Odysseas Vlachodimos,GRE,GK,32-185,1994,10,10,900,10.0,16,1.6,46,30,65.2,5,2,3,3,30.0,1,1,0,0,0.0
+ESP-La Liga,2627,Valencia,Stole Dimitrievski,MKD,GK,32-307,1993,10,10,900,10.0,17,1.7,50,33,66.0,1,3,6,3,30.0,1,1,0,0,0.0
+ESP-La Liga,2627,Villarreal,Luiz Lúcio Reis Júnior,BRA,GK,25-287,2001,4,4,360,4.0,8,2.0,14,6,42.9,0,2,2,0,0.0,1,1,0,0,0.0
+ESP-La Liga,2627,Villarreal,Péter Gulácsi,HUN,GK,36-175,1990,6,6,540,6.0,6,1.0,24,18,75.0,3,1,2,1,16.7,1,1,0,0,0.0
+ITA-Serie A,2627,Atalanta,Marco Carnesecchi,ITA,GK,26-119,2000,8,8,720,8.0,15,1.87,51,36,70.6,3,1,4,1,12.5,3,2,1,0,33.3
+ITA-Serie A,2627,Bologna,Massimo Pessina,ITA,GK,18-307,2007,2,2,180,2.0,2,1.0,9,7,77.8,1,0,1,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Bologna,Łukasz Skorupski,POL,GK,35-176,1991,6,6,540,6.0,8,1.33,23,15,65.2,1,2,3,1,16.7,0,0,0,0,
+ITA-Serie A,2627,Cagliari,Elia Caprile,ITA,GK,25-064,2001,9,9,810,9.0,13,1.44,50,36,74.0,4,1,4,3,33.3,1,1,0,0,0.0
+ITA-Serie A,2627,Como,Jean Butez,FRA,GK,31-142,1995,7,7,630,7.0,6,0.86,21,15,71.4,4,2,1,2,28.6,0,0,0,0,
+ITA-Serie A,2627,Como,Robert Sánchez,ESP,GK,28-344,1997,2,2,180,2.0,2,1.0,9,7,77.8,2,0,0,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Fiorentina,David de Gea,ESP,GK,35-355,1990,8,8,720,8.0,19,2.37,49,30,61.2,1,1,6,0,0.0,1,1,0,0,0.0
+ITA-Serie A,2627,Frosinone,Lorenzo Palmisani,ITA,GK,22-138,2004,8,8,720,8.0,13,1.62,46,33,71.7,4,2,2,2,25.0,3,2,0,1,0.0
+ITA-Serie A,2627,Genoa,Justin Bijlow,NED,GK,28-279,1998,8,8,720,8.0,13,1.62,37,24,64.9,2,1,5,1,12.5,0,0,0,0,
+ITA-Serie A,2627,Inter,Ivan Provedel,ITA,GK,32-225,1994,1,1,90,1.0,1,1.0,2,1,50.0,1,0,0,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Inter,Josep Martinez,ESP,GK,28-154,1998,7,7,630,7.0,9,1.29,26,17,65.4,6,1,0,2,28.6,0,0,0,0,
+ITA-Serie A,2627,Juventus,Guglielmo Vicario,ITA,GK,30-021,1996,8,8,719,8.0,8,1.0,22,14,63.6,4,2,2,4,50.0,0,0,0,0,
+ITA-Serie A,2627,Juventus,Mattia Perin,ITA,GK,33-352,1992,1,0,1,0.0,0,0.0,0,0,,,,,1,,0,0,0,0,
+ITA-Serie A,2627,Lazio,Christos Mandas,GRE,GK,25-041,2001,9,9,810,9.0,7,0.78,37,30,81.1,8,1,0,4,44.4,1,0,1,0,100.0
+ITA-Serie A,2627,Lecce,Wladimiro Falcone,ITA,GK,31-199,1995,8,8,720,8.0,14,1.75,46,32,69.6,3,0,5,2,25.0,0,0,0,0,
+ITA-Serie A,2627,Milan,Mike Maignan,FRA,GK,31-117,1995,8,8,720,8.0,7,0.87,30,23,76.7,5,3,0,3,37.5,0,0,0,0,
+ITA-Serie A,2627,Monza,Demba Thiam,SEN,GK,28-233,1998,3,3,270,3.0,7,2.33,11,4,36.4,0,1,2,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Monza,Noel Törnqvist,SWE,GK,24-269,2002,4,4,360,4.0,7,1.75,27,20,74.1,2,0,2,1,25.0,0,0,0,0,
+ITA-Serie A,2627,Monza,Semuel Pizzignacco,ITA,GK,25-057,2001,1,1,90,1.0,4,4.0,5,1,20.0,0,0,1,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Napoli,Alex Meret,ITA,GK,29-220,1997,6,6,540,6.0,9,1.5,25,16,64.0,2,1,3,2,33.3,0,0,0,0,
+ITA-Serie A,2627,Napoli,Vanja Milinković-Savić,SRB,GK,29-250,1997,2,2,180,2.0,1,0.5,6,5,83.3,1,1,0,1,50.0,0,0,0,0,
+ITA-Serie A,2627,Parma,Edoardo Corvi,ITA,GK,25-219,2001,8,8,720,8.0,15,1.87,44,29,65.9,1,1,6,0,0.0,1,1,0,0,0.0
+ITA-Serie A,2627,Roma,Mile Svilar,SRB,GK,27-062,1999,5,5,450,5.0,3,0.6,16,13,81.3,4,1,0,3,60.0,0,0,0,0,
+ITA-Serie A,2627,Roma,Pierluigi Gollini,ITA,GK,31-224,1995,4,4,360,4.0,5,1.25,21,16,76.2,2,2,0,2,50.0,1,1,0,0,0.0
+ITA-Serie A,2627,Sassuolo,Arijanet Muric,KVX,GK,27-355,1998,7,7,630,7.0,14,2.0,46,32,69.6,2,2,3,0,0.0,1,1,0,0,0.0
+ITA-Serie A,2627,Sassuolo,Stefano Turati,ITA,GK,25-053,2001,2,2,180,2.0,8,4.0,12,4,33.3,0,0,2,0,0.0,2,0,2,0,100.0
+ITA-Serie A,2627,Torino,Diego Mascardi,ITA,GK,20-032,2006,2,2,180,2.0,4,2.0,11,7,63.6,0,0,2,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Torino,Lucas Perri,BRA,GK,28-322,1997,7,7,630,7.0,10,1.43,30,20,66.7,4,1,2,1,14.3,0,0,0,0,
+ITA-Serie A,2627,Udinese,Maduka Okoye,NGA,GK,27-061,1999,8,8,720,8.0,18,2.25,53,35,66.0,1,1,6,0,0.0,0,0,0,0,
+ITA-Serie A,2627,Venezia,Filip Stankovic,SRB,GK,24-245,2002,8,8,720,8.0,17,2.12,52,35,67.3,1,0,7,1,12.5,2,1,1,0,50.0

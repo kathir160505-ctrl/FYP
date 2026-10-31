@@ -2,7 +2,13 @@
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-data/raw/
+# Raw downloads stay local, except the small tables the weekly refresh (GitHub Actions) rebuilds from:
+# finished-season match tables, player tables and Wikidata answers (~22 MB). The big page caches stay out.
+data/raw/*
+!data/raw/history/
+!data/raw/players/
+data/raw/players/wikimedia_cache/
+!data/raw/legacy/
 .env
 downloaded_files/
 .streamlit/secrets.toml

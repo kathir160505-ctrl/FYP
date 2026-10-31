@@ -1,0 +1,63 @@
+# Weekly data refresh: collect the current season's new matches, rebuild every dataset the dashboard reads and
+# commit the result. Streamlit Community Cloud redeploys the app when the commit lands.
+# Runs every Tuesday 04:00 Malaysia time (Monday 20:00 UTC), after the weekend's matches; can also be started by
+# hand from the Actions tab ("Run workflow").
+name: Weekly data refresh
+
+on:
+  schedule:
+    - cron: "0 20 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install the pipeline packages
+        run: python -m pip install -r requirements-dev.txt
+
+      # Downloaded pages (ESPN match pages, Wikimedia answers) are kept between runs so each week only fetches what
+      # is new. Without them a run still works, just more slowly.
+      - name: Restore the download caches
+        uses: actions/cache@v4
+        with:
+          path: |
+            data/raw/espn
+            data/raw/live
+            data/raw/players/wikimedia_cache
+          key: raw-cache-${{ github.run_id }}
+          restore-keys: raw-cache-
+
+      - name: Refresh the data
+        run: python -m src.refresh
+
+      - name: Check nothing broke
+        run: python -m pytest tests -q
+
+      - name: Commit the refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/processed data/live data/raw/history data/raw/players data/raw/legacy
+          if git diff --cached --quiet; then
+            echo "No data changes this week."
+          else
+            git commit -m "Weekly data refresh $(date -u +%Y-%m-%d)"
+            git push
+          fi

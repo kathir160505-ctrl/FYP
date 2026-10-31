@@ -1,0 +1,1434 @@
+league,season,team,player,nation,pos,age,born,Playing Time_MP,Playing Time_Starts,Playing Time_Min,Playing Time_90s,Performance_Gls,Performance_Ast,Performance_G+A,Performance_G-PK,Performance_PK,Performance_PKatt,Performance_CrdY,Performance_CrdR,Per 90 Minutes_Gls,Per 90 Minutes_Ast,Per 90 Minutes_G+A,Per 90 Minutes_G-PK,Per 90 Minutes_G+A-PK
+ENG-Premier League,2627,Arsenal,Ben White,ENG,DF,29-020,1997,7,7,532,5.9,0,3,3,0,0,0,0,0,0.0,0.51,0.51,0.0,0.51
+ENG-Premier League,2627,Arsenal,Bruno Guimarães,BRA,MF,28-346,1997,6,2,240,2.7,2,0,2,2,0,0,0,0,0.75,0.0,0.75,0.75,0.75
+ENG-Premier League,2627,Arsenal,Bukayo Saka,ENG,MF,25-053,2001,7,7,596,6.6,3,0,3,2,1,1,0,0,0.45,0.0,0.45,0.3,0.3
+ENG-Premier League,2627,Arsenal,Christos Tzolis,GRE,MF,24-271,2002,5,5,362,4.0,0,1,1,0,0,0,2,0,0.0,0.25,0.25,0.0,0.25
+ENG-Premier League,2627,Arsenal,Cristhian Mosquera,ESP,DF,22-123,2004,2,2,168,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,David Raya,ESP,GK,31-043,1995,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Declan Rice,ENG,MF,27-287,1999,8,8,670,7.4,0,4,4,0,0,0,1,0,0.0,0.54,0.54,0.0,0.54
+ENG-Premier League,2627,Arsenal,Eberechi Eze,ENG,MF,28-121,1998,6,2,212,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Ezri Konsa,ENG,DF,29-005,1997,7,6,552,6.1,1,0,1,1,0,0,0,0,0.16,0.0,0.16,0.16,0.16
+ENG-Premier League,2627,Arsenal,Gabriel Magalhães,BRA,DF,28-313,1997,8,8,720,8.0,1,0,1,1,0,0,2,0,0.12,0.0,0.12,0.12,0.12
+ENG-Premier League,2627,Arsenal,Jurriën Timber,NED,DF,25-133,2001,4,1,157,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Kai Havertz,GER,FW,27-139,1999,8,7,587,6.5,2,0,2,2,0,0,1,0,0.31,0.0,0.31,0.31,0.31
+ENG-Premier League,2627,Arsenal,Martin Ødegaard,NOR,MF,27-315,1998,8,8,647,7.2,2,0,2,2,0,0,1,0,0.28,0.0,0.28,0.28,0.28
+ENG-Premier League,2627,Arsenal,Martín Zubimendi,ESP,MF,27-268,1999,6,0,105,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Max Dowman,ENG,MF,16-301,2009,2,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Mikel Merino,ESP,MF,30-128,1996,8,1,178,2.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Myles Lewis-Skelly,ENG,"MF,DF",20-032,2006,6,6,400,4.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Noni Madueke,ENG,MF,24-232,2002,5,2,249,2.8,1,0,1,1,0,0,1,0,0.36,0.0,0.36,0.36,0.36
+ENG-Premier League,2627,Arsenal,Piero Hincapié,ECU,DF,24-292,2002,3,0,42,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Arsenal,Riccardo Calafiori,ITA,DF,24-162,2002,8,7,611,6.8,1,2,3,1,0,0,0,0,0.15,0.29,0.44,0.15,0.44
+ENG-Premier League,2627,Arsenal,Viktor Gyökeres,SWE,FW,28-146,1998,5,1,151,1.7,0,1,1,0,0,0,0,0,0.0,0.6,0.6,0.0,0.6
+ENG-Premier League,2627,Aston Villa,Aaron Wan-Bissaka,COD,DF,28-336,1997,6,3,275,3.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Alejandro Garnacho,ARG,MF,22-119,2004,3,0,34,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Alysson,BRA,MF,20-176,2006,7,2,198,2.2,1,0,1,1,0,0,2,0,0.45,0.0,0.45,0.45,0.45
+ENG-Premier League,2627,Aston Villa,Boubacar Kamara,FRA,MF,26-339,1999,8,8,713,7.9,0,1,1,0,0,0,0,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Aston Villa,Brian Madjo,LUX,FW,17-289,2009,1,0,9,0.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Emi Buendía,ARG,"MF,FW",29-307,1996,8,7,560,6.2,1,0,1,1,0,0,2,0,0.16,0.0,0.16,0.16,0.16
+ENG-Premier League,2627,Aston Villa,George Hemmings,ENG,MF,19-238,2007,5,4,298,3.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Ian Maatsen,NED,DF,24-232,2002,5,5,425,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Ibrahim Mbaye,SEN,FW,18-277,2008,5,0,113,1.3,0,1,1,0,0,0,0,0,0.0,0.8,0.8,0.0,0.8
+ENG-Premier League,2627,Aston Villa,Johan Manzambi,SUI,MF,21-014,2005,5,4,320,3.6,2,2,4,2,0,0,1,0,0.56,0.56,1.13,0.56,1.13
+ENG-Premier League,2627,Aston Villa,John McGinn,SCO,MF,32-010,1994,8,7,634,7.0,1,3,4,1,0,0,2,0,0.14,0.43,0.57,0.14,0.57
+ENG-Premier League,2627,Aston Villa,João Gomes,BRA,MF,25-258,2001,5,5,366,4.1,0,1,1,0,0,0,2,1,0.0,0.25,0.25,0.0,0.25
+ENG-Premier League,2627,Aston Villa,Lamare Bogarde,NED,"DF,MF",22-296,2004,1,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Leon Goretzka,GER,MF,31-264,1995,2,0,28,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Marco Bizot,NED,GK,35-232,1991,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Matteo Ruggeri,ITA,DF,24-109,2002,4,2,160,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Matty Cash,POL,DF,29-082,1997,7,6,566,6.3,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Nicolas Jackson,SEN,FW,25-130,2001,7,7,547,6.1,4,0,4,4,0,0,2,0,0.66,0.0,0.66,0.66,0.66
+ENG-Premier League,2627,Aston Villa,Pau Torres,ESP,DF,29-285,1997,5,4,291,3.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Ross Barkley,ENG,MF,32-327,1993,8,4,358,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Tammy Abraham,ENG,FW,29-026,1997,4,0,74,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Tyrone Mings,ENG,DF,33-229,1993,6,4,443,4.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Victor Lindelöf,SWE,DF,32-103,1994,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Aston Villa,Zion Suzuki,JPN,GK,24-068,2002,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Adam Smith,ENG,DF,35-182,1991,8,8,681,7.6,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Adrien Truffert,FRA,DF,24-342,2001,8,8,713,7.9,0,1,1,0,0,0,2,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Bournemouth,Alex Scott,ENG,MF,23-068,2003,5,5,445,4.9,1,0,1,1,0,0,1,0,0.2,0.0,0.2,0.2,0.2
+ENG-Premier League,2627,Bournemouth,Alex Tóth,HUN,MF,21-005,2005,2,0,19,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Amine Adli,MAR,"FW,MF",26-171,2000,2,0,16,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,António Silva,POR,DF,22-363,2003,8,8,720,8.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Bafodé Diakité,FRA,DF,25-295,2001,2,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Ben Gannon-Doak,SCO,MF,20-351,2005,7,0,91,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Daniel Jebbison,CAN,FW,23-076,2003,3,0,34,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,David Brooks,WAL,MF,29-112,1997,5,1,94,1.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Eli Junior Kroupi,FRA,"FW,MF",20-127,2006,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Evanilson,BRA,FW,27-022,1999,8,8,677,7.5,3,4,7,3,0,0,1,0,0.4,0.53,0.93,0.4,0.93
+ENG-Premier League,2627,Bournemouth,James Hill,ENG,DF,24-291,2002,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Juanlu Sánchez,ESP,"DF,MF",23-074,2003,1,0,19,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Julio Soler,ARG,DF,21-254,2005,1,0,7,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Justin Kluivert,NED,MF,27-176,1999,6,5,385,4.3,1,1,2,1,0,0,1,0,0.23,0.23,0.47,0.23,0.47
+ENG-Premier League,2627,Bournemouth,Lewis Cook,ENG,MF,29-267,1997,8,4,336,3.7,0,1,1,0,0,0,2,0,0.0,0.27,0.27,0.0,0.27
+ENG-Premier League,2627,Bournemouth,Marcus Tavernier,ENG,MF,27-220,1999,8,8,659,7.3,5,0,5,5,0,0,3,0,0.68,0.0,0.68,0.68,0.68
+ENG-Premier League,2627,Bournemouth,Rayan,BRA,MF,20-086,2006,8,8,702,7.8,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Bournemouth,Ryan Christie,SCO,MF,31-248,1995,7,3,281,3.1,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Tyler Adams,USA,MF,27-256,1999,8,6,549,6.1,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Álvaro Rodríguez,URU,FW,22-106,2004,4,0,42,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Bournemouth,Đorđe Petrović,SRB,GK,27-020,1999,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Aaron Hickey,SCO,"MF,DF",24-140,2002,8,2,281,3.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Callum Wilson,ENG,FW,34-243,1992,5,0,35,0.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Caoimhín Kelleher,IRL,GK,27-339,1998,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Dango Ouattara,BFA,MF,24-259,2002,8,4,328,3.6,1,0,1,1,0,0,0,0,0.27,0.0,0.27,0.27,0.27
+ENG-Premier League,2627,Brentford,El Hadji Malick Diouf,SEN,DF,21-304,2004,5,1,158,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Fabio Carvalho,POR,"FW,MF",24-059,2002,1,0,4,0.0,1,0,1,1,0,0,0,0,22.5,0.0,22.5,22.5,22.5
+ENG-Premier League,2627,Brentford,Igor Thiago,BRA,FW,25-124,2001,8,8,712,7.9,1,2,3,1,0,1,4,0,0.13,0.25,0.38,0.13,0.38
+ENG-Premier League,2627,Brentford,Jaidon Anthony,ENG,MF,26-331,1999,8,5,457,5.1,1,1,2,1,0,0,1,0,0.2,0.2,0.39,0.2,0.39
+ENG-Premier League,2627,Brentford,Jannik Schuster,AUT,DF,20-165,2006,4,3,299,3.3,0,1,1,0,0,0,0,0,0.0,0.3,0.3,0.0,0.3
+ENG-Premier League,2627,Brentford,Keane Lewis-Potter,ENG,"DF,MF",25-248,2001,8,8,625,6.9,2,1,3,2,0,0,0,0,0.29,0.14,0.43,0.29,0.43
+ENG-Premier League,2627,Brentford,Kevin Schade,GER,MF,24-335,2001,8,7,604,6.7,3,0,3,3,0,0,1,0,0.45,0.0,0.45,0.45,0.45
+ENG-Premier League,2627,Brentford,Kristoffer Ajer,NOR,DF,28-194,1998,8,8,720,8.0,1,0,1,1,0,0,2,0,0.12,0.0,0.12,0.12,0.12
+ENG-Premier League,2627,Brentford,Mamadou Sangare,MLI,MF,24-124,2002,8,5,496,5.5,0,1,1,0,0,0,2,0,0.0,0.18,0.18,0.0,0.18
+ENG-Premier League,2627,Brentford,Mathias Jensen,DEN,MF,30-300,1996,4,3,225,2.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Michael Kayode,ITA,DF,22-110,2004,8,7,565,6.3,1,0,1,1,0,0,1,0,0.16,0.0,0.16,0.16,0.16
+ENG-Premier League,2627,Brentford,Mikkel Damsgaard,DEN,MF,26-117,2000,7,3,328,3.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Nathan Collins,IRL,DF,25-181,2001,3,3,196,2.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Rico Henry,JAM,"DF,MF",29-112,1997,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Sepp van den Berg,NED,DF,24-312,2001,2,2,160,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brentford,Vitaly Janelt,GER,MF,28-171,1998,7,7,629,7.0,2,0,2,2,0,0,6,1,0.29,0.0,0.29,0.29,0.29
+ENG-Premier League,2627,Brentford,Yehor Yarmoliuk,UKR,MF,22-241,2004,7,4,328,3.6,1,1,2,1,0,0,1,1,0.27,0.27,0.55,0.27,0.55
+ENG-Premier League,2627,Brighton,Bart Verbruggen,NED,GK,24-071,2002,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Charalampos Kostoulas,GRE,FW,19-151,2007,8,7,573,6.4,3,2,5,3,0,0,1,0,0.47,0.31,0.79,0.47,0.79
+ENG-Premier League,2627,Brighton,Chema,ESP,MF,21-186,2005,5,4,344,3.8,1,1,2,1,0,0,1,0,0.26,0.26,0.52,0.26,0.52
+ENG-Premier League,2627,Brighton,Costinha,POR,"DF,MF",26-216,2000,7,0,181,2.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Diego Gómez,PAR,MF,23-215,2003,8,8,700,7.8,1,2,3,1,0,0,0,0,0.13,0.26,0.39,0.13,0.39
+ENG-Premier League,2627,Brighton,Ferdi Kadioglu,TUR,DF,27-021,1999,7,7,517,5.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Georginio Rutter,FRA,FW,24-191,2002,5,1,144,1.6,0,2,2,0,0,0,0,0,0.0,1.25,1.25,0.0,1.25
+ENG-Premier League,2627,Brighton,Ibrahim Osman,GHA,"FW,MF",21-333,2004,3,0,43,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Jack Hinshelwood,ENG,MF,21-200,2005,3,1,128,1.4,3,0,3,3,0,0,0,0,2.11,0.0,2.11,2.11,2.11
+ENG-Premier League,2627,Brighton,Jaouen Hadjam,ALG,DF,23-216,2003,2,0,13,0.1,1,0,1,1,0,0,0,0,6.92,0.0,6.92,6.92,6.92
+ENG-Premier League,2627,Brighton,Lewis Dunk,ENG,DF,34-341,1991,7,6,570,6.3,1,0,1,1,0,0,1,0,0.16,0.0,0.16,0.16,0.16
+ENG-Premier League,2627,Brighton,Luka Vušković,CRO,DF,19-246,2007,8,8,707,7.9,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Brighton,Malick Yalcouye,CIV,MF,20-344,2005,8,3,307,3.4,2,0,2,2,0,0,0,0,0.59,0.0,0.59,0.59,0.59
+ENG-Premier League,2627,Brighton,Mats Wieffer,NED,DF,26-346,1999,2,2,156,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Matt O'Riley,DEN,MF,25-341,2000,2,0,12,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Maxim De Cuyper,BEL,MF,25-310,2000,8,8,671,7.5,2,2,4,2,0,0,2,0,0.27,0.27,0.54,0.27,0.54
+ENG-Premier League,2627,Brighton,Michael Svoboda,AUT,DF,28-013,1998,2,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Olivier Boscagli,FRA,"DF,MF",28-344,1997,8,8,628,7.0,0,1,1,0,0,0,3,0,0.0,0.14,0.14,0.0,0.14
+ENG-Premier League,2627,Brighton,Pascal Groß,GER,MF,35-135,1991,8,8,700,7.8,3,4,7,2,1,1,3,0,0.39,0.51,0.9,0.26,0.77
+ENG-Premier League,2627,Brighton,Pascal Struijk,NED,DF,27-078,1999,4,2,155,1.7,0,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Promise David,CAN,FW,25-117,2001,2,0,24,0.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Brighton,Yasin Ayari,SWE,MF,23-022,2003,7,7,574,6.4,2,0,2,2,0,0,1,0,0.31,0.0,0.31,0.31,0.31
+ENG-Premier League,2627,Brighton,Zadok Yohanna,NGA,FW,19-121,2007,1,0,13,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Cole Palmer,ENG,MF,24-175,2002,8,8,698,7.8,2,3,5,2,0,0,4,1,0.26,0.39,0.64,0.26,0.64
+ENG-Premier League,2627,Chelsea,Danny Welbeck,ENG,FW,35-336,1990,6,1,98,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Emiliano Martínez,ARG,GK,34-056,1992,6,6,524,5.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Enzo Fernández,ARG,MF,25-284,2001,1,0,26,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Estêvão Willian,BRA,MF,19-187,2007,6,0,53,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Geovany Quenda,POR,MF,19-181,2007,4,1,101,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Jordan Henderson,ENG,MF,36-133,1990,4,4,360,4.0,2,1,3,2,0,0,0,0,0.5,0.25,0.75,0.5,0.75
+ENG-Premier League,2627,Chelsea,Jorrel Hato,NED,"MF,DF",20-235,2006,6,6,411,4.6,0,2,2,0,0,0,0,0,0.0,0.44,0.44,0.0,0.44
+ENG-Premier League,2627,Chelsea,Joshua Acheampong,ENG,DF,20-176,2006,7,5,493,5.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,João Pedro,BRA,FW,25-032,2001,6,6,520,5.8,5,3,8,5,0,0,1,0,0.87,0.52,1.38,0.87,1.38
+ENG-Premier League,2627,Chelsea,Levi Colwill,ENG,DF,23-244,2003,7,7,611,6.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Mahdi Jazuli,ENG,MF,16-295,2010,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Malo Gusto,FRA,"MF,DF",23-162,2003,5,3,276,3.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Marco Palestra,ITA,MF,21-239,2005,3,0,46,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Maxence Lacroix,FRA,DF,26-205,2000,8,7,635,7.1,0,1,1,0,0,0,1,0,0.0,0.14,0.14,0.0,0.14
+ENG-Premier League,2627,Chelsea,Mike Penders,BEL,GK,21-089,2005,2,1,106,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Moisés Caicedo,ECU,MF,24-360,2001,4,3,264,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Morgan Rogers,ENG,"MF,FW",24-094,2002,8,8,700,7.8,4,1,5,4,0,0,3,0,0.51,0.13,0.64,0.51,0.64
+ENG-Premier League,2627,Chelsea,Pedro Neto,POR,MF,26-233,2000,8,7,592,6.6,3,1,4,3,0,0,2,0,0.46,0.15,0.61,0.46,0.61
+ENG-Premier League,2627,Chelsea,Pep Chavarría,ESP,MF,28-201,1998,6,2,301,3.3,0,1,1,0,0,0,0,0,0.0,0.3,0.3,0.0,0.3
+ENG-Premier League,2627,Chelsea,Reece James,ENG,MF,26-324,1999,4,3,293,3.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Robert Sánchez,ESP,GK,28-344,1997,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Roméo Lavia,BEL,MF,22-295,2004,6,4,278,3.1,1,0,1,1,0,0,1,0,0.32,0.0,0.32,0.32,0.32
+ENG-Premier League,2627,Chelsea,Valentín Barco,ARG,MF,22-097,2004,3,1,117,1.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Chelsea,Wesley Fofana,FRA,DF,25-315,2000,4,4,312,3.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Aurèle Amenda,SUI,DF,23-089,2003,4,4,360,4.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Bobby Thomas,ENG,DF,25-271,2001,8,8,676,7.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Brandon Thomas-Asante,GHA,"MF,FW",27-303,1998,8,5,462,5.1,0,2,2,0,0,0,0,0,0.0,0.39,0.39,0.0,0.39
+ENG-Premier League,2627,Coventry City,Caleb Yirenkyi,GHA,MF,20-286,2006,8,6,468,5.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Carl Rushworth,ENG,GK,25-118,2001,8,8,720,8.0,0,1,1,0,0,0,0,0,0.0,0.12,0.12,0.0,0.12
+ENG-Premier League,2627,Coventry City,Ellis Simms,ENG,FW,25-296,2001,4,1,119,1.3,1,0,1,1,0,0,0,0,0.76,0.0,0.76,0.76,0.76
+ENG-Premier League,2627,Coventry City,Ephron Mason-Clark,JAM,MF,27-064,1999,7,5,329,3.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Ethan Pinnock,JAM,DF,33-152,1993,7,6,553,6.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Frank Onyeka,NGA,MF,28-300,1998,7,4,382,4.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Gustavo Hamer,NED,MF,29-126,1997,5,0,53,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Jack Rudoni,ENG,MF,26-155,2000,8,7,556,6.2,2,0,2,1,1,1,1,0,0.32,0.0,0.32,0.16,0.16
+ENG-Premier League,2627,Coventry City,Jay Dasilva,WAL,"DF,MF",28-189,1998,8,8,714,7.9,1,1,2,1,0,0,1,0,0.13,0.13,0.25,0.13,0.25
+ENG-Premier League,2627,Coventry City,Joël Latibeaudière,JAM,"DF,MF",26-295,2000,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Kaine Kesler-Hayden,ENG,"DF,MF",24-005,2002,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Loum Tchaouna,FRA,MF,23-050,2003,4,2,212,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Matt Grimes,ENG,MF,31-105,1995,8,8,705,7.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Milan van Ewijk,NED,"DF,MF",26-050,2000,7,7,630,7.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Sidiki Cherif,FRA,FW,19-317,2006,4,3,233,2.6,1,0,1,1,0,0,0,0,0.39,0.0,0.39,0.39,0.39
+ENG-Premier League,2627,Coventry City,Stephen Mfuni,ENG,DF,18-258,2008,3,1,129,1.4,1,0,1,1,0,0,0,0,0.7,0.0,0.7,0.7,0.7
+ENG-Premier League,2627,Coventry City,Taiwo Awoniyi,NGA,FW,29-077,1997,6,3,288,3.2,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Tatsuhiro Sakamoto,JPN,MF,30-006,1996,4,2,224,2.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Coventry City,Victor Torp,DEN,MF,27-090,1999,4,0,64,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Adam Wharton,ENG,MF,22-264,2004,8,8,706,7.8,0,1,1,0,0,0,1,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Crystal Palace,Anan Khalaili,ISR,MF,22-055,2004,8,7,650,7.2,1,0,1,1,0,0,2,0,0.14,0.0,0.14,0.14,0.14
+ENG-Premier League,2627,Crystal Palace,Axel Disasi,FRA,DF,28-231,1998,4,3,229,2.5,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Ben Chilwell,ENG,"DF,MF",29-311,1996,2,0,31,0.3,1,0,1,1,0,0,0,0,2.9,0.0,2.9,2.9,2.9
+ENG-Premier League,2627,Crystal Palace,Chadi Riad,MAR,DF,23-133,2003,1,1,71,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Chris Richards,USA,DF,26-214,2000,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Daichi Kamada,JPN,MF,30-084,1996,8,8,700,7.8,1,3,4,1,0,0,2,0,0.13,0.39,0.51,0.13,0.51
+ENG-Premier League,2627,Crystal Palace,Daniel Muñoz,COL,MF,30-155,1996,1,1,54,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Darío Osorio,CHI,"FW,MF",22-277,2004,2,0,31,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Dean Henderson,ENG,GK,29-230,1997,3,3,270,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Dwight McNeil,ENG,MF,26-340,1999,5,2,192,2.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Eddie Nketiah,ENG,"MF,FW",27-151,1999,7,3,242,2.7,0,1,1,0,0,0,0,0,0.0,0.37,0.37,0.0,0.37
+ENG-Premier League,2627,Crystal Palace,Evann Guessand,CIV,"FW,MF",25-119,2001,2,0,56,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Honest Ahanor,ITA,DF,18-247,2008,3,2,161,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Ismaila Sarr,SEN,"FW,MF",28-245,1998,2,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Jaydee Canvot,FRA,DF,20-091,2006,7,7,630,7.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Jean-Philippe Mateta,FRA,FW,29-122,1997,3,2,153,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Jefferson Lerma,COL,DF,32-003,1994,4,1,161,1.8,1,0,1,1,0,0,2,0,0.56,0.0,0.56,0.56,0.56
+ENG-Premier League,2627,Crystal Palace,Jørgen Strand Larsen,NOR,FW,26-264,2000,7,5,441,4.9,1,0,1,1,0,0,0,0,0.2,0.0,0.2,0.2,0.2
+ENG-Premier League,2627,Crystal Palace,Quinten Timber,NED,MF,25-133,2001,5,5,388,4.3,0,1,1,0,0,0,0,0,0.0,0.23,0.23,0.0,0.23
+ENG-Premier League,2627,Crystal Palace,Takehiro Tomiyasu,JPN,DF,27-357,1998,4,2,192,2.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Tyrick Mitchell,ENG,MF,27-057,1999,8,8,689,7.7,2,0,2,2,0,0,0,0,0.26,0.0,0.26,0.26,0.26
+ENG-Premier League,2627,Crystal Palace,Walter Benítez,ARG,GK,33-282,1993,5,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Will Hughes,ENG,MF,31-194,1995,3,0,41,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Yéremy Pino,ESP,MF,24-008,2002,8,7,540,6.0,1,0,1,1,0,0,3,0,0.17,0.0,0.17,0.17,0.17
+ENG-Premier League,2627,Crystal Palace,Zavier Gozo,USA,MF,19-220,2007,2,0,30,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Crystal Palace,Óscar Mingueza,ESP,"DF,MF",27-168,1999,2,0,18,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Ainsley Maitland-Niles,ENG,DF,29-060,1997,5,4,308,3.4,1,1,2,1,0,0,0,0,0.29,0.29,0.58,0.29,0.58
+ENG-Premier League,2627,Everton,Beto,GNB,FW,28-270,1998,2,0,33,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Brennan Johnson,WAL,MF,25-158,2001,8,5,382,4.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Carlos Alcaraz,ARG,MF,23-332,2002,4,0,16,0.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Christian Nørgaard,DEN,MF,32-232,1994,1,0,6,0.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Harrison Armstrong,ENG,MF,19-282,2007,8,8,696,7.7,0,1,1,0,0,0,3,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Everton,Hayden Hackney,ENG,MF,24-124,2002,7,1,170,1.9,0,1,1,0,0,0,0,0,0.0,0.53,0.53,0.0,0.53
+ENG-Premier League,2627,Everton,Iliman Ndiaye,SEN,MF,26-236,2000,2,2,180,2.0,0,1,1,0,0,0,0,0,0.0,0.5,0.5,0.0,0.5
+ENG-Premier League,2627,Everton,Jack Grealish,ENG,MF,31-048,1995,5,3,298,3.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Jake O'Brien,IRL,DF,25-166,2001,4,1,120,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,James Garner,ENG,MF,25-229,2001,8,7,599,6.7,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,James Tarkowski,ENG,DF,33-343,1992,8,8,720,8.0,1,1,2,1,0,0,2,0,0.12,0.12,0.25,0.12,0.25
+ENG-Premier League,2627,Everton,Jarrad Branthwaite,ENG,DF,24-123,2002,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Jordan Pickford,ENG,GK,32-235,1994,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Kiernan Dewsbury-Hall,ENG,MF,28-052,1998,8,8,713,7.9,2,1,3,2,0,0,1,0,0.25,0.13,0.38,0.25,0.38
+ENG-Premier League,2627,Everton,Merlin Röhl,GER,"DF,MF",24-115,2002,5,5,429,4.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Michael Keane,ENG,DF,33-290,1993,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Thierno Barry,FRA,FW,24-007,2002,8,8,682,7.6,3,0,3,3,0,0,0,0,0.4,0.0,0.4,0.4,0.4
+ENG-Premier League,2627,Everton,Tim Iroegbunam,ENG,MF,23-120,2003,1,0,5,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Tyler Dibling,ENG,MF,20-230,2006,3,0,49,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Everton,Tyrique George,ENG,MF,20-266,2006,8,5,461,5.1,1,0,1,1,0,0,0,0,0.2,0.0,0.2,0.2,0.2
+ENG-Premier League,2627,Everton,Vitaliy Mykolenko,UKR,DF,27-152,1999,7,7,613,6.8,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Alex Iwobi,NGA,MF,30-178,1996,8,8,657,7.3,1,0,1,1,0,0,0,0,0.14,0.0,0.14,0.14,0.14
+ENG-Premier League,2627,Fulham,Antonee Robinson,USA,DF,29-081,1997,7,7,609,6.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Bernd Leno,GER,GK,34-238,1992,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Calvin Bassey,NGA,DF,26-301,1999,8,8,720,8.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,César Palacios,ESP,MF,21-351,2004,6,3,250,2.8,1,0,1,1,0,0,1,0,0.36,0.0,0.36,0.36,0.36
+ENG-Premier League,2627,Fulham,David Affengruber,AUT,DF,25-223,2001,5,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Emile Smith Rowe,ENG,MF,26-092,2000,4,0,45,0.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Gonzalo García,ESP,FW,22-218,2004,8,8,668,7.4,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Fulham,Hugo Larsson,SWE,MF,22-123,2004,5,1,106,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Joachim Andersen,DEN,DF,30-150,1996,3,2,191,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Jorge Cuenca,ESP,DF,26-345,1999,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Joshua King,ENG,MF,19-298,2007,8,8,657,7.3,2,1,3,2,0,0,3,0,0.27,0.14,0.41,0.27,0.41
+ENG-Premier League,2627,Fulham,Kenny Tete,NED,DF,31-019,1995,3,1,128,1.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Kevin,BRA,MF,23-297,2003,5,0,80,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Manuel Ángel,ESP,MF,22-227,2004,1,0,20,0.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Oscar Bobb,NOR,MF,23-108,2003,8,8,575,6.4,1,0,1,1,0,0,0,0,0.16,0.0,0.16,0.16,0.16
+ENG-Premier League,2627,Fulham,Rodrigo Muniz,BRA,FW,25-177,2001,6,0,74,0.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Ryan Sessegnon,ENG,DF,26-163,2000,5,1,155,1.7,1,0,1,1,0,0,0,1,0.58,0.0,0.58,0.58,0.58
+ENG-Premier League,2627,Fulham,Sander Berge,NOR,MF,28-256,1998,8,6,558,6.2,0,1,1,0,0,0,1,0,0.0,0.16,0.16,0.0,0.16
+ENG-Premier League,2627,Fulham,Shea Charles,NIR,MF,22-357,2003,8,6,555,6.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Fulham,Timothy Castagne,BEL,DF,30-327,1995,7,7,588,6.5,0,1,1,0,0,0,2,0,0.0,0.15,0.15,0.0,0.15
+ENG-Premier League,2627,Fulham,Tom Cairney,SCO,MF,35-281,1991,2,0,23,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Bachir Belloumi,ALG,MF,24-149,2002,8,7,596,6.6,3,2,5,3,0,0,1,0,0.45,0.3,0.76,0.45,0.76
+ENG-Premier League,2627,Hull City,Brooke Norton-Cuffy,ENG,DF,22-289,2004,4,1,129,1.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Cody Drameh,ENG,"DF,MF",24-324,2001,2,0,66,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Elliot Stroud,SWE,MF,24-128,2002,6,5,366,4.1,0,1,1,0,0,0,1,0,0.0,0.25,0.25,0.0,0.25
+ENG-Premier League,2627,Hull City,Hidemasa Morita,JPN,MF,31-171,1995,4,1,96,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Jens Hjertø-Dahl,NOR,MF,20-362,2005,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Joe Gelhardt,ENG,MF,24-177,2002,4,1,99,1.1,1,0,1,1,0,0,0,0,0.91,0.0,0.91,0.91,0.91
+ENG-Premier League,2627,Hull City,John Egan,IRL,DF,34-008,1992,8,8,707,7.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Kostas Tzolakis,GRE,GK,23-354,2002,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Lewie Coyle,ENG,DF,31-013,1995,8,8,592,6.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Liam Millar,CAN,"FW,MF",27-031,1999,2,0,52,0.6,1,0,1,1,0,0,1,0,1.73,0.0,1.73,1.73,1.73
+ENG-Premier League,2627,Hull City,Lucas Gourna-Douath,FRA,MF,23-084,2003,3,1,139,1.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Lucas Herrington,AUS,DF,19-053,2007,7,3,336,3.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Matt Crooks,ENG,MF,32-281,1994,5,5,334,3.7,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Matt Targett,ENG,"DF,MF",31-040,1995,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Mohamed Ali Cho,FRA,"FW,MF",22-282,2004,5,0,102,1.1,1,0,1,1,0,0,0,0,0.88,0.0,0.88,0.88,0.88
+ENG-Premier League,2627,Hull City,Nobel Mendy,SEN,DF,22-055,2004,5,5,339,3.8,1,0,1,1,0,0,0,0,0.27,0.0,0.27,0.27,0.27
+ENG-Premier League,2627,Hull City,Oliver McBurnie,SCO,FW,30-146,1996,8,8,706,7.8,1,1,2,0,1,1,4,0,0.13,0.13,0.25,0.0,0.13
+ENG-Premier League,2627,Hull City,Paddy McNair,NIR,"DF,MF",31-184,1995,1,0,27,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Regan Slater,ENG,MF,27-047,1999,8,8,675,7.5,0,1,1,0,0,0,2,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Hull City,Robinio Vaz,FRA,FW,19-253,2007,5,0,55,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Hull City,Ryan Giles,ENG,DF,26-275,2000,8,7,594,6.6,0,1,1,0,0,0,1,0,0.0,0.15,0.15,0.0,0.15
+ENG-Premier League,2627,Hull City,Semi Ajayi,NGA,DF,32-353,1993,8,8,693,7.7,1,0,1,1,0,0,1,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Hull City,Sorba Thomas,WAL,MF,27-067,1999,5,3,273,3.0,0,1,1,0,0,0,0,0,0.0,0.33,0.33,0.0,0.33
+ENG-Premier League,2627,Hull City,Tim Iroegbunam,ENG,MF,23-120,2003,5,1,209,2.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Abdoul Ouattara,FRA,"DF,MF",21-006,2005,8,4,405,4.5,1,1,2,1,0,0,1,0,0.22,0.22,0.44,0.22,0.44
+ENG-Premier League,2627,Ipswich Town,Abdul Fatawu Issahaku,GHA,MF,22-234,2004,7,6,444,4.9,0,1,1,0,0,0,4,1,0.0,0.2,0.2,0.0,0.2
+ENG-Premier League,2627,Ipswich Town,Azor Matusiwa,NED,MF,28-183,1998,2,0,25,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Christian Walton,ENG,GK,30-353,1995,4,4,360,4.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Chuba Akpom,ENG,"FW,MF",31-019,1995,6,0,118,1.3,1,0,1,1,0,0,0,0,0.76,0.0,0.76,0.76,0.76
+ENG-Premier League,2627,Ipswich Town,Daizen Maeda,JPN,MF,29-008,1997,8,5,429,4.8,1,0,1,1,0,0,0,0,0.21,0.0,0.21,0.21,0.21
+ENG-Premier League,2627,Ipswich Town,Dara O'Shea,IRL,DF,27-238,1999,8,8,720,8.0,1,0,1,1,0,0,0,0,0.12,0.0,0.12,0.12,0.12
+ENG-Premier League,2627,Ipswich Town,Darnell Furlong,ENG,"DF,MF",30-362,1995,1,0,18,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Emersonn,BRA,FW,22-104,2004,8,8,524,5.8,2,1,3,2,0,0,0,0,0.34,0.17,0.52,0.34,0.52
+ENG-Premier League,2627,Ipswich Town,Exequiel Palacios,ARG,MF,28-023,1998,7,5,484,5.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Florentino Luís,POR,MF,27-070,1999,5,3,249,2.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Issa Diop,MAR,DF,29-292,1997,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Jack Clarke,ENG,MF,25-339,2000,7,2,231,2.6,1,1,2,1,0,0,1,0,0.39,0.39,0.78,0.39,0.78
+ENG-Premier League,2627,Ipswich Town,Jacob Greaves,ENG,DF,26-046,2000,5,5,446,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Jaden Philogene Bidace,ENG,MF,24-262,2002,4,2,176,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Julio Enciso,PAR,MF,22-278,2004,8,8,645,7.2,1,2,3,1,0,0,1,0,0.14,0.28,0.42,0.14,0.42
+ENG-Premier League,2627,Ipswich Town,Kasey McAteer,IRL,MF,24-340,2001,3,0,45,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Kjell Scherpen,NED,GK,26-278,2000,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Leif Davis,ENG,"DF,MF",26-301,1999,8,8,720,8.0,2,1,3,2,0,0,2,0,0.25,0.12,0.37,0.25,0.37
+ENG-Premier League,2627,Ipswich Town,Marcelino Núñez,CHI,MF,26-241,2000,2,2,140,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Saša Lukić,SRB,MF,30-076,1996,6,6,490,5.4,0,1,1,0,0,0,2,0,0.0,0.18,0.18,0.0,0.18
+ENG-Premier League,2627,Ipswich Town,Sindre Egeli,NOR,"FW,MF",20-129,2006,2,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Ipswich Town,Zian Flemming,NED,"FW,MF",28-088,1998,6,0,126,1.4,2,0,2,1,1,1,1,0,1.43,0.0,1.43,0.71,0.71
+ENG-Premier League,2627,Leeds United,Anton Stach,GER,MF,27-347,1998,8,7,652,7.2,1,0,1,1,0,0,0,0,0.14,0.0,0.14,0.14,0.14
+ENG-Premier League,2627,Leeds United,Ao Tanaka,JPN,MF,28-048,1998,7,6,493,5.5,0,1,1,0,0,0,2,0,0.0,0.18,0.18,0.0,0.18
+ENG-Premier League,2627,Leeds United,Brenden Aaronson,USA,MF,26-006,2000,7,3,282,3.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Daniel James,WAL,"FW,MF",28-352,1997,3,0,54,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Dominic Calvert-Lewin,ENG,FW,29-226,1997,8,8,683,7.6,3,1,4,3,0,0,3,0,0.4,0.13,0.53,0.4,0.53
+ENG-Premier League,2627,Leeds United,Ethan Ampadu,WAL,MF,26-044,2000,8,8,720,8.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Gabriel Gudmundsson,SWE,MF,27-182,1999,6,6,520,5.8,0,1,1,0,0,0,1,0,0.0,0.17,0.17,0.0,0.17
+ENG-Premier League,2627,Leeds United,Harry Wilson,WAL,MF,29-220,1997,6,2,232,2.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Jaka Bijol,SVN,DF,27-265,1999,5,3,260,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,James Justin,ENG,"DF,MF",28-247,1998,8,8,708,7.9,1,0,1,1,0,0,1,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Leeds United,James Trafford,ENG,GK,24-018,2002,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Jayden Bogle,ENG,MF,26-093,2000,8,8,631,7.0,2,0,2,2,0,0,3,0,0.29,0.0,0.29,0.29,0.29
+ENG-Premier League,2627,Leeds United,Jean Mattéo Bahoya,FRA,MF,21-174,2005,2,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Joe Rodon,WAL,DF,29-006,1997,2,2,123,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Lukas Nmecha,GER,FW,27-318,1998,7,0,103,1.1,0,1,1,0,0,0,0,0,0.0,0.87,0.87,0.0,0.87
+ENG-Premier League,2627,Leeds United,Melvin Bard,FRA,"DF,MF",25-356,2000,1,0,19,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Nico Elvedi,SUI,DF,30-028,1996,6,5,502,5.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Noah Okafor,SUI,"MF,FW",26-157,2000,8,6,468,5.2,1,0,1,1,0,0,0,0,0.19,0.0,0.19,0.19,0.19
+ENG-Premier League,2627,Leeds United,Sean Longstaff,ENG,MF,28-363,1997,4,0,24,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Leeds United,Tarik Muharemovic,BIH,DF,23-242,2003,8,8,720,8.0,0,2,2,0,0,0,1,0,0.0,0.25,0.25,0.0,0.25
+ENG-Premier League,2627,Liverpool,Alexander Isak,SWE,FW,27-037,1999,7,7,567,6.3,6,0,6,6,0,0,1,0,0.95,0.0,0.95,0.95,0.95
+ENG-Premier League,2627,Liverpool,Alexis Mac Allister,ARG,MF,27-308,1998,8,6,578,6.4,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Alisson,BRA,GK,34-026,1992,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Bradley Barcola,FRA,MF,24-056,2002,6,5,422,4.7,0,2,2,0,0,0,1,0,0.0,0.43,0.43,0.0,0.43
+ENG-Premier League,2627,Liverpool,Cody Gakpo,NED,MF,27-174,1999,6,5,461,5.1,1,3,4,1,0,0,0,0,0.2,0.59,0.78,0.2,0.78
+ENG-Premier League,2627,Liverpool,Dominik Szoboszlai,HUN,MF,26-003,2000,6,6,471,5.2,1,0,1,0,1,1,1,0,0.19,0.0,0.19,0.0,0.0
+ENG-Premier League,2627,Liverpool,Federico Chiesa,ITA,"FW,MF",29-003,1997,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Florian Wirtz,GER,MF,23-178,2003,8,8,620,6.9,0,2,2,0,0,0,1,0,0.0,0.29,0.29,0.0,0.29
+ENG-Premier League,2627,Liverpool,Jeremie Frimpong,NED,DF,25-322,2000,5,2,201,2.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Joe Gomez,ENG,DF,29-158,1997,2,0,15,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Jérémy Jacquet,FRA,DF,21-107,2005,8,8,682,7.6,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Kostas Tsimikas,GRE,DF,30-169,1996,3,1,68,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Lewis Koumas,WAL,FW,21-039,2005,6,1,124,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Milos Kerkez,HUN,DF,22-355,2003,8,7,652,7.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Rio Ngumoha,ENG,MF,18-060,2008,6,1,170,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Ronald Araújo,URU,DF,27-235,1999,8,6,495,5.5,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Ryan Gravenberch,NED,MF,24-165,2002,7,4,344,3.8,0,1,1,0,0,0,2,1,0.0,0.26,0.26,0.0,0.26
+ENG-Premier League,2627,Liverpool,Trey Nyoni,ENG,MF,19-120,2007,6,0,151,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Virgil van Dijk,NED,DF,35-112,1991,8,8,720,8.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Liverpool,Víctor Muñoz,ESP,MF,23-107,2003,7,5,427,4.7,2,0,2,2,0,0,1,0,0.42,0.0,0.42,0.42,0.42
+ENG-Premier League,2627,Manchester City,Abdukodir Khusanov,UZB,DF,22-241,2004,5,4,372,4.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Allan,BRA,MF,22-192,2004,1,0,11,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Antoine Semenyo,GHA,MF,26-294,2000,7,6,554,6.2,2,3,5,2,0,0,0,0,0.32,0.49,0.81,0.32,0.81
+ENG-Premier League,2627,Manchester City,Ayyoub Bouaddi,MAR,MF,19-026,2007,4,1,125,1.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Elliot Anderson,ENG,MF,23-356,2002,8,7,607,6.7,0,1,1,0,0,0,2,0,0.0,0.15,0.15,0.0,0.15
+ENG-Premier League,2627,Manchester City,Enzo Fernández,ARG,MF,25-284,2001,6,5,456,5.1,1,0,1,1,0,0,1,0,0.2,0.0,0.2,0.2,0.2
+ENG-Premier League,2627,Manchester City,Erling Haaland,NOR,FW,26-099,2000,8,8,709,7.9,9,0,9,9,0,0,0,0,1.14,0.0,1.14,1.14,1.14
+ENG-Premier League,2627,Manchester City,Gianluigi Donnarumma,ITA,GK,27-245,1999,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Iliman Ndiaye,SEN,MF,26-236,2000,6,5,418,4.6,0,2,2,0,0,0,0,0,0.0,0.43,0.43,0.0,0.43
+ENG-Premier League,2627,Manchester City,Jack Grealish,ENG,"FW,MF",31-048,1995,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Jeremy Doku,BEL,MF,24-154,2002,4,2,217,2.4,1,1,2,1,0,0,0,0,0.41,0.41,0.83,0.41,0.83
+ENG-Premier League,2627,Manchester City,Joško Gvardiol,CRO,DF,24-278,2002,8,6,579,6.4,1,3,4,1,0,0,2,0,0.16,0.47,0.62,0.16,0.62
+ENG-Premier League,2627,Manchester City,Kaden Braithwaite,ENG,DF,18-262,2008,1,0,2,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Marc Guéhi,ENG,"DF,MF",26-107,2000,8,8,675,7.5,1,1,2,1,0,0,1,0,0.13,0.13,0.27,0.13,0.27
+ENG-Premier League,2627,Manchester City,Mateo Kovačić,CRO,MF,32-175,1994,3,1,93,1.0,0,1,1,0,0,0,0,0,0.0,0.97,0.97,0.0,0.97
+ENG-Premier League,2627,Manchester City,Matheus Nunes,POR,DF,28-062,1998,5,4,380,4.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Nico O'Reilly,ENG,"MF,DF",21-221,2005,6,4,290,3.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Phil Foden,ENG,MF,26-153,2000,6,4,339,3.8,1,2,3,1,0,0,1,1,0.27,0.53,0.8,0.27,0.8
+ENG-Premier League,2627,Manchester City,Rayan Cherki,FRA,MF,23-072,2003,7,6,438,4.9,4,2,6,4,0,0,2,0,0.82,0.41,1.23,0.82,1.23
+ENG-Premier League,2627,Manchester City,Rico Lewis,ENG,DF,21-341,2004,2,1,101,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Ryan Mcaidoo,ENG,FW,18-126,2008,3,0,35,0.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Rúben Dias,POR,DF,29-167,1997,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester City,Vitor Reis,BRA,DF,20-289,2006,1,0,2,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Amad Diallo,CIV,MF,24-109,2002,3,3,225,2.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Andrey Santos,BRA,MF,22-178,2004,5,3,264,2.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Ayden Heaven,ENG,DF,20-036,2006,3,2,155,1.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Benjamin Šeško,SVN,FW,23-150,2003,4,0,80,0.9,1,0,1,1,0,0,0,0,1.13,0.0,1.13,1.13,1.13
+ENG-Premier League,2627,Manchester Utd,Bruno Fernandes,POR,MF,32-050,1994,7,7,630,7.0,3,1,4,2,1,1,2,0,0.43,0.14,0.57,0.29,0.43
+ENG-Premier League,2627,Manchester Utd,Bryan Mbeumo,CMR,"MF,FW",27-082,1999,8,8,720,8.0,4,0,4,4,0,0,1,0,0.5,0.0,0.5,0.5,0.5
+ENG-Premier League,2627,Manchester Utd,Carlos Baleba,CMR,MF,22-298,2004,3,2,176,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Diogo Dalot,POR,DF,27-224,1999,8,6,559,6.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Harry Maguire,ENG,DF,33-237,1993,8,8,720,8.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Joshua Zirkzee,NED,FW,25-159,2001,4,0,73,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Kobbie Mainoo,ENG,MF,21-192,2005,6,5,445,4.9,0,1,1,0,0,0,0,0,0.0,0.2,0.2,0.0,0.2
+ENG-Premier League,2627,Manchester Utd,Leny Yoro,FRA,DF,20-349,2005,5,3,262,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Lisandro Martínez,ARG,DF,28-283,1998,7,6,521,5.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Luke Shaw,ENG,DF,31-108,1995,5,5,423,4.7,0,1,1,0,0,0,2,0,0.0,0.21,0.21,0.0,0.21
+ENG-Premier League,2627,Manchester Utd,Marcus Rashford,ENG,MF,28-362,1997,6,4,352,3.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Mason Mount,ENG,MF,27-291,1999,3,1,118,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Matheus Cunha,BRA,"FW,MF",27-154,1999,8,6,548,6.1,1,2,3,1,0,0,0,0,0.16,0.33,0.49,0.16,0.49
+ENG-Premier League,2627,Manchester Utd,Noussair Mazraoui,MAR,DF,28-348,1997,4,1,143,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Patrick Dorgu,DEN,"MF,DF",22-002,2004,5,2,174,1.9,0,1,1,0,0,0,1,0,0.0,0.52,0.52,0.0,0.52
+ENG-Premier League,2627,Manchester Utd,Senne Lammens,BEL,GK,24-113,2002,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Shea Lacey,ENG,FW,19-197,2007,2,0,24,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Manchester Utd,Youri Tielemans,BEL,MF,29-174,1997,8,8,588,6.5,0,1,1,0,0,0,1,0,0.0,0.15,0.15,0.0,0.15
+ENG-Premier League,2627,Newcastle,Aladji Bamba,FRA,MF,20-106,2006,3,0,30,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Amar Dedić,BIH,DF,24-071,2002,6,5,448,5.0,0,2,2,0,0,0,0,0,0.0,0.4,0.4,0.0,0.4
+ENG-Premier League,2627,Newcastle,Anthony Elanga,SWE,MF,24-184,2002,4,3,246,2.7,2,0,2,2,0,0,1,0,0.73,0.0,0.73,0.73,0.73
+ENG-Premier League,2627,Newcastle,Bazoumana Touré,CIV,MF,20-240,2006,5,0,118,1.3,1,0,1,1,0,0,0,0,0.76,0.0,0.76,0.76,0.76
+ENG-Premier League,2627,Newcastle,Dan Burn,ENG,DF,34-172,1992,3,1,92,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Fabian Schär,SUI,DF,34-312,1991,3,1,116,1.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Harvey Barnes,ENG,MF,28-323,1997,8,8,705,7.8,2,2,4,2,0,0,0,0,0.26,0.26,0.51,0.26,0.51
+ENG-Premier League,2627,Newcastle,Jacob Murphy,ENG,MF,31-246,1995,7,4,332,3.7,0,1,1,0,0,0,3,0,0.0,0.27,0.27,0.0,0.27
+ENG-Premier League,2627,Newcastle,Jacob Ramsey,ENG,MF,25-153,2001,4,0,86,1.0,1,0,1,1,0,0,1,0,1.05,0.0,1.05,1.05,1.05
+ENG-Premier League,2627,Newcastle,Joe Willock,ENG,MF,27-069,1999,8,6,475,5.3,2,0,2,2,0,0,0,0,0.38,0.0,0.38,0.38,0.38
+ENG-Premier League,2627,Newcastle,Joelinton,BRA,MF,30-075,1996,3,2,205,2.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Lewis Hall,ENG,DF,22-050,2004,8,8,719,8.0,1,1,2,1,0,0,1,0,0.13,0.13,0.25,0.13,0.25
+ENG-Premier League,2627,Newcastle,Lewis Miley,ENG,"MF,DF",20-180,2006,7,7,544,6.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Lukáš Horníček,CZE,GK,24-107,2002,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Malick Thiaw,GER,DF,25-081,2001,8,7,631,7.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Matias Fernandez-Pardo,BEL,"MF,FW",21-267,2005,5,4,303,3.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Nick Woltemade,GER,"FW,MF",24-256,2002,1,0,20,0.2,0,1,1,0,0,0,0,0,0.0,4.5,4.5,0.0,4.5
+ENG-Premier League,2627,Newcastle,Nicolás González,ESP,MF,24-298,2002,6,6,434,4.8,0,1,1,0,0,0,3,0,0.0,0.21,0.21,0.0,0.21
+ENG-Premier League,2627,Newcastle,Sean Steur,NED,MF,18-290,2008,6,2,232,2.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,Sven Botman,NED,DF,26-289,2000,7,7,630,7.0,1,0,1,1,0,0,2,0,0.14,0.0,0.14,0.14,0.14
+ENG-Premier League,2627,Newcastle,Tino Livramento,ENG,"DF,MF",23-350,2002,2,0,34,0.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Newcastle,William Osula,DEN,FW,23-085,2003,4,2,179,2.0,1,1,2,1,0,0,1,0,0.5,0.5,1.01,0.5,1.01
+ENG-Premier League,2627,Newcastle,Yoane Wissa,COD,"FW,MF",30-055,1996,8,7,621,6.9,1,1,2,1,0,1,3,0,0.14,0.14,0.29,0.14,0.29
+ENG-Premier League,2627,Nottingham,Arnaud Kalimuendo,FRA,FW,24-281,2002,3,0,26,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Callum Hudson-Odoi,ENG,"FW,MF",25-355,2000,4,0,48,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Chris Wood,NZL,FW,34-325,1991,7,0,91,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Dan Ndoye,SUI,MF,26-003,2000,8,8,528,5.9,2,0,2,2,0,0,1,0,0.34,0.0,0.34,0.34,0.34
+ENG-Premier League,2627,Nottingham,Daniel Muñoz,COL,MF,30-155,1996,6,5,474,5.3,0,1,1,0,0,0,0,0,0.0,0.19,0.19,0.0,0.19
+ENG-Premier League,2627,Nottingham,Ibrahim Sangaré,CIV,MF,28-330,1997,5,1,149,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Igor Jesus,BRA,FW,25-245,2001,5,2,259,2.9,1,0,1,1,0,0,1,0,0.35,0.0,0.35,0.35,0.35
+ENG-Premier League,2627,Nottingham,Jair,BRA,DF,21-235,2005,6,6,534,5.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,James Mcatee,ENG,MF,24-010,2002,8,8,679,7.5,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Liam Delap,ENG,FW,23-262,2003,7,6,527,5.9,1,0,1,1,0,0,2,0,0.17,0.0,0.17,0.17,0.17
+ENG-Premier League,2627,Nottingham,Luca Netz,GER,"DF,MF",23-166,2003,4,0,37,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Matz Sels,BEL,GK,34-244,1992,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Morgan Gibbs-White,ENG,MF,26-274,2000,7,7,630,7.0,1,2,3,0,1,1,0,0,0.14,0.29,0.43,0.0,0.29
+ENG-Premier League,2627,Nottingham,Murillo,BRA,DF,24-116,2002,8,8,718,8.0,0,1,1,0,0,0,3,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Nottingham,Neco Williams,WAL,MF,25-198,2001,8,8,713,7.9,1,0,1,1,0,0,1,0,0.13,0.0,0.13,0.13,0.13
+ENG-Premier League,2627,Nottingham,Nicolás Domínguez,ARG,MF,28-122,1998,2,1,74,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Nikola Milenković,SRB,DF,29-016,1997,4,4,360,4.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Ola Aina,NGA,"MF,DF",30-020,1996,5,5,388,4.3,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Ousmane Diomande,CIV,DF,22-328,2003,5,4,343,3.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Nottingham,Xaver Schlager,AUT,MF,29-030,1997,8,7,622,6.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Brian Brobbey,NED,FW,24-269,2002,6,6,465,5.2,3,0,3,3,0,0,1,0,0.58,0.0,0.58,0.58,0.58
+ENG-Premier League,2627,Sunderland,Chemsdine Talbi,MAR,MF,21-172,2005,2,0,44,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Chris Rigg,ENG,MF,19-132,2007,4,2,173,1.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Daniel Ballard,NIR,DF,27-036,1999,5,5,450,5.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Dayann Methalie,FRA,DF,20-255,2006,2,1,108,1.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Enzo Le Fée,FRA,MF,26-267,2000,8,8,686,7.6,1,1,2,0,1,2,0,0,0.13,0.13,0.26,0.0,0.13
+ENG-Premier League,2627,Sunderland,Granit Xhaka,SUI,MF,34-031,1992,8,8,720,8.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Habib Diarra,SEN,MF,22-298,2004,4,0,73,0.8,0,1,1,0,0,0,0,0,0.0,1.23,1.23,0.0,1.23
+ENG-Premier League,2627,Sunderland,Jocelin Ta Bi,CIV,FW,21-261,2005,1,0,18,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Jules Ahoka,COD,MF,20-173,2006,1,0,26,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Kevin Danso,AUT,DF,28-039,1998,5,5,376,4.2,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Luke O'Nien,ENG,DF,31-341,1994,3,2,188,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Malick Fofana,BEL,"FW,MF",21-211,2005,4,0,120,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Nilson Angulo,ECU,MF,23-131,2003,7,7,463,5.1,1,1,2,1,0,0,1,0,0.19,0.19,0.39,0.19,0.39
+ENG-Premier League,2627,Sunderland,Noah Sadiki,COD,MF,21-315,2004,8,8,680,7.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Nordi Mukiele,FRA,DF,28-361,1997,7,7,591,6.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Omar Alderete,PAR,DF,29-306,1996,3,1,121,1.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Reinildo Mandava,MOZ,DF,32-280,1994,7,7,611,6.8,0,0,0,0,0,0,3,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Riquelme Angulo,ECU,FW,18-289,2008,1,0,10,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Robin Roefs,NED,GK,23-284,2003,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Romaine Mundle,ENG,MF,23-187,2003,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Thomas Meunier,BEL,"MF,DF",35-046,1991,6,6,429,4.8,0,1,1,0,0,0,0,0,0.0,0.21,0.21,0.0,0.21
+ENG-Premier League,2627,Sunderland,Timur Tuterov,UKR,FW,21-139,2005,2,1,83,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Trai Hume,NIR,"MF,DF",24-224,2002,7,5,478,5.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Sunderland,Wilson Isidor,HAI,FW,26-062,2000,6,1,211,2.3,1,0,1,1,0,0,0,0,0.43,0.0,0.43,0.43,0.43
+ENG-Premier League,2627,Tottenham,Andy Robertson,SCO,"DF,MF",32-231,1994,7,6,499,5.5,0,2,2,0,0,0,0,0,0.0,0.36,0.36,0.0,0.36
+ENG-Premier League,2627,Tottenham,Antonín Kinský,CZE,GK,23-229,2003,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Archie Gray,ENG,"DF,MF",20-230,2006,7,6,578,6.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Ben Davies,WAL,"DF,MF",33-187,1993,2,0,24,0.3,1,0,1,1,0,0,0,0,3.75,0.0,3.75,3.75,3.75
+ENG-Premier League,2627,Tottenham,Conor Gallagher,ENG,MF,26-264,2000,6,3,270,3.0,1,0,1,1,0,0,3,0,0.33,0.0,0.33,0.33,0.33
+ENG-Premier League,2627,Tottenham,Dejan Kulusevski,SWE,"FW,MF",26-186,2000,2,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Destiny Udogie,ITA,DF,23-334,2002,4,2,161,1.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Dominic Solanke,ENG,FW,29-044,1997,8,4,379,4.2,1,1,2,1,0,0,1,0,0.24,0.24,0.47,0.24,0.47
+ENG-Premier League,2627,Tottenham,James Maddison,ENG,MF,29-339,1996,6,2,197,2.2,1,0,1,1,0,0,0,0,0.46,0.0,0.46,0.46,0.46
+ENG-Premier League,2627,Tottenham,Jan Paul van Hecke,NED,DF,26-142,2000,8,8,720,8.0,1,0,1,1,0,0,2,0,0.12,0.0,0.12,0.12,0.12
+ENG-Premier League,2627,Tottenham,Lucas Bergvall,SWE,MF,20-268,2006,4,2,145,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Marcos Senesi,ARG,DF,29-171,1997,2,2,178,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Mateus Fernandes,POR,MF,22-110,2004,8,4,361,4.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Mathys Tel,FRA,MF,21-184,2005,6,4,350,3.9,1,0,1,1,0,0,0,0,0.26,0.0,0.26,0.26,0.26
+ENG-Premier League,2627,Tottenham,Micky van de Ven,NED,DF,25-192,2001,7,6,557,6.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Mikey Moore,ENG,MF,19-078,2007,2,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Mohammed Kudus,GHA,MF,26-087,2000,7,3,365,4.1,0,2,2,0,0,0,0,0,0.0,0.49,0.49,0.0,0.49
+ENG-Premier League,2627,Tottenham,Mykhailo Mudryk,UKR,MF,25-296,2001,1,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Omar Marmoush,EGY,"FW,MF",27-263,1999,7,6,514,5.7,1,0,1,1,0,0,0,0,0.18,0.0,0.18,0.18,0.18
+ENG-Premier League,2627,Tottenham,Pedro Porro,ESP,"DF,MF",27-045,1999,4,3,224,2.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Richarlison,BRA,FW,29-171,1997,1,1,67,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Rodrigo Bentancur,URU,MF,29-125,1997,6,4,382,4.2,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Sandro Tonali,ITA,MF,26-173,2000,8,8,697,7.7,0,1,1,0,0,0,0,0,0.0,0.13,0.13,0.0,0.13
+ENG-Premier League,2627,Tottenham,Sávio,BRA,MF,22-201,2004,4,4,330,3.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ENG-Premier League,2627,Tottenham,Tosin Adarabioyo,ENG,DF,29-034,1997,2,1,76,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Abde Rebbach,ALG,"MF,DF",28-078,1998,10,10,788,8.8,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Aitor Mañas,ESP,FW,23-296,2003,7,1,120,1.3,1,0,1,1,0,0,0,0,0.75,0.0,0.75,0.75,0.75
+ESP-La Liga,2627,Alavés,Ander Guevara,ESP,MF,29-113,1997,5,1,127,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Antonio Blanco,ESP,MF,26-097,2000,10,9,749,8.3,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Antonio Sivera,ESP,GK,30-078,1996,10,10,900,10.0,0,1,1,0,0,0,1,0,0.0,0.1,0.1,0.0,0.1
+ESP-La Liga,2627,Alavés,Carles Aleñá,ESP,MF,28-296,1998,8,3,224,2.5,0,1,1,0,0,0,0,0,0.0,0.4,0.4,0.0,0.4
+ESP-La Liga,2627,Alavés,Carlos Benavídez,URU,MF,28-212,1998,4,1,166,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Denis Suárez,ESP,MF,32-295,1994,9,4,424,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Hugo Novoa,ESP,"DF,MF",23-300,2003,2,0,74,0.8,1,0,1,1,0,0,0,0,1.22,0.0,1.22,1.22,1.22
+ESP-La Liga,2627,Alavés,Jonny Castro,ESP,DF,32-239,1994,8,8,659,7.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Lucas Boyé,ARG,FW,30-242,1996,9,9,723,8.0,5,0,5,4,1,1,1,0,0.62,0.0,0.62,0.5,0.5
+ESP-La Liga,2627,Alavés,Mariano,DOM,FW,33-088,1993,10,4,445,4.9,3,4,7,3,0,0,2,0,0.61,0.81,1.42,0.61,1.42
+ESP-La Liga,2627,Alavés,Miguel Rodríguez,ESP,MF,23-182,2003,3,0,13,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Mikel Rodriguez,ESP,MF,24-208,2002,3,2,148,1.6,1,0,1,1,0,0,0,0,0.61,0.0,0.61,0.61,0.61
+ESP-La Liga,2627,Alavés,Nahuel Tenaglia,ARG,DF,30-249,1996,10,10,855,9.5,1,0,1,1,0,0,3,0,0.11,0.0,0.11,0.11,0.11
+ESP-La Liga,2627,Alavés,Nicolás Valentini,ARG,DF,25-205,2001,7,5,450,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Pablo Ibáñez,ESP,MF,28-038,1998,10,10,849,9.4,1,0,1,1,0,0,1,0,0.11,0.0,0.11,0.11,0.11
+ESP-La Liga,2627,Alavés,Toni Martínez,ESP,FW,29-120,1997,9,6,498,5.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Ville Koski,FIN,DF,24-274,2002,10,9,819,9.1,1,0,1,1,0,0,0,0,0.11,0.0,0.11,0.11,0.11
+ESP-La Liga,2627,Alavés,Xanet Olaiz,ESP,DF,21-132,2005,1,0,11,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Youssef Lekhedim,ESP,DF,21-021,2005,7,0,190,2.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Alavés,Ángel Pérez,ESP,"MF,DF",24-060,2002,9,8,638,7.1,0,3,3,0,0,0,0,1,0.0,0.42,0.42,0.0,0.42
+ESP-La Liga,2627,Athletic Club,Adama Boiro,ESP,DF,24-128,2002,1,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Aitor Paredes,ESP,DF,26-182,2000,7,5,488,5.4,2,0,2,2,0,0,0,0,0.37,0.0,0.37,0.37,0.37
+ESP-La Liga,2627,Athletic Club,Alejandro Rego,ESP,MF,23-139,2003,3,0,61,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Aymeric Laporte,ESP,DF,32-154,1994,8,7,645,7.2,0,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Beñat Gerenabarrena,ESP,MF,23-213,2003,7,5,491,5.5,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Beñat Prados,ESP,MF,25-262,2001,1,0,7,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Christian Mitogo,ESP,FW,17-253,2009,1,0,23,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Daniel Vivian,ESP,DF,27-105,1999,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Gorka Guruzeta,ESP,FW,30-046,1996,5,2,183,2.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Hugo Rincón,ESP,DF,23-274,2003,5,4,367,4.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Iñaki Williams,GHA,"FW,MF",32-135,1994,9,8,577,6.4,1,2,3,1,0,0,0,0,0.16,0.31,0.47,0.16,0.47
+ESP-La Liga,2627,Athletic Club,Iñigo Ruiz de Galarreta,ESP,MF,33-083,1993,8,7,444,4.9,0,1,1,0,0,0,3,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Athletic Club,Jesús Areso,ESP,DF,27-118,1999,6,4,369,4.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Jesús Vizcay,ESP,FW,21-084,2005,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Johaneko Louisjean,FRA,"DF,MF",22-122,2004,7,4,277,3.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Maroan Sannadi,MAR,FW,25-269,2001,6,2,252,2.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Mikel Jauregizar,ESP,MF,22-349,2003,7,3,303,3.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Nico Williams,ESP,MF,24-108,2002,8,5,441,4.9,1,0,1,1,0,0,0,0,0.2,0.0,0.2,0.2,0.2
+ESP-La Liga,2627,Athletic Club,Nicolás Serrano,ESP,MF,23-237,2003,1,0,5,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Oihan Sancet,ESP,MF,26-186,2000,6,6,514,5.7,1,0,1,1,0,1,0,0,0.18,0.0,0.18,0.18,0.18
+ESP-La Liga,2627,Athletic Club,Peio Canales,ESP,MF,21-284,2005,7,4,440,4.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Roberto Navarro,ESP,MF,24-199,2002,7,6,484,5.4,2,0,2,2,0,0,1,0,0.37,0.0,0.37,0.37,0.37
+ESP-La Liga,2627,Athletic Club,Unai Simón,ESP,GK,29-139,1997,9,9,810,9.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Athletic Club,Yeray Álvarez,ESP,DF,31-277,1995,5,5,405,4.5,0,1,1,0,0,0,0,0,0.0,0.22,0.22,0.0,0.22
+ESP-La Liga,2627,Athletic Club,Yuri Berchiche,ESP,DF,36-260,1990,7,7,545,6.1,1,0,1,1,0,0,3,1,0.17,0.0,0.17,0.17,0.17
+ESP-La Liga,2627,Athletic Club,Álex Berenguer,ESP,MF,31-116,1995,9,5,554,6.2,3,3,6,2,1,1,1,0,0.49,0.49,0.97,0.32,0.81
+ESP-La Liga,2627,Athletic Club,Álvaro djaló,GNB,MF,27-073,1999,1,0,10,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Ademola Lookman,NGA,"FW,MF",29-008,1997,10,9,591,6.6,1,0,1,1,0,0,2,0,0.15,0.0,0.15,0.15,0.15
+ESP-La Liga,2627,Atlético Madrid,Alexander Sørloth,NOR,FW,30-327,1995,2,0,42,0.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Arnau Ortiz,ESP,MF,24-364,2001,5,1,152,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Carlos Martín,ESP,MF,24-189,2002,1,1,56,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Cristian Romero,ARG,DF,28-184,1998,6,5,433,4.8,1,0,1,1,0,0,2,0,0.21,0.0,0.21,0.21,0.21
+ESP-La Liga,2627,Atlético Madrid,Daniel Martinez,ESP,DF,22-176,2004,2,2,135,1.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Dávid Hancko,SVK,DF,28-319,1997,10,8,755,8.4,0,2,2,0,0,0,1,0,0.0,0.24,0.24,0.0,0.24
+ESP-La Liga,2627,Atlético Madrid,Giuliano Simeone,ARG,MF,23-314,2002,10,7,682,7.6,2,2,4,2,0,0,1,0,0.26,0.26,0.53,0.26,0.53
+ESP-La Liga,2627,Atlético Madrid,Jan Oblak,SVN,GK,33-294,1993,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Johnny Cardoso,USA,MF,25-038,2001,6,3,317,3.5,0,1,1,0,0,0,2,0,0.0,0.28,0.28,0.0,0.28
+ESP-La Liga,2627,Atlético Madrid,Jonathan David,CAN,FW,26-287,2000,5,4,294,3.3,3,2,5,3,0,0,0,0,0.92,0.61,1.53,0.92,1.53
+ESP-La Liga,2627,Atlético Madrid,Jorge Domínguez,ESP,DF,16-311,2009,1,1,45,0.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,José María Giménez,URU,DF,31-281,1995,2,0,37,0.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Julián Álvarez,ARG,FW,26-270,2000,6,1,266,3.0,1,1,2,1,0,0,0,0,0.34,0.34,0.68,0.34,0.68
+ESP-La Liga,2627,Atlético Madrid,Koke,ESP,MF,34-293,1992,8,4,449,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Lee Kang-in,KOR,"FW,MF",25-251,2001,10,8,626,7.0,2,1,3,2,0,0,2,0,0.29,0.14,0.43,0.29,0.43
+ESP-La Liga,2627,Atlético Madrid,Marc Pubill,ESP,DF,23-130,2003,8,7,583,6.5,1,0,1,1,0,0,3,0,0.15,0.0,0.15,0.15,0.15
+ESP-La Liga,2627,Atlético Madrid,Marcos Llorente,ESP,"DF,MF",31-271,1995,10,7,680,7.6,0,1,1,0,0,0,1,0,0.0,0.13,0.13,0.0,0.13
+ESP-La Liga,2627,Atlético Madrid,Morten Hjulmand,DEN,MF,27-125,1999,9,6,512,5.7,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Pablo Barrios,ESP,MF,23-135,2003,7,6,450,5.0,0,1,1,0,0,0,0,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Atlético Madrid,Robin Le Normand,ESP,DF,29-351,1996,6,4,363,4.0,1,0,1,1,0,0,1,1,0.25,0.0,0.25,0.25,0.25
+ESP-La Liga,2627,Atlético Madrid,Rodrigo Mendoza,ESP,MF,21-227,2005,5,2,142,1.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Atlético Madrid,Álex Baena,ESP,"MF,FW",25-100,2001,10,6,616,6.8,5,2,7,5,0,0,3,0,0.73,0.29,1.02,0.73,1.02
+ESP-La Liga,2627,Atlético Madrid,Álex Grimaldo,ESP,"DF,MF",31-038,1995,9,8,759,8.4,3,2,5,1,2,2,0,0,0.36,0.24,0.59,0.12,0.36
+ESP-La Liga,2627,Barcelona,Alejandro Balde,ESP,DF,23-010,2003,2,0,74,0.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Andreas Christensen,DEN,DF,30-201,1996,6,4,402,4.5,0,1,1,0,0,0,0,0,0.0,0.22,0.22,0.0,0.22
+ESP-La Liga,2627,Barcelona,Anthony Gordon,ENG,"FW,MF",25-246,2001,9,7,576,6.4,1,4,5,1,0,0,1,0,0.16,0.62,0.78,0.16,0.78
+ESP-La Liga,2627,Barcelona,Dani Olmo,ESP,MF,28-174,1998,9,3,352,3.9,1,3,4,1,0,0,1,0,0.26,0.77,1.02,0.26,1.02
+ESP-La Liga,2627,Barcelona,Dominik Livaković,CRO,GK,31-292,1995,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Eric García,ESP,DF,25-292,2001,8,7,602,6.7,1,0,1,1,0,0,0,0,0.15,0.0,0.15,0.15,0.15
+ESP-La Liga,2627,Barcelona,Fermin López,ESP,MF,23-170,2003,9,7,610,6.8,4,3,7,4,0,0,3,0,0.59,0.44,1.03,0.59,1.03
+ESP-La Liga,2627,Barcelona,Frenkie de Jong,NED,"DF,MF",29-169,1997,1,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Gabriel Jesus,BRA,FW,29-208,1997,6,2,201,2.2,3,0,3,3,0,0,0,0,1.34,0.0,1.34,1.34,1.34
+ESP-La Liga,2627,Barcelona,Gavi,ESP,MF,22-084,2004,4,2,146,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Gerard Martín,ESP,DF,24-244,2002,9,8,662,7.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Hamza Abdelkarim,EGY,FW,18-300,2008,2,0,14,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Joan García,ESP,GK,25-177,2001,9,9,765,8.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,João Cancelo,POR,DF,32-154,1994,7,3,299,3.3,1,0,1,1,0,0,1,0,0.3,0.0,0.3,0.3,0.3
+ESP-La Liga,2627,Barcelona,Jules Koundé,FRA,DF,27-350,1998,6,3,354,3.9,1,1,2,1,0,0,0,0,0.25,0.25,0.51,0.25,0.51
+ESP-La Liga,2627,Barcelona,Karim Adeyemi,GER,"MF,FW",24-283,2002,10,3,333,3.7,2,2,4,2,0,0,2,0,0.54,0.54,1.08,0.54,1.08
+ESP-La Liga,2627,Barcelona,Lamine Yamal,ESP,"FW,MF",19-107,2007,10,10,828,9.2,8,6,14,7,1,2,2,0,0.87,0.65,1.52,0.76,1.41
+ESP-La Liga,2627,Barcelona,Marc Bernal,ESP,MF,19-155,2007,8,3,313,3.5,0,2,2,0,0,0,0,0,0.0,0.58,0.58,0.0,0.58
+ESP-La Liga,2627,Barcelona,Pau Cubarsí,ESP,DF,19-279,2007,7,7,601,6.7,0,2,2,0,0,0,1,0,0.0,0.3,0.3,0.0,0.3
+ESP-La Liga,2627,Barcelona,Pedri,ESP,MF,23-337,2002,10,8,706,7.8,1,2,3,1,0,0,0,0,0.13,0.25,0.38,0.13,0.38
+ESP-La Liga,2627,Barcelona,Raphinha,BRA,FW,29-318,1996,9,8,656,7.3,13,3,16,10,3,3,0,0,1.78,0.41,2.2,1.37,1.78
+ESP-La Liga,2627,Barcelona,Rodri,ESP,MF,30-128,1996,9,7,606,6.7,1,0,1,1,0,0,1,0,0.15,0.0,0.15,0.15,0.15
+ESP-La Liga,2627,Barcelona,Wojciech Szczęsny,POL,GK,36-193,1990,1,0,45,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Barcelona,Xavi Espart,ESP,DF,19-160,2007,8,8,648,7.2,1,2,3,1,0,0,1,0,0.14,0.28,0.42,0.14,0.42
+ESP-La Liga,2627,Celta Vigo,Abdoulaye Faye,SEN,DF,22-036,2004,1,1,45,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Aleix Febas,ESP,MF,30-268,1996,5,4,373,4.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Andrés Antañón,ESP,FW,19-279,2007,2,1,83,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Borja Iglesias,ESP,FW,33-284,1993,3,0,81,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Carl Starfelt,SWE,DF,31-149,1995,3,2,219,2.4,1,0,1,1,0,0,1,0,0.41,0.0,0.41,0.41,0.41
+ESP-La Liga,2627,Celta Vigo,Couhaib Driouech,MAR,FW,24-194,2002,5,1,155,1.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Ferran Jutglà,ESP,FW,27-269,1999,10,7,580,6.4,2,0,2,2,0,0,0,0,0.31,0.0,0.31,0.31,0.31
+ESP-La Liga,2627,Celta Vigo,Hugo García,ESP,MF,19-362,2006,5,1,111,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Hugo González,ESP,FW,23-263,2003,5,5,290,3.2,1,2,3,0,1,1,0,0,0.31,0.62,0.93,0.0,0.62
+ESP-La Liga,2627,Celta Vigo,Hugo Álvarez,ESP,"FW,MF",23-118,2003,8,6,495,5.5,0,2,2,0,0,0,0,0,0.0,0.36,0.36,0.0,0.36
+ESP-La Liga,2627,Celta Vigo,Iago Aspas,ESP,FW,39-088,1987,8,2,265,2.9,1,1,2,1,0,0,0,0,0.34,0.34,0.68,0.34,0.68
+ESP-La Liga,2627,Celta Vigo,Ilaix Moriba,GUI,MF,23-282,2003,10,9,717,8.0,1,0,1,1,0,0,1,0,0.13,0.0,0.13,0.13,0.13
+ESP-La Liga,2627,Celta Vigo,Ionuț Radu,ROU,GK,29-153,1997,10,10,900,10.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Javi Galán,ESP,MF,31-343,1994,8,5,391,4.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Javi Rodríguez,ESP,DF,23-123,2003,6,5,412,4.6,1,1,2,1,0,0,0,0,0.22,0.22,0.44,0.22,0.44
+ESP-La Liga,2627,Celta Vigo,Javi Rueda,ESP,MF,24-173,2002,10,6,577,6.4,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Jones El-Abdellaoui,MAR,"MF,FW",20-289,2006,3,2,151,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Marcos Alonso,ESP,DF,35-304,1990,8,7,604,6.7,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Miguel Román,ESP,MF,23-306,2002,7,6,578,6.4,1,2,3,1,0,0,0,0,0.16,0.31,0.47,0.16,0.47
+ESP-La Liga,2627,Celta Vigo,Pablo Durán,ESP,FW,25-156,2001,7,4,372,4.1,2,0,2,2,0,0,0,0,0.48,0.0,0.48,0.48,0.48
+ESP-La Liga,2627,Celta Vigo,Sebastián Cáceres,URU,DF,27-071,1999,3,3,256,2.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Sergio Carreira,ESP,MF,26-015,2000,10,5,591,6.6,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Williot Swedberg,SWE,FW,22-269,2004,9,5,406,4.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Yoel Lago,ESP,DF,22-217,2004,10,9,855,9.5,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Celta Vigo,Álvaro Núñez,ESP,"DF,MF",26-113,2000,4,4,353,3.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Adama Traoré,ESP,"FW,MF",30-276,1996,7,0,211,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Adrià Altimira,ESP,"MF,DF",25-214,2001,7,4,391,4.3,0,0,0,0,0,0,3,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Angeliño,ESP,DF,29-297,1997,2,1,69,0.8,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Bil Nsongo,CMR,"FW,MF",22-037,2004,10,9,660,7.3,1,0,1,1,0,0,1,0,0.14,0.0,0.14,0.14,0.14
+ESP-La Liga,2627,Dep. A Coruña,Bright Ede,POL,DF,19-252,2007,6,5,461,5.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,David Mella,ESP,"MF,DF",21-158,2005,5,3,225,2.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Diego Villares,ESP,MF,30-133,1996,6,3,320,3.6,1,0,1,1,0,0,0,0,0.28,0.0,0.28,0.28,0.28
+ESP-La Liga,2627,Dep. A Coruña,Giacomo Quagliata,ITA,DF,26-251,2000,10,9,817,9.1,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Jonathan Asp Jensen,DEN,"MF,FW",20-287,2006,8,3,260,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,José María Giménez,URU,DF,31-281,1995,7,7,597,6.6,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Kevin Sánchez,ESP,FW,21-250,2005,2,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Leo Román,ESP,GK,26-114,2000,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Lorenzo Amatucci,ITA,MF,22-265,2004,8,7,656,7.3,0,1,1,0,0,0,3,1,0.0,0.14,0.14,0.0,0.14
+ESP-La Liga,2627,Dep. A Coruña,Lucas Noubi,BEL,DF,21-286,2005,5,5,450,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Luismi,ESP,MF,25-158,2001,10,7,546,6.1,1,1,2,1,0,0,1,0,0.16,0.16,0.33,0.16,0.33
+ESP-La Liga,2627,Dep. A Coruña,Marc Casado,ESP,MF,23-044,2003,3,2,119,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Mario Soriano,ESP,MF,24-189,2002,10,9,775,8.6,1,2,3,1,0,0,1,0,0.12,0.23,0.35,0.12,0.35
+ESP-La Liga,2627,Dep. A Coruña,Miguel Loureiro,ESP,DF,29-341,1996,6,3,292,3.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Pierre-Emerick Aubameyang,GAB,FW,37-132,1989,7,6,560,6.2,5,2,7,5,0,0,0,0,0.8,0.32,1.13,0.8,1.13
+ESP-La Liga,2627,Dep. A Coruña,Riki Rodríguez,ESP,MF,29-033,1997,7,5,367,4.1,0,1,1,0,0,0,0,0,0.0,0.25,0.25,0.0,0.25
+ESP-La Liga,2627,Dep. A Coruña,Teun Gijselhart,NED,MF,21-205,2005,1,0,27,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Ximo Navarro,ESP,DF,36-278,1990,8,8,649,7.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Dep. A Coruña,Yeremay Hernández,ESP,"MF,FW",23-322,2002,9,4,424,4.7,1,1,2,0,1,1,2,0,0.21,0.21,0.42,0.0,0.21
+ESP-La Liga,2627,Dep. A Coruña,Zakaria Eddahchouri,NED,FW,26-170,2000,4,0,73,0.8,1,0,1,1,0,0,0,0,1.23,0.0,1.23,1.23,1.23
+ESP-La Liga,2627,Elche,Abiel Osorio,ARG,FW,24-137,2002,7,2,304,3.4,1,0,1,1,0,0,1,0,0.3,0.0,0.3,0.3,0.3
+ESP-La Liga,2627,Elche,Ali Houary,MAR,MF,21-084,2005,3,3,188,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Buba Sangaré,ESP,DF,19-083,2007,9,9,708,7.9,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ESP-La Liga,2627,Elche,David Affengruber,AUT,DF,25-223,2001,3,3,270,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Ezequiel Ponce,ARG,FW,29-213,1997,3,1,121,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Facundo Buonanotte,ARG,MF,21-309,2004,6,3,266,3.0,1,1,2,0,1,1,1,0,0.34,0.34,0.68,0.0,0.34
+ESP-La Liga,2627,Elche,Federico Redondo,ARG,DF,23-283,2003,7,6,469,5.2,1,0,1,0,1,1,2,1,0.19,0.0,0.19,0.0,0.0
+ESP-La Liga,2627,Elche,Fernando Niño,ESP,FW,26-004,2000,10,8,623,6.9,6,0,6,5,1,1,2,0,0.87,0.0,0.87,0.72,0.72
+ESP-La Liga,2627,Elche,Germán Valera,ESP,"DF,MF",24-226,2002,10,10,838,9.3,2,0,2,2,0,0,1,0,0.21,0.0,0.21,0.21,0.21
+ESP-La Liga,2627,Elche,Gonzalo Villar,ESP,MF,28-219,1998,10,10,775,8.6,0,1,1,0,0,0,4,0,0.0,0.12,0.12,0.0,0.12
+ESP-La Liga,2627,Elche,Javi Morcillo,ESP,"MF,DF",20-227,2006,8,6,579,6.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Josan,ESP,"DF,MF",36-329,1989,3,0,28,0.3,0,1,1,0,0,0,1,0,0.0,3.21,3.21,0.0,3.21
+ESP-La Liga,2627,Elche,Lucas Cepeda,CHI,"FW,MF",23-362,2002,10,3,388,4.3,0,2,2,0,0,0,2,0,0.0,0.46,0.46,0.0,0.46
+ESP-La Liga,2627,Elche,Marc Aguado,ESP,MF,26-248,2000,6,6,372,4.1,1,0,1,1,0,0,2,0,0.24,0.0,0.24,0.24,0.24
+ESP-La Liga,2627,Elche,Martim Neto,POR,MF,23-287,2003,7,2,226,2.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Matia Barzic,CRO,DF,22-150,2004,1,0,14,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Matías Dituro,ARG,GK,39-173,1987,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Pedro Bigas,ESP,DF,36-043,1990,5,2,200,2.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Roy Revivo,ISR,DF,23-159,2003,7,6,536,6.0,0,2,2,0,0,0,1,0,0.0,0.34,0.34,0.0,0.34
+ESP-La Liga,2627,Elche,Rubén,ESP,DF,25-266,2001,5,1,190,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Tete Morente,ESP,"MF,FW",29-328,1996,10,5,500,5.6,0,3,3,0,0,0,2,0,0.0,0.54,0.54,0.0,0.54
+ESP-La Liga,2627,Elche,Thomas Lemar,FRA,MF,30-350,1995,7,4,388,4.3,1,0,1,1,0,0,1,0,0.23,0.0,0.23,0.23,0.23
+ESP-La Liga,2627,Elche,Umaru Konare,ESP,FW,22-079,2004,1,0,22,0.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Elche,Víctor Chust,ESP,DF,26-237,2000,10,10,900,10.0,0,1,1,0,0,0,1,0,0.0,0.1,0.1,0.0,0.1
+ESP-La Liga,2627,Elche,Álvaro Padilla,ESP,FW,20-300,2006,1,0,10,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Bryan Zaragoza,ESP,MF,25-049,2001,7,4,366,4.1,1,0,1,1,0,0,1,0,0.25,0.0,0.25,0.25,0.25
+ESP-La Liga,2627,Espanyol,Clemens Riedel,GER,DF,23-101,2003,8,6,544,6.0,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Edu Expósito,ESP,MF,30-088,1996,10,9,797,8.9,1,0,1,1,0,0,3,0,0.11,0.0,0.11,0.11,0.11
+ESP-La Liga,2627,Espanyol,Fortuño,ESP,GK,25-023,2001,3,3,270,3.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Gabriel Moscardo,BRA,MF,21-030,2005,5,2,191,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Javi Puado,ESP,"FW,MF",28-156,1998,2,0,24,0.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Javier Hernández,ESP,"MF,FW",22-271,2004,10,10,759,8.4,0,6,6,0,0,0,2,0,0.0,0.71,0.71,0.0,0.71
+ESP-La Liga,2627,Espanyol,Jofre,ESP,MF,25-133,2001,3,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,José López,ESP,DF,20-300,2006,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Leandro Cabrera,URU,DF,35-133,1991,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Marcos Fernández,ESP,MF,23-164,2003,9,1,237,2.6,1,1,2,1,0,0,2,0,0.38,0.38,0.76,0.38,0.76
+ESP-La Liga,2627,Espanyol,Marko Dmitrović,SRB,GK,34-277,1992,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Omar El Hilali,MAR,DF,23-046,2003,9,9,793,8.8,0,1,1,0,0,0,2,1,0.0,0.11,0.11,0.0,0.11
+ESP-La Liga,2627,Espanyol,Pere Milla,ESP,"FW,MF",34-035,1992,6,0,83,0.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Pol Lozano,ESP,MF,27-022,1999,6,3,306,3.4,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Quilindschy Hartman,NED,"DF,MF",24-348,2001,5,3,320,3.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Rafael Bauza,ESP,MF,21-271,2005,4,1,110,1.2,0,1,1,0,0,0,1,0,0.0,0.82,0.82,0.0,0.82
+ESP-La Liga,2627,Espanyol,Roberto Férnandez,ESP,FW,24-117,2002,10,10,863,9.6,6,0,6,6,0,0,0,0,0.63,0.0,0.63,0.63,0.63
+ESP-La Liga,2627,Espanyol,Roger Hinojo,ESP,DF,21-249,2005,9,8,634,7.0,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Tyrhys Dolan,ENG,MF,24-304,2001,8,6,527,5.9,1,0,1,1,0,0,0,0,0.17,0.0,0.17,0.17,0.17
+ESP-La Liga,2627,Espanyol,Unai Núñez,ESP,DF,29-271,1997,7,5,449,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Urko González,ESP,MF,25-222,2001,9,6,480,5.3,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Vanja Drkušič,SVN,DF,26-363,1999,5,3,269,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Espanyol,Álex Calatrava,ESP,MF,26-128,2000,10,6,506,5.6,1,0,1,1,0,0,3,0,0.18,0.0,0.18,0.18,0.18
+ESP-La Liga,2627,Getafe,Abdel Abqar,MAR,DF,27-232,1999,4,1,204,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Alberto Risco,ESP,MF,21-059,2005,4,0,62,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Andrés García,ESP,"MF,DF",23-263,2003,9,6,623,6.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Borja Mayoral,ESP,FW,29-206,1997,4,0,30,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Dani Carvajal,ESP,DF,34-290,1992,2,2,169,1.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,David Soria,ESP,GK,33-207,1993,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Davinchi,ESP,"MF,DF",19-012,2007,6,2,139,1.5,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Djené,TOG,DF,34-301,1991,9,9,711,7.9,0,0,0,0,0,0,3,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Enes Ünal,TUR,FW,29-171,1997,9,6,646,7.2,1,0,1,1,0,0,3,0,0.14,0.0,0.14,0.14,0.14
+ESP-La Liga,2627,Getafe,Francho Serrano,ESP,MF,25-011,2001,8,6,530,5.9,0,1,1,0,0,0,2,0,0.0,0.17,0.17,0.0,0.17
+ESP-La Liga,2627,Getafe,Ivan Azón,ESP,"FW,MF",23-308,2002,6,5,405,4.5,1,1,2,1,0,0,1,0,0.22,0.22,0.44,0.22,0.44
+ESP-La Liga,2627,Getafe,Jean Valou,CIV,DF,19-310,2006,3,2,198,2.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Johan Mojica,COL,"DF,MF",34-068,1992,9,8,719,8.0,0,0,0,0,0,0,5,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Joselu Pérez,ESP,DF,22-230,2004,1,0,7,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Kiko Femenía,ESP,"DF,MF",35-268,1991,6,6,312,3.5,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Mario Martín,ESP,MF,22-237,2004,7,7,551,6.1,0,0,0,0,0,0,4,2,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Martin Satriano,URU,"MF,FW",25-250,2001,10,9,746,8.3,2,1,3,2,0,0,0,0,0.24,0.12,0.36,0.24,0.36
+ESP-La Liga,2627,Getafe,Nemanja Gudelj,SRB,"DF,MF",34-346,1991,8,7,645,7.2,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Orel Mangala,BEL,MF,28-224,1998,7,6,554,6.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Oscar Lopez,BOL,MF,20-076,2006,2,0,11,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Ramón Terrats,ESP,"MF,FW",26-010,2000,9,9,722,8.0,1,0,1,1,0,0,4,0,0.12,0.0,0.12,0.12,0.12
+ESP-La Liga,2627,Getafe,Saba Sazonov,GEO,DF,24-269,2002,6,1,160,1.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Sebastián Boselli,URU,DF,22-328,2003,7,1,159,1.8,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Getafe,Zaid Romero,ARG,DF,26-317,1999,7,7,552,6.1,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Adrián de la Fuente,ESP,DF,27-244,1999,8,8,700,7.8,2,0,2,2,0,0,3,0,0.26,0.0,0.26,0.26,0.26
+ESP-La Liga,2627,Levante,Axel Tapé,FRA,MF,19-079,2007,1,0,29,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Aïssa Mandi,ALG,DF,35-006,1991,8,8,692,7.7,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Brugui,ESP,"MF,FW",29-358,1996,9,9,739,8.2,5,1,6,5,0,0,0,0,0.61,0.12,0.73,0.61,0.73
+ESP-La Liga,2627,Levante,Carlos Álvarez,ESP,MF,23-083,2003,1,1,45,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Daniel Requena,ESP,"MF,FW",22-258,2004,7,4,396,4.4,1,1,2,1,0,0,1,0,0.23,0.23,0.45,0.23,0.45
+ESP-La Liga,2627,Levante,Enzo Bardeli,FRA,MF,25-200,2001,7,5,446,5.0,1,1,2,1,0,0,0,0,0.2,0.2,0.4,0.2,0.4
+ESP-La Liga,2627,Levante,Hugo Sotelo,ESP,MF,22-313,2003,4,1,100,1.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Ifeanyi Ndukwe,AUT,DF,18-239,2008,6,4,408,4.5,1,0,1,1,0,0,0,0,0.22,0.0,0.22,0.22,0.22
+ESP-La Liga,2627,Levante,Iván Romero,ESP,FW,25-201,2001,10,9,688,7.6,3,0,3,3,0,0,2,0,0.39,0.0,0.39,0.39,0.39
+ESP-La Liga,2627,Levante,Jeremy Toljan,GER,DF,32-081,1994,9,4,453,5.0,0,1,1,0,0,0,2,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Levante,Kareem Tunde,ESP,FW,21-070,2005,1,0,15,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Karl Etta Eyong,CMR,FW,23-014,2003,5,0,113,1.3,1,1,2,1,0,0,1,0,0.8,0.8,1.59,0.8,1.59
+ESP-La Liga,2627,Levante,Manu Sánchez,ESP,DF,26-065,2000,10,10,880,9.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Marc Santos,ESP,DF,15-353,2010,1,0,27,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Mathew Ryan,AUS,GK,34-203,1992,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Nacho Pérez,ESP,DF,18-057,2008,9,6,467,5.2,1,0,1,1,0,0,0,0,0.19,0.0,0.19,0.19,0.19
+ESP-La Liga,2627,Levante,Olasagasti,ESP,MF,26-073,2000,10,9,794,8.8,1,1,2,1,0,0,0,0,0.11,0.11,0.23,0.11,0.23
+ESP-La Liga,2627,Levante,Oriol Rey,ESP,MF,28-245,1998,9,7,627,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Paco Cortés,ESP,MF,19-078,2007,6,1,84,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Petar Ratkov,SRB,FW,23-071,2003,6,3,254,2.8,0,1,1,0,0,0,0,0,0.0,0.35,0.35,0.0,0.35
+ESP-La Liga,2627,Levante,Thiago Fernández,ARG,"MF,FW",22-208,2004,8,7,573,6.4,0,1,1,0,0,0,0,0,0.0,0.16,0.16,0.0,0.16
+ESP-La Liga,2627,Levante,Víctor García,ESP,MF,29-042,1997,9,3,345,3.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Levante,Yanis Musuayi,BEL,FW,19-124,2007,4,1,125,1.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Adam Aznou,MAR,MF,20-148,2006,3,1,141,1.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Adrian Niño,ESP,FW,22-131,2004,6,2,285,3.2,4,0,4,4,0,0,0,0,1.26,0.0,1.26,1.26,1.26
+ESP-La Liga,2627,Málaga,Alfonso Herrero,ESP,GK,32-190,1994,10,10,900,10.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Carlos Dotor,ESP,"MF,FW",25-227,2001,9,8,641,7.1,1,0,1,1,0,0,2,0,0.14,0.0,0.14,0.14,0.14
+ESP-La Liga,2627,Málaga,Chupete,ESP,FW,22-065,2004,10,8,758,8.4,1,0,1,0,1,2,3,0,0.12,0.0,0.12,0.0,0.0
+ESP-La Liga,2627,Málaga,Dani Lorenzo,ESP,MF,23-206,2003,9,7,613,6.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,David Larrubia,ESP,"MF,FW",24-191,2002,10,9,822,9.1,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Einar Galilea,ESP,DF,32-159,1994,7,7,557,6.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Eneko Jauregi,ESP,FW,30-107,1996,2,1,56,0.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Fernando Calero,ESP,DF,31-044,1995,2,2,163,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Haitam Abaida,MAR,FW,24-149,2002,3,0,44,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Izan Merino,ESP,MF,20-196,2006,8,6,480,5.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Jens Cajuste,SWE,MF,27-079,1999,2,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Joaquín Muñoz,ESP,MF,27-232,1999,9,6,470,5.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,José Salinas,ESP,DF,26-028,2000,8,5,429,4.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Juan Berrocal,ESP,DF,27-177,1999,3,1,106,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Juan Cruz,ESP,"MF,FW",26-186,2000,7,3,244,2.7,0,1,1,0,0,0,1,0,0.0,0.37,0.37,0.0,0.37
+ESP-La Liga,2627,Málaga,Julen Lobete,ESP,"FW,MF",26-040,2000,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Pablo Martínez,ESP,MF,28-248,1998,7,5,478,5.3,1,2,3,1,0,0,1,0,0.19,0.38,0.56,0.19,0.56
+ESP-La Liga,2627,Málaga,Puga,ESP,DF,25-336,2000,9,6,488,5.4,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Rafa Rodríguez,ESP,MF,23-110,2003,6,3,244,2.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Málaga,Rafael Garrido,ESP,DF,21-353,2004,10,9,831,9.2,0,1,1,0,0,0,1,0,0.0,0.11,0.11,0.0,0.11
+ESP-La Liga,2627,Málaga,Ramón Enríquez,ESP,MF,25-192,2001,9,1,235,2.6,0,1,1,0,0,0,3,0,0.0,0.38,0.38,0.0,0.38
+ESP-La Liga,2627,Málaga,Ángel Recio,,DF,,,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Abel Bretones,ESP,DF,26-068,2000,10,8,800,8.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Aimar Oroz,ESP,"MF,FW",24-335,2001,3,2,150,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Aitor Fernández,ESP,GK,35-178,1991,5,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Ante Budimir,CRO,FW,35-098,1991,10,8,773,8.6,7,0,7,3,4,4,1,0,0.82,0.0,0.82,0.35,0.35
+ESP-La Liga,2627,Osasuna,Asier Osambela,ESP,"DF,MF",22-262,2004,8,3,372,4.1,1,0,1,1,0,0,1,0,0.24,0.0,0.24,0.24,0.24
+ESP-La Liga,2627,Osasuna,Catena,ESP,DF,32-000,1994,9,9,810,9.0,0,1,1,0,0,0,2,0,0.0,0.11,0.11,0.0,0.11
+ESP-La Liga,2627,Osasuna,Diego Rico,ESP,DF,33-247,1993,2,2,100,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Enzo Boyomo,CMR,DF,25-021,2001,5,4,381,4.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Iker Muñoz,ESP,MF,23-357,2002,8,6,553,6.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Iñigo Arguibide,ESP,DF,21-192,2005,10,8,651,7.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Jon Moncayola,ESP,MF,28-168,1998,10,9,735,8.2,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Jonathan Dubasin,BEL,"MF,FW",26-268,2000,10,4,409,4.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Jorge Herrando,ESP,DF,25-242,2001,3,3,185,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Kike Barja,ESP,MF,29-210,1997,7,3,249,2.8,1,0,1,1,0,0,3,0,0.36,0.0,0.36,0.36,0.36
+ESP-La Liga,2627,Osasuna,Lucas Torró,ESP,MF,32-101,1994,8,4,424,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Mauro Echegoyen,ESP,MF,21-239,2005,1,0,28,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Moi Gómez,ESP,MF,32-127,1994,7,6,472,5.2,0,1,1,0,0,0,0,0,0.0,0.19,0.19,0.0,0.19
+ESP-La Liga,2627,Osasuna,Raúl,ESP,"FW,MF",25-359,2000,10,5,464,5.2,1,1,2,1,0,0,1,0,0.19,0.19,0.39,0.19,0.39
+ESP-La Liga,2627,Osasuna,Raúl Moro,ESP,MF,23-327,2002,7,1,217,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Rockson Yeboah,GHA,DF,22-087,2004,3,2,211,2.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Romain Del Castillo,FRA,"FW,MF",30-213,1996,2,0,37,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Rubén García,ESP,"MF,FW",33-106,1993,10,8,591,6.6,0,1,1,0,0,0,1,0,0.0,0.15,0.15,0.0,0.15
+ESP-La Liga,2627,Osasuna,Sergio Herrera,ESP,GK,33-145,1993,5,5,450,5.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Unai Santos,ESP,DF,20-359,2005,3,3,207,2.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Osasuna,Valentin Rosier,FRA,DF,30-070,1996,3,2,181,2.0,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Aarón Martín,ESP,DF,29-189,1997,5,1,157,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,André Almeida,POR,MF,26-151,2000,6,3,236,2.6,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Andrés Martín,ESP,MF,27-109,1999,6,4,379,4.2,1,0,1,0,1,2,0,0,0.24,0.0,0.24,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Arana,ESP,FW,26-262,2000,3,1,62,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Asier Villalibre,ESP,FW,29-028,1997,8,3,258,2.9,0,1,1,0,0,0,0,0,0.0,0.35,0.35,0.0,0.35
+ESP-La Liga,2627,Racing Sant,Diego Diaz,ESP,FW,21-150,2005,1,0,14,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Facundo González,URU,DF,23-144,2003,5,3,246,2.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Giorgi Guliashvili,GEO,FW,25-053,2001,5,0,68,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Gustavo Puerta,COL,MF,23-097,2003,3,3,267,3.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Iker Luque,ESP,MF,21-145,2005,4,1,163,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Iván Martín,ESP,MF,27-256,1999,8,7,660,7.3,1,0,1,1,0,0,2,0,0.14,0.0,0.14,0.14,0.14
+ESP-La Liga,2627,Racing Sant,Iñigo Vicente,ESP,MF,28-295,1998,10,9,810,9.0,0,3,3,0,0,0,3,0,0.0,0.33,0.33,0.0,0.33
+ESP-La Liga,2627,Racing Sant,Jeanuël Belocian,FRA,DF,21-253,2005,6,5,486,5.4,1,0,1,1,0,0,1,0,0.19,0.0,0.19,0.19,0.19
+ESP-La Liga,2627,Racing Sant,Jorge Salinas,ESP,DF,19-208,2007,10,9,807,9.0,0,1,1,0,0,0,5,0,0.0,0.11,0.11,0.0,0.11
+ESP-La Liga,2627,Racing Sant,Julen Agirrezabala,ESP,GK,25-306,2000,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Maguette Gueye,SEN,MF,23-302,2002,7,1,159,1.8,1,0,1,1,0,0,0,0,0.57,0.0,0.57,0.57,0.57
+ESP-La Liga,2627,Racing Sant,Mantilla,ESP,DF,26-172,2000,9,9,781,8.7,0,1,1,0,0,0,3,0,0.0,0.12,0.12,0.0,0.12
+ESP-La Liga,2627,Racing Sant,Manu Hernando,ESP,DF,28-101,1998,5,4,396,4.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Matteo Prati,ITA,MF,22-304,2003,7,6,501,5.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Pablo Garcia,ESP,MF,20-137,2006,6,3,277,3.1,1,0,1,1,0,0,0,0,0.32,0.0,0.32,0.32,0.32
+ESP-La Liga,2627,Racing Sant,Pablo Ramon,ESP,DF,25-120,2001,8,7,613,6.8,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Pedro Felipe,BRA,DF,22-158,2004,4,2,83,0.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Racing Sant,Sergio Canales,ESP,MF,35-254,1991,10,9,727,8.1,1,1,2,1,0,0,1,0,0.12,0.12,0.25,0.12,0.25
+ESP-La Liga,2627,Racing Sant,Sergio Martínez,ESP,MF,19-166,2007,2,2,113,1.3,1,0,1,1,0,0,0,0,0.8,0.0,0.8,0.8,0.8
+ESP-La Liga,2627,Racing Sant,Yassir Zabiri,MAR,FW,21-247,2005,10,7,651,7.2,8,0,8,8,0,0,4,0,1.11,0.0,1.11,1.11,1.11
+ESP-La Liga,2627,Racing Sant,Íñigo Sainz-Maza,ESP,MF,28-134,1998,2,1,84,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Adrià Pedrosa,ESP,DF,28-168,1998,7,6,546,6.1,1,1,2,1,0,0,2,0,0.16,0.16,0.33,0.16,0.33
+ESP-La Liga,2627,Rayo Vallecano,Alexandre Alemão,BRA,FW,28-210,1998,8,0,183,2.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Andrei Ratiu,ROU,DF,28-130,1998,6,6,540,6.0,1,0,1,1,0,0,0,0,0.17,0.0,0.17,0.17,0.17
+ESP-La Liga,2627,Rayo Vallecano,Augusto Batalla,ARG,GK,30-181,1996,2,2,149,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Dani Cárdenas,ESP,GK,29-214,1997,3,2,211,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Emil Audero,IDN,GK,29-283,1997,5,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Florian Lejeune,FRA,DF,35-161,1991,9,9,810,9.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Francisco Perez,ESP,MF,24-049,2002,6,1,155,1.7,0,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Gnangoro,ESP,MF,22-137,2004,6,2,205,2.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Heorhii Tsitaishvili,GEO,MF,25-344,2000,6,2,273,3.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Isaac Palazón Camacho,ESP,MF,31-305,1994,4,3,168,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Iván Balliu,ALB,DF,34-300,1992,8,4,346,3.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Jorge de Frutos,ESP,"MF,FW",29-250,1997,7,7,479,5.3,0,2,2,0,0,0,0,1,0.0,0.38,0.38,0.0,0.38
+ESP-La Liga,2627,Rayo Vallecano,Jozhua Vertrouwd,NED,DF,22-068,2004,3,2,152,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Mujaid Sadick,ESP,DF,26-228,2000,5,4,346,3.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Pathé Ciss,SEN,"MF,DF",32-226,1994,9,9,810,9.0,0,0,0,0,0,1,6,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Pedro Díaz,ESP,MF,28-145,1998,8,4,415,4.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Pelayo Fernandez,ESP,DF,23-182,2003,2,1,67,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Randy Nteka,ANG,FW,28-326,1997,3,1,154,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Rayane Belaid,ESP,DF,21-259,2005,1,0,24,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Rayo Vallecano,Sergio Camello,ESP,"FW,MF",25-260,2001,9,8,601,6.7,7,1,8,7,0,0,3,0,1.05,0.15,1.2,1.05,1.2
+ESP-La Liga,2627,Rayo Vallecano,Unai López,ESP,MF,30-363,1995,9,9,720,8.0,0,3,3,0,0,0,2,0,0.0,0.37,0.37,0.0,0.37
+ESP-La Liga,2627,Rayo Vallecano,Álvaro García,ESP,"MF,FW",34-001,1992,9,8,696,7.7,3,2,5,3,0,0,2,0,0.39,0.26,0.65,0.39,0.65
+ESP-La Liga,2627,Rayo Vallecano,Óscar Valentín,ESP,MF,32-069,1994,8,4,404,4.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Abde Ezzalzouli,MAR,"MF,FW",24-315,2001,7,6,512,5.7,3,0,3,3,0,0,0,0,0.53,0.0,0.53,0.53,0.53
+ESP-La Liga,2627,Real Betis,Antony,BRA,"MF,FW",26-246,2000,9,7,599,6.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Cucho,COL,FW,27-191,1999,9,7,585,6.5,2,2,4,2,0,0,1,0,0.31,0.31,0.62,0.31,0.62
+ESP-La Liga,2627,Real Betis,Dani Ceballos,ESP,MF,30-082,1996,6,2,212,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Diego Llorente,ESP,DF,33-073,1993,5,5,375,4.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Facundo Bernal,URU,MF,23-068,2003,8,6,466,5.2,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Fran Garcia,ESP,DF,27-075,1999,8,7,662,7.4,0,1,1,0,0,0,1,0,0.0,0.14,0.14,0.0,0.14
+ESP-La Liga,2627,Real Betis,Giovani Lo Celso,ARG,MF,30-202,1996,3,1,93,1.0,0,1,1,0,0,0,0,0,0.0,0.97,0.97,0.0,0.97
+ESP-La Liga,2627,Real Betis,Héctor Bellerín,ESP,DF,31-223,1995,9,7,674,7.5,0,1,1,0,0,0,2,0,0.0,0.13,0.13,0.0,0.13
+ESP-La Liga,2627,Real Betis,Isco,ESP,MF,34-190,1992,9,6,466,5.2,2,0,2,1,1,1,0,0,0.39,0.0,0.39,0.19,0.19
+ESP-La Liga,2627,Real Betis,Jose Antonio,ESP,FW,19-122,2007,1,0,1,0.0,1,0,1,1,0,0,0,0,90.0,0.0,90.0,90.0,90.0
+ESP-La Liga,2627,Real Betis,Junior Firpo,DOM,DF,30-067,1996,2,2,148,1.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Marc Bartra,ESP,DF,35-286,1991,6,4,356,4.0,1,0,1,1,0,0,0,0,0.25,0.0,0.25,0.25,0.25
+ESP-La Liga,2627,Real Betis,Marc Roca,ESP,MF,29-336,1996,7,7,594,6.6,0,1,1,0,0,0,2,0,0.0,0.15,0.15,0.0,0.15
+ESP-La Liga,2627,Real Betis,Natan,BRA,DF,25-264,2001,8,8,720,8.0,1,0,1,1,0,0,2,0,0.12,0.0,0.12,0.12,0.12
+ESP-La Liga,2627,Real Betis,Nelson Deossa,COL,"MF,FW",26-264,2000,10,4,437,4.9,0,1,1,0,0,0,0,0,0.0,0.21,0.21,0.0,0.21
+ESP-La Liga,2627,Real Betis,Pablo Fornals,ESP,MF,30-248,1996,9,7,632,7.0,0,1,1,0,0,0,0,0,0.0,0.14,0.14,0.0,0.14
+ESP-La Liga,2627,Real Betis,Pablo Garcia,ESP,FW,20-137,2006,3,0,54,0.6,1,0,1,1,0,0,1,0,1.67,0.0,1.67,1.67,1.67
+ESP-La Liga,2627,Real Betis,Rodrigo Riquelme,ESP,MF,26-209,2000,9,5,406,4.5,2,0,2,2,0,0,0,0,0.44,0.0,0.44,0.44,0.44
+ESP-La Liga,2627,Real Betis,Troy Parrott,IRL,FW,24-266,2002,7,2,237,2.6,1,1,2,1,0,0,0,0,0.38,0.38,0.76,0.38,0.76
+ESP-La Liga,2627,Real Betis,Valentín Gómez,ARG,DF,23-124,2003,5,4,439,4.9,1,0,1,1,0,0,1,0,0.21,0.0,0.21,0.21,0.21
+ESP-La Liga,2627,Real Betis,Álvaro Fidalgo,MEX,MF,29-202,1997,4,0,69,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Álvaro Vallés,ESP,GK,29-095,1997,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Betis,Ángel Ortíz,ESP,DF,22-095,2004,4,3,226,2.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Andriy Lunin,UKR,GK,27-259,1999,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Antonio Rüdiger,GER,DF,33-239,1993,4,3,307,3.4,1,0,1,1,0,0,1,0,0.29,0.0,0.29,0.29,0.29
+ESP-La Liga,2627,Real Madrid,Arda Güler,TUR,MF,21-245,2005,10,8,588,6.5,2,2,4,2,0,0,1,0,0.31,0.31,0.61,0.31,0.61
+ESP-La Liga,2627,Real Madrid,Aurélien Tchouaméni,FRA,MF,26-274,2000,6,5,447,5.0,0,1,1,0,0,0,2,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Real Madrid,Bernardo Silva,POR,MF,32-079,1994,8,4,383,4.3,0,1,1,0,0,0,0,0,0.0,0.23,0.23,0.0,0.23
+ESP-La Liga,2627,Real Madrid,Brahim Díaz,MAR,MF,27-086,1999,4,1,122,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Carlos Espí,ESP,FW,21-096,2005,6,0,37,0.4,2,0,2,2,0,0,0,0,4.86,0.0,4.86,4.86,4.86
+ESP-La Liga,2627,Real Madrid,Dean Huijsen,ESP,DF,21-197,2005,8,8,681,7.6,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Denzel Dumfries,NED,DF,30-193,1996,8,5,447,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Eduardo Camavinga,FRA,MF,23-352,2002,9,2,280,3.1,0,1,1,0,0,0,2,0,0.0,0.32,0.32,0.0,0.32
+ESP-La Liga,2627,Real Madrid,Endrick,BRA,MF,20-099,2006,2,1,73,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Federico Valverde,URU,"MF,DF",28-098,1998,10,10,797,8.9,0,2,2,0,0,0,0,0,0.0,0.23,0.23,0.0,0.23
+ESP-La Liga,2627,Real Madrid,Ibrahima Konaté,FRA,DF,27-156,1999,9,9,810,9.0,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Jude Bellingham,ENG,MF,23-121,2003,10,9,774,8.6,3,3,6,3,0,0,2,0,0.35,0.35,0.7,0.35,0.7
+ESP-La Liga,2627,Real Madrid,Kylian Mbappé,FRA,FW,27-312,1998,10,10,893,9.9,11,2,13,9,2,3,2,0,1.11,0.2,1.31,0.91,1.11
+ESP-La Liga,2627,Real Madrid,Marc Cucurella,ESP,DF,28-098,1998,10,6,656,7.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Thibaut Courtois,BEL,GK,34-170,1992,9,9,810,9.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Madrid,Trent Alexander-Arnold,ENG,DF,28-021,1998,6,3,266,3.0,0,1,1,0,0,0,0,0,0.0,0.34,0.34,0.0,0.34
+ESP-La Liga,2627,Real Madrid,Vinicius Júnior,BRA,MF,26-108,2000,8,7,581,6.5,1,3,4,1,0,0,2,1,0.15,0.46,0.62,0.15,0.62
+ESP-La Liga,2627,Real Madrid,Yan Diomandé,CIV,MF,19-348,2006,10,5,548,6.1,2,2,4,2,0,0,1,0,0.33,0.33,0.66,0.33,0.66
+ESP-La Liga,2627,Real Madrid,Álvaro Carreras,ESP,DF,23-219,2003,5,4,246,2.7,1,0,1,1,0,0,1,0,0.37,0.0,0.37,0.37,0.37
+ESP-La Liga,2627,Real Madrid,Éder Militão,BRA,"DF,MF",28-283,1998,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Aihen Muñoz,ESP,DF,29-073,1997,3,1,111,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Alex Marchal,ESP,MF,19-041,2007,5,0,116,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Ander Barrenetxea,ESP,MF,24-305,2001,9,6,491,5.5,2,1,3,2,0,0,0,0,0.37,0.18,0.55,0.37,0.55
+ESP-La Liga,2627,Real Sociedad,Arsen Zakharyan,RUS,FW,23-155,2003,5,1,75,0.8,1,0,1,1,0,0,0,0,1.2,0.0,1.2,1.2,1.2
+ESP-La Liga,2627,Real Sociedad,Beñat Turrientes,ESP,MF,24-270,2002,5,4,327,3.6,1,0,1,1,0,0,1,0,0.28,0.0,0.28,0.28,0.28
+ESP-La Liga,2627,Real Sociedad,Carlos Soler,ESP,MF,29-299,1997,9,7,623,6.9,1,3,4,0,1,1,0,0,0.14,0.43,0.58,0.0,0.43
+ESP-La Liga,2627,Real Sociedad,Gonçalo Guedes,POR,MF,29-333,1996,9,5,437,4.9,2,1,3,2,0,0,0,0,0.41,0.21,0.62,0.41,0.62
+ESP-La Liga,2627,Real Sociedad,Héctor Fort,ESP,DF,20-087,2006,4,2,134,1.5,0,1,1,0,0,0,0,0,0.0,0.67,0.67,0.0,0.67
+ESP-La Liga,2627,Real Sociedad,Igor Zubeldia,ESP,DF,29-212,1997,7,4,446,5.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Job Ochieng',KEN,MF,23-284,2003,7,3,295,3.3,1,3,4,1,0,0,0,0,0.31,0.92,1.22,0.31,1.22
+ESP-La Liga,2627,Real Sociedad,Jon Aramburu,VEN,DF,24-097,2002,8,7,625,6.9,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Jon Gorrotxategi,ESP,MF,24-268,2002,7,3,313,3.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Jon Martin,ESP,DF,20-188,2006,9,8,726,8.1,1,1,2,1,0,0,2,1,0.12,0.12,0.25,0.12,0.25
+ESP-La Liga,2627,Real Sociedad,Jon Pacheco,ESP,DF,25-293,2001,1,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Luka Sučić,CRO,"MF,FW",24-050,2002,9,8,700,7.8,3,0,3,3,0,0,2,0,0.39,0.0,0.39,0.39,0.39
+ESP-La Liga,2627,Real Sociedad,Luken Beitia,ESP,DF,22-120,2004,3,3,270,3.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Mamadou Sarr,SEN,DF,21-060,2005,5,5,417,4.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Mikel Oyarzabal,ESP,"FW,MF",29-190,1997,10,8,690,7.7,2,2,4,2,0,0,1,0,0.26,0.26,0.52,0.26,0.52
+ESP-La Liga,2627,Real Sociedad,Orri Steinn Óskarsson,ISL,FW,22-060,2004,8,5,474,5.3,3,0,3,3,0,0,2,1,0.57,0.0,0.57,0.57,0.57
+ESP-La Liga,2627,Real Sociedad,Pablo Marín,ESP,DF,23-117,2003,1,1,65,0.7,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Sergio Gómez,ESP,DF,26-054,2000,10,9,789,8.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Takefusa Kubo,JPN,MF,25-146,2001,6,4,292,3.2,1,1,2,1,0,0,0,0,0.31,0.31,0.62,0.31,0.62
+ESP-La Liga,2627,Real Sociedad,Unai Marrero,ESP,GK,25-019,2001,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Real Sociedad,Yangel Herrera,VEN,MF,28-287,1998,9,6,510,5.7,1,0,1,1,0,0,4,0,0.18,0.0,0.18,0.18,0.18
+ESP-La Liga,2627,Real Sociedad,Álex Remiro,ESP,GK,31-218,1995,9,9,810,9.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Alfon,ESP,FW,27-177,1999,4,0,64,0.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Arouna Sangante,SEN,DF,24-199,2002,4,4,279,3.1,0,0,0,0,0,0,0,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Carmona,ESP,"DF,MF",24-272,2002,5,0,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Castrin,ESP,DF,23-300,2003,9,8,751,8.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Chidera Ejuke,NGA,"MF,FW",28-299,1998,8,2,328,3.6,1,0,1,1,0,0,1,0,0.27,0.0,0.27,0.27,0.27
+ESP-La Liga,2627,Sevilla,Félix Correia,POR,MF,25-279,2001,6,6,448,5.0,2,1,3,2,0,0,2,0,0.4,0.2,0.6,0.4,0.6
+ESP-La Liga,2627,Sevilla,Gabriel Suazo,CHI,DF,29-080,1997,10,10,900,10.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Giorgi Kochorashvili,GEO,MF,27-121,1999,6,3,273,3.0,0,1,1,0,0,0,1,0,0.0,0.33,0.33,0.0,0.33
+ESP-La Liga,2627,Sevilla,Iglesias,ESP,DF,28-117,1998,10,10,881,9.8,1,0,1,1,0,0,3,0,0.1,0.0,0.1,0.1,0.1
+ESP-La Liga,2627,Sevilla,Isaac Romero,ESP,"FW,MF",26-163,2000,8,3,305,3.4,3,1,4,3,0,0,6,1,0.89,0.3,1.18,0.89,1.18
+ESP-La Liga,2627,Sevilla,Joaquín Martínez Gauna,ESP,MF,23-111,2003,2,2,154,1.7,1,1,2,1,0,0,0,0,0.58,0.58,1.17,0.58,1.17
+ESP-La Liga,2627,Sevilla,Jon Guridi,ESP,MF,31-242,1995,8,5,354,3.9,1,0,1,0,1,1,3,0,0.25,0.0,0.25,0.0,0.0
+ESP-La Liga,2627,Sevilla,Julio Diaz,ESP,MF,21-291,2005,5,1,104,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Kike Salas,ESP,DF,24-188,2002,8,8,717,8.0,0,0,0,0,0,0,1,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Lucas Stassin,BEL,FW,21-334,2004,5,3,291,3.2,1,1,2,1,0,0,0,0,0.31,0.31,0.62,0.31,0.62
+ESP-La Liga,2627,Sevilla,Lucien Agoume,FRA,MF,24-261,2002,10,10,900,10.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Manu Bueno,ESP,MF,22-093,2004,4,0,84,0.9,1,0,1,1,0,0,0,0,1.07,0.0,1.07,1.07,1.07
+ESP-La Liga,2627,Sevilla,Miguel Ángel Sierra,ESP,"MF,FW",22-106,2004,8,8,558,6.2,2,0,2,2,0,0,2,0,0.32,0.0,0.32,0.32,0.32
+ESP-La Liga,2627,Sevilla,Nicolás Guilén Peguero,ESP,MF,18-271,2008,2,1,90,1.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Odysseas Vlachodimos,GRE,GK,32-185,1994,10,10,900,10.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Peque,ESP,MF,24-024,2002,4,3,212,2.4,1,0,1,0,1,1,1,0,0.42,0.0,0.42,0.0,0.0
+ESP-La Liga,2627,Sevilla,Robbie Ure,SCO,FW,22-244,2004,10,6,547,6.1,1,2,3,1,0,0,1,0,0.16,0.33,0.49,0.16,0.49
+ESP-La Liga,2627,Sevilla,Ruben Vargas,SUI,MF,28-084,1998,3,1,86,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Sevilla,Youssouf Fofana,FRA,MF,27-291,1999,7,6,545,6.1,1,3,4,1,0,0,0,0,0.17,0.5,0.66,0.17,0.66
+ESP-La Liga,2627,Valencia,Aaron Mayol,,MF,,,2,2,180,2.0,1,0,1,1,0,0,1,0,0.5,0.0,0.5,0.5,0.5
+ESP-La Liga,2627,Valencia,Aimar Blazquez,ESP,FW,20-223,2006,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Aliou Dieng,MLI,MF,29-012,1997,6,2,236,2.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Arnau Martinez,ESP,DF,23-186,2003,6,3,267,3.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Arnaut Danjuma,NED,"MF,FW",29-270,1997,10,8,749,8.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,César Tárrega,ESP,DF,24-244,2002,7,6,510,5.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Dani Raba,ESP,MF,30-364,1995,4,2,175,1.9,1,0,1,1,0,0,3,0,0.51,0.0,0.51,0.51,0.51
+ESP-La Liga,2627,Valencia,David Otorbi,ESP,MF,19-012,2007,9,3,348,3.9,1,0,1,1,0,0,0,0,0.26,0.0,0.26,0.26,0.26
+ESP-La Liga,2627,Valencia,Filip Ugrinic,SUI,MF,27-296,1999,10,7,585,6.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Guido Rodríguez,ARG,MF,32-199,1994,7,7,579,6.4,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Harvey Elliott,ENG,"FW,MF",23-207,2003,6,0,157,1.7,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Hugo Duro,ESP,FW,26-352,1999,10,5,416,4.6,0,1,1,0,0,0,0,0,0.0,0.22,0.22,0.0,0.22
+ESP-La Liga,2627,Valencia,Iker Córdoba,ESP,DF,20-351,2005,3,0,105,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Javier Guerra,ESP,"MF,FW",23-168,2003,10,10,805,8.9,0,2,2,0,0,0,1,0,0.0,0.22,0.22,0.0,0.22
+ESP-La Liga,2627,Valencia,Jesus Vazquez,ESP,DF,23-299,2003,8,4,355,3.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,José Luis García Vayá,ESP,"DF,MF",28-078,1998,10,10,835,9.3,1,0,1,0,1,1,2,0,0.11,0.0,0.11,0.0,0.0
+ESP-La Liga,2627,Valencia,José Luis Gayà,ESP,DF,31-156,1995,8,7,622,6.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Justin de Haas,NED,DF,26-269,2000,6,6,455,5.1,0,1,1,0,0,0,2,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Valencia,Luis Rioja,ESP,"MF,DF",33-012,1993,6,2,244,2.7,1,0,1,1,0,0,0,0,0.37,0.0,0.37,0.37,0.37
+ESP-La Liga,2627,Valencia,Mouctar Diakhaby,GUI,DF,29-313,1996,5,4,331,3.7,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Pablo Maffeo,ESP,DF,29-108,1997,9,7,580,6.4,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Ryūnosuke Satō,JPN,MF,20-012,2006,5,4,295,3.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Stole Dimitrievski,MKD,GK,32-307,1993,10,10,900,10.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Valencia,Umar Sadiq,NGA,FW,29-268,1997,3,1,160,1.8,1,0,1,1,0,0,0,0,0.56,0.0,0.56,0.56,0.56
+ESP-La Liga,2627,Villarreal,Alberto Moleiro,ESP,"MF,FW",23-028,2003,10,7,609,6.8,2,4,6,2,0,0,0,0,0.3,0.59,0.89,0.3,0.89
+ESP-La Liga,2627,Villarreal,Alex Freeman,USA,DF,22-080,2004,9,6,587,6.5,1,0,1,1,0,0,1,0,0.15,0.0,0.15,0.15,0.15
+ESP-La Liga,2627,Villarreal,Ayoze Pérez,ESP,FW,33-091,1993,10,8,586,6.5,1,2,3,1,0,0,1,0,0.15,0.31,0.46,0.15,0.46
+ESP-La Liga,2627,Villarreal,Carlos Macià,ESP,MF,18-057,2008,6,2,217,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Carlos Romero,ESP,DF,24-364,2001,6,4,423,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Georges Mikautadze,GEO,FW,25-362,2000,10,4,494,5.5,3,1,4,2,1,1,0,0,0.55,0.18,0.73,0.36,0.55
+ESP-La Liga,2627,Villarreal,Gerard Moreno,ESP,FW,34-204,1992,9,4,417,4.6,2,0,2,1,1,1,0,0,0.43,0.0,0.43,0.22,0.22
+ESP-La Liga,2627,Villarreal,Ilias Akhomach,MAR,"MF,FW",22-195,2004,9,5,387,4.3,0,2,2,0,0,0,1,0,0.0,0.47,0.47,0.0,0.47
+ESP-La Liga,2627,Villarreal,Juan Foyth,ARG,"DF,MF",28-289,1998,6,6,479,5.3,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Logan Costa,CPV,DF,25-210,2001,2,2,172,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Luiz Lúcio Reis Júnior,BRA,GK,25-287,2001,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Nathan Saliba,CAN,MF,22-263,2004,6,3,356,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Nicolas Pépé,CIV,MF,31-152,1995,6,5,421,4.7,2,0,2,2,0,0,1,0,0.43,0.0,0.43,0.43,0.43
+ESP-La Liga,2627,Villarreal,Nizar,ESP,FW,21-332,2004,2,0,12,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Pape Gueye,SEN,MF,27-277,1999,10,8,717,8.0,3,0,3,2,1,1,1,1,0.38,0.0,0.38,0.25,0.25
+ESP-La Liga,2627,Villarreal,Pau Navarro,ESP,DF,21-186,2005,5,4,352,3.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Péter Gulácsi,HUN,GK,36-175,1990,6,6,540,6.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Renato Veiga,POR,DF,23-091,2003,9,9,810,9.0,0,1,1,0,0,0,3,0,0.0,0.11,0.11,0.0,0.11
+ESP-La Liga,2627,Villarreal,Santi Comesaña,ESP,MF,30-023,1996,9,7,483,5.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Santiago Mouriño,URU,DF,24-257,2002,7,5,426,4.7,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Sergi Cardona,ESP,DF,27-112,1999,6,5,452,5.0,0,1,1,0,0,0,0,0,0.0,0.2,0.2,0.0,0.2
+ESP-La Liga,2627,Villarreal,Tajon Buchanan,CAN,MF,27-262,1999,8,5,464,5.2,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ESP-La Liga,2627,Villarreal,Tani Oluwaseyi,CAN,MF,26-166,2000,5,1,124,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Charles De Ketelaere,BEL,"FW,MF",25-232,2001,8,7,580,6.4,0,2,2,0,0,0,0,0,0.0,0.31,0.31,0.0,0.31
+ITA-Serie A,2627,Atalanta,Davide Zappacosta,ITA,DF,34-139,1992,6,4,394,4.4,0,1,1,0,0,0,0,0,0.0,0.23,0.23,0.0,0.23
+ITA-Serie A,2627,Atalanta,Elif Elmas,MKD,"MF,FW",27-034,1999,6,3,294,3.3,1,1,2,1,0,0,0,1,0.31,0.31,0.61,0.31,0.61
+ITA-Serie A,2627,Atalanta,Franck Kessié,CIV,MF,29-313,1996,4,3,243,2.7,1,0,1,1,0,0,1,0,0.37,0.0,0.37,0.37,0.37
+ITA-Serie A,2627,Atalanta,Giacomo Raspadori,ITA,FW,26-252,2000,4,2,179,2.0,1,0,1,1,0,0,0,0,0.5,0.0,0.5,0.5,0.5
+ITA-Serie A,2627,Atalanta,Gianluca Gaetano,ITA,MF,26-176,2000,7,4,396,4.4,1,1,2,1,0,0,0,1,0.23,0.23,0.45,0.23,0.45
+ITA-Serie A,2627,Atalanta,Gianluca Scamacca,ITA,FW,27-300,1999,7,4,287,3.2,1,0,1,1,0,0,0,0,0.31,0.0,0.31,0.31,0.31
+ITA-Serie A,2627,Atalanta,Giorgio Scalvini,ITA,DF,22-321,2003,6,6,516,5.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Jonathan Rowe,ENG,"FW,MF",23-181,2003,5,5,367,4.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Lazar Samardzic,SRB,MF,24-246,2002,8,4,375,4.2,1,0,1,1,0,0,0,0,0.24,0.0,0.24,0.24,0.24
+ITA-Serie A,2627,Atalanta,Lorenzo Bernasconi,ITA,DF,22-346,2003,6,3,343,3.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Marco Carnesecchi,ITA,GK,26-119,2000,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Mario Pašalić,CRO,MF,31-261,1995,6,3,266,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Nicola Zalewski,POL,FW,24-278,2002,6,1,196,2.2,0,2,2,0,0,0,0,0,0.0,0.92,0.92,0.0,0.92
+ITA-Serie A,2627,Atalanta,Nikola Krstović,MNE,FW,26-206,2000,8,4,449,5.0,6,2,8,6,0,0,1,0,1.2,0.4,1.6,1.2,1.6
+ITA-Serie A,2627,Atalanta,Odilon Kossounou,CIV,DF,25-297,2001,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Raoul Bellanova,ITA,DF,26-164,2000,7,6,467,5.2,0,1,1,0,0,0,1,0,0.0,0.19,0.19,0.0,0.19
+ITA-Serie A,2627,Atalanta,Relja Obrić,SVN,DF,20-200,2006,2,1,161,1.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Sead Kolašinac,BIH,DF,33-130,1993,6,4,279,3.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Thomas Kristensen,DEN,DF,24-284,2002,4,4,360,4.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Atalanta,Éderson Silva,BRA,MF,27-113,1999,8,8,685,7.6,2,0,2,1,1,1,2,0,0.26,0.0,0.26,0.13,0.13
+ITA-Serie A,2627,Bologna,Artem Dovbyk,UKR,FW,29-129,1997,4,0,102,1.1,1,0,1,1,0,0,1,0,0.88,0.0,0.88,0.88,0.88
+ITA-Serie A,2627,Bologna,Arthur Theate,BEL,DF,26-156,2000,5,5,422,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Eivind Helland,NOR,DF,21-186,2005,5,3,301,3.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Emil Holm,SWE,DF,26-168,2000,5,3,280,3.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Federico Bernardeschi,ITA,"MF,FW",32-254,1994,8,6,549,6.1,2,0,2,1,1,1,2,0,0.33,0.0,0.33,0.16,0.16
+ITA-Serie A,2627,Bologna,Jay Enem,NED,FW,23-231,2003,3,0,99,1.1,1,0,1,1,0,0,0,0,0.91,0.0,0.91,0.91,0.91
+ITA-Serie A,2627,Bologna,Jens Odgaard,DEN,"MF,FW",27-211,1999,6,4,334,3.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Jonathan Rowe,ENG,"FW,MF",23-181,2003,1,0,31,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Juan Miranda,ESP,"MF,DF",26-282,2000,7,6,559,6.2,0,3,3,0,0,0,1,0,0.0,0.48,0.48,0.0,0.48
+ITA-Serie A,2627,Bologna,Lewis Ferguson,SCO,MF,27-065,1999,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Lorenzo De Silvestri,ITA,"DF,MF",38-158,1988,1,0,33,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Marco Libra,VEN,MF,18-221,2008,3,0,94,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Martin Vitík,CZE,DF,23-280,2003,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Massimo Pessina,ITA,GK,18-307,2007,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Matteo Darmian,ITA,DF,36-330,1989,3,3,264,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Mikel Amondarain,ARG,MF,21-295,2005,4,1,112,1.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Nadir Zortea,ITA,"MF,DF",27-131,1999,6,5,424,4.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Nicolò Cambiaghi,ITA,"MF,FW",25-304,2000,8,8,597,6.6,0,2,2,0,0,0,1,0,0.0,0.3,0.3,0.0,0.3
+ITA-Serie A,2627,Bologna,Nicolò Casale,ITA,DF,28-256,1998,3,3,270,3.0,1,0,1,1,0,0,0,0,0.33,0.0,0.33,0.33,0.33
+ITA-Serie A,2627,Bologna,Nikola Moro,CRO,MF,28-230,1998,5,0,110,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Oussama El Azzouzi,MAR,MF,25-152,2001,2,1,107,1.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Rahim Bonkano,NIG,DF,24-300,2002,4,2,161,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Riccardo Orsolini,ITA,MF,29-277,1997,4,2,184,2.0,1,0,1,1,0,0,0,0,0.49,0.0,0.49,0.49,0.49
+ITA-Serie A,2627,Bologna,Roberto Piccoli,ITA,FW,25-274,2001,7,7,445,4.9,1,0,1,1,0,0,1,0,0.2,0.0,0.2,0.2,0.2
+ITA-Serie A,2627,Bologna,Samuel Mbangula,BEL,MF,22-285,2004,3,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Tommaso Pobega,ITA,MF,27-105,1999,7,7,475,5.3,1,0,1,1,0,0,1,0,0.19,0.0,0.19,0.19,0.19
+ITA-Serie A,2627,Bologna,Torbjørn Heggem,NOR,DF,27-289,1999,6,6,504,5.6,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Bologna,Łukasz Skorupski,POL,GK,35-176,1991,6,6,540,6.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Adam Obert,SVK,"DF,MF",24-066,2002,9,9,799,8.9,0,1,1,0,0,0,0,0,0.0,0.11,0.11,0.0,0.11
+ITA-Serie A,2627,Cagliari,Alessandro Deiola,ITA,"DF,MF",31-088,1995,9,7,662,7.4,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Alessandro Romano,ITA,MF,20-133,2006,9,9,778,8.6,1,0,1,1,0,0,0,0,0.12,0.0,0.12,0.12,0.12
+ITA-Serie A,2627,Cagliari,Alessandro Sugamele,ITA,FW,19-248,2007,1,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Alieu Fadera,GAM,MF,24-359,2001,8,1,259,2.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Daniel Maldini,ITA,"MF,FW",25-017,2001,9,8,579,6.4,5,0,5,4,1,1,0,0,0.78,0.0,0.78,0.62,0.62
+ITA-Serie A,2627,Cagliari,Elia Caprile,ITA,GK,25-064,2001,9,9,810,9.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Gabriele Zappa,ITA,"DF,MF",26-310,1999,1,0,25,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Gennaro Borrelli,ITA,FW,26-232,2000,2,0,38,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Giuseppe Aurelio,ITA,MF,26-220,2000,2,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Harry Winks,ENG,MF,30-268,1996,8,8,631,7.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Jacopo Fazzini,ITA,MF,23-226,2003,5,4,244,2.7,0,1,1,0,0,0,1,0,0.0,0.37,0.37,0.0,0.37
+ITA-Serie A,2627,Cagliari,Joseph Liteta,ZAM,FW,20-248,2006,2,0,25,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Juan Rodríguez,URU,DF,21-151,2005,9,9,708,7.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Kevin Carlos,ESP,FW,25-201,2001,5,0,126,1.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Kingstone Mutandwa,ZAM,FW,23-296,2003,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,M'Bala Nzola,ANG,FW,30-071,1996,3,2,136,1.5,1,0,1,0,1,1,0,0,0.66,0.0,0.66,0.0,0.0
+ITA-Serie A,2627,Cagliari,Mattia Felici,ITA,MF,25-194,2001,2,0,38,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Michel Ndary Adopo,FRA,"MF,DF",26-101,2000,9,9,809,9.0,0,2,2,0,0,0,0,0,0.0,0.22,0.22,0.0,0.22
+ITA-Serie A,2627,Cagliari,Paul Mendy,SEN,"FW,MF",19-300,2007,9,8,632,7.0,1,1,2,1,0,0,0,0,0.14,0.14,0.28,0.14,0.28
+ITA-Serie A,2627,Cagliari,Raphael Kofler,ITA,DF,21-185,2005,3,0,71,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Riccardo Ciervo,ITA,MF,24-210,2002,1,0,8,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Roberto Gagliardini,ITA,MF,32-204,1994,3,0,68,0.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Yael Trepy,,FW,,,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Yanis Massolin,FRA,MF,24-038,2002,3,2,145,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Yerry Mina,COL,DF,32-035,1994,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Yukinari Sugawara,JPN,MF,26-122,2000,6,1,235,2.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Cagliari,Zé Pedro Figueiredo,POR,DF,29-144,1997,9,9,693,7.7,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Adrian Lahdo,SWE,MF,18-306,2007,1,0,2,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Anastasios Douvikas,GRE,FW,27-087,1999,9,8,677,7.5,5,0,5,5,0,0,0,0,0.66,0.0,0.66,0.66,0.66
+ITA-Serie A,2627,Como,Assane Diao,SEN,MF,21-051,2005,6,5,423,4.7,2,1,3,2,0,0,2,0,0.43,0.21,0.64,0.43,0.64
+ITA-Serie A,2627,Como,Ivan Smolčić,CRO,DF,26-072,2000,5,1,162,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Jacobo Ramón,ESP,DF,21-295,2005,9,7,752,8.4,2,0,2,2,0,0,1,0,0.24,0.0,0.24,0.24,0.24
+ITA-Serie A,2627,Como,Jayden Addai,NED,MF,21-063,2005,3,0,68,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Jean Butez,FRA,GK,31-142,1995,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Jesus Rodríguez,ESP,MF,20-341,2005,4,1,176,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Kaiki Bruno,BRA,DF,23-234,2003,7,3,364,4.0,1,1,2,1,0,0,0,0,0.25,0.25,0.49,0.25,0.49
+ITA-Serie A,2627,Como,Lucas Da Cunha,FRA,MF,25-141,2001,9,8,650,7.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Luis Milla,ESP,MF,32-021,1994,9,5,489,5.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Marc-Oliver Kempf,GER,DF,31-273,1995,6,4,389,4.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Martin Baturina,CRO,MF,23-254,2003,8,6,357,4.0,3,1,4,3,0,0,2,0,0.76,0.25,1.01,0.76,1.01
+ITA-Serie A,2627,Como,Mattia Liberali,ITA,MF,19-205,2007,3,1,109,1.2,1,0,1,1,0,0,0,0,0.83,0.0,0.83,0.83,0.83
+ITA-Serie A,2627,Como,Maxence Caqueret,FRA,MF,26-255,2000,8,4,398,4.4,0,2,2,0,0,0,1,0,0.0,0.45,0.45,0.0,0.45
+ITA-Serie A,2627,Como,Moise Kean,ITA,FW,26-242,2000,3,1,133,1.5,0,1,1,0,0,0,0,0,0.0,0.68,0.68,0.0,0.68
+ITA-Serie A,2627,Como,Máximo Perrone,ARG,MF,23-294,2003,9,6,532,5.9,0,1,1,0,0,0,0,0,0.0,0.17,0.17,0.0,0.17
+ITA-Serie A,2627,Como,Nico Paz,ARG,MF,22-050,2004,8,8,656,7.3,3,3,6,3,0,0,1,0,0.41,0.41,0.82,0.41,0.82
+ITA-Serie A,2627,Como,Robert Sánchez,ESP,GK,28-344,1997,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Samuele Ricci,ITA,MF,25-068,2001,6,1,133,1.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Trevoh Chalobah,ENG,DF,27-115,1999,6,6,463,5.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Willy Kambwala,,DF,22-064,2004,2,1,53,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Como,Yan Couto,BRA,DF,24-147,2002,8,8,658,7.3,0,2,2,0,0,0,2,0,0.0,0.27,0.27,0.0,0.27
+ITA-Serie A,2627,Como,Álex Valle,ESP,DF,22-186,2004,6,6,456,5.1,0,2,2,0,0,0,1,0,0.0,0.39,0.39,0.0,0.39
+ITA-Serie A,2627,Fiorentina,Albert Guðmundsson,ISL,FW,29-135,1997,1,1,70,0.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Alieu Njie,SWE,"FW,MF",21-167,2005,6,5,453,5.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Arthur Atta,FRA,MF,23-287,2003,5,4,332,3.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Beto,GNB,FW,28-270,1998,6,2,183,2.0,0,1,1,0,0,0,0,0,0.0,0.49,0.49,0.0,0.49
+ITA-Serie A,2627,Fiorentina,Cher Ndour,ITA,MF,22-093,2004,8,7,656,7.3,0,1,1,0,0,0,1,0,0.0,0.14,0.14,0.0,0.14
+ITA-Serie A,2627,Fiorentina,Christ Inao Oulaï,CIV,MF,20-205,2006,4,3,167,1.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,David de Gea,ESP,GK,35-355,1990,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Dodô,BRA,DF,27-345,1998,4,1,139,1.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Franco Mastantuono,ARG,"MF,FW",19-075,2007,8,8,607,6.7,3,0,3,3,0,0,2,0,0.44,0.0,0.44,0.44,0.44
+ITA-Serie A,2627,Fiorentina,João Mário Lopes,POR,DF,26-298,2000,4,2,184,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Luca Ranieri,ITA,DF,27-188,1999,4,4,307,3.4,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Marco Brescianini,ITA,MF,26-281,2000,6,3,240,2.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Marin Pongračić,CRO,DF,29-047,1997,5,3,208,2.3,1,0,1,1,0,0,0,0,0.43,0.0,0.43,0.43,0.43
+ITA-Serie A,2627,Fiorentina,Mateo Pellegrino,ARG,FW,25-241,2001,8,6,549,6.1,2,0,2,2,0,0,1,0,0.33,0.0,0.33,0.33,0.33
+ITA-Serie A,2627,Fiorentina,Moise Kean,ITA,FW,26-242,2000,1,0,28,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Nicolò Fagioli,ITA,MF,25-258,2001,8,7,630,7.0,0,2,2,0,0,0,1,0,0.0,0.29,0.29,0.0,0.29
+ITA-Serie A,2627,Fiorentina,Pedro Gonçalves,POR,MF,28-122,1998,5,1,120,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Radu Drăgușin,ROU,DF,24-267,2002,8,8,720,8.0,0,1,1,0,0,0,1,0,0.0,0.12,0.12,0.0,0.12
+ITA-Serie A,2627,Fiorentina,Rolando Mandragora,ITA,MF,29-121,1997,2,0,37,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Victor Valdepeñas,ESP,DF,20-008,2006,7,4,443,4.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Viery,BRA,DF,21-299,2005,7,4,403,4.5,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Wilfried Gnonto,ITA,MF,22-357,2003,6,1,211,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Fiorentina,Álex Jiménez,ESP,DF,21-173,2005,7,6,513,5.7,2,1,3,2,0,0,1,0,0.35,0.18,0.53,0.35,0.53
+ITA-Serie A,2627,Frosinone,Aleksa Terzić,SRB,DF,27-072,1999,4,0,122,1.4,1,0,1,1,0,0,1,0,0.74,0.0,0.74,0.74,0.74
+ITA-Serie A,2627,Frosinone,Alessio Zerbin,ITA,"FW,MF",27-239,1999,7,0,143,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Anouar El Azzouzi,NED,"DF,MF",25-152,2001,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Anthony Oyono,GAB,DF,25-199,2001,8,7,641,7.1,0,1,1,0,0,0,1,0,0.0,0.14,0.14,0.0,0.14
+ITA-Serie A,2627,Frosinone,Antonio Raimondo,ITA,FW,22-224,2004,8,8,657,7.3,7,0,7,7,0,0,3,0,0.96,0.0,0.96,0.96,0.96
+ITA-Serie A,2627,Frosinone,Daniel Birligea,ROU,FW,26-192,2000,3,0,15,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Enzo Tchato,CMR,DF,23-339,2002,1,0,2,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Farés Ghedjemis,ALG,MF,24-052,2002,6,5,434,4.8,0,3,3,0,0,0,0,0,0.0,0.62,0.62,0.0,0.62
+ITA-Serie A,2627,Frosinone,Florian Grillitsch,AUT,"DF,MF",31-082,1995,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Gabriele Bracaglia,ITA,DF,23-101,2003,8,8,628,7.0,1,1,2,1,0,0,4,0,0.14,0.14,0.29,0.14,0.29
+ITA-Serie A,2627,Frosinone,Gabriele Calvani,ITA,DF,22-289,2004,7,7,613,6.8,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Giacomo Calò,ITA,MF,29-265,1997,8,8,685,7.6,3,1,4,3,0,0,0,0,0.39,0.13,0.53,0.39,0.53
+ITA-Serie A,2627,Frosinone,Giorgi Kvernadze,GEO,MF,23-263,2003,8,8,662,7.4,3,1,4,3,0,0,2,0,0.41,0.14,0.54,0.41,0.54
+ITA-Serie A,2627,Frosinone,Giorgio Cittadini,ITA,DF,24-193,2002,8,6,521,5.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Ilario Monterisi,ITA,DF,24-313,2001,7,4,355,3.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Lorenzo Palmisani,ITA,GK,22-138,2004,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Luis Hasa,ALB,MF,22-295,2004,2,0,44,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Matteo Chichella,ITA,MF,21-024,2005,6,1,164,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Omar Fayed,EGY,DF,23-116,2003,1,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Patrizio Masini,ITA,MF,25-274,2001,8,7,591,6.6,0,1,1,0,0,0,0,0,0.0,0.15,0.15,0.0,0.15
+ITA-Serie A,2627,Frosinone,Romano Schmid,AUT,MF,26-274,2000,8,8,623,6.9,2,3,5,2,0,0,2,0,0.29,0.43,0.72,0.29,0.72
+ITA-Serie A,2627,Frosinone,Seydou Fini,ITA,MF,20-148,2006,5,3,206,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Tomáš Bobček,SVK,FW,25-050,2001,2,0,48,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Frosinone,Wisdom Amey,ITA,DF,21-078,2005,3,0,17,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Adam Zulevic,SVK,FW,19-044,2007,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Alessandro Marcandalli,ITA,DF,24-003,2002,8,6,576,6.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Amorim,BRA,MF,21-163,2005,6,1,133,1.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Brooke Norton-Cuffy,ENG,MF,22-289,2004,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,David Puczka,AUT,MF,21-275,2005,4,1,141,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Djibril Sow,SUI,MF,29-264,1997,5,4,308,3.4,0,1,1,0,0,0,1,0,0.0,0.29,0.29,0.0,0.29
+ITA-Serie A,2627,Genoa,Franz-Ethan Meichtry,SUI,MF,21-112,2005,4,0,51,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Hamed Junior Traorè,CIV,MF,26-254,2000,3,2,186,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Johan Vásquez,MEX,DF,28-006,1998,7,7,608,6.8,1,0,1,1,0,0,4,1,0.15,0.0,0.15,0.15,0.15
+ITA-Serie A,2627,Genoa,Junior Messias,BRA,MF,35-168,1991,8,4,411,4.6,1,0,1,1,0,0,0,0,0.22,0.0,0.22,0.22,0.22
+ITA-Serie A,2627,Genoa,Justin Bijlow,NED,GK,28-279,1998,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Kingsley Ehizibue,NED,"MF,DF",31-156,1995,4,3,223,2.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Leo Østigård,NOR,DF,26-334,1999,8,8,695,7.7,0,0,0,0,0,0,4,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Lorenzo Colombo,ITA,FW,24-234,2002,6,4,348,3.9,0,2,2,0,0,1,0,0,0.0,0.52,0.52,0.0,0.52
+ITA-Serie A,2627,Genoa,Mario Mitaj,ALB,MF,23-083,2003,1,1,80,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Mikael Ellertsson,ISL,MF,24-231,2002,8,8,699,7.8,1,1,2,1,0,0,2,0,0.13,0.13,0.26,0.13,0.26
+ITA-Serie A,2627,Genoa,Milutin Osmajić,MNE,FW,27-095,1999,7,6,568,6.3,3,1,4,3,0,0,0,0,0.48,0.16,0.63,0.48,0.63
+ITA-Serie A,2627,Genoa,Morten Frendrup,DEN,MF,25-204,2001,8,7,651,7.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Robinho Junior,BRA,MF,18-315,2007,1,0,8,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Samuel Wiafe,ITA,MF,18-128,2008,3,2,204,2.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Sebastian Otoa,DEN,DF,22-168,2004,4,3,218,2.4,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Stefano Sabelli,ITA,MF,33-288,1993,2,1,55,0.6,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Stephan El Shaarawy,ITA,MF,34-001,1992,5,3,243,2.7,0,1,1,0,0,0,0,0,0.0,0.37,0.37,0.0,0.37
+ITA-Serie A,2627,Genoa,Tommaso Baldanzi,ITA,MF,23-219,2003,5,5,320,3.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Genoa,Vitinha,POR,MF,26-227,2000,7,2,285,3.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Aleksandar Stanković,SRB,MF,21-086,2005,3,0,47,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Alessandro Bastoni,ITA,DF,27-198,1999,7,7,555,6.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Andy Diouf,FRA,MF,23-164,2003,7,6,528,5.9,0,4,4,0,0,0,0,0,0.0,0.68,0.68,0.0,0.68
+ITA-Serie A,2627,Inter,Ange-Yoan Bonny,CIV,FW,23-003,2003,7,0,161,1.8,2,0,2,2,0,0,0,0,1.12,0.0,1.12,1.12,1.12
+ITA-Serie A,2627,Inter,Benjamin Pavard,FRA,DF,30-214,1996,3,2,209,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Carlos Augusto,BRA,"MF,DF",27-294,1999,6,3,358,4.0,2,2,4,2,0,0,1,0,0.5,0.5,1.01,0.5,1.01
+ITA-Serie A,2627,Inter,Curtis Jones,ENG,MF,25-271,2001,4,1,153,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Djed Spence,ENG,"DF,MF",26-080,2000,1,0,18,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Federico Dimarco,ITA,MF,28-352,1997,8,6,469,5.2,0,1,1,0,0,0,0,0,0.0,0.19,0.19,0.0,0.19
+ITA-Serie A,2627,Inter,Francesco Esposito,ITA,FW,21-122,2005,8,7,470,5.2,2,1,3,2,0,0,1,0,0.38,0.19,0.57,0.38,0.57
+ITA-Serie A,2627,Inter,Hakan Çalhanoğlu,TUR,MF,32-262,1994,6,4,285,3.2,3,0,3,2,1,1,1,0,0.95,0.0,0.95,0.63,0.63
+ITA-Serie A,2627,Inter,Henrikh Mkhitaryan,ARM,MF,37-280,1989,4,3,240,2.7,0,1,1,0,0,0,1,0,0.0,0.37,0.37,0.0,0.37
+ITA-Serie A,2627,Inter,Ivan Provedel,ITA,GK,32-225,1994,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,John Stones,ENG,DF,32-153,1994,3,1,100,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Josep Martinez,ESP,GK,28-154,1998,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Lautaro Martínez,ARG,FW,29-067,1997,5,4,352,3.9,4,0,4,4,0,0,2,0,1.02,0.0,1.02,1.02,1.02
+ITA-Serie A,2627,Inter,Luis Henrique,BRA,MF,24-318,2001,5,2,210,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Manuel Akanji,SUI,DF,31-101,1995,7,7,591,6.6,0,1,1,0,0,0,2,0,0.0,0.15,0.15,0.0,0.15
+ITA-Serie A,2627,Inter,Marcus Thuram,FRA,FW,29-083,1997,7,5,457,5.1,5,2,7,5,0,0,1,0,0.98,0.39,1.38,0.98,1.38
+ITA-Serie A,2627,Inter,Matteo Lavelli,ITA,FW,19-324,2006,1,0,6,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Inter,Nicolò Barella,ITA,MF,29-263,1997,7,7,624,6.9,1,2,3,1,0,0,1,0,0.14,0.29,0.43,0.14,0.43
+ITA-Serie A,2627,Inter,Petar Sučić,CRO,MF,23-003,2003,7,4,376,4.2,1,0,1,1,0,0,0,0,0.24,0.0,0.24,0.24,0.24
+ITA-Serie A,2627,Inter,Piotr Zieliński,POL,MF,32-161,1994,7,5,441,4.9,2,2,4,1,1,1,0,0,0.41,0.41,0.82,0.2,0.61
+ITA-Serie A,2627,Inter,Yann Aurel Bisseck,GER,DF,25-333,2000,7,6,550,6.1,1,0,1,1,0,0,0,0,0.16,0.0,0.16,0.16,0.16
+ITA-Serie A,2627,Juventus,Andrea Cambiaso,ITA,MF,26-250,2000,5,1,143,1.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Douglas Luiz,BRA,MF,28-172,1998,8,8,654,7.3,1,1,2,1,0,0,1,0,0.14,0.14,0.28,0.14,0.28
+ITA-Serie A,2627,Juventus,Edon Zhegrova,KVX,MF,27-211,1999,6,0,145,1.6,2,1,3,2,0,0,0,0,1.24,0.62,1.86,1.24,1.86
+ITA-Serie A,2627,Juventus,Federico Gatti,ITA,DF,28-126,1998,2,1,93,1.0,1,1,2,1,0,0,1,0,0.97,0.97,1.94,0.97,1.94
+ITA-Serie A,2627,Juventus,Francisco Conceição,POR,MF,23-318,2002,7,6,428,4.8,1,1,2,1,0,0,1,0,0.21,0.21,0.42,0.21,0.42
+ITA-Serie A,2627,Juventus,Gleison Bremer,BRA,DF,29-224,1997,8,8,720,8.0,2,0,2,2,0,0,0,0,0.25,0.0,0.25,0.25,0.25
+ITA-Serie A,2627,Juventus,Guglielmo Vicario,ITA,GK,30-021,1996,8,8,719,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Jeremie Boga,CIV,MF,29-298,1997,5,1,132,1.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Jhon Lucumí,COL,DF,28-124,1998,7,7,569,6.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Jonathan David,CAN,FW,26-287,2000,1,1,56,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Juan David Cabal,COL,DF,25-293,2001,1,0,23,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Justin Oboavwoduo,ENG,FW,20-066,2006,1,0,4,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Kenan Yıldız,TUR,MF,21-177,2005,1,1,68,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Kerim Alajbegović,BIH,MF,19-037,2007,7,4,319,3.5,0,1,1,0,0,0,0,0,0.0,0.28,0.28,0.0,0.28
+ITA-Serie A,2627,Juventus,Lloyd Kelly,ENG,DF,28-022,1998,4,1,153,1.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Manuel Locatelli,ITA,MF,28-293,1998,3,3,270,3.0,0,1,1,0,0,0,1,0,0.0,0.33,0.33,0.0,0.33
+ITA-Serie A,2627,Juventus,Mattia Perin,ITA,GK,33-352,1992,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Nick Woltemade,GER,FW,24-256,2002,6,1,217,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Nicolás González,ARG,MF,28-205,1998,6,5,351,3.9,1,0,1,1,0,0,0,0,0.26,0.0,0.26,0.26,0.26
+ITA-Serie A,2627,Juventus,Pape Matar Sarr,SEN,MF,24-044,2002,5,2,249,2.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Pierre Kalulu,FRA,"DF,MF",26-145,2000,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Juventus,Randal Kolo Muani,FRA,FW,27-327,1998,8,8,695,7.7,1,1,2,1,0,0,0,0,0.13,0.13,0.26,0.13,0.26
+ITA-Serie A,2627,Juventus,Teun Koopmeiners,NED,MF,28-242,1998,7,2,231,2.6,1,1,2,1,0,0,0,0,0.39,0.39,0.78,0.39,0.78
+ITA-Serie A,2627,Juventus,Weston McKennie,USA,MF,28-061,1998,5,5,399,4.4,1,0,1,1,0,0,1,0,0.23,0.0,0.23,0.23,0.23
+ITA-Serie A,2627,Juventus,Zeki Çelik,TUR,"DF,MF",29-253,1997,7,7,561,6.2,0,1,1,0,0,0,1,0,0.0,0.16,0.16,0.0,0.16
+ITA-Serie A,2627,Lazio,Adam Marušić,MNE,DF,34-011,1992,1,1,18,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Albert Guðmundsson,ISL,"FW,MF",29-135,1997,3,0,42,0.5,1,0,1,1,0,0,0,0,2.14,0.0,2.14,2.14,2.14
+ITA-Serie A,2627,Lazio,Alfonso Pedraza,ESP,DF,30-202,1996,8,1,176,2.0,0,1,1,0,0,0,0,0,0.0,0.51,0.51,0.0,0.51
+ITA-Serie A,2627,Lazio,Andrea Pinamonti,ITA,FW,27-162,1999,7,1,168,1.9,1,1,2,1,0,0,0,0,0.54,0.54,1.07,0.54,1.07
+ITA-Serie A,2627,Lazio,Boulaye Dia,SEN,FW,29-346,1996,2,2,157,1.7,0,1,1,0,0,0,1,0,0.0,0.57,0.57,0.0,0.57
+ITA-Serie A,2627,Lazio,Christos Mandas,GRE,GK,25-041,2001,9,9,810,9.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Danilho Doekhi,NED,DF,28-120,1998,4,4,322,3.6,0,1,1,0,0,0,1,0,0.0,0.28,0.28,0.0,0.28
+ITA-Serie A,2627,Lazio,Davide Frattesi,ITA,MF,27-006,1999,9,8,715,7.9,3,0,3,3,0,1,0,0,0.38,0.0,0.38,0.38,0.38
+ITA-Serie A,2627,Lazio,Diogo Leite,POR,DF,27-278,1999,4,1,180,2.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Fisayo Dele-Bashiru,NGA,MF,25-264,2001,5,1,171,1.9,1,1,2,1,0,0,0,0,0.53,0.53,1.05,0.53,1.05
+ITA-Serie A,2627,Lazio,Gustav Isaksen,DEN,FW,25-192,2001,9,5,468,5.2,3,1,4,3,0,0,1,0,0.58,0.19,0.77,0.58,0.77
+ITA-Serie A,2627,Lazio,Josip Šutalo,CRO,DF,26-242,2000,6,5,474,5.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Kenneth Taylor,NED,MF,24-165,2002,9,9,692,7.7,2,1,3,2,0,0,2,0,0.26,0.13,0.39,0.26,0.39
+ITA-Serie A,2627,Lazio,Manuel Lazzari,ITA,"DF,MF",32-333,1993,6,0,86,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Matteo Cancellieri,ITA,FW,24-258,2002,6,4,320,3.6,1,0,1,1,0,0,1,0,0.28,0.0,0.28,0.28,0.28
+ITA-Serie A,2627,Lazio,Mattia Zaccagni,ITA,FW,31-134,1995,9,9,786,8.7,2,5,7,1,1,2,3,0,0.23,0.57,0.8,0.11,0.69
+ITA-Serie A,2627,Lazio,Nicolò Rovella,ITA,MF,24-328,2001,2,2,126,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Nuno Tavares,POR,DF,26-275,2000,9,8,654,7.3,1,3,4,1,0,0,0,0,0.14,0.41,0.55,0.14,0.55
+ITA-Serie A,2627,Lazio,Oliver Nielsen,DEN,DF,23-146,2003,8,8,644,7.2,1,0,1,1,0,0,3,0,0.14,0.0,0.14,0.14,0.14
+ITA-Serie A,2627,Lazio,Reda Belahyane,MAR,MF,22-149,2004,8,7,684,7.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lazio,Romano Floriani,ITA,DF,23-274,2003,9,8,732,8.1,1,0,1,1,0,0,1,0,0.12,0.0,0.12,0.12,0.12
+ITA-Serie A,2627,Lazio,Tijjani Noslin,NED,FW,27-113,1999,8,6,485,5.4,4,2,6,4,0,0,0,0,0.74,0.37,1.11,0.74,1.11
+ITA-Serie A,2627,Lecce,Amar Ahmed,SWE,FW,22-251,2004,7,3,293,3.3,1,0,1,1,0,0,0,0,0.31,0.0,0.31,0.31,0.31
+ITA-Serie A,2627,Lecce,Antonino Gallo,ITA,DF,26-296,2000,7,7,585,6.5,0,1,1,0,0,0,0,0,0.0,0.15,0.15,0.0,0.15
+ITA-Serie A,2627,Lecce,Corrie Ndaba,IRL,MF,26-307,1999,3,1,166,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Danilo Veiga,POR,"DF,MF",24-033,2002,8,8,720,8.0,0,2,2,0,0,0,3,0,0.0,0.25,0.25,0.0,0.25
+ITA-Serie A,2627,Lecce,Ivan Ilić,SRB,MF,25-225,2001,5,4,253,2.8,0,2,2,0,0,0,2,0,0.0,0.71,0.71,0.0,0.71
+ITA-Serie A,2627,Lecce,Jamil Siebert,GER,DF,24-209,2002,8,5,529,5.9,1,0,1,1,0,0,1,0,0.17,0.0,0.17,0.17,0.17
+ITA-Serie A,2627,Lecce,Joel Monteiro,SUI,"FW,MF",27-084,1999,6,3,273,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Kialonda,ANG,DF,29-031,1997,6,6,514,5.7,1,0,1,1,0,0,3,1,0.18,0.0,0.18,0.18,0.18
+ITA-Serie A,2627,Lecce,Konan N'dri,NIG,FW,26-001,2000,8,4,392,4.4,1,0,1,1,0,0,1,0,0.23,0.0,0.23,0.23,0.23
+ITA-Serie A,2627,Lecce,Lassana Coulibaly,MLI,"MF,FW",30-201,1996,7,7,580,6.4,2,1,3,2,0,0,0,0,0.31,0.16,0.47,0.31,0.47
+ITA-Serie A,2627,Lecce,Medon Berisha,ALB,MF,23-007,2003,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Mohamed Kaba,GUI,MF,25-001,2001,4,1,122,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Nikola Štulić,SRB,FW,25-050,2001,6,3,267,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Olaf Gorter,NED,MF,21-270,2005,2,2,105,1.2,1,0,1,1,0,0,0,0,0.86,0.0,0.86,0.86,0.86
+ITA-Serie A,2627,Lecce,Omri Gandelman,ISR,MF,26-165,2000,2,0,13,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Oumar Ngom,MTN,MF,22-233,2004,8,5,487,5.4,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Paco Esteban,ESP,FW,20-179,2006,5,1,164,1.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Santiago Pierotti,ARG,"FW,MF",25-208,2001,7,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Tiago Gabriel,POR,DF,21-306,2004,7,6,481,5.3,2,1,3,2,0,0,0,0,0.37,0.19,0.56,0.37,0.56
+ITA-Serie A,2627,Lecce,Willem Geubbels,FRA,FW,25-073,2001,5,4,294,3.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Wladimiro Falcone,ITA,GK,31-199,1995,8,8,720,8.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Lecce,Youssef Maleh,MAR,MF,28-067,1998,8,5,502,5.6,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Adrien Rabiot,FRA,"MF,FW",31-208,1995,7,5,487,5.4,4,3,7,4,0,0,1,0,0.74,0.55,1.29,0.74,1.29
+ITA-Serie A,2627,Milan,Alexis Saelemaekers,BEL,MF,27-123,1999,4,2,185,2.1,0,1,1,0,0,0,0,0,0.0,0.49,0.49,0.0,0.49
+ITA-Serie A,2627,Milan,Alphadjo Cissè,ITA,MF,20-006,2006,6,3,248,2.8,2,0,2,2,0,0,1,0,0.73,0.0,0.73,0.73,0.73
+ITA-Serie A,2627,Milan,Ardon Jashari,SUI,MF,24-090,2002,6,2,200,2.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Christian Comotto,ITA,MF,18-186,2008,1,0,1,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Christian Pulisic,USA,"MF,FW",28-040,1998,5,4,354,3.9,2,1,3,2,0,0,1,0,0.51,0.25,0.76,0.51,0.76
+ITA-Serie A,2627,Milan,Davide Bartesaghi,ITA,MF,20-303,2005,4,2,210,2.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Diego Moreira,BEL,MF,22-083,2004,5,3,307,3.4,3,1,4,3,0,0,0,0,0.88,0.29,1.17,0.88,1.17
+ITA-Serie A,2627,Milan,Fikayo Tomori,ENG,MF,28-313,1997,2,1,79,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Filippo Terracciano,ITA,DF,23-262,2003,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Francesco Camarda,ITA,FW,18-232,2008,3,0,11,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Gonçalo Ramos,POR,FW,25-130,2001,8,8,713,7.9,2,1,3,1,1,2,2,0,0.25,0.13,0.38,0.13,0.25
+ITA-Serie A,2627,Milan,Koni De Winter,BEL,DF,24-138,2002,8,7,701,7.8,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Luka Modrić,CRO,MF,41-049,1985,8,6,518,5.8,0,2,2,0,0,0,1,0,0.0,0.35,0.35,0.0,0.35
+ITA-Serie A,2627,Milan,Mario Gila,ESP,DF,26-060,2000,7,7,601,6.7,1,0,1,1,0,0,1,0,0.15,0.0,0.15,0.15,0.15
+ITA-Serie A,2627,Milan,Matteo Gabbia,ITA,DF,27-007,1999,3,1,38,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Mike Maignan,FRA,GK,31-117,1995,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Omari Hutchinson,ENG,MF,22-363,2003,4,1,130,1.4,1,0,1,1,0,0,0,0,0.69,0.0,0.69,0.69,0.69
+ITA-Serie A,2627,Milan,Pervis Estupiñán,ECU,"MF,DF",28-280,1998,7,5,340,3.8,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Ruben Loftus-Cheek,ENG,MF,30-278,1996,7,3,243,2.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Samuel Chukwueze,NGA,MF,27-159,1999,7,6,522,5.8,0,2,2,0,0,0,0,0,0.0,0.34,0.34,0.0,0.34
+ITA-Serie A,2627,Milan,Sankhoun Diawara,FRA,DF,20-288,2006,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Milan,Strahinja Pavlović,SRB,DF,25-157,2001,8,8,720,8.0,0,1,1,0,0,0,3,0,0.0,0.12,0.12,0.0,0.12
+ITA-Serie A,2627,Milan,Yunus Musah,USA,MF,23-333,2002,8,5,499,5.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Adam Bakoune,ITA,MF,20-264,2006,6,1,190,2.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Andrea Carboni,ITA,DF,25-266,2001,8,8,659,7.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Andrea Colpani,ITA,"MF,FW",27-170,1999,5,3,279,3.1,1,0,1,1,0,0,0,0,0.32,0.0,0.32,0.32,0.32
+ITA-Serie A,2627,Monza,Cyril Ngonge,BEL,MF,26-155,2000,2,1,47,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Dany Mota,POR,"MF,FW",28-179,1998,6,3,289,3.2,0,2,2,0,0,0,0,0,0.0,0.62,0.62,0.0,0.62
+ITA-Serie A,2627,Monza,Demba Thiam,SEN,GK,28-233,1998,3,3,270,3.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Ebenezer Akinsanmiro,NGA,MF,21-337,2004,7,6,525,5.8,0,1,1,0,0,0,0,0,0.0,0.17,0.17,0.0,0.17
+ITA-Serie A,2627,Monza,Eddy Kouadio,ITA,DF,20-151,2006,8,7,638,7.1,1,0,1,1,0,0,2,0,0.14,0.0,0.14,0.14,0.14
+ITA-Serie A,2627,Monza,Exequiel Zeballos,ARG,MF,24-187,2002,2,1,72,0.8,1,0,1,1,0,0,0,0,1.25,0.0,1.25,1.25,1.25
+ITA-Serie A,2627,Monza,Filippo Delli Carri,ITA,DF,27-178,1999,2,0,33,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Gustavo Varela,POR,FW,21-271,2005,7,7,596,6.6,7,1,8,6,1,1,1,0,1.06,0.15,1.21,0.91,1.06
+ITA-Serie A,2627,Monza,Jay Robinson,ENG,MF,19-227,2007,6,5,396,4.4,2,0,2,2,0,0,0,0,0.45,0.0,0.45,0.45,0.45
+ITA-Serie A,2627,Monza,Leonardo Colombo,ITA,MF,21-146,2005,1,0,29,0.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Lorenzo Lucchesi,ITA,DF,23-172,2003,7,7,513,5.7,0,0,0,0,0,0,2,1,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Manga Foe Ondoa,FRA,MF,20-320,2005,6,4,375,4.2,0,1,1,0,0,0,0,0,0.0,0.24,0.24,0.0,0.24
+ITA-Serie A,2627,Monza,Mathis Mout,ITA,MF,19-083,2007,6,2,154,1.7,0,1,1,0,0,0,0,0,0.0,0.58,0.58,0.0,0.58
+ITA-Serie A,2627,Monza,Michael Folorunsho,ITA,MF,28-263,1998,7,4,390,4.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Nicolas Galazzi,ITA,MF,25-314,2000,1,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Noel Törnqvist,SWE,GK,24-269,2002,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Omari Forson,ENG,MF,22-100,2004,5,1,101,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Patrick Cutrone,ITA,MF,28-298,1998,6,2,215,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Ricardo Mangas,POR,"MF,FW",28-223,1998,8,8,619,6.9,1,2,3,1,0,0,0,0,0.15,0.29,0.44,0.15,0.44
+ITA-Serie A,2627,Monza,Saba Goglichidze,GEO,DF,22-125,2004,3,2,235,2.6,1,0,1,1,0,0,0,0,0.38,0.0,0.38,0.38,0.38
+ITA-Serie A,2627,Monza,Samuele Birindelli,ITA,MF,27-101,1999,8,8,712,7.9,0,2,2,0,0,0,2,0,0.0,0.25,0.25,0.0,0.25
+ITA-Serie A,2627,Monza,Semuel Pizzignacco,ITA,GK,25-057,2001,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Monza,Yvan Maye,FRA,DF,20-221,2006,3,0,56,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Alex Meret,ITA,GK,29-220,1997,6,6,540,6.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Alisson Santos,BRA,FW,24-031,2002,4,2,216,2.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Amir Rrahmani,KVX,DF,32-246,1994,7,7,630,7.0,0,1,1,0,0,0,1,0,0.0,0.14,0.14,0.0,0.14
+ITA-Serie A,2627,Napoli,Antonio Vergara,ITA,MF,23-285,2003,4,2,142,1.6,1,1,2,1,0,0,1,0,0.63,0.63,1.27,0.63,1.27
+ITA-Serie A,2627,Napoli,Benoît Badiashile,FRA,DF,25-216,2001,4,3,242,2.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Billy Gilmour,SCO,MF,25-139,2001,5,3,265,2.9,1,0,1,1,0,0,0,0,0.34,0.0,0.34,0.34,0.34
+ITA-Serie A,2627,Napoli,Costantino Favasuli,ITA,MF,22-185,2004,2,0,63,0.7,0,1,1,0,0,0,0,0,0.0,1.43,1.43,0.0,1.43
+ITA-Serie A,2627,Napoli,David Neres,BRA,MF,29-239,1997,4,1,133,1.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Frank Anguissa,CMR,MF,30-346,1995,5,4,326,3.6,1,0,1,1,0,0,0,0,0.28,0.0,0.28,0.28,0.28
+ITA-Serie A,2627,Napoli,Giovane,BRA,MF,22-338,2003,3,1,97,1.1,0,1,1,0,0,0,0,0,0.0,0.93,0.93,0.0,0.93
+ITA-Serie A,2627,Napoli,Giovanni Di Lorenzo,ITA,"DF,MF",33-085,1993,8,8,709,7.9,0,1,1,0,0,0,1,0,0.0,0.13,0.13,0.0,0.13
+ITA-Serie A,2627,Napoli,Kevin De Bruyne,BEL,MF,35-122,1991,8,4,470,5.2,3,1,4,2,1,2,0,0,0.57,0.19,0.77,0.38,0.57
+ITA-Serie A,2627,Napoli,Leonardo Spinazzola,ITA,"DF,MF",33-217,1993,7,5,477,5.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Lorenzo Lucca,ITA,FW,26-048,2000,7,1,175,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Mathías Olivera,URU,DF,28-362,1997,6,3,257,2.9,0,1,1,0,0,0,0,0,0.0,0.35,0.35,0.0,0.35
+ITA-Serie A,2627,Napoli,Matteo Politano,ITA,"FW,MF",33-086,1993,8,6,437,4.9,1,2,3,1,0,0,1,0,0.21,0.41,0.62,0.21,0.62
+ITA-Serie A,2627,Napoli,Noa Lang,NED,"MF,FW",27-133,1999,6,4,331,3.7,1,0,1,1,0,0,0,0,0.27,0.0,0.27,0.27,0.27
+ITA-Serie A,2627,Napoli,Rafa Marín,ESP,DF,24-162,2002,7,7,620,6.9,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Rasmus Højlund,DEN,FW,23-266,2003,8,7,545,6.1,2,0,2,2,0,0,0,0,0.33,0.0,0.33,0.33,0.33
+ITA-Serie A,2627,Napoli,Sam Beukema,NED,DF,27-345,1998,2,1,101,1.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Napoli,Scott McTominay,SCO,MF,29-324,1996,5,4,355,3.9,2,0,2,2,0,0,0,0,0.51,0.0,0.51,0.51,0.51
+ITA-Serie A,2627,Napoli,Stanislav Lobotka,SVK,MF,31-337,1994,8,7,609,6.8,1,0,1,1,0,0,0,0,0.15,0.0,0.15,0.15,0.15
+ITA-Serie A,2627,Napoli,Vanja Milinković-Savić,SRB,GK,29-250,1997,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Abdou-Salam Konaté,SEN,MF,19-337,2006,2,1,94,1.0,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Abdoulaye Ndiaye,SEN,DF,24-201,2002,1,1,90,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Adrian Bernabe,ESP,MF,25-155,2001,6,3,324,3.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Ben Cremaschi,USA,MF,21-240,2005,2,0,36,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Christian Ordoñez,ARG,MF,22-096,2004,6,4,278,3.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Diego Carlos,BRA,DF,33-227,1993,6,6,421,4.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Dominik Drobnič,SVN,DF,19-206,2007,4,3,315,3.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Edoardo Corvi,ITA,GK,25-219,2001,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,El Bilal Touré,MLI,"MF,FW",25-025,2001,8,8,611,6.8,0,1,1,0,0,0,0,0,0.0,0.15,0.15,0.0,0.15
+ITA-Serie A,2627,Parma,Emanuele Valeri,ITA,"MF,DF",27-325,1998,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Enrico Delprato,ITA,"DF,MF",26-352,1999,8,8,720,8.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Franco Carboni,ITA,DF,23-207,2003,1,1,77,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Giovanni Fabbian,ITA,MF,23-287,2003,6,3,199,2.2,0,1,1,0,0,0,0,0,0.0,0.45,0.45,0.0,0.45
+ITA-Serie A,2627,Parma,José Romero,ARG,FW,23-217,2003,7,4,363,4.0,2,0,2,2,0,0,0,0,0.5,0.0,0.5,0.5,0.5
+ITA-Serie A,2627,Parma,Lautaro Valenti,ARG,DF,27-287,1999,1,0,45,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Mandela Keita,BEL,"MF,FW",24-171,2002,8,8,704,7.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Mariano Troilo,ARG,DF,23-128,2003,8,8,714,7.9,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Matija Frigan,CRO,FW,23-259,2003,5,0,128,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Nesta Elphege,FRA,FW,25-292,2001,5,2,175,1.9,0,1,1,0,0,0,0,0,0.0,0.51,0.51,0.0,0.51
+ITA-Serie A,2627,Parma,Ousmane Diallo,ESP,FW,19-138,2007,2,0,37,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Pontus Almqvist,SWE,"FW,MF",27-110,1999,5,0,91,1.0,1,1,2,1,0,0,1,0,0.99,0.99,1.98,0.99,1.98
+ITA-Serie A,2627,Parma,Rachid Kouda,BFA,MF,24-095,2002,1,0,16,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Sascha Britschgi,SUI,MF,20-062,2006,6,4,330,3.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Parma,Simone Lontani,ITA,"MF,FW",18-282,2008,8,4,418,4.6,2,0,2,2,0,0,0,0,0.43,0.0,0.43,0.43,0.43
+ITA-Serie A,2627,Parma,Vincent Sierro,SUI,MF,31-020,1995,5,4,294,3.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Alessandro Di Nunzio,ITA,MF,19-190,2007,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Bryan Cristante,ITA,MF,31-239,1995,7,7,603,6.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Daniele Ghilardi,ITA,DF,23-295,2003,6,1,163,1.8,0,1,1,0,0,0,1,0,0.0,0.55,0.55,0.0,0.55
+ITA-Serie A,2627,Roma,Devyne Rensch,NED,MF,23-283,2003,6,2,202,2.2,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Donyell Malen,NED,FW,27-292,1999,8,7,511,5.7,7,1,8,7,0,0,1,1,1.23,0.18,1.41,1.23,1.41
+ITA-Serie A,2627,Roma,Emanuele Lulli,ITA,MF,19-072,2007,7,6,474,5.3,2,1,3,2,0,0,0,0,0.38,0.19,0.57,0.38,0.57
+ITA-Serie A,2627,Roma,Gianluca Mancini,ITA,DF,30-194,1996,8,8,644,7.2,0,2,2,0,0,0,0,0,0.0,0.28,0.28,0.0,0.28
+ITA-Serie A,2627,Roma,Konstantinos Koulierakis,GRE,DF,22-334,2003,4,2,185,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Leonardo Balerdi,ARG,DF,27-275,1999,6,3,333,3.7,2,0,2,2,0,0,1,0,0.54,0.0,0.54,0.54,0.54
+ITA-Serie A,2627,Roma,Lorenzo Pellegrini,ITA,MF,30-131,1996,2,1,73,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Manu Koné,FRA,MF,25-164,2001,6,5,408,4.5,2,0,2,2,0,0,2,0,0.44,0.0,0.44,0.44,0.44
+ITA-Serie A,2627,Roma,Mario Hermoso,ESP,DF,31-132,1995,8,7,561,6.2,1,0,1,1,0,0,2,0,0.16,0.0,0.16,0.16,0.16
+ITA-Serie A,2627,Roma,Marten de Roon,NED,MF,35-213,1991,6,4,359,4.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Matìas Soulé,ARG,"MF,FW",23-196,2003,9,6,594,6.6,3,1,4,3,0,0,2,0,0.45,0.15,0.61,0.45,0.61
+ITA-Serie A,2627,Roma,Mile Svilar,SRB,GK,27-062,1999,5,5,450,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Nahuel Molina,ARG,MF,28-205,1998,7,4,376,4.2,0,2,2,0,0,0,0,0,0.0,0.48,0.48,0.0,0.48
+ITA-Serie A,2627,Roma,Neil El Aynaoui,MAR,MF,25-118,2001,1,0,12,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Niccolò Pisilli,ITA,MF,22-035,2004,8,4,393,4.4,3,0,3,3,0,0,2,0,0.69,0.0,0.69,0.69,0.69
+ITA-Serie A,2627,Roma,Obite N'Dicka,CIV,DF,27-069,1999,7,6,547,6.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Paulo Dybala,ARG,"MF,FW",32-347,1993,6,6,492,5.5,0,4,4,0,0,0,0,0,0.0,0.73,0.73,0.0,0.73
+ITA-Serie A,2627,Roma,Pierluigi Gollini,ITA,GK,31-224,1995,4,4,360,4.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Roma,Rodrigo Mora,POR,MF,19-176,2007,7,3,275,3.1,2,0,2,2,0,0,0,0,0.65,0.0,0.65,0.65,0.65
+ITA-Serie A,2627,Roma,Santiago Castro,ARG,FW,22-040,2004,7,2,287,3.2,1,1,2,1,0,0,0,0,0.31,0.31,0.63,0.31,0.63
+ITA-Serie A,2627,Roma,Wesley,BRA,MF,23-052,2003,8,6,567,6.3,0,2,2,0,0,0,0,0,0.0,0.32,0.32,0.0,0.32
+ITA-Serie A,2627,Sassuolo,Andrea Ghion,ITA,MF,26-247,2000,2,0,32,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Arijanet Muric,KVX,GK,27-355,1998,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Armand Lauriente,FRA,"FW,MF",27-328,1998,9,8,720,8.0,0,1,1,0,0,0,1,0,0.0,0.12,0.12,0.0,0.12
+ITA-Serie A,2627,Sassuolo,Benjamín Domínguez,ARG,MF,23-039,2003,6,1,173,1.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Cas Odenthal,NED,DF,26-032,2000,4,3,335,3.7,2,0,2,2,0,0,0,0,0.54,0.0,0.54,0.54,0.54
+ITA-Serie A,2627,Sassuolo,Cristian Volpato,AUS,FW,22-347,2003,5,3,208,2.3,1,0,1,1,0,0,1,0,0.43,0.0,0.43,0.43,0.43
+ITA-Serie A,2627,Sassuolo,Darryl Bakola,FRA,MF,18-332,2007,8,7,612,6.8,0,2,2,0,0,0,0,0,0.0,0.29,0.29,0.0,0.29
+ITA-Serie A,2627,Sassuolo,Domenico Berardi,ITA,"MF,FW",32-088,1994,8,6,528,5.9,2,0,2,2,0,0,3,0,0.34,0.0,0.34,0.34,0.34
+ITA-Serie A,2627,Sassuolo,Duje Ćaleta-Car,CRO,DF,30-041,1996,6,5,451,5.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Fali Candé,GNB,DF,28-277,1998,2,1,118,1.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Fedde Leysen,BEL,DF,23-111,2003,6,5,402,4.5,0,1,1,0,0,0,1,0,0.0,0.22,0.22,0.0,0.22
+ITA-Serie A,2627,Sassuolo,Gabriel Kulla,ALB,FW,18-250,2008,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Ibrahim Sulemana,GHA,MF,23-159,2003,2,0,76,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Ignace Van Der Brempt,BEL,DF,24-210,2002,3,3,258,2.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Jay Idzes,IDN,DF,26-148,2000,3,3,260,2.9,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Josh Doig,SCO,DF,24-163,2002,9,8,685,7.6,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ITA-Serie A,2627,Sassuolo,Kieron Bowie,SCO,FW,24-037,2002,9,4,477,5.3,1,0,1,1,0,0,1,0,0.19,0.0,0.19,0.19,0.19
+ITA-Serie A,2627,Sassuolo,Kristian Thorstvedt,NOR,MF,27-229,1999,8,4,340,3.8,1,0,1,1,0,0,1,1,0.26,0.0,0.26,0.26,0.26
+ITA-Serie A,2627,Sassuolo,Laurs Skjellerup,DEN,FW,24-077,2002,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Luca Lipani,ITA,MF,21-163,2005,8,3,295,3.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Nemanja Matić,SRB,MF,38-088,1988,8,8,600,6.7,0,1,1,0,0,0,1,0,0.0,0.15,0.15,0.0,0.15
+ITA-Serie A,2627,Sassuolo,Rafel Obrador,ESP,DF,22-246,2004,4,1,125,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Riccardo Ciervo,ITA,MF,24-210,2002,1,0,3,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Sebastian Walukiewicz,POL,DF,26-206,2000,1,0,9,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Sebastiano Esposito,ITA,FW,24-118,2002,6,5,332,3.7,2,0,2,2,0,0,0,0,0.54,0.0,0.54,0.54,0.54
+ITA-Serie A,2627,Sassuolo,Simone Cinquegrano,ITA,DF,22-125,2004,7,6,552,6.1,0,1,1,0,0,0,0,0,0.0,0.16,0.16,0.0,0.16
+ITA-Serie A,2627,Sassuolo,Stefano Turati,ITA,GK,25-053,2001,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Tommaso Macchioni,ITA,DF,20-207,2006,1,1,73,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Sassuolo,Vasilije Adžić,MNE,MF,20-169,2006,7,5,364,4.0,3,1,4,3,0,0,0,0,0.74,0.25,0.99,0.74,0.99
+ITA-Serie A,2627,Torino,Alessio Cacciamani,ITA,"MF,DF",19-121,2007,9,8,664,7.4,0,1,1,0,0,0,0,0,0.0,0.14,0.14,0.0,0.14
+ITA-Serie A,2627,Torino,Alieu Njie,SWE,FW,21-167,2005,1,0,21,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Ardian Ismajli,ALB,DF,30-028,1996,8,5,570,6.3,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Cesare Casadei,ITA,MF,23-291,2003,2,1,87,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Ché Adams,SCO,"FW,MF",30-107,1996,7,6,498,5.5,4,0,4,4,0,0,0,0,0.72,0.0,0.72,0.72,0.72
+ITA-Serie A,2627,Torino,Daniel Bragança,POR,MF,27-154,1999,7,4,384,4.3,1,0,1,1,0,0,1,0,0.23,0.0,0.23,0.23,0.23
+ITA-Serie A,2627,Torino,Diego Mascardi,ITA,GK,20-032,2006,2,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Duván Zapata,COL,FW,35-210,1991,3,0,24,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Emirhan İlkhan,TUR,MF,22-149,2004,5,0,104,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Eray Cömert,SUI,DF,28-266,1998,4,4,313,3.5,0,1,1,0,0,0,0,0,0.0,0.29,0.29,0.0,0.29
+ITA-Serie A,2627,Torino,Gaetano Oristanio,ITA,MF,24-030,2002,3,1,78,0.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Giovanni Simeone,ARG,FW,31-115,1995,9,8,657,7.3,2,1,3,2,0,0,0,0,0.27,0.14,0.41,0.27,0.41
+ITA-Serie A,2627,Torino,Gvidas Gineitis,LTU,MF,22-196,2004,8,4,388,4.3,0,2,2,0,0,0,1,0,0.0,0.46,0.46,0.0,0.46
+ITA-Serie A,2627,Torino,Kian Fitz-Jim,NED,MF,23-115,2003,7,7,506,5.6,1,1,2,1,0,0,0,0,0.18,0.18,0.36,0.18,0.36
+ITA-Serie A,2627,Torino,Lucas Perri,BRA,GK,28-322,1997,7,7,630,7.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Marcus Pedersen,NOR,MF,26-104,2000,1,1,69,0.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Nathan Patterson,SCO,DF,25-012,2001,4,0,136,1.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Niccolò Fortini,ITA,"MF,DF",20-257,2006,5,4,265,2.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Nikola Vlašić,CRO,"MF,FW",29-024,1997,9,8,716,8.0,1,0,1,1,0,0,0,0,0.13,0.0,0.13,0.13,0.13
+ITA-Serie A,2627,Torino,Pietro Comuzzo,ITA,DF,21-250,2005,8,8,693,7.7,1,0,1,1,0,0,1,0,0.13,0.0,0.13,0.13,0.13
+ITA-Serie A,2627,Torino,Rafik Belghali,ALG,"MF,DF",24-143,2002,7,5,436,4.8,1,3,4,1,0,0,2,0,0.21,0.62,0.83,0.21,0.83
+ITA-Serie A,2627,Torino,Ricardo Rodríguez,SUI,DF,34-064,1992,2,1,63,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Rolando Mandragora,ITA,MF,29-121,1997,6,6,464,5.2,1,1,2,1,0,0,0,0,0.19,0.19,0.39,0.19,0.39
+ITA-Serie A,2627,Torino,Sandro Kulenović,CRO,FW,26-328,1999,7,0,152,1.7,2,0,2,2,0,0,0,0,1.18,0.0,1.18,1.18,1.18
+ITA-Serie A,2627,Torino,Saúl Coco,EQG,DF,27-261,1999,9,9,759,8.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Torino,Zakaria Aboukhlal,MAR,"FW,MF",26-252,2000,4,0,53,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Alessandro Zanoli,ITA,MF,26-025,2000,2,0,47,0.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Christian Kabasele,BEL,DF,35-246,1991,4,3,303,3.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,David Alaba,AUT,DF,34-126,1992,2,1,64,0.7,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Enzo Ebosse,CMR,DF,27-231,1999,7,6,535,5.9,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Giorgi Chakvetadze,GEO,MF,27-060,1999,5,3,306,3.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Giulio Vincinati,ITA,FW,19-060,2007,1,0,8,0.1,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Hassane Kamara,CIV,MF,32-237,1994,8,8,618,6.9,2,1,3,2,0,0,1,0,0.29,0.15,0.44,0.29,0.44
+ITA-Serie A,2627,Udinese,Idrissa Guèye,SEN,FW,20-042,2006,4,1,178,2.0,1,0,1,1,0,0,0,0,0.51,0.0,0.51,0.51,0.51
+ITA-Serie A,2627,Udinese,Jakub Piotrowski,POL,MF,29-024,1997,5,4,233,2.6,1,0,1,1,0,0,2,0,0.39,0.0,0.39,0.39,0.39
+ITA-Serie A,2627,Udinese,James Abankwah,IRL,DF,22-285,2004,7,7,584,6.5,1,0,1,1,0,0,1,0,0.15,0.0,0.15,0.15,0.15
+ITA-Serie A,2627,Udinese,Jesper Karlström,SWE,MF,31-129,1995,8,8,712,7.9,1,0,1,1,0,0,3,0,0.13,0.0,0.13,0.13,0.13
+ITA-Serie A,2627,Udinese,Juan Arizala,COL,MF,21-018,2005,4,0,88,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Jurgen Ekkelenkamp,NED,MF,26-206,2000,8,8,703,7.8,3,1,4,3,0,0,0,0,0.38,0.13,0.51,0.38,0.51
+ITA-Serie A,2627,Udinese,Keinan Davis,ENG,FW,28-257,1998,7,6,448,5.0,0,2,2,0,0,0,1,0,0.0,0.4,0.4,0.0,0.4
+ITA-Serie A,2627,Udinese,Lazar Jovanović,SRB,FW,19-332,2006,1,0,19,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Lennon Miller,SCO,MF,20-064,2006,6,2,300,3.3,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Maduka Okoye,NGA,GK,27-061,1999,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Matteo Palma,GER,DF,18-229,2008,3,2,180,2.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Mërgim Vojvoda,KVX,MF,31-269,1995,8,8,650,7.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Nicolò Bertola,ITA,DF,23-219,2003,4,0,86,1.0,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Nicolò Zaniolo,ITA,MF,27-118,1999,3,2,162,1.8,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Oier Zarraga,ESP,MF,27-297,1999,5,2,163,1.8,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Oumar Solet,FRA,DF,26-263,2000,5,5,397,4.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Sandi Lovrić,SVN,MF,28-214,1998,2,0,19,0.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Udinese,Unai Gómez,ESP,"MF,FW",23-156,2003,7,4,302,3.4,0,1,1,0,0,0,1,0,0.0,0.3,0.3,0.0,0.3
+ITA-Serie A,2627,Udinese,Vakoun Bayo,CIV,FW,29-291,1997,4,0,95,1.1,0,1,1,0,0,0,1,0,0.0,0.95,0.95,0.0,0.95
+ITA-Serie A,2627,Venezia,Akor Adams,NGA,FW,26-272,2000,8,8,673,7.5,2,0,2,2,0,0,0,0,0.27,0.0,0.27,0.27,0.27
+ITA-Serie A,2627,Venezia,Albion Rrahmani,KVX,FW,26-058,2000,7,1,124,1.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Antoine Hainaut,FRA,MF,24-252,2002,8,8,702,7.8,2,1,3,2,0,0,0,0,0.26,0.13,0.38,0.26,0.38
+ITA-Serie A,2627,Venezia,Armel Bella Kotchap,GER,DF,24-321,2001,3,3,195,2.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Bartol Franjić,CRO,DF,26-287,2000,2,2,134,1.5,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Filip Stankovic,SRB,GK,24-245,2002,8,8,720,8.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Gianluca Busio,USA,MF,24-153,2002,4,4,313,3.5,0,2,2,0,0,0,1,0,0.0,0.58,0.58,0.0,0.58
+ITA-Serie A,2627,Venezia,John Yeboah,ECU,FW,26-127,2000,8,7,621,6.9,1,0,1,1,0,1,0,0,0.14,0.0,0.14,0.14,0.14
+ITA-Serie A,2627,Venezia,Joël Schingtienne,BEL,DF,24-077,2002,7,5,477,5.3,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Juan Jesus,BRA,DF,35-140,1991,5,4,382,4.2,0,0,0,0,0,0,2,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Kike Pérez,ESP,MF,29-256,1997,8,8,688,7.6,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Lamine Fanne,ESP,MF,22-271,2004,2,0,27,0.3,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Lion Lauberbach,GER,"FW,MF",28-255,1998,5,0,55,0.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Matias Moreno,ARG,DF,23-034,2003,6,5,417,4.6,0,0,0,0,0,0,3,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Matteo Dagasso,ITA,MF,22-210,2004,2,0,41,0.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Pasquale Mazzocchi,ITA,"DF,MF",31-093,1995,2,0,40,0.4,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Redouane Halhal,MAR,DF,23-237,2003,5,4,406,4.5,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Richie Sagrado,BEL,MF,22-271,2004,5,1,247,2.7,1,1,2,1,0,0,0,0,0.36,0.36,0.73,0.36,0.73
+ITA-Serie A,2627,Venezia,Ridgeciano Haps,SUR,"MF,DF",33-138,1993,6,5,396,4.4,0,1,1,0,0,0,1,0,0.0,0.23,0.23,0.0,0.23
+ITA-Serie A,2627,Venezia,Simon Sohm,SUI,MF,25-200,2001,7,6,493,5.5,0,1,1,0,0,0,2,0,0.0,0.18,0.18,0.0,0.18
+ITA-Serie A,2627,Venezia,Thierry Correia,POR,MF,27-233,1999,5,3,192,2.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Toma Bašić,CRO,MF,29-337,1996,5,5,370,4.1,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Toni Fernández,ESP,MF,18-105,2008,3,0,60,0.7,0,0,0,0,0,0,1,0,0.0,0.0,0.0,0.0,0.0
+ITA-Serie A,2627,Venezia,Þórir Jóhann Helgason,ISL,MF,26-030,2000,4,1,147,1.6,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0
