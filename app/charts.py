@@ -314,43 +314,6 @@ def trophies_by_decade(h: pd.DataFrame) -> go.Figure:
                                                 font=dict(size=11), bgcolor="rgba(0,0,0,0)"))
 
 
-def ucl_vs_league(d: pd.DataFrame, color: str) -> go.Figure:
-    """Per-match stats in the Champions League relative to the same club's league season (% difference)."""
-    d = d.assign(pct=(d.ucl - d.league) / d.league.abs() * 100).iloc[::-1]
-    fig = go.Figure(go.Bar(
-        y=d.label, x=d.pct, orientation="h", marker_color=[color if v >= 0 else "#9CA3AF" for v in d.pct],
-        customdata=np.stack([d.ucl, d.league], axis=1),
-        hovertemplate="%{y}<br>UCL %{customdata[0]:.2f} · league %{customdata[1]:.2f} (%{x:+.0f}%)<extra></extra>"))
-    fig.add_vline(x=0, line=dict(color=MUTED))
-    fig.update_xaxes(title="← lower in the UCL · higher in the UCL →  (% vs league season)", zeroline=False)
-    return _layout(fig, height=380, showlegend=False)
-
-
-def europe_vs_dominance(s: pd.DataFrame) -> go.Figure:
-    """Each club's league attacking dominance (PC1) against its Champions League points per match."""
-    fig = go.Figure()
-    for cluster in CLUSTER_ORDER:
-        d = s[s.cluster == cluster]
-        if d.empty:
-            continue
-        fig.add_trace(go.Scatter(
-            x=d.PC1, y=d.points_per_match, mode="markers+text", text=d.team, textposition="top center",
-            textfont=dict(size=10, color="#5B6472"), name=cluster,
-            marker=dict(size=13, color=CLUSTER_COLORS[cluster], line=dict(width=1, color="#FFFFFF")),
-            customdata=np.stack([d.stage_name, d.played, d.possession], axis=1),
-            hovertemplate="<b>%{text}</b><br>League PC1 %{x:.2f} · UCL %{y:.2f} pts/match<br>"
-                          "Reached: %{customdata[0]} · %{customdata[1]} matches · possession %{customdata[2]:.1f}%"
-                          "<extra></extra>"))
-    if len(s) > 2:
-        b, a = np.polyfit(s.PC1, s.points_per_match, 1)
-        xs = np.linspace(s.PC1.min(), s.PC1.max(), 20)
-        fig.add_trace(go.Scatter(x=xs, y=a + b * xs, mode="lines", line=dict(color=MUTED, dash="dot"),
-                                 name="Linear trend", hoverinfo="skip"))
-    fig.update_xaxes(title="League attacking dominance (PC1)  →")
-    fig.update_yaxes(title="Champions League points per match", range=[-0.1, 3.1])
-    return _layout(fig, height=440)
-
-
 # ESPN position codes -> (depth from own goal, lateral position from left -1 to right +1)
 POSITION_XY = {"G": (0, 0), "SW": (0.8, 0), "CD": (1, 0), "CD-L": (1, -0.35), "CD-R": (1, 0.35),
                "LB": (1, -1), "RB": (1, 1), "DM": (2, 0), "CM": (3, 0), "CM-L": (3, -0.35), "CM-R": (3, 0.35),

@@ -7,7 +7,7 @@ import data
 import live
 import ui
 
-LEAGUE_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A", "Champions League": "UCL"}
+LEAGUE_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A"}
 
 
 def _team(name: str, logo: str, side: str) -> str:
@@ -80,8 +80,7 @@ def render() -> None:
     if updated is not None:
         meta += f'<br>Form data: {updated.tz_convert(live.LOCAL_TZ).strftime("%d %b, %H:%M")}'
     ui.page_header("Matchday · 2026/27", "Matchday centre",
-                   "Upcoming fixtures, live scores and recent results across the three leagues and the Champions League, "
-                   "with a model estimate of "
+                   "Upcoming fixtures, live scores and recent results across the three leagues, with a model estimate of "
                    "which side is likely to show the more attacking style. Latest headlines on the right.", meta=meta)
 
     leagues = st.pills("League", ["All leagues", *live.LEAGUE_CODES], default="All leagues",
@@ -118,8 +117,7 @@ def board(leagues: str) -> None:
                     ui.callout("<b>Attacking edge</b> is the model's probability that each side shows the more attacking "
                                "style (xG, shots, deep completions, box shots and possession) in that match, based on its "
                                "2026/27 season-to-date and last-five-match profile plus home advantage. It does <b>not</b> "
-                               "predict the winner or the score, and is not intended for betting. For Champions League ties between "
-                               "two of our clubs it uses each side's domestic form, so treat it as a rougher guide.")
+                               "predict the winner or the score, and is not intended for betting.")
             with t2:
                 if results.empty:
                     ui.note("No results in the last 7 days.")

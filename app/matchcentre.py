@@ -14,8 +14,6 @@ import streamlit as st
 import data
 import live
 
-sys.path.insert(0, str(data.ROOT))  # src.model.commentary_xg
-import joblib  # noqa: E402
 
 STAT_ROWS = [("possessionPct", "Possession %"), ("totalShots", "Shots"), ("shotsOnTarget", "Shots on target"),
              ("totalPasses", "Passes"), ("passPct", "Pass accuracy"), ("totalCrosses", "Crosses"),
@@ -160,18 +158,53 @@ def youtube_key() -> str | None:
     return key or os.environ.get("YOUTUBE_API_KEY")
 
 
-@st.cache_data(ttl=6 * 3600, show_spinner=False)
+HIGHLIGHTS_CACHE = data.ROOT / "data" / "cache" / "highlights.json"
+RETRY_AFTER = pd.Timedelta(hours=6)    # a match without a video yet is searched again at most every 6 hours
+STOP_AFTER = pd.Timedelta(days=7)      # and not at all once it is a week old
+
+
+def _cache_read() -> dict:
+    import json
+    try:
+        return json.loads(HIGHLIGHTS_CACHE.read_text(encoding="utf-8"))
+    except (FileNotFoundError, ValueError):
+        return {}
+
+
+def _cache_write(cache: dict) -> None:
+    import json
+    HIGHLIGHTS_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    HIGHLIGHTS_CACHE.write_text(json.dumps(cache, indent=1), encoding="utf-8")
+
+
 def highlights(home: str, away: str, kickoff: str) -> dict | None:
-    """Best embeddable YouTube highlights video published after kick-off whose title names both clubs."""
+    """Best embeddable YouTube highlights video for a finished match (title names both clubs and "highlights",
+    published after kick-off; official broadcaster channels first).
+
+    Results are kept on disk (data/cache/highlights.json): a found video is never searched again, and a match
+    without one is retried at most every six hours for a week. Each search costs 100 of the free API's
+    10,000 daily quota units, so this keeps the app far inside the limit. Returns {"quota": True} when YouTube
+    reports the daily quota as used up."""
     key = youtube_key()
     if not key:
+        return None
+    ck = f"{home}|{away}|{kickoff[:10]}"
+    cache = _cache_read()
+    hit = cache.get(ck)
+    now = pd.Timestamp.now(tz="UTC")
+    if hit and hit.get("video"):
+        return hit["video"]
+    if hit and (now - pd.Timestamp(hit["checked"]) < RETRY_AFTER or now - pd.Timestamp(kickoff) > STOP_AFTER):
         return None
     try:
         resp = requests.get("https://www.googleapis.com/youtube/v3/search", timeout=15, params={
             "key": key, "part": "snippet", "type": "video", "videoEmbeddable": "true", "maxResults": 10,
             "q": f"{home} vs {away} highlights", "publishedAfter": kickoff, "order": "relevance"})
-        resp.raise_for_status()
     except requests.RequestException:
+        return None
+    if resp.status_code == 403 and "quota" in resp.text.lower():
+        return {"quota": True}
+    if not resp.ok:
         return None
     import html as _html
     hits = []
@@ -182,8 +215,10 @@ def highlights(home: str, away: str, kickoff: str) -> dict | None:
             official = any(c in fold(channel) for c in OFFICIAL_CHANNELS)
             hits.append((not official, len(hits), {"id": item["id"]["videoId"], "title": raw, "channel": channel,
                                                     "official": official}))
-    return min(hits, key=lambda h: h[:2])[2] if hits else None
-
+    video = min(hits, key=lambda h: h[:2])[2] if hits else None
+    cache[ck] = {"video": video, "checked": now.isoformat()}
+    _cache_write(cache)
+    return video
 
 ALIASES = {"Manchester United": ["man utd", "man united"], "Manchester City": ["man city"],
            "Paris Saint-Germain": ["psg"], "Bayern Munich": ["bayern"], "Tottenham": ["spurs"],
@@ -267,7 +302,7 @@ def squad_absentees(team: str, on_sheet: set, min_apps: int = 3) -> list[str]:
 
 @st.cache_data(ttl=1800, show_spinner=False)
 def previous_match_news(team: str, before: str) -> dict:
-    """From the club's last recorded match before `before`: who went off injured and who was sent off."""
+    """From the club's last recorded match before `before`: who was sent off (and so may be suspended)."""
     if not data.players_ready():
         return {}
     lu = data.lineups(team)
@@ -275,37 +310,14 @@ def previous_match_news(team: str, before: str) -> dict:
     if lu.empty:
         return {}
     last = lu.sort_values("date").iloc[-1]
-    code = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1",
-            "Champions League": "uefa.champions"}.get(last.competition_name, "eng.1")
+    code = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1"}.get(last.competition_name, "eng.1")
     s = summary(code, str(last.event_id))
     side = last.home_away
     home_espn = next((r["team"]["displayName"] for r in s.get("rosters", []) if r.get("homeAway") == "home"), "")
     ev = key_events(s, home_espn) if s else pd.DataFrame()
-    injured, sent_off = [], []
+    sent_off = []
     if len(ev):
         mine = ev[ev.side == side]
-        injured = mine[(mine.kind == "sub") & mine.injury].other.tolist()
         sent_off = mine[mine.kind.isin(["red", "second_yellow"])].player.tolist()
-    return {"opponent": last.opponent, "date": last.date, "competition": last.competition_name,
-            "injured": injured, "sent_off": sent_off}
+    return {"opponent": last.opponent, "date": last.date, "competition": last.competition_name, "sent_off": sent_off}
 
-
-@st.cache_resource
-def commentary_model() -> dict | None:
-    path = data.MODELS / "commentary_xg.joblib"
-    return joblib.load(path) if path.exists() else None
-
-
-def commentary_shots(s: dict, h: dict) -> pd.DataFrame:
-    """Shots parsed from ESPN's commentary with our commentary-model xG, in the shape charts.xg_race expects.
-    Works for any competition and while a match is live (Understat covers only the three leagues, weekly)."""
-    from src.model.commentary_xg import predict, shots_from_summary, side_of
-    model = commentary_model()
-    shots = shots_from_summary(s)
-    if model is None or shots.empty:
-        return pd.DataFrame()
-    shots["xg"] = predict(model, shots)
-    side = side_of(shots, h["home"]["espn"], h["away"]["espn"])
-    shots["team"] = side.map({"home": h["home"]["team"], "away": h["away"]["team"]})
-    shots["result"] = shots.goal.map({True: "Goal", False: ""})
-    return shots.dropna(subset=["team", "minute"])

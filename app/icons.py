@@ -17,11 +17,6 @@ _SHAPES = {
     "sub_in": '<path d="M8 2 13.5 8.5H10V14H6V8.5H2.5Z" fill="#16A34A"/>',
     "sub_out": '<path d="M8 14 2.5 7.5H6V2h4v5.5h3.5Z" fill="#DC2626"/>',
     "penalty_miss": _BALL + '<path d="M3 3l10 10M13 3 3 13" stroke="#DC2626" stroke-width="1.8"/>',
-    "injury": ('<rect x="1" y="1" width="14" height="14" rx="3" fill="#fff" stroke="#DC2626" stroke-width="1.4"/>'
-               '<path d="M6.5 4h3v2.5H12v3H9.5V12h-3V9.5H4v-3h2.5z" fill="#DC2626"/>'),
-    "doubt": ('<circle cx="8" cy="8" r="7" fill="#F59E0B"/><text x="8" y="11.6" font-size="10" font-family="Arial" '
-              'font-weight="700" fill="#fff" text-anchor="middle">?</text>'),
-    "unavailable": '<circle cx="8" cy="8" r="7" fill="#6B7280"/><path d="M4.5 8h7" stroke="#fff" stroke-width="2"/>',
     "var": '<rect x="1" y="3" width="14" height="10" rx="2" fill="#111827"/><text x="8" y="10.6" font-size="6.5" '
            'font-family="Arial" font-weight="700" fill="#fff" text-anchor="middle">VAR</text>',
 }

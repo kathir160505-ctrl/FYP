@@ -6,7 +6,6 @@ import streamlit as st
 import cabinet
 import charts
 import data
-import injuries
 import live
 import pitch
 import ui
@@ -88,7 +87,7 @@ def render() -> None:
     tabs = st.tabs([":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
                     ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
                     ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27",
-                    ":material/star: Champions League", ":material/groups: Squad & line-ups",
+                    ":material/groups: Squad & line-ups",
                     ":material/emoji_events: Honours & managers"])
 
     with tabs[0]:
@@ -217,10 +216,8 @@ def render() -> None:
     with tabs[5]:
         season_by_season(team, row.color)
     with tabs[6]:
-        champions_league(team, row.color)
-    with tabs[7]:
         squad_and_lineups(team, row.color)
-    with tabs[8]:
+    with tabs[7]:
         legacy(team, row.color)
     ui.footer()
 
@@ -238,8 +235,7 @@ def squad_and_lineups(team: str, color: str) -> None:
         ui.note("Squad and line-up data is still being prepared (run src.collect.players, then "
                 "src.process.build_players).")
         return
-    xi = data.probable_lineup(team, injuries.unavailable_ids(team)) if team in set(data.probable_xi().team) \
-        else pd.DataFrame()
+    xi = data.probable_lineup(team) if team in set(data.probable_xi().team) else pd.DataFrame()
     lu = data.lineups(team)
     lu = lu[lu.season == lu.season.max()] if len(lu) else lu
     c1, c2 = st.columns(2, gap="medium")
@@ -284,10 +280,6 @@ def squad_and_lineups(team: str, color: str) -> None:
                 st.markdown(pitch.bench(sheet, team, start.formation.iloc[0], None, color, links),
                             unsafe_allow_html=True)
 
-    inj = injuries.for_club(team)
-    if len(inj):
-        with ui.panel("Injuries and suspensions", f"Current list from {', '.join(sorted(set(inj.source)))}"):
-            st.markdown(pitch.injury_list(inj, color, data.player_links(), data.avatar), unsafe_allow_html=True)
     with ui.panel("Squad", "All players used in the league this season · click a photo to enlarge it"):
         ps = data.players()
         ps = ps[(ps.team == team) & (ps.season == ps[ps.team == team].season.max())]
@@ -305,57 +297,6 @@ def squad_and_lineups(team: str, color: str) -> None:
                 "xG": st.column_config.NumberColumn(format="%.1f"),
                 "xA": st.column_config.NumberColumn(format="%.1f")})
         ui.note("Player pages: open <b>Players</b> in the top menu. Photos from Wikimedia Commons where available.")
-
-
-def champions_league(team: str, color: str) -> None:
-    s = data.ucl_seasons()
-    s = s[s.team == team].sort_values("season", ascending=False)
-    if s.empty:
-        ui.note(f"{html.escape(team)} has not played in the Champions League league phase since 2025/26.")
-        return
-    seasons = s.season.tolist()
-    pick = st.segmented_control("Season", seasons, default=seasons[0], format_func=data.season_label,
-                                key="club_ucl_season") or seasons[0]
-    r = s[s.season == pick].iloc[0]
-    all_s = data.ucl_seasons()
-    in_progress = not all_s[all_s.season == pick].champion.any()  # no winner yet
-    ui.kpis([("Reached", r.stage_name, "so far" if in_progress else "final stage", color),
-             ("League phase", ui.ordinal(int(r.league_phase_position)) if pd.notna(r.league_phase_position) else "–",
-              f"of 36 · {int(r.lp_pts)} pts" if pd.notna(r.lp_pts) else "", color),
-             ("Record", f"{r.wins}-{r.draws}-{r.losses}", f"W-D-L in {r.played} matches", color),
-             ("Goals", f"{r.gf}–{r.ga}", f"{r.goals:.2f} scored per match", color),
-             ("Possession", f"{r.possession:.1f}%", f"{r.shots:.1f} shots per match", color)])
-
-    c1, c2 = st.columns([1, 1.15], gap="medium")
-    with c1:
-        with ui.panel("In Europe vs in the league", f"{data.season_label(pick)} per-match averages, both from ESPN "
-                      "(xG: our commentary model for the UCL, Understat for the league)"):
-            v = data.ucl_vs_league()
-            v = v[(v.team == team) & (v.season == pick)]
-            if len(v):
-                st.plotly_chart(charts.ucl_vs_league(v, color), width="stretch", key=f"ucl-vs-{team}-{pick}")
-                poss = v.set_index("stat").loc["possession"]
-                ui.note(f"Possession {poss.ucl:.1f}% in the Champions League vs {poss.league:.1f}% in the league. "
-                        "Opponents differ in strength and number, so read differences as tendencies, not effects.")
-            else:
-                ui.note("No league data for this season to compare with.")
-    with c2:
-        with ui.panel("Matches", "Most recent first"):
-            m = data.ucl_matches()
-            m = m[(m.team == team) & (m.season == pick)].sort_values("date", ascending=False)
-            stage = m.stage.map({"league-phase": "League phase", "knockout-round-playoffs": "KO play-off",
-                                 "round-of-16": "Round of 16", "quarterfinals": "Quarter-final",
-                                 "semifinals": "Semi-final", "final": "Final"})
-            st.dataframe(pd.DataFrame({
-                "Date": m.date.dt.strftime("%d %b %Y"), "Stage": stage, "": m.is_home.map({True: "H", False: "A"}),
-                "Opponent": m.opponent, "Score": [f"{g}–{a}" for g, a in zip(m.goals, m.goals_against)],
-                "Result": m.result, "xG": m.xg, "xG against": m.xg_against,
-                "Possession": m.possessionPct / 100, "Shots": m.totalShots,
-                "On target": m.shotsOnTarget}),
-                hide_index=True, placeholder="–", width="stretch", height=min(390, 35 * (len(m) + 1) + 3),
-                column_config={"Possession": st.column_config.NumberColumn(format="percent"),
-                               "xG": st.column_config.NumberColumn(format="%.2f", help="Commentary-model xG"),
-                               "xG against": st.column_config.NumberColumn(format="%.2f")})
 
 
 def legacy(team: str, color: str) -> None:

@@ -90,15 +90,7 @@ Phases:
   - Styles are projected with the unchanged 2025/26 model; 2025/26 reproduces the thesis data exactly.
   - App: season selector on Overview, a "2025/26 vs 2026/27" tab on Clubs, and the style mix per season on Leagues.
   - Weekly refresh of everything: `python -m src.refresh`.
-- **B. DONE (2026-10-28): Champions League.**
-  - Collect with `python -m src.collect.ucl` (ESPN `uefa.champions`, league phase to the final; qualifiers are a separate ESPN competition and are not included). Build with `python -m src.process.build_ucl`. Output goes to `data/processed/ucl/`. Both are part of `src.refresh`.
-  - Data notes: `season.year` is the start year; the stage is in `season.slug`. A drawn final is decided via ESPN's `winner` flag.
-  - UCL vs league comparisons use ESPN stats on both sides; there is no xG.
-  - App:
-    - Matchday includes UCL fixtures and news. The attacking edge is only shown when both clubs are ours.
-    - Clubs has a "Champions League" tab.
-    - Leagues has an "In the Champions League" section (league PC1 vs UCL points per match; tables by league and by style).
-  - 2025/26 finding: our clubs average about 4.5 percentage points less possession in the UCL than in their league; league PC1 vs UCL points per match r = 0.27 (n = 15). PSG won 2025/26 against Arsenal.
+- **B. REMOVED (2026-10-31): Champions League.** Built, then removed at the user's request so the app follows the proposal (three leagues only). Collector, build, commentary-xG model, UCL tabs and charts are deleted. Matchday, last-5 form and line-ups are league-only.
 - **C. DONE (2026-10-28): players, line-ups, probable XI, trophy cabinet.**
   - Collect with `python -m src.collect.players` (`--current` refreshes only this season). FBref is slow, about 1–3 minutes per page.
   - Build with `python -m src.process.build_players`. Output goes to `data/processed/players/{players.csv, lineups.parquet, probable_xi.csv}`. Both are part of `src.refresh`.
@@ -129,6 +121,10 @@ Phases:
     - Subs show as one row per team (green arrow plus minute). Stats are rows: value | label | value plus a split bar.
     - The timeline has home events on the left and away on the right, with running-score badges and HT/FT dividers.
   - The YouTube key is configured (the user's own key, in the gitignored `secrets.toml`). Official broadcaster channels are preferred (`OFFICIAL_CHANNELS`).
+  - **Quota gotcha (2026-10-31):** each search costs 100 of the 10,000 daily units, and AppTest runs with empty caches used up the quota, so the app showed only a search link.
+    - Lookups are now cached on disk in `data/cache/highlights.json` (gitignored). A found video is never searched again; a match with no video yet is retried at most every 6 h, and only for 7 days.
+    - `{"quota": True}` triggers a note.
+    - Don't run many match-centre AppTests with the key active.
   - News: the ESPN match `article` plus summary `news` filtered to stories that mention either club.
   - Team news: ESPN soccer injury fields are empty, and FotMob/Transfermarkt are off-limits, so no injury list. Instead:
     - "went off injured" comes from substitution text, and "suspended" from a red card in the previous match;
@@ -141,28 +137,17 @@ Phases:
   - Not yet seen running during a live game.
 - **Completeness pass (2026-10-28):**
   - Every `st.dataframe` uses `placeholder="–"`, so no "None" appears in tables.
-  - **Commentary xG** (`src/model/commentary_xg.py`): logistic regression on ESPN commentary shot text (zone, body, assist, situation; penalty = 0.76).
-    - Trained on 2025/26 league shots and scaled to Understat totals.
-    - Tested on 2026/27: AUC 0.753, team-match r = 0.84 vs Understat, MAE 0.40.
-    - Gives xG to every UCL match (`ucl_shots.parquet`, `ucl_xg.csv` → `build_ucl` columns `xg`/`xg_against`).
-    - Commentary team names differ from ESPN's, so they are matched per match by similarity (`side_of`).
-    - The match centre shows a commentary xG race when Understat has no data (UCL, live or this week's games).
-    - Run it before `build_ucl`.
-  - UCL qualifiers: ESPN has `uefa.champions_qual`, but none of our clubs play in them, so they aren't collected.
+  - Commentary xG model: removed with the UCL (2026-10-31).
   - Photos: `src.collect.photos` (Wikipedia lead images with `pilicense=free`, plus Wikidata name search filtered by footballer and birth year) → `photos_extra.csv` → fallback in `build_players`.
   - Line-up players (match centre pitch, benches, Clubs tab) link to `players?season&club&player` via `data.player_links()`. The Clubs line-ups now use `pitch.team_pitch` (HTML).
-  - Injuries: `app/injuries.py` (API-Football `/injuries`, leagues 39/140/135/2, cached 6 h). Active only with `API_FOOTBALL_KEY` in `secrets.toml`. Checked 2026-10-28 with the user's key: the **Free plan returns "Free plans do not have access to this season, try from 2022 to 2024."**
-    - So there is no current-season injury data unless the user upgrades.
-    - `injuries.access_error()` (1 request, cached 6 h) detects this, and the app falls back to match-sheet team news with an explanatory note.
-    - Parsing and club mapping were verified on 2024/25 (EPL 3,168 listings; all 20 EPL clubs mapped).
-  - **Premier League injuries come from the FPL feed** (`fantasy.premierleague.com/api/bootstrap-static/`, public, no key, cached 30 min; `injuries.fpl()`).
-    - Statuses i/s/d/n are used; "u" means left the club or on loan.
-    - Players are linked to ours by club and name across both seasons (85% linked).
-    - Shown Google-style (`pitch.injury_list`) in the match centre's "Injuries and suspensions" tabs (pre- and post-match) and on the Clubs squad tab.
-    - The probable XI is availability-aware: `build_players.probable_xi` stores rank 1 plus up to 3 replacements per slot (same slot, then same position, last 10 matches); `data.probable_lineup(team, injuries.unavailable_ids(team))` picks the best available.
-    - Doubts at 25% or less count as out.
-    - La Liga and Serie A have no free source.
+  - **Injury lists: REMOVED (2026-10-31)** at the user's request. They conflicted with the proposal's ethics statement (3.13: no health information published).
+    - Removed: `app/injuries.py`, the FPL and API-Football sources, "went off injured" notes and the injury icons.
+    - Team news now shows only "not in squad" (no reason) and "sent off" (suspension).
+    - `data.probable_lineup(team)` still exists; it gets no injury input.
   - `matchcentre.names_in` now matches whole words only. "ham" (West Ham) used to match "Southampton", which affected injury mapping and highlight matching. Exact accent-folded names win first (`Atletico Madrid` → `Atlético Madrid`).
+- **Proposal alignment (2026-10-31):**
+  - The Methodology page lists the proposal's 12 research-process stages (FYP1 Figure 3.1), each with what we did.
+  - It also has a Face validity panel; see `reports/phase4_face_validity.md`. Average finish by style: 3.9 / 7.7 / 12.7 / 16.9.
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.

@@ -169,26 +169,6 @@ def history_league_season(league: str, season: int) -> pd.DataFrame:
     return tm
 
 
-UCL = PROC / "ucl"
-
-
-@st.cache_data
-def ucl_matches() -> pd.DataFrame:
-    return pd.read_csv(UCL / "ucl_match.csv", parse_dates=["date"])
-
-
-@st.cache_data
-def ucl_seasons() -> pd.DataFrame:
-    s = pd.read_csv(UCL / "ucl_season.csv")
-    s["league_name"] = s["league"].map(LEAGUES)
-    return s
-
-
-@st.cache_data
-def ucl_vs_league() -> pd.DataFrame:
-    return pd.read_csv(UCL / "ucl_vs_league.csv")
-
-
 PLAYERS = PROC / "players"
 POSITION_GROUPS = ["Forward", "Midfielder", "Defender", "Goalkeeper"]
 # Radar metrics per position group: (column, label). Percentiles are within the group and season.

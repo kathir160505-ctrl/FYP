@@ -5,10 +5,8 @@ Run from the project root:  python -m src.refresh
 1. Re-collect the current season for all three leagues (Understat + ESPN; past seasons are untouched).
 2. Rebuild the multi-season tables and re-project styles (data/processed/history/).
 3. Rebuild current-season form for the Matchday predictions (data/live/).
-4. Re-collect the current Champions League season, score its shots with the commentary xG model and rebuild
-   data/processed/ucl/.
-5. Refresh current-season player stats, line-ups and photos, and rebuild data/processed/players/.
-6. Re-query Wikidata for honours and managers, then rebuild data/processed/legacy/ (manager records use step 2).
+4. Refresh current-season player stats, line-ups and photos, and rebuild data/processed/players/.
+5. Re-query Wikidata for honours and managers, then rebuild data/processed/legacy/ (manager records use step 2).
 
 The 2025/26 thesis dataset and models are never modified by this script.
 """
@@ -22,9 +20,6 @@ STEPS = [
     ["-m", "src.collect.history", "--current"],
     ["-m", "src.process.build_history"],
     ["-m", "src.collect.live"],
-    ["-m", "src.collect.ucl"],
-    ["-m", "src.model.commentary_xg"],  # xG for UCL matches (needs the cached ESPN summaries)
-    ["-m", "src.process.build_ucl"],
     ["-m", "src.collect.players", "--current"],
     ["-m", "src.process.build_players"],
     ["-m", "src.collect.photos"],  # cached: only new players hit Wikimedia

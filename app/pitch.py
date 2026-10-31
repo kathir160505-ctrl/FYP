@@ -134,7 +134,7 @@ def timeline(ev: pd.DataFrame, home: dict, away: dict) -> str:
         if r.kind == "sub":
             body = (f'<div class="tl-main">{icon("sub_in", 13, "On")}{html.escape(r.player)}</div>'
                     f'<div class="tl-sub">{icon("sub_out", 13, "Off")}{html.escape(r.other)}'
-                    f'{" · injury" if r.injury else ""}</div>')
+                    '</div>')
         else:
             extra = ""
             if r.kind == "goal" and r.other:
@@ -162,28 +162,3 @@ def scorers(ev: pd.DataFrame, side: str) -> str:
         by.setdefault(r.player + (" (OG)" if r.kind == "own_goal" else ""), []).append(r.minute)
     return "<br>".join(f"{html.escape(p)} {', '.join(m)}" for p, m in by.items())
 
-
-INJURY_ICON = {"injured": ("injury", "Injured"), "suspended": ("red", "Suspended"), "doubtful": ("doubt", "Doubtful"),
-               "unavailable": ("unavailable", "Unavailable")}
-
-
-def injury_list(df: pd.DataFrame, color: str, links: dict | None = None, avatar=None) -> str:
-    """Injured, suspended and doubtful players: photo with a status badge, name, position and shirt number, then
-    the status, reason and expected return (or chance of playing)."""
-    if df is None or df.empty:
-        return '<div class="muted">No injuries or suspensions reported.</div>'
-    rows = []
-    for r in df.itertuples():
-        ico, label = INJURY_ICON.get(r.kind, ("injury", r.kind.title()))
-        photo = r.photo if isinstance(r.photo, str) and r.photo else (avatar(r.player, color) if avatar else "")
-        url = (links or {}).get(str(r.athlete_id)) if isinstance(r.athlete_id, str) else None
-        name = html.escape(r.player)
-        name = f'<a href="{html.escape(url)}" target="_self">{name}</a>' if url else name
-        meta = " · ".join(x for x in (r.position, f"#{r.jersey}" if isinstance(r.jersey, str) and r.jersey else "") if x)
-        detail = str(r.detail or "")
-        status = label if not detail else f"{label} · {html.escape(detail)}"
-        rows.append(f'<div class="inj"><div class="inj-face"><img src="{html.escape(photo)}" alt="">'
-                    f'<span class="inj-badge">{icon(ico, 15, label)}</span></div>'
-                    f'<div><div class="inj-name">{name}<span>{html.escape(" · " + meta) if meta else ""}</span></div>'
-                    f'<div class="inj-status {r.kind}">{status}</div></div></div>')
-    return '<div class="inj-list">' + "".join(rows) + "</div>"

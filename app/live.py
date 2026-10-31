@@ -1,5 +1,5 @@
-"""Live 2026/27 data for the Matchday page: ESPN news and fixtures for the three leagues and the Champions League
-(fetched at view time, cached) and the
+"""Live 2026/27 data for the Matchday page: ESPN news and fixtures for the three leagues (fetched at view time,
+cached) and the
 current-season form table written by `python -m src.collect.live`."""
 import json
 from datetime import datetime, timedelta, timezone
@@ -12,7 +12,7 @@ from data import REF, ROOT, readable
 
 LIVE = ROOT / "data" / "live"
 API = "https://site.api.espn.com/apis/site/v2/sports/soccer"
-LEAGUE_CODES = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1", "Champions League": "uefa.champions"}
+LEAGUE_CODES = {"Premier League": "eng.1", "La Liga": "esp.1", "Serie A": "ita.1"}
 LOCAL_TZ = timezone(timedelta(hours=8), "MYT")
 
 
@@ -139,8 +139,8 @@ def _score(c: dict):
 
 @st.cache_data(ttl=300, show_spinner=False)
 def recent_results(team: str, before: str | None = None, n: int = 5) -> pd.DataFrame:
-    """A club's latest completed competitive matches in every competition (friendlies excluded), newest first.
-    Live from ESPN's team schedule, so it includes this week's league, cup and Champions League games."""
+    """A club's latest completed league matches (Premier League, La Liga, Serie A), newest first. Live from ESPN's
+    team schedule, so it includes this week's games before the weekly data refresh."""
     tid = team_ids().get(team)
     if not tid:
         return pd.DataFrame()
@@ -153,7 +153,7 @@ def recent_results(team: str, before: str | None = None, n: int = 5) -> pd.DataF
     for e in events:
         comp = e["competitions"][0]
         league = e.get("league", {})
-        if "friendly" in league.get("slug", "") or not comp["status"]["type"].get("completed"):
+        if league.get("slug", "") not in LEAGUE_CODES.values() or not comp["status"]["type"].get("completed"):
             continue
         date = pd.to_datetime(e["date"], utc=True)
         if date >= cutoff:
@@ -167,7 +167,7 @@ def recent_results(team: str, before: str | None = None, n: int = 5) -> pd.DataF
             continue
         result = "W" if gf > ga else "L" if gf < ga else "D"  # a tie settled on penalties counts as a draw
         slug = league.get("slug", "")
-        tidy = {v: k for k, v in LEAGUE_CODES.items()}  # "LALIGA", "UEFA Champions League" -> our names
+        tidy = {v: k for k, v in LEAGUE_CODES.items()}  # "LALIGA" -> "La Liga"
         rows.append({"date": date, "competition": tidy.get(slug, league.get("abbreviation") or league.get("name", "")),
                      "code": league.get("slug", ""), "event_id": e["id"], "home": me.get("homeAway") == "home",
                      "opponent": club_names().get(opp["team"]["displayName"], opp["team"]["displayName"]),

@@ -1,5 +1,3 @@
-import html
-
 import pandas as pd
 import streamlit as st
 
@@ -71,8 +69,6 @@ def render() -> None:
             ui.note("Share of clubs playing Dominant Possession, 2025/26 vs 2026/27 so far: " + " · ".join(
                 f"{lg} {first[lg]:.0f}% → {last[lg]:.0f}%" for lg in dom.columns))
 
-    europe(hist)
-
     with ui.panel("League tables by style"):
         tabs = st.tabs(list(data.LEAGUE_FLAGS))
         for tab, league in zip(tabs, data.LEAGUE_FLAGS):
@@ -91,54 +87,3 @@ def render() -> None:
                         "Shots / match": st.column_config.NumberColumn(format="%.1f"),
                         "Long-ball share": st.column_config.NumberColumn(format="percent")})
     ui.footer()
-
-
-STAGE_ORDER = ["League phase", "Knockout play-off", "Round of 16", "Quarter-final", "Semi-final", "Final", "Winner"]
-
-
-def europe(hist: pd.DataFrame) -> None:
-    """How each league's clubs, and each attacking style, fared in the Champions League."""
-    s = data.ucl_seasons()
-    ours = s[s.ours].merge(hist[["season", "team", "PC1"]], on=["season", "team"], how="left")
-    seasons = sorted(ours.season.unique(), reverse=True)
-    done = [x for x in seasons if s[s.season == x].champion.any()]
-    ui.section("In the Champions League")
-    pick = st.segmented_control("UCL season", seasons, default=done[0] if done else seasons[0],
-                                format_func=data.season_label, key="ucl_season_leagues",
-                                label_visibility="collapsed") or seasons[0]
-    o = ours[ours.season == pick]
-    champ = s[(s.season == pick) & s.champion].team.tolist()
-    c1, c2 = st.columns([1.4, 1], gap="medium")
-    with c1:
-        with ui.panel("Does domestic dominance carry into Europe?",
-                      f"{data.season_label(pick)} · each dot is one of our clubs, coloured by its league style"):
-            st.plotly_chart(charts.europe_vs_dominance(o.dropna(subset=["PC1"])), width="stretch",
-                            key=f"europe-{pick}")
-            r = o[["PC1", "points_per_match"]].corr().iloc[0, 1] if len(o) > 2 else float("nan")
-            ui.note(f"Correlation between league attacking dominance and Champions League points per match: "
-                    f"r = {r:.2f} across {len(o)} clubs. "
-                    + ("Season in progress: few matches per club so far. " if not champ else "")
-                    + "A small sample with different opponents, so this is descriptive, not a tested effect.")
-    with c2:
-        with ui.panel("By league", "Our clubs only" + (f" · winner: {html.escape(champ[0])}" if champ else "")):
-            best = o.assign(stage_rank=o.stage_name.map(STAGE_ORDER.index))
-            tbl = (best.groupby("league_name").agg(Clubs=("team", "size"), Played=("played", "sum"),
-                                                   W=("wins", "sum"), D=("draws", "sum"), L=("losses", "sum"),
-                                                   **{"Pts / match": ("points_per_match", "mean")},
-                                                   stage_rank=("stage_rank", "max"))
-                   .reset_index().rename(columns={"league_name": "League"}))
-            tbl["Furthest"] = tbl.pop("stage_rank").map(dict(enumerate(STAGE_ORDER)))
-            st.dataframe(tbl, hide_index=True, placeholder="–", width="stretch", column_config={
-                "Pts / match": st.column_config.NumberColumn(format="%.2f")})
-        with ui.panel("By attacking style", "Same clubs, grouped by their league style that season"):
-            v = data.ucl_vs_league()
-            poss = v[(v.season == pick) & (v.stat == "possession")].set_index("team")["diff"]
-            st_tbl = (o.assign(poss_change=o.team.map(poss)).groupby("cluster")
-                      .agg(Clubs=("team", "size"), **{"Pts / match": ("points_per_match", "mean")},
-                           **{"Possession vs league": ("poss_change", "mean")})
-                      .reindex([c for c in data.CLUSTER_ORDER if c in set(o.cluster)]).reset_index()
-                      .rename(columns={"cluster": "Style"}))
-            st.dataframe(st_tbl, hide_index=True, placeholder="–", width="stretch", column_config={
-                "Pts / match": st.column_config.NumberColumn(format="%.2f"),
-                "Possession vs league": st.column_config.NumberColumn(format="%+.1f pp")})
-            ui.note("Possession vs league: percentage-point change from the same club's league average that season.")

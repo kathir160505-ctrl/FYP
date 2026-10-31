@@ -1,20 +1,20 @@
 """Phase C: player data for the three leagues, 2025/26 onwards.
 
-Run from the project root after src.collect.history (and src.collect.ucl):  python -m src.collect.players
+Run from the project root after src.collect.history:  python -m src.collect.players
                                                                              python -m src.collect.players --current
 
 Writes data/raw/players/:
 - understat_<season>.csv   attacking season stats per player and club (xG, xA, shots, key passes, xGChain, ...)
 - fbref_<table>_<season>.csv  FBref 'standard' (minutes, nation, position, birth year), 'misc' (tackles won,
                               interceptions, fouls, crosses) and 'keeper' (saves, clean sheets) tables
-- lineups.csv              every player in every league and UCL match sheet: starter, formation slot, position,
+- lineups.csv              every player on every league match sheet: starter, formation slot, position,
                            minutes on/off, goals, assists, cards (parsed from the cached ESPN match summaries)
 - wikidata_players.csv     footballers linked to our clubs on Wikidata, with birth date and a Commons photo
 - wikidata_names.csv       footballers whose English label equals a player name in our data (for players whose
                            Wikidata entry is not linked to their current club); birth year decides between namesakes
 
 Finished seasons are kept; the current season is always refreshed. ESPN summaries are read from the cache the
-history and UCL collectors fill, so this script makes no ESPN requests.
+history collector fills, so this script makes no ESPN requests.
 """
 import argparse
 import json
@@ -76,13 +76,11 @@ def fbref(season: str, fresh: bool) -> dict[str, pd.DataFrame]:
 
 
 def lineups() -> pd.DataFrame:
-    """Players on every cached match sheet of our league seasons and the Champions League."""
+    """Players on every cached match sheet of our league seasons."""
     events = []
     for path in (ROOT / "data" / "raw" / "history").glob("*/*/espn_stats.csv"):
         code = dict((k, v[1]) for k, v in LEAGUES.items())[path.parent.name]
         events += [(code, int(path.parent.parent.name), e) for e in pd.read_csv(path).event_id.unique()]
-    for path in (ROOT / "data" / "raw" / "ucl").glob("*/ucl_stats.csv"):
-        events += [("uefa.champions", int(path.parent.name), e) for e in pd.read_csv(path).event_id.unique()]
     rows = []
     for code, season, event in events:
         cache = ESPN_CACHE / code / f"summary_{event}.json"

@@ -6,7 +6,7 @@ Outputs (data/processed/players/):
 - players.csv      one row per player, club and season: Understat attacking stats, FBref defensive and goalkeeper
                    stats, per-90 rates, percentiles among players of the same position group, nation, age,
                    ESPN id/shirt number and a Wikimedia Commons photo where one exists
-- lineups.parquet  every player on every league and Champions League match sheet, with canonical club names
+- lineups.parquet  every player on every league match sheet, with canonical club names
 - probable_xi.csv  each club's most likely starting XI from its last five league starts (current season)
 - match_report.csv how each source was matched (audit)
 
@@ -28,7 +28,7 @@ OUT = ROOT / "data" / "processed" / "players"
 MIN_SIMILARITY = 0.8
 PERCENTILE_MINUTES = 0.3  # share of the club's league minutes a player needs to enter the percentile pool
 GROUPS = {"GK": "Goalkeeper", "D": "Defender", "M": "Midfielder", "F": "Forward"}
-COMPETITIONS = {"eng.1": "Premier League", "esp.1": "La Liga", "ita.1": "Serie A", "uefa.champions": "Champions League"}
+COMPETITIONS = {"eng.1": "Premier League", "esp.1": "La Liga", "ita.1": "Serie A"}
 
 # Per-90 stats and the position groups whose percentiles the app shows.
 PER90 = ["goals", "np_xg", "assists", "xa", "shots", "key_passes", "xg_chain", "xg_buildup",
@@ -139,13 +139,14 @@ def base_table() -> tuple[pd.DataFrame, dict]:
 
 def add_lineups(players: pd.DataFrame, report: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
     lu = pd.read_csv(RAW / "lineups.csv", dtype={"athlete_id": str, "jersey": str, "formation_place": str})
+    lu = lu[lu.competition.isin(COMPETITIONS)]  # league match sheets only
     lu["team"] = lu.espn_team.map(names("espn")).fillna(lu.espn_team)
     lu["competition_name"] = lu.competition.map(COMPETITIONS)
     lu["date"] = pd.to_datetime(lu.date, utc=True).dt.tz_localize(None)
     opp = lu.groupby(["event_id", "home_away"]).team.first().unstack()
     lu["opponent"] = [opp.at[e, "away" if h == "home" else "home"] if e in opp.index else None
                       for e, h in zip(lu.event_id, lu.home_away)]
-    league = lu[lu.competition != "uefa.champions"]
+    league = lu
     apps = (league.groupby(["season", "team", "athlete_id"])
             .agg(espn_name=("player", "last"), jersey=("jersey", "last"), espn_position=("position", "last"),
                  starts=("starter", "sum"), apps=("event_id", "nunique")).reset_index())
@@ -228,7 +229,7 @@ def probable_xi(lu: pd.DataFrame, last_n: int = 5, backups: int = 3) -> pd.DataF
     """Most likely XI per club: the most-used recent formation, then the most frequent starter in each slot (rank 1).
     Ranks 2+ are that slot's replacements if the first choice is injured or suspended: players who started in the
     same slot, then in the same position, over the last 10 league matches (recent matches weigh more)."""
-    league = lu[(lu.competition != "uefa.champions") & lu.starter & (lu.season == lu.season.max())]
+    league = lu[lu.starter & (lu.season == lu.season.max())]
     rows = []
     for team, g in league.groupby("team"):
         all_events = g.sort_values("date").event_id.unique()

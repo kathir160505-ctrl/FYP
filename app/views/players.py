@@ -8,7 +8,7 @@ import charts
 import data
 import ui
 
-COMPETITION_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A", "Champions League": "UCL"}
+COMPETITION_SHORT = {"Premier League": "EPL", "La Liga": "LaLiga", "Serie A": "Serie A"}
 
 
 def pick_player(p: pd.DataFrame) -> pd.Series:
@@ -98,7 +98,7 @@ def render() -> None:
                     "": st.column_config.ImageColumn(width="small"),
                     "Similarity": st.column_config.ProgressColumn(format="%.0f", min_value=0, max_value=100)})
 
-    with ui.panel("Match log", "League and Champions League matches · from ESPN match sheets"):
+    with ui.panel("Match log", "League matches · from ESPN match sheets"):
         if pd.isna(row.athlete_id):
             ui.note("This player could not be linked to ESPN match sheets.")
         else:

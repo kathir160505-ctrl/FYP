@@ -6,18 +6,39 @@ import charts
 import data
 import ui
 
+# The twelve stages of the proposal's research process (FYP1, Figure 3.1), with what this system did at each.
 PIPELINE = [
-    ("01", "Collect", "Understat (xG, shots, deep completions, attack speed) and ESPN (possession, passing, crosses) for "
-                      "all 1,140 matches. FBref used as an independent cross-check."),
-    ("02", "Engineer", "13 attacking features per club, per match (≈ per 90). Ratios from season totals; documented "
-                       "proxies where free data has gaps."),
-    ("03", "Reduce", "z-score scaling, then PCA. Components with eigenvalue > 1 retained (Kaiser criterion)."),
-    ("04", "Cluster", "K-means vs Ward hierarchical vs DBSCAN for k = 2–8, judged by silhouette, Davies–Bouldin, "
-                      "Calinski–Harabasz, elbow and bootstrap stability."),
-    ("05", "Validate", "Bootstrap stability, split-half (first vs second half of the season), face validity, and a "
-                       "league χ² test with permutation p-value."),
-    ("06", "Predict", "Logistic regression on pre-match form estimates which club shows the more attacking style; "
-                      "evaluated on a temporal hold-out."),
+    ("01", "Problem definition & objectives", "RQ1–RQ3 and RO1–RO3 from the proposal; gaps from the Chapter 2 "
+                                              "literature review."),
+    ("02", "Data collection", "Automated with the SoccerData library: Understat (xG, shots, deep completions, attack "
+                              "speed) and ESPN (possession, passing, crosses) for all 1,140 matches of 2025/26. FBref "
+                              "as an independent cross-check (r ≥ 0.977). StatsBomb has no 2025/26 data and Opta "
+                              "Analyst no API, so they could not be used."),
+    ("03", "Cleaning & feature engineering", "Club names harmonised, missing values checked, 13 attacking variables "
+                                             "(Table 3.1) per match (≈ per 90 minutes); documented proxies where free "
+                                             "data has gaps."),
+    ("04", "Exploratory data analysis", "Distributions, correlations (|r| ≥ 0.7 flagged) and outliers (|z| > 3), "
+                                        "kept because unique clubs are of interest."),
+    ("05", "Scaling & dimensionality reduction", "z-score standardisation (StandardScaler), then PCA: 4 components "
+                                                 "with eigenvalue > 1 keep 87.4% of the variance."),
+    ("06", "Clustering & model selection", "K-means (primary) vs agglomerative (Ward) vs DBSCAN for k = 2–8; k "
+                                           "chosen with the elbow method and silhouette, plus Davies–Bouldin, "
+                                           "Calinski–Harabasz and bootstrap stability. Final: K-means, k = 4."),
+    ("07", "Cluster interpretation & profiling", "Each cluster labelled from its standardised feature means and PCA "
+                                                 "loadings: Dominant Possession, Controlled Build-up, Direct & "
+                                                 "Cross-Oriented, Long-Ball Low Block."),
+    ("08", "Cross-league distribution", "League × cluster cross-tabulation and χ² test of independence (permutation "
+                                        "p = 0.45, Cramér's V = 0.22): not significant."),
+    ("09", "Team comparison & prediction", "Logistic regression (vs gradient boosting) on pre-match form predicts "
+                                           "which team shows the more attacking style: AUC 0.805 on a temporal "
+                                           "hold-out."),
+    ("10", "Web dashboard", "Streamlit + Plotly: team profiles, head-to-head comparison with the prediction, style "
+                            "map, league comparison and this methodology page."),
+    ("11", "Evaluation, verification & validation", "Silhouette and the other indices, unit tests, fixed seeds, "
+                                                    "bootstrap stability (ARI 0.64), split-half (80% keep their "
+                                                    "cluster) and face validity (below)."),
+    ("12", "Documentation & reporting", "Every stage reproducible from scripts in src/, with reports in reports/ and "
+                                        "sources attributed; version-controlled with Git."),
 ]
 
 SOURCES = pd.DataFrame([
@@ -96,6 +117,8 @@ def render() -> None:
              ("Silhouette", f"{final.silhouette:.3f}", "K-means, k = 4", "#0B0D10"),
              ("Davies–Bouldin", f"{final.davies_bouldin:.2f}", "lower is better", "#0B0D10")])
 
+    face_validity()
+
     c1, c2 = st.columns([1.3, 1], gap="medium")
     with c1:
         with ui.panel("Prediction model", f"Trained on matches before {pm['cutoff']}, tested on the final 30% of the season"):
@@ -112,9 +135,7 @@ def render() -> None:
   could not be measured.
 - **Small sample.** 60 clubs, one season: clusters describe tendencies on a continuum, not fixed identities.
 - **Probabilistic.** Predictions estimate attacking style, not match results, and must not be used for betting.
-- **Champions League.** ESPN match stats (possession, passing, crosses, shots) from the league phase onwards;
-  qualifiers are not included. Understat has no Champions League data, so there is no xG, and comparisons with
-  the league use ESPN figures on both sides.
+
 - **Players.** Attacking stats from Understat, tackles won, interceptions and goalkeeping from FBref, line-ups
   from ESPN match sheets; players are matched across sources by club and name (96% FBref, 98% ESPN). Percentiles
   compare players of the same position group with at least 30% of their club's minutes. The probable XI is a
@@ -124,10 +145,42 @@ def render() -> None:
   revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
   League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
   left out because Wikidata records too few of them.
-- **Injuries.** Premier League injury, suspension and doubt lists come from the official Fantasy Premier League
-  data feed (status, reason, expected return, chance of playing), refreshed every 30 minutes; the probable XI leaves
-  out players marked unavailable. La Liga and Serie A have no free equivalent, so their team news comes from match
-  sheets.
-- **Attribution.** Data from Understat, ESPN, FBref, Wikidata and Fantasy Premier League; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
+
+- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
 """)
     ui.footer()
+
+
+# What the literature reviewed in Chapter 2 leads us to expect of each style (proposal Section 3.12, face validity).
+EXPECTED = {
+    "Dominant Possession": "Possession-heavy, high-volume attacks: the profile associated with clubs such as Barcelona "
+                           "and Manchester City (Gyarmati et al., 2014; Kempe et al., 2014).",
+    "Controlled Build-up": "Patient, accurate passing without dominating the ball: an intermediate profile between the "
+                           "possession and direct poles (Bekkers & Dabadghao, 2019).",
+    "Direct & Cross-Oriented": "Less possession, more long balls and crosses: the direct play described for much of the "
+                               "Premier League (Mitrotasios et al., 2019; Sarmento et al., 2013).",
+    "Long-Ball Low Block": "The most direct passing and lowest possession: the direct pole of the possession-versus-"
+                           "direct continuum (Kempe et al., 2014).",
+}
+
+
+def face_validity() -> None:
+    """Cluster membership set against documented reputations and league standing (proposal Section 3.12)."""
+    df = data.clubs()
+    rows = []
+    for cluster in data.CLUSTER_ORDER:
+        g = df[df.cluster == cluster].sort_values("PC1", ascending=False)
+        rows.append({"Style": cluster, "Clubs": len(g), "Average league finish": g.position.mean(),
+                     "Possession %": g.possession.mean(), "Long-ball share %": g.long_ball_share.mean(),
+                     "Most typical clubs": ", ".join(g.team.head(6)), "Expected from the literature": EXPECTED[cluster]})
+    with ui.panel("Face validity", "Do the clusters match clubs' documented styles? Typical clubs = highest attacking "
+                  "dominance (PC1) within the cluster"):
+        st.dataframe(pd.DataFrame(rows), hide_index=True, placeholder="–", width="stretch", column_config={
+            "Average league finish": st.column_config.NumberColumn(format="%.1f"),
+            "Possession %": st.column_config.NumberColumn(format="%.1f"),
+            "Long-ball share %": st.column_config.NumberColumn(format="%.1f"),
+            "Expected from the literature": st.column_config.TextColumn(width="large")})
+        ui.note("The four styles line up with the possession-versus-direct continuum in the literature, and with "
+                "league standing: possession-dominant clubs finish highest on average, long-ball sides lowest. "
+                "Where the data disagree with expectations (no significant league effect), it is reported as a "
+                "finding.")
