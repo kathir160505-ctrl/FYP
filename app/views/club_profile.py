@@ -84,11 +84,13 @@ def render() -> None:
     tm = data.team_matches()
     club_tm = tm[tm.team == team]
     st.write("")
-    tabs = st.tabs([":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
-                    ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
-                    ":material/hub: Similar clubs", ":material/history: 2025/26 vs 2026/27",
-                    ":material/groups: Squad & line-ups",
-                    ":material/emoji_events: Honours & managers"])
+    names = [":material/timeline: Season timeline", ":material/sports_soccer: Shot map",
+             ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
+             ":material/hub: Similar clubs"]
+    if data.EXTENSIONS:
+        names += [":material/history: 2025/26 vs 2026/27", ":material/groups: Squad & line-ups",
+                  ":material/emoji_events: Honours & managers"]
+    tabs = st.tabs(names)
 
     with tabs[0]:
         with ui.panel("Match Attacking Index", "Within-league z-score of xG, shots, deep completions, box shots and "
@@ -213,12 +215,13 @@ def render() -> None:
                 {"name": pick, "values": [other[f"{f}_pct"] for f in data.FEATURES], "color": "#111418", "fill": False}],
                 height=420), width="stretch")
 
-    with tabs[5]:
-        season_by_season(team, row.color)
-    with tabs[6]:
-        squad_and_lineups(team, row.color)
-    with tabs[7]:
-        legacy(team, row.color)
+    if data.EXTENSIONS:
+        with tabs[5]:
+            season_by_season(team, row.color)
+        with tabs[6]:
+            squad_and_lineups(team, row.color)
+        with tabs[7]:
+            legacy(team, row.color)
     ui.footer()
 
 

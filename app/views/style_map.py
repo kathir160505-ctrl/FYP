@@ -29,7 +29,7 @@ def _crest_strip(members, limit: int = 8) -> str:
 def render() -> None:
     df = data.clubs()
     cm = data.cluster_model()
-    seasons = data.seasons()
+    seasons = data.seasons() if data.EXTENSIONS else [data.THESIS_SEASON]
     c_head, c_season = st.columns([4, 1], vertical_alignment="bottom")
     season = c_season.selectbox("Season", seasons, index=seasons.index(data.THESIS_SEASON),
                                 format_func=lambda s: data.season_label(s) + (" · thesis" if s == data.THESIS_SEASON else ""))

@@ -346,7 +346,7 @@ def note(text: str) -> None:
 def footer() -> None:
     st.markdown(
         '<div class="foot">Data: Understat and ESPN (FBref cross-check). Style analysis covers the 2025/26 Premier League, '
-        "La Liga and Serie A seasons; Matchday uses live 2026/27 data. Attacking profiles are a data-driven abstraction of "
+        "La Liga and Serie A seasons. Attacking profiles are a data-driven abstraction of "
         "attacking play only, not a full description of a team's tactics. Predictions are probabilistic estimates of "
         "attacking style, not match results, and are not intended for betting.</div>", unsafe_allow_html=True)
 

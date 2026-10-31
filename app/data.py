@@ -131,6 +131,20 @@ def model_selection() -> pd.DataFrame:
     return pd.read_csv(PROC / "model_selection.csv")
 
 
+def _show_extensions() -> bool:
+    """Extensions beyond the FYP1 proposal (Matchday, Players, match centre, 2026/27, honours) are hidden unless
+    SHOW_EXTENSIONS = true is set in .streamlit/secrets.toml or the environment. Off = the thesis system only."""
+    import os
+    try:
+        value = st.secrets.get("SHOW_EXTENSIONS", None)
+    except Exception:  # no secrets file
+        value = None
+    value = os.environ.get("SHOW_EXTENSIONS", value)
+    return str(value).strip().lower() in ("1", "true", "yes", "on")
+
+
+EXTENSIONS = _show_extensions()
+
 HIST = PROC / "history"
 THESIS_SEASON = 2526
 

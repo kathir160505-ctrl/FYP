@@ -85,6 +85,10 @@ def render() -> None:
     tm = data.team_matches()
     c1, c2 = st.columns(2, gap="medium")
     for col, team in ((c1, a), (c2, b)):
+        if not data.EXTENSIONS:
+            with col:
+                season_last_five(tm, team)
+            continue
         last = live.recent_results(team)
         with col:
             with ui.panel(f"{team}: last five matches", "League matches, live from ESPN · xG and Attacking Index "
@@ -121,3 +125,17 @@ def render() -> None:
                 f"{rb.abbr} xG": st.column_config.NumberColumn(format="%.2f"),
                 f"{ra.abbr} possession": st.column_config.NumberColumn(format="percent")})
     ui.footer()
+
+
+def season_last_five(tm: pd.DataFrame, team: str) -> None:
+    """The club's last five league matches of 2025/26, with xG and the match Attacking Index (thesis data)."""
+    last = tm[tm.team == team].sort_values("matchweek").tail(5)
+    with ui.panel(f"{team}: last five matches of 2025/26",
+                  f"Average Attacking Index {last.attacking_index.mean():+.2f} "
+                  f"(season {tm[tm.team == team].attacking_index.mean():+.2f})"):
+        st.dataframe(pd.DataFrame({
+            "MW": last.matchweek, "Opponent": last.opponent, "H/A": last.is_home.map({True: "H", False: "A"}),
+            "Result": [f"{r} {g}-{c}" for r, g, c in zip(last.result, last.goals, last.goals_against)],
+            "xG": last.xg, "Attacking Index": last.attacking_index}), hide_index=True, placeholder="–", width="stretch",
+            column_config={"xG": st.column_config.NumberColumn(format="%.2f"),
+                           "Attacking Index": st.column_config.NumberColumn(format="%+.2f")})

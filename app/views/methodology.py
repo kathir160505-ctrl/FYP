@@ -66,6 +66,8 @@ def render() -> None:
                              f'font-weight:700;letter-spacing:0.1em">STEP {num}</div><h4 style="margin-top:0.2rem">{title}</h4>'
                              f'<p>{text}</p></div>', unsafe_allow_html=True)
 
+    data_pipeline()
+
     c1, c2 = st.columns([1.2, 1], gap="medium")
     with c1:
         with ui.panel("Features and data sources", "Proposal Table 3.1 mapped to the free 2025/26 data"):
@@ -136,18 +138,10 @@ def render() -> None:
 - **Small sample.** 60 clubs, one season: clusters describe tendencies on a continuum, not fixed identities.
 - **Probabilistic.** Predictions estimate attacking style, not match results, and must not be used for betting.
 
-- **Players.** Attacking stats from Understat, tackles won, interceptions and goalkeeping from FBref, line-ups
-  from ESPN match sheets; players are matched across sources by club and name (96% FBref, 98% ESPN). Percentiles
-  compare players of the same position group with at least 30% of their club's minutes. The probable XI is a
-  data-driven guess from recent starts and does not know about injuries or suspensions. Photos are freely licensed
-  images from Wikimedia Commons (via Wikidata); players without one are shown with their initials.
-- **Honours and managers.** From Wikidata (community-maintained, CC0). Each trophy is counted once per season;
-  revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
-  League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
-  left out because Wikidata records too few of them.
-
-- **Attribution.** Data from Understat, ESPN, FBref and Wikidata; crests via ESPN; player photos from Wikimedia Commons (CC licences, credited on Commons). Non-commercial academic use.
+- **Attribution.** Data from Understat and ESPN (FBref cross-check); crests via ESPN. Non-commercial academic use.
 """)
+            if data.EXTENSIONS:
+                st.markdown(EXTENSION_NOTES)
     ui.footer()
 
 
@@ -184,3 +178,90 @@ def face_validity() -> None:
                 "league standing: possession-dominant clubs finish highest on average, long-ball sides lowest. "
                 "Where the data disagree with expectations (no significant league effect), it is reported as a "
                 "finding.")
+
+
+EXTENSION_NOTES = """
+- **Players.** Attacking stats from Understat, tackles won, interceptions and goalkeeping from FBref, line-ups
+  from ESPN match sheets; players are matched across sources by club and name (96% FBref, 98% ESPN). Percentiles
+  compare players of the same position group with at least 30% of their club's minutes. The probable XI is a
+  data-driven guess from recent starts and does not know about injuries or suspensions. Photos are freely licensed
+  images from Wikimedia Commons (via Wikidata); players without one are shown with their initials.
+- **Honours and managers.** From Wikidata (community-maintained, CC0). Each trophy is counted once per season;
+  revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
+  League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
+  left out because Wikidata records too few of them.
+- **Extension sources.** Wikidata (honours, managers, player photos via Wikimedia Commons, CC licences); YouTube
+  for highlights.
+"""
+
+
+MATCH_COLUMNS = {"date": "Date", "team": "Club", "opponent": "Opponent", "goals": "Goals", "xg": "xG",
+                 "shots": "Shots", "deep_completions": "Deep completions", "box_shots": "Box shots",
+                 "possessionPct": "Possession %", "accuratePasses": "Accurate passes", "totalPasses": "Passes",
+                 "totalCrosses": "Crosses", "totalLongBalls": "Long balls"}
+
+
+def data_pipeline() -> None:
+    """The data at each step of the pipeline, so a reader can see it was processed and used (stages 2 to 7)."""
+    tm = pd.read_csv(data.PROC / "team_match.csv", parse_dates=["date"])
+    ts = pd.read_csv(data.PROC / "team_season.csv")
+    shots = len(pd.read_csv(data.PROC / "shots.csv", usecols=["team"]))
+    cm = data.cluster_model()
+    pipe, feats = cm["pipeline"], cm["features"]
+    X = ts[feats]
+    z = pd.DataFrame(pipe.named_steps["scale"].transform(X), columns=feats)
+    pcs = pipe[:-1].transform(X)
+    clusters = [cm["names"][int(k)] for k in pipe.predict(X)]
+    ident = ts[["team", "league"]].assign(league=ts.league.map(data.LEAGUES)).rename(
+        columns={"team": "Club", "league": "League"})
+
+    with ui.panel("From raw data to results", "The actual data at each step of the pipeline, for all 60 clubs of "
+                  "2025/26 · every table can be downloaded"):
+        ui.kpis([("Matches", f"{tm.game_id.nunique():,}", "380 per league", "#0B0D10"),
+                 ("Team-match rows", f"{len(tm):,}", "one per club per match", "#0B0D10"),
+                 ("Shots", f"{shots:,}", "with pitch coordinates", "#0B0D10"),
+                 ("Clubs × features", f"{len(ts)} × {len(feats)}", "the clustering dataset", "#0B0D10"),
+                 ("PCA components", f"{pcs.shape[1]}", f"{cm['explained_variance'].sum():.1%} of the variance", "#0B0D10"),
+                 ("Clusters", f"{len(set(clusters))}", "K-means, seed 42", "#0B0D10")])
+        t1, t2, t3, t4 = st.tabs(["1 · Match data", "2 · 13 features per club", "3 · Standardised (z-scores)",
+                                  "4 · PCA scores and cluster"])
+        with t1:
+            ui.note("Cleaned match data: Understat and ESPN merged on club and date, one row per club per match. "
+                    "The 13 features are aggregated from these rows.")
+            sample = tm.sort_values(["date", "team"])[list(MATCH_COLUMNS)].rename(columns=MATCH_COLUMNS)
+            st.dataframe(sample, hide_index=True, placeholder="–", width="stretch", height=320,
+                         column_config={"Date": st.column_config.DateColumn(format="DD MMM YYYY"),
+                                        "xG": st.column_config.NumberColumn(format="%.2f")})
+            st.download_button("Download match data (CSV)", tm.to_csv(index=False).encode("utf-8"),
+                               "team_match_2025-26.csv", "text/csv", icon=":material/download:")
+        with t2:
+            ui.note("Per-match averages per club (≈ per 90 minutes); ratios from season totals. This 60 × 13 table is "
+                    "the input to the clustering.")
+            feat_df = pd.concat([ident, X.rename(columns=data.SHORT_LABELS)], axis=1)
+            st.dataframe(feat_df, hide_index=True, placeholder="–", width="stretch", height=320,
+                         column_config={c: st.column_config.NumberColumn(format="%.2f")
+                                        for c in feat_df.columns if c not in ("Club", "League")})
+            st.download_button("Download club features (CSV)", feat_df.to_csv(index=False).encode("utf-8"),
+                               "club_features_2025-26.csv", "text/csv", icon=":material/download:")
+        with t3:
+            ui.note(f"z = (value − mean) ÷ standard deviation, so every feature counts equally in the distances. Check: "
+                    f"column means are {z.mean().abs().max():.0e} or less, standard deviations "
+                    f"{z.std(ddof=0).min():.2f}–{z.std(ddof=0).max():.2f}.")
+            z_df = pd.concat([ident, z.rename(columns=data.SHORT_LABELS)], axis=1)
+            st.dataframe(z_df, hide_index=True, placeholder="–", width="stretch", height=320,
+                         column_config={c: st.column_config.NumberColumn(format="%+.2f")
+                                        for c in z_df.columns if c not in ("Club", "League")})
+        with t4:
+            ui.note("The standardised features projected onto the 4 retained principal components; K-means assigns "
+                    "each club to the nearest of the 4 cluster centres in this space.")
+            pc_df = pd.concat([ident, pd.DataFrame(pcs, columns=[f"PC{i + 1}" for i in range(pcs.shape[1])]),
+                               pd.DataFrame({"Cluster": clusters})], axis=1)
+            st.dataframe(pc_df, hide_index=True, placeholder="–", width="stretch", height=320,
+                         column_config={f"PC{i + 1}": st.column_config.NumberColumn(format="%+.2f")
+                                        for i in range(pcs.shape[1])})
+            st.download_button("Download PCA scores and clusters (CSV)", pc_df.to_csv(index=False).encode("utf-8"),
+                               "pca_clusters_2025-26.csv", "text/csv", icon=":material/download:")
+        xlsx = data.ROOT / "data" / "FYP_dataset_2025-26.xlsx"
+        if xlsx.exists():
+            st.download_button("Download the full dataset (Excel, with a data dictionary)", xlsx.read_bytes(),
+                               xlsx.name, icon=":material/table_view:")

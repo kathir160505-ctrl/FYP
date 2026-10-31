@@ -54,20 +54,21 @@ def render() -> None:
                              data.SHORT_LABELS[feat]: st.column_config.ProgressColumn(
                                  format="%.2f", min_value=0, max_value=float(df[feat].max()))})
 
-    hist = data.history()
-    hist = hist[hist.cluster.notna()]
-    with ui.panel("Style mix: last season vs this season", "Share of each league's clubs in each philosophy · "
-                  f"{data.season_label(hist.season.max())} is in progress and uses the 2025/26 model"):
-        tabs = st.tabs(list(data.LEAGUE_FLAGS))
-        for tab, league in zip(tabs, data.LEAGUE_FLAGS):
-            with tab:
-                st.plotly_chart(charts.league_style_trend(hist, league), width="stretch", key=f"trend-{league}")
-        dom = (hist.assign(dom=hist.cluster == "Dominant Possession").groupby(["league_name", "season_label"]).dom.mean()
-               .unstack(0) * 100)
-        if len(dom) > 1:
-            first, last = dom.iloc[0], dom.iloc[-1]
-            ui.note("Share of clubs playing Dominant Possession, 2025/26 vs 2026/27 so far: " + " · ".join(
-                f"{lg} {first[lg]:.0f}% → {last[lg]:.0f}%" for lg in dom.columns))
+    if data.EXTENSIONS:  # 2026/27 projection: an extension beyond the 2025/26 thesis
+        hist = data.history()
+        hist = hist[hist.cluster.notna()]
+        with ui.panel("Style mix: last season vs this season", "Share of each league's clubs in each philosophy · "
+                      f"{data.season_label(hist.season.max())} is in progress and uses the 2025/26 model"):
+            tabs = st.tabs(list(data.LEAGUE_FLAGS))
+            for tab, league in zip(tabs, data.LEAGUE_FLAGS):
+                with tab:
+                    st.plotly_chart(charts.league_style_trend(hist, league), width="stretch", key=f"trend-{league}")
+            dom = (hist.assign(dom=hist.cluster == "Dominant Possession").groupby(["league_name", "season_label"]).dom.mean()
+                   .unstack(0) * 100)
+            if len(dom) > 1:
+                first, last = dom.iloc[0], dom.iloc[-1]
+                ui.note("Share of clubs playing Dominant Possession, 2025/26 vs 2026/27 so far: " + " · ".join(
+                    f"{lg} {first[lg]:.0f}% → {last[lg]:.0f}%" for lg in dom.columns))
 
     with ui.panel("League tables by style"):
         tabs = st.tabs(list(data.LEAGUE_FLAGS))
