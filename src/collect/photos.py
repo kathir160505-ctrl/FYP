@@ -145,6 +145,11 @@ def main() -> None:
     out = pd.DataFrame([{"wikidata": q, "photo": u, "source": s} for q, (u, s) in rows.items()])
     names = pd.DataFrame([{"name": n, "wikidata": q} for n, q in found_q.items()])
     out = out.merge(names, on="wikidata", how="left") if len(out) else out
+    # Only ever add: photos found in earlier runs stay, so a run that finds fewer (e.g. Wikimedia answering a cloud
+    # server differently) cannot shrink the coverage. New finds win where both have the same player.
+    if OUT.exists():
+        old = pd.read_csv(OUT)
+        out = pd.concat([out, old], ignore_index=True).drop_duplicates("wikidata", keep="first")
     OUT.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT, index=False, encoding="utf-8")
     print(f"Photos found: {len(out)} ({out.source.value_counts().to_dict() if len(out) else {}})", flush=True)

@@ -123,7 +123,14 @@ def main() -> None:
             print(f"Understat {season}: {len(df):,} player-club rows", flush=True)
         for table in FBREF_TABLES:
             if fresh or not (OUT / f"fbref_{table}_{season}.csv").exists():
-                for t, df in fbref(season, fresh).items():
+                # FBref shows cloud servers (e.g. the GitHub Actions refresh) a CAPTCHA: keep last week's tables
+                # and carry on, so line-ups and photos still update.
+                try:
+                    tables = fbref(season, fresh)
+                except Exception as exc:  # noqa: BLE001 - any scraping failure
+                    print(f"FBref {season}: skipped, keeping the previous tables ({type(exc).__name__})", flush=True)
+                    break
+                for t, df in tables.items():
                     df.to_csv(OUT / f"fbref_{t}_{season}.csv", index=False, encoding="utf-8")
                     print(f"FBref {t} {season}: {len(df):,} rows", flush=True)
                 break
