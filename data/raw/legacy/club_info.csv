@@ -18,7 +18,7 @@ Q8687,,53289,1898-07-18T00:00:00Z,Athletic Club,San Mamés Stadium,Ibaigane Pala
 Q8701,,70813,1903-01-01T00:00:00Z,Atlético Madrid,Metropolitano Stadium,Madrid
 Q19571,,14863,1889-10-10T00:00:00Z,Brentford F.C.,Griffin Park,London
 Q759482,,15191,1903-01-01T00:00:00Z,US Cremonese,Stadio Giovanni Zini,Cremona
-Q1120838,,13602,1907-01-01T00:00:00Z,Como 1907,Stadio Giuseppe Sinigaglia,Como
+Q1120838,,13602,1907-05-25T00:00:00Z,Como 1907,Stadio Giuseppe Sinigaglia,Como
 Q1900,,16416,1920-01-01T00:00:00Z,Cagliari Calcio,Unipol Domus,CRAI Sport Center
 Q8749,,24870,1923-08-23T00:00:00Z,RC Celta de Vigo,Abanca Balaídos Stadium,Vigo
 Q8760,,32490,1906-03-02T00:00:00Z,Deportivo de A Coruña,Estadio Municipal de Abanca Riazor,A Coruña
@@ -33,6 +33,8 @@ Q19458,The Clarets,22546,1882-01-01T00:00:00Z,Burnley F.C.,Turf Moor,Burnley
 Q19467,The Eagles,26255,1905-09-10T00:00:00Z,Crystal Palace F.C.,Selhurst Park,London
 Q19467,The Glaziers,26255,1905-09-10T00:00:00Z,Crystal Palace F.C.,Selhurst Park,London
 Q19580,The Sky Blues,32609,1883-08-13T00:00:00Z,Coventry City F.C.,Coventry Building Society Arena,Coventry
+Q18708,The Cottagers,25700,1879-01-01T00:00:00Z,Fulham F.C.,Craven Cottage,London
+Q19477,The Tigers,25400,1904-01-01T00:00:00Z,Hull City A.F.C.,MKM Stadium,Kingston upon Hull
 Q845043,,16227,1928-09-19T00:00:00Z,Frosinone Calcio,Benito Stirpe Stadium,Frosinone
 Q631,,75817,1908-03-09T00:00:00Z,Inter Milan,Giuseppe Meazza Stadium,Milan
 Q1422,,41700,1897-11-01T00:00:00Z,Juventus FC,Juventus Stadium,Turin
@@ -45,22 +47,6 @@ Q8639,,31045,1991-01-01T00:00:00Z,Hellas Verona FC,Stadio Marcantonio Bentegodi,
 Q8806,,16500,1983-01-01T00:00:00Z,Getafe CF,Estadio Coliseum,Getafe
 Q9653,,30311,1878-01-01T00:00:00Z,Ipswich Town F.C.,Portman Road,Ipswich
 Q11945,,14624,1930-01-01T00:00:00Z,Girona FC,Montilivi Stadium,Girona
-Q18708,The Cottagers,25700,1879-01-01T00:00:00Z,Fulham F.C.,Craven Cottage,London
-Q19477,The Tigers,25400,1904-01-01T00:00:00Z,Hull City A.F.C.,MKM Stadium,Kingston upon Hull
-Q289482,,17102,1912-09-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
-Q289482,,17102,2004-01-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
-Q289482,,17102,2015-01-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
-Q2641,,54726,1926-01-01T00:00:00Z,SSC Napoli,Stadio Diego Armando Maradona,Naples
-Q2641,,54726,2004-01-01T00:00:00Z,SSC Napoli,Stadio Diego Armando Maradona,Naples
-Q8823,,26354,1909-01-01T00:00:00Z,Levante UD,Estadi Ciutat de València,Valencia
-Q8823,,26354,1939-01-01T00:00:00Z,Levante UD,Estadi Ciutat de València,Valencia
-Q8835,,25736,1916-03-05T00:00:00Z,RCD Mallorca,Estadi Mallorca Son Moix,Palma
-Q8857,,30778,1904-04-03T00:00:00Z,Málaga CF,La Rosaleda Stadium,Málaga
-Q13391,,31461,1908-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
-Q13391,,31461,1923-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
-Q13391,,31461,1927-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
-Q13391,,31461,1932-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
-Q13391,,31461,1934-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
 Q1128631,The Peacocks,37792,1919-01-01T00:00:00Z,Leeds United F.C.,Elland Road,Leeds
 Q1128631,The Whites,37792,1919-01-01T00:00:00Z,Leeds United F.C.,Elland Road,Leeds
 Q1130849,The Reds,61276,1892-06-03T00:00:00Z,Liverpool F.C.,Anfield,Liverpool
@@ -75,6 +61,20 @@ Q50602,The Citizens,52900,1894-04-16T00:00:00Z,Manchester City F.C.,Etihad Stadi
 Q50602,Man City,52900,1894-04-16T00:00:00Z,Manchester City F.C.,Etihad Stadium,Manchester
 Q50602,The Sky Blues,52900,1894-04-16T00:00:00Z,Manchester City F.C.,Etihad Stadium,Manchester
 Q50602,Cityzens,52900,1894-04-16T00:00:00Z,Manchester City F.C.,Etihad Stadium,Manchester
+Q289482,,17102,1912-09-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
+Q289482,,17102,2004-01-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
+Q289482,,17102,2015-01-01T00:00:00Z,AC Monza,Stadio Brianteo,Monza
+Q2641,,54726,1926-01-01T00:00:00Z,SSC Napoli,Stadio Diego Armando Maradona,Naples
+Q2641,,54726,2004-01-01T00:00:00Z,SSC Napoli,Stadio Diego Armando Maradona,Naples
+Q8823,,26354,1909-01-01T00:00:00Z,Levante UD,Estadi Ciutat de València,Valencia
+Q8823,,26354,1939-01-01T00:00:00Z,Levante UD,Estadi Ciutat de València,Valencia
+Q8835,,25736,1916-03-05T00:00:00Z,RCD Mallorca,Estadi Mallorca Son Moix,Palma
+Q8857,,30778,1904-04-03T00:00:00Z,Málaga CF,La Rosaleda Stadium,Málaga
+Q13391,,31461,1908-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
+Q13391,,31461,1923-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
+Q13391,,31461,1927-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
+Q13391,,31461,1932-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
+Q13391,,31461,1934-01-01T00:00:00Z,US Lecce,Stadio Via del Mare,Lecce
 Q271574,,30500,1926-01-01T00:00:00Z,Real Oviedo,Carlos Tartiere Stadium,Oviedo
 Q289613,,10442,1909-01-01T00:00:00Z,Pisa SC,Arena Garibaldi – Stadio Romeo Anconetani,Pisa
 Q2693,,22352,1913-01-01T00:00:00Z,Parma Calcio 1913,Stadio Ennio Tardini,Parma
@@ -93,6 +93,11 @@ Q10315,,40000,1909-09-07T00:00:00Z,Real Sociedad,Anoeta Stadium,San Sebastián
 Q10329,,43751,1890-01-25T00:00:00Z,Sevilla FC,Ramón Sánchez Pizjuán Stadium,Seville
 Q10329,,43751,1905-01-01T00:00:00Z,Sevilla FC,Ramón Sánchez Pizjuán Stadium,Seville
 Q12236,,22.9,1913-02-23T00:00:00Z,Racing de Santander,Campos de Sport de El Sardinero,Santander
+Q18741,The Lilywhites,62850,1882-09-05T00:00:00Z,Tottenham Hotspur F.C.,Tottenham Hotspur Stadium,London Borough of Haringey
+Q18741,The Spurs,62850,1882-09-05T00:00:00Z,Tottenham Hotspur F.C.,Tottenham Hotspur Stadium,London Borough of Haringey
+Q18747,The Academy of Football,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
+Q18747,The Hammers,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
+Q18747,The Irons,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
 Q501245,,10500,1907-12-14T00:00:00Z,Venezia F.C.,Stadio Pierluigi Penzo,Venice
 Q2768,,28177,2005-01-01T00:00:00Z,Torino FC,Stadio Olimpico Grande Torino,Turin
 Q2798,,25312,1896-01-01T00:00:00Z,Udinese Calcio,Stadio Friuli,Udine
@@ -100,8 +105,3 @@ Q10333,,49430,1919-03-18T00:00:00Z,Valencia CF,Mestalla Stadium,Valencia
 Q12297,,24891,1923-03-10T00:00:00Z,Villarreal CF,Estadio de la Cerámica,Villarreal
 Q18739,,48339,1879-01-01T00:00:00Z,Sunderland A.F.C.,Stadium of Light,Sunderland
 Q19500,,30852,1877-01-01T00:00:00Z,Wolverhampton Wanderers F.C.,Molineux Stadium,Wolverhampton
-Q18741,The Lilywhites,62850,1882-09-05T00:00:00Z,Tottenham Hotspur F.C.,Tottenham Hotspur Stadium,London Borough of Haringey
-Q18741,The Spurs,62850,1882-09-05T00:00:00Z,Tottenham Hotspur F.C.,Tottenham Hotspur Stadium,London Borough of Haringey
-Q18747,The Academy of Football,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
-Q18747,The Hammers,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
-Q18747,The Irons,62500,1895-01-01T00:00:00Z,West Ham United F.C.,London Stadium,London Borough of Newham
