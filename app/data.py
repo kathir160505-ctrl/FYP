@@ -163,10 +163,88 @@ def history() -> pd.DataFrame:
     # Thesis clubs first; promoted clubs' crests and colours come from the live ESPN metadata.
     live_meta = ROOT / "data" / "live" / "team_meta.csv"
     meta = pd.concat([pd.read_csv(REF / "team_meta.csv"), *([pd.read_csv(live_meta)] if live_meta.exists() else [])])
-    meta = meta.drop_duplicates("team")[["team", "logo", "color"]]
+    meta = meta.drop_duplicates("team")[["team", "logo", "color", "abbr"]]
     h = h.merge(meta, on="team", how="left")
     h["color"] = h["color"].fillna("#6B7280").map(readable)
+    h["abbr"] = h["abbr"].fillna(h["team"].str[:3].str.upper())
     return h.sort_values(["season", "league", "position"]).reset_index(drop=True)
+
+
+@st.cache_data
+def season_clubs(season: int) -> pd.DataFrame:
+    """The clubs of one season only, with percentiles and z-scores among that season's clubs (no mixing)."""
+    df = history()[lambda h: h["season"] == season].copy()
+    for f in FEATURES:
+        df[f"{f}_pct"] = df[f].rank(pct=True) * 100
+        df[f"{f}_z"] = (df[f] - df[f].mean()) / df[f].std()
+    return df.reset_index(drop=True)
+
+
+# Plain-English phrases for a feature well above / below the season average, and how to show its value.
+STYLE_PHRASES = {
+    "possession": ("keeping the ball", "giving the ball up", "{:.1f}% possession"),
+    "pass_accuracy": ("accurate passing", "less accurate passing", "{:.1f}% pass accuracy"),
+    "passes_completed": ("a high passing volume", "a low passing volume", "{:.0f} completed passes per match"),
+    "deep_completions": ("reaching the final third often", "rarely reaching the final third",
+                         "{:.1f} deep completions per match"),
+    "long_ball_share": ("going long often", "rarely going long", "{:.1f}% long balls"),
+    "crosses": ("crossing a lot", "crossing little", "{:.1f} crosses per match"),
+    "shots": ("a high shot volume", "a low shot volume", "{:.1f} shots per match"),
+    "sot_pct": ("accurate shooting", "inaccurate shooting", "{:.1f}% on target"),
+    "xg": ("creating good chances", "creating few good chances", "{:.2f} xG per match"),
+    "goals": ("scoring often", "scoring rarely", "{:.2f} goals per match"),
+    "goals_per_shot": ("clinical finishing", "wasteful finishing", "{:.2f} goals per shot"),
+    "fast_attack_shots": ("counter-attacking often", "rarely counter-attacking", "{:.2f} fast-attack shots per match"),
+    "box_shot_share": ("shooting from inside the box", "shooting from distance", "{:.0f}% of shots in the box"),
+}
+
+
+def style_summary(row) -> str:
+    """Two sentences describing a club's attacking style in one season, built from its cluster and z-scores.
+
+    Regenerated from the data on every refresh, so the wording follows the club's current numbers."""
+    matches = int(row["matches"])
+    based = f"all {matches} league matches" if matches >= 38 else f"{matches} league matches so far"
+    first = f"{row['team']}'s attacking style in {season_label(row['season'])} is {row['cluster']}, based on {based}"
+    if row["style_confidence"] < 0.15:
+        first += ", although it sits close to another style"
+    z = pd.Series({f: row[f"{f}_z"] for f in FEATURES}).sort_values()
+    picks = [(f, 0) for f in z.index[::-1] if z[f] >= 0.5][:2] + [(f, 1) for f in z.index if z[f] <= -0.5][:1]
+    if not picks:
+        return first + ". The club's attacking numbers are close to the average on every measure."
+    parts = [f"{STYLE_PHRASES[f][side]} ({STYLE_PHRASES[f][2].format(row[f])})" for f, side in picks]
+    listed = parts[0] if len(parts) == 1 else ", ".join(parts[:-1]) + " and " + parts[-1]
+    return f"{first}. Compared with the other clubs that season, the club stands out for {listed}."
+
+
+def comparison_summary(ra, rb, pred: dict, venue: str) -> str:
+    """A few sentences on which of two clubs is more likely to show the more attacking style, and why.
+
+    ra, rb: the two clubs' rows from season_clubs(); pred: predict_more_attacking() output; venue: "A", "B" or "N".
+    Positive theme contributions favour club A."""
+    a, b, p = ra["team"], rb["team"], pred["prob"]
+    fav, other, fav_p, sign = (a, b, p, 1) if p >= 0.5 else (b, a, 1 - p, -1)
+    shown = ">99%" if fav_p >= 0.995 else f"{fav_p:.0%}"
+    if fav_p < 0.58:
+        first = (f"The two sides are closely matched: {fav} is only slightly more likely than {other} to show the "
+                 f"more attacking style ({shown})")
+    else:
+        strength = "clearly" if fav_p >= 0.70 else "moderately"
+        first = f"{fav} is {strength} more likely than {other} to show the more attacking style ({shown})"
+    if venue != "N":
+        first += f", with {a if venue == 'A' else b} at home"
+    phrases = {"Chance creation": "chance creation", "Ball dominance": "ball dominance",
+               "Opposition faced": "the opposition each side has faced", "Venue": "home advantage"}
+    drivers = [t for t, v in sorted(pred["themes"].items(), key=lambda kv: -kv[1] * sign) if v * sign > 0.05][:2]
+    second = ""
+    if drivers:
+        second = (f" The main factors in {fav}'s favour are " if len(drivers) > 1 else
+                  f" The main factor in {fav}'s favour is ") + " and ".join(phrases[t] for t in drivers)
+        second += ", judged on season-to-date and last-five-match form." if drivers != ["Venue"] else "."
+    third = (f" In {season_label(ra['season'])} league matches, {a} average {ra['xg']:.2f} xG, {ra['shots']:.1f} shots "
+             f"and {ra['possession']:.0f}% possession per match, against {rb['xg']:.2f}, {rb['shots']:.1f} and "
+             f"{rb['possession']:.0f}% for {b}.")
+    return first + "." + second + third
 
 
 @st.cache_data

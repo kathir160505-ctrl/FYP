@@ -156,6 +156,10 @@ Phases:
   - Methodology "From raw data to results" panel: the data at each step (match rows → 60×13 features → z-scores → PCA scores + cluster) with downloads. Re-predicting with the saved pipeline matches the stored clusters 100%.
   - Reproducibility checked 2026-10-31: re-running build_dataset, eda, clustering and predict reproduced every CSV, report, figure and model byte for byte. Only `fyp.sqlite` changes bytes, not content.
   - Handover: `FYP_Project_Handover.docx` (where it is, how to run it, the requirements table). The viva study guide is a Claude doc.
+- **Head-to-head, one season at a time (2026-11-15, supervisor's request):** a Season selector (current season by default; 2025/26 only in thesis mode). Styles, percentiles, the "more attacking" estimate (2025/26: `data.team_form()`; current: `live.form()`), last five and meetings all come from that season only. Never mix seasons or use promoted clubs' second-division data.
+  - Under the estimate, `data.comparison_summary()` writes a few lines on which club is more likely to attack more, the main factors (theme contributions) and the season averages.
+  - Each club card has a two-sentence description from `data.style_summary()` (cluster + strongest/weakest z-scores among that season's clubs). It is code, not an LLM, so it updates with each weekly refresh and needs no API key.
+- **Understat outage (from about 2026-11-03):** understat.com shows "We will come back soon", so the weekly refresh's history/live/players steps fail with JSONDecodeError while the run still reports success. The 2026/27 data stops at 30 Oct until Understat returns; nothing to fix on our side.
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.
