@@ -6,7 +6,6 @@ import streamlit as st
 import cabinet
 import charts
 import data
-import live
 import pitch
 import ui
 
@@ -88,7 +87,7 @@ def render() -> None:
              ":material/bolt: How they attack", ":material/splitscreen: First vs second half",
              ":material/hub: Similar clubs"]
     if data.EXTENSIONS:
-        names += [":material/history: 2025/26 vs 2026/27", ":material/groups: Squad & line-ups",
+        names += [":material/groups: Squad & line-ups",
                   ":material/emoji_events: Honours & managers"]
     tabs = st.tabs(names)
 
@@ -217,20 +216,30 @@ def render() -> None:
 
     if data.EXTENSIONS:
         with tabs[5]:
-            season_by_season(team, row.color)
-        with tabs[6]:
             squad_and_lineups(team, row.color)
-        with tabs[7]:
+        with tabs[6]:
             legacy(team, row.color)
     ui.footer()
 
 
-def next_fixture(team: str):
-    fx = live.fixtures()
-    if fx.empty:
-        return None
-    up = fx[(fx.state == "pre") & ((fx.home == team) | (fx.away == team))]
-    return up.iloc[0] if len(up) else None
+def season_xi(lu: pd.DataFrame) -> pd.DataFrame:
+    """The club's most used XI of the season: its most used formation, then the most frequent starter in each slot."""
+    starts = lu[lu.starter.fillna(False).astype(bool)]
+    if starts.empty:
+        return starts
+    formation = starts.drop_duplicates("event_id").formation.value_counts().index[0]
+    shape = starts[starts.formation == formation]
+    rows, taken = [], set()
+    for place in sorted(shape.formation_place.dropna().unique(), key=int):
+        cands = shape[(shape.formation_place == place) & ~shape.athlete_id.isin(taken)]
+        if cands.empty:
+            continue
+        aid = cands.athlete_id.value_counts().index[0]
+        taken.add(aid)
+        c = cands[cands.athlete_id == aid].iloc[-1]
+        rows.append({"formation": formation, "formation_place": int(place), "athlete_id": aid, "player": c.player,
+                     "position_abbr": c.position_abbr, "position": c.position, "jersey": c.jersey})
+    return pd.DataFrame(rows).assign(of_matches=shape.event_id.nunique())
 
 
 def squad_and_lineups(team: str, color: str) -> None:
@@ -238,36 +247,28 @@ def squad_and_lineups(team: str, color: str) -> None:
         ui.note("Squad and line-up data is still being prepared (run src.collect.players, then "
                 "src.process.build_players).")
         return
-    xi = data.probable_lineup(team) if team in set(data.probable_xi().team) else pd.DataFrame()
+    season = data.THESIS_SEASON  # the Clubs page shows 2025/26 only
+    label = data.season_label(season)
     lu = data.lineups(team)
-    lu = lu[lu.season == lu.season.max()] if len(lu) else lu
+    lu = lu[lu.season == season] if len(lu) else lu
+    xi = season_xi(lu)
     c1, c2 = st.columns(2, gap="medium")
     with c1:
-        nxt = next_fixture(team)
-        if nxt is not None:
-            opp = nxt.away if nxt.home == team else nxt.home
-            title = f"Probable XI vs {opp}"
-            sub = f"{nxt.league} · {nxt.local.strftime('%a %d %b, %H:%M')} MYT"
-        else:
-            title, sub = "Probable XI", "Next fixture not yet scheduled"
-        with ui.panel(title, sub):
+        with ui.panel(f"Most used XI · {label}", "League matches of the season"):
             if xi.empty:
-                ui.note("No line-ups recorded for this club this season yet.")
+                ui.note(f"No line-ups recorded for this club in {label}.")
             else:
-                jerseys = lu.drop_duplicates("athlete_id").set_index("athlete_id").jersey if len(lu) else {}
-                d = xi.assign(jersey=xi.athlete_id.map(jerseys))
-                st.markdown(pitch.team_pitch(d.assign(formation=xi.formation.iloc[0]), color, with_events=False,
-                                             links=data.player_links()), unsafe_allow_html=True)
-                ui.note(f"<b>{html.escape(str(xi.formation.iloc[0]))}</b>, the most used shape in the last "
-                        f"{int(xi.of_matches.iloc[0])} league matches; each position goes to the player who started "
-                        "there most often (recent matches count more). A data-driven guess: injuries, suspensions "
-                        "and rotation news are not known to the model.")
+                st.markdown(pitch.team_pitch(xi, color, with_events=False, links=data.player_links()),
+                            unsafe_allow_html=True)
+                ui.note(f"<b>{html.escape(str(xi.formation.iloc[0]))}</b>, the club's most used shape "
+                        f"({int(xi.of_matches.iloc[0])} league matches); each position goes to the player who started "
+                        "there most often in that shape.")
     with c2:
         events = (lu.drop_duplicates("event_id").sort_values("date", ascending=False) if len(lu) else lu)
         with ui.panel("Match line-ups", "Starting XI and substitutes from the ESPN match sheet · click a player "
                       "for his profile"):
             if events.empty:
-                ui.note("No line-ups recorded for this club this season yet.")
+                ui.note(f"No line-ups recorded for this club in {label}.")
             else:
                 labels = {e: f"{d:%d %b} · {c} · {'vs' if h == 'home' else 'at'} {o}" for e, d, c, h, o in
                           zip(events.event_id, events.date, events.competition_name, events.home_away, events.opponent)}
@@ -283,9 +284,9 @@ def squad_and_lineups(team: str, color: str) -> None:
                 st.markdown(pitch.bench(sheet, team, start.formation.iloc[0], None, color, links),
                             unsafe_allow_html=True)
 
-    with ui.panel("Squad", "All players used in the league this season · click a photo to enlarge it"):
+    with ui.panel(f"Squad · {label}", "All players used in the league that season · click a photo to enlarge it"):
         ps = data.players()
-        ps = ps[(ps.team == team) & (ps.season == ps[ps.team == team].season.max())]
+        ps = ps[(ps.team == team) & (ps.season == season)]
         ps = ps.assign(g_order=ps.group.map({g: i for i, g in enumerate(["Goalkeeper", "Defender", "Midfielder", "Forward"])}))
         ps = ps.sort_values(["g_order", "minutes"], ascending=[True, False])
         st.dataframe(pd.DataFrame({
@@ -409,54 +410,3 @@ def tenure(days: int) -> str:
     if years:
         return f"{years} yr {months} mo" if months else f"{years} yr"
     return f"{months} mo" if months else f"{days} days"
-
-
-def season_by_season(team: str, color: str) -> None:
-    hist = data.history()
-    h = hist[hist.team == team].sort_values("season")
-    if h.empty:
-        ui.note("No multi-season history for this club yet.")
-        return
-    last, now = h.iloc[0], h.iloc[-1]
-    if len(h) > 1:
-        same = last.cluster == now.cluster
-        ui.callout(f"<b>{data.season_label(now.season)} so far ({int(now.played)} matches):</b> "
-                   f"{ui.cluster_badge(now.cluster)} "
-                   + ("the same attacking style as last season." if same else
-                      f"a change from last season's {ui.cluster_badge(last.cluster)}.")
-                   + " Both seasons are assigned with the 2025/26 model (same scaling, components and style centres), "
-                     "so they are directly comparable.", warn=not same)
-    c1, c2 = st.columns([1, 1.1], gap="medium")
-    with c1:
-        with ui.panel("Style by season", "Each square is a season; the number is the league position "
-                      "(current position for a season in progress)"):
-            st.plotly_chart(charts.style_timeline(h), width="stretch", config={"displayModeBar": False})
-    with c2:
-        with ui.panel("Last season vs this season", "Per-match averages"):
-            rows = [("League position", "position", "%d"), ("Points per match", "points_per_match", "%.2f"),
-                    ("xG", "xg", "%.2f"), ("Goals", "goals", "%.2f"), ("Shots", "shots", "%.1f"),
-                    ("Possession %", "possession", "%.1f"), ("Long-ball share %", "long_ball_share", "%.1f"),
-                    ("Deep completions", "deep_completions", "%.1f"), ("Box presence %", "box_shot_share", "%.1f")]
-            cols = {data.season_label(s): [fmt % r[c] if pd.notna(r[c]) else "–" for _, c, fmt in rows]
-                    for s, r in h.set_index("season").iterrows()}
-            st.dataframe(pd.DataFrame({"Metric": [n for n, _, _ in rows], **cols}), hide_index=True, placeholder="–", width="stretch")
-
-    seasons = h.season.tolist()[::-1]
-    pick = st.segmented_control("Week by week", seasons, default=seasons[0], format_func=data.season_label,
-                                key="club_hist_season") or seasons[0]
-    tm = data.history_matches(team)
-    tm = tm[tm.season == pick]
-    league = h.loc[h.season == pick, "league"].iloc[0]
-    hist_all = data.history_league_season(league, pick)
-    avg = hist_all.groupby("matchweek").points.mean().cumsum()
-    c1, c2 = st.columns(2, gap="medium")
-    with c1:
-        with ui.panel(f"Points race · {data.season_label(pick)}", "Cumulative points by matchweek against the league average"):
-            st.plotly_chart(charts.points_race(tm, color, avg), width="stretch")
-    with c2:
-        with ui.panel(f"Attacking Index · {data.season_label(pick)}", "Match by match, bars coloured by result"):
-            if tm.attacking_index.notna().any():
-                st.plotly_chart(charts.timeline(tm.dropna(subset=["attacking_index"]), color), width="stretch",
-                                key=f"hist-timeline-{pick}")
-            else:
-                ui.note("Possession data is missing for this season, so the Attacking Index is unavailable.")

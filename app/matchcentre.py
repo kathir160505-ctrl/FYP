@@ -142,7 +142,7 @@ def understat_match(event_id: str) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Our processed team-match rows (xG, attacking index) and the shots for this ESPN event, if it is a league
     match we have collected."""
     tm = pd.read_parquet(data.HIST / "team_match.parquet",
-                         columns=["event_id", "game_id", "team", "is_home", "xg", "goals", "attacking_index"])
+                         columns=["event_id", "game_id", "team", "is_home", "xg", "goals", "attacking_index", "source"])
     tm = tm[tm.event_id.astype("Int64").astype(str) == str(event_id)]
     if tm.empty:
         return tm, pd.DataFrame()

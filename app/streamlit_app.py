@@ -15,7 +15,7 @@ st.logo(str(ASSETS / "logo.svg"), size="large")
 
 import data  # noqa: E402
 
-# The thesis system (FYP1 proposal, RO3): five pages. Extensions appear only with SHOW_EXTENSIONS on (data.py).
+# The core system (FYP1 proposal, RO3): five pages. Extensions appear only with SHOW_EXTENSIONS on (data.py).
 pages = [
     st.Page(style_map.render, title="Overview", icon=":material/scatter_plot:", url_path="overview", default=True),
     st.Page(club_profile.render, title="Clubs", icon=":material/shield:", url_path="club"),

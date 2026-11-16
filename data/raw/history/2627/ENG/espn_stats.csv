@@ -159,3 +159,43 @@ event_id,date,espn_home,espn_away,home_score,away_score,espn_team,home_away,poss
 401879252,2026-10-25T14:00Z,Manchester United,AFC Bournemouth,0,3,AFC Bournemouth,away,37.4,264,367,12,4,62,17,10,4,4,16,14
 401878764,2026-10-25T16:30Z,Sunderland,Leeds United,0,0,Sunderland,home,50.4,279,375,20,3,61,14,15,4,4,3,15
 401878764,2026-10-25T16:30Z,Sunderland,Leeds United,0,0,Leeds United,away,49.6,261,361,22,6,64,27,11,4,5,5,10
+401879248,2026-10-31T12:30Z,Chelsea,Manchester United,2,0,Chelsea,home,58.7,479,542,14,5,38,16,18,9,8,15,16
+401879248,2026-10-31T12:30Z,Chelsea,Manchester United,2,0,Manchester United,away,41.3,293,379,13,3,44,13,12,5,7,15,14
+401879251,2026-10-31T15:00Z,AFC Bournemouth,Leeds United,2,0,AFC Bournemouth,home,43.9,314,409,10,3,66,24,11,5,4,6,13
+401879251,2026-10-31T15:00Z,AFC Bournemouth,Leeds United,2,0,Leeds United,away,56.1,410,508,21,4,59,28,10,1,4,6,4
+401879249,2026-10-31T15:00Z,Brentford,Nottingham Forest,2,0,Brentford,home,41.7,241,339,10,2,55,22,7,1,3,7,13
+401879249,2026-10-31T15:00Z,Brentford,Nottingham Forest,2,0,Nottingham Forest,away,58.3,365,476,16,3,64,23,15,1,4,12,9
+401879247,2026-10-31T15:00Z,Coventry City,Sunderland,3,1,Coventry City,home,43.5,256,339,13,5,72,35,12,4,4,7,8
+401879247,2026-10-31T15:00Z,Coventry City,Sunderland,3,1,Sunderland,away,56.5,355,438,22,3,59,30,17,2,4,9,7
+401878763,2026-10-31T15:00Z,Hull City,Ipswich Town,2,2,Hull City,home,38.5,245,335,16,3,64,28,9,3,6,5,7
+401878763,2026-10-31T15:00Z,Hull City,Ipswich Town,2,2,Ipswich Town,away,61.5,489,560,11,2,56,21,15,3,3,5,10
+401879245,2026-10-31T15:00Z,Manchester City,Brighton & Hove Albion,0,1,Manchester City,home,62.4,503,597,24,10,50,23,21,6,8,11,5
+401879245,2026-10-31T15:00Z,Manchester City,Brighton & Hove Albion,0,1,Brighton & Hove Albion,away,37.6,280,362,7,2,61,36,7,3,2,15,15
+401878761,2026-10-31T17:30Z,Tottenham Hotspur,Crystal Palace,2,0,Tottenham Hotspur,home,79.4,759,816,39,10,18,12,34,9,19,13,8
+401878761,2026-10-31T17:30Z,Tottenham Hotspur,Crystal Palace,2,0,Crystal Palace,away,20.6,150,220,2,0,51,17,2,1,0,18,13
+401879250,2026-10-31T20:00Z,Aston Villa,Fulham,1,1,Aston Villa,home,45.0,373,434,17,6,38,21,16,3,7,8,5
+401879250,2026-10-31T20:00Z,Aston Villa,Fulham,1,1,Fulham,away,55.0,474,536,17,5,41,27,14,5,7,8,13
+401879246,2026-11-01T16:30Z,Liverpool,Arsenal,0,1,Liverpool,home,56.4,377,461,33,5,46,14,17,0,7,11,10
+401879246,2026-11-01T16:30Z,Liverpool,Arsenal,0,1,Arsenal,away,43.6,269,370,10,4,67,22,10,3,4,16,6
+401878762,2026-11-02T20:00Z,Newcastle United,Everton,0,1,Newcastle United,home,51.6,332,419,24,7,54,12,17,2,4,4,2
+401878762,2026-11-02T20:00Z,Newcastle United,Everton,0,1,Everton,away,48.4,314,393,22,7,62,26,16,5,5,4,6
+401879242,2026-11-06T20:00Z,Everton,Coventry City,3,1,Everton,home,49.8,344,424,21,7,46,17,16,7,2,14,8
+401879242,2026-11-06T20:00Z,Everton,Coventry City,3,1,Coventry City,away,50.2,353,438,13,3,49,16,15,4,2,13,14
+401878758,2026-11-07T12:30Z,Leeds United,Tottenham Hotspur,1,0,Leeds United,home,39.2,246,310,29,5,47,21,16,4,6,12,11
+401878758,2026-11-07T12:30Z,Leeds United,Tottenham Hotspur,1,0,Tottenham Hotspur,away,60.8,420,508,23,6,59,22,7,4,4,11,4
+401878760,2026-11-07T15:00Z,Arsenal,Hull City,1,0,Arsenal,home,66.9,490,569,21,5,47,21,21,10,7,6,6
+401878760,2026-11-07T15:00Z,Arsenal,Hull City,1,0,Hull City,away,33.1,190,272,15,6,73,26,7,2,4,9,11
+401879241,2026-11-07T15:00Z,Fulham,Newcastle United,1,1,Fulham,home,57.9,426,522,14,3,66,30,11,5,3,8,6
+401879241,2026-11-07T15:00Z,Fulham,Newcastle United,1,1,Newcastle United,away,42.1,294,376,11,3,68,26,9,5,3,10,12
+401878757,2026-11-07T17:30Z,Nottingham Forest,Manchester City,3,1,Nottingham Forest,home,22.0,138,206,12,2,58,17,11,5,3,13,11
+401878757,2026-11-07T17:30Z,Nottingham Forest,Manchester City,3,1,Manchester City,away,78.0,665,753,23,7,32,14,12,4,7,9,1
+401879244,2026-11-08T14:00Z,Brighton & Hove Albion,Brentford,2,0,Brighton & Hove Albion,home,75.3,590,651,37,15,61,45,20,6,7,10,4
+401879244,2026-11-08T14:00Z,Brighton & Hove Albion,Brentford,2,0,Brentford,away,24.7,142,215,7,2,60,19,5,0,3,9,13
+401879243,2026-11-08T14:00Z,Crystal Palace,Liverpool,1,3,Crystal Palace,home,53.1,328,410,22,6,61,27,19,7,4,7,7
+401879243,2026-11-08T14:00Z,Crystal Palace,Liverpool,1,3,Liverpool,away,46.9,275,353,22,9,63,35,20,8,7,4,14
+401878759,2026-11-08T14:00Z,Ipswich Town,AFC Bournemouth,1,2,Ipswich Town,home,55.9,399,508,13,2,68,28,10,2,2,10,7
+401878759,2026-11-08T14:00Z,Ipswich Town,AFC Bournemouth,1,2,AFC Bournemouth,away,44.1,300,396,12,1,70,25,15,4,7,10,15
+401879239,2026-11-08T14:00Z,Sunderland,Chelsea,1,0,Sunderland,home,31.3,203,292,9,4,63,21,9,2,2,15,4
+401879239,2026-11-08T14:00Z,Sunderland,Chelsea,1,0,Chelsea,away,68.7,578,648,23,6,40,22,10,4,2,8,13
+401879240,2026-11-08T16:30Z,Manchester United,Aston Villa,4,4,Manchester United,home,55.7,422,484,30,5,35,20,26,9,8,14,11
+401879240,2026-11-08T16:30Z,Manchester United,Aston Villa,4,4,Aston Villa,away,44.3,337,399,5,2,46,20,12,6,1,6,11

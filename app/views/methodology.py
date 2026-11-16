@@ -190,6 +190,13 @@ EXTENSION_NOTES = """
   revoked titles, missing finals and missing manager spells are hand-corrected and listed in `data/reference`.
   League, domestic-cup and European counts match published totals for all 95 checked club counts. Super cups are
   left out because Wikidata records too few of them.
+- **When Understat is unavailable (2026/27).** Matches Understat has not published are estimated from ESPN alone
+  and marked as estimates; the 2025/26 analysis is never affected. Shots, shot locations and box shots come straight
+  from ESPN's play-by-play; xG comes from a shot model (distance, angle, header, assist, situation) and deep
+  completions and PPDA from regressions on ESPN team stats, all trained on 2025/26. Tested on 2026/27 matches that
+  Understat did publish: match xG r = 0.86, shots and box shots r = 0.99, deep completions r = 0.68, fast attacks
+  r = 0.55; describing every 2026/27 club from estimates alone gives the same style for 90% of clubs
+  (`reports/espn_fallback.md`). Understat's own numbers replace the estimates once it is back.
 - **Extension sources.** Wikidata (honours, managers, player photos via Wikimedia Commons, CC licences); YouTube
   for highlights.
 """

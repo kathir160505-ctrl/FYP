@@ -120,7 +120,7 @@ def board(leagues: str) -> None:
                                "predict the winner or the score, and is not intended for betting.")
             with t2:
                 if results.empty:
-                    ui.note("No results in the last 7 days.")
+                    ui.note("No recent results.")
                 else:
                     recent = results.assign(local_day=results.local.dt.date)
                     st.markdown(_fixture_rows(recent.sort_values("kickoff"), form, with_edge=False),

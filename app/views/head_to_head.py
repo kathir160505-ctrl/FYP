@@ -30,13 +30,12 @@ def render() -> None:
                    "Choose a season and two clubs, from the same league or different ones, to see their attacking "
                    "styles and statistics side by side and which of the two is more likely to attack more. All figures "
                    "come from the selected season. This compares attacking style only; it does not predict results.")
-    # One season at a time: the thesis season, or (with the extensions) the current season, classified with the
+    # One season at a time: 2025/26, or (with the extensions) the current season, classified with the
     # unchanged 2025/26 model from that season's own top-flight matches.
     seasons = data.seasons() if data.EXTENSIONS else [data.THESIS_SEASON]
-    labels = {s: f"{data.season_label(s)} · {'thesis' if s == data.THESIS_SEASON else 'current'}" for s in seasons}
     with ui.panel():
         c0, c1, c2, c3 = st.columns([1.7, 2, 2, 1.7])
-        season = c0.selectbox("Season", seasons, format_func=labels.get, disabled=len(seasons) == 1)
+        season = c0.selectbox("Season", seasons, format_func=data.season_option, disabled=len(seasons) == 1)
         df = data.season_clubs(season)
         teams = sorted(df.team)
         default_a = st.query_params.get("a", "Manchester United")
@@ -56,8 +55,11 @@ def render() -> None:
     _side(left, ra, "Club A")
     _side(right, rb, "Club B")
     if season != data.THESIS_SEASON:
+        est = {t: int(r.get("estimated_matches", 0) or 0) for t, r in ((a, ra), (b, rb))}
+        est_text = (" " + " and ".join(f"{n} of {t}'s" for t, n in est.items() if n) + " matches are estimated. "
+                    + data.ESTIMATE_NOTE) if any(est.values()) else ""
         ui.note(f"{label} styles use only {label} league matches, assigned by the model trained on 2025/26. Early in a "
-                "season they rest on few matches and can still change from week to week.")
+                "season they rest on few matches and can still change from week to week." + est_text)
 
     st.write("")
     c1, c2 = st.columns([1, 1.1], gap="medium")

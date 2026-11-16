@@ -93,6 +93,9 @@ def build_league_season(key: str, season: str, names: dict) -> dict[str, pd.Data
     n_games = tm.groupby("team")["matchweek"].transform("max")
     tm["half"] = np.where(tm["matchweek"] > n_games / 2, "H2", "H1")
     tm["season"] = int(season)
+    # "understat", or "espn_estimate" for matches Understat had not published (src/collect/history.py fallback).
+    estimated = set(us.loc[us["source"] == "espn_estimate", "game_id"]) if "source" in us else set()
+    tm["source"] = np.where(tm["game_id"].isin(estimated), "espn_estimate", "understat")
     tm["espn_missing"] = tm["event_id"].isna()
     # The attacking index needs ESPN possession; matches ESPN lacks keep NaN there.
     full = tm[~tm.espn_missing]
@@ -104,6 +107,8 @@ def build_league_season(key: str, season: str, names: dict) -> dict[str, pd.Data
     speed = br[br.block == "attackSpeed"].pivot_table(index="team", columns="category", values="shots", aggfunc="sum")
     season_df["fast_attack_shots"] = season_df["team"].map(speed.get("Fast", pd.Series(dtype=float))) / season_df["matches"]
     season_df["season"] = int(season)
+    est = tm[tm.source == "espn_estimate"].groupby("team").size()
+    season_df["estimated_matches"] = season_df["team"].map(est).fillna(0).astype(int)
     shots = shots.assign(team=shots.team.map(to_team), season=int(season), league=league,
                          in_box=lambda s: in_box(s.location_x, s.location_y))
     return {"team_match": tm, "team_season": season_df, "shots": shots, "breakdowns": br,

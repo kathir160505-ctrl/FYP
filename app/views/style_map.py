@@ -32,9 +32,9 @@ def render() -> None:
     seasons = data.seasons() if data.EXTENSIONS else [data.THESIS_SEASON]
     c_head, c_season = st.columns([4, 1], vertical_alignment="bottom")
     season = c_season.selectbox("Season", seasons, index=seasons.index(data.THESIS_SEASON),
-                                format_func=lambda s: data.season_label(s) + (" · thesis" if s == data.THESIS_SEASON else ""))
-    is_thesis = season == data.THESIS_SEASON
-    if not is_thesis:
+                                format_func=data.season_option)
+    is_base = season == data.THESIS_SEASON
+    if not is_base:
         df = season_view(season, df)
     with c_head:
         ui.page_header("Overview", "How Europe's top three leagues attack",
@@ -52,10 +52,12 @@ def render() -> None:
         ("Variance captured", f"{cm['explained_variance'].sum():.0%}", f"by {cm['n_components']} principal components",
          "#0B0D10"),
     ])
-    if not is_thesis:
+    if not is_base:
         ui.callout(f"{data.season_label(season)} is shown through the 2025/26 model: the same scaling, principal "
                    "components and style centres, so positions and styles are directly comparable across seasons."
-                   + (" The season is still in progress." if season == max(seasons) else ""))
+                   + (" The season is still in progress." if season == max(seasons) else "")
+                   + (f" {data.estimated_matches(season) // 2} of its matches are estimated: " + data.ESTIMATE_NOTE
+                      if data.estimated_matches(season) else ""))
 
     c1, c2 = st.columns([3, 1], gap="medium")
     with c2:
@@ -94,7 +96,7 @@ def render() -> None:
             <div>{_crest_strip(members)}</div></div>''',
             unsafe_allow_html=True)
 
-    if not is_thesis:
+    if not is_base:
         ui.footer()
         return
     uniq = df[df.dbscan_outlier].sort_values("uniqueness", ascending=False)

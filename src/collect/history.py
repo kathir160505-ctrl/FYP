@@ -14,6 +14,10 @@ Files per league-season:
 - us_shots.csv       Understat shot events (xG, location, situation, result)
 - us_breakdowns.csv  Understat team-page splits (attack speed, shot zone, situation)
 - espn_stats.csv     ESPN team box stats for every completed match (possession, passes, crosses, long balls)
+
+If Understat cannot be reached, the Understat files already on disk are kept and every newer ESPN match is added to
+them as an estimate from ESPN alone (src/model/espn_fallback.py), marked source = "espn_estimate". The next run that
+reaches Understat replaces the estimates with Understat's own numbers.
 """
 import argparse
 import json
@@ -140,6 +144,62 @@ def understat_season(league: str, season: str, is_current: bool) -> dict[str, pd
     return {"us_matches": matches, "us_shots": shots, "us_breakdowns": pd.DataFrame(rows)}
 
 
+# ---------------------------------------------------------------- ESPN fallback (Understat unavailable)
+def stored_understat(out: Path) -> dict[str, pd.DataFrame]:
+    """The Understat files from the last successful run, without earlier ESPN estimates."""
+    tables = {}
+    for name in ("us_matches", "us_shots", "us_breakdowns"):
+        p = out / f"{name}.csv"
+        df = pd.read_csv(p) if p.exists() else pd.DataFrame()
+        tables[name] = df[df["source"] != "espn_estimate"] if "source" in df else df
+    return tables
+
+
+def add_espn_estimates(league: str, code: str, season: str, tables: dict[str, pd.DataFrame]) -> int:
+    """Append ESPN-based estimates, in Understat's format, for completed ESPN matches Understat does not have."""
+    import joblib
+
+    from src.model.espn_fallback import MODEL, estimate_season
+
+    ref = pd.concat([pd.read_csv(ROOT / "data" / "reference" / f) for f in ("teams.csv", "teams_promoted_2627.csv")])
+    to_us = dict(zip(ref.espn, ref.understat))
+    espn = tables["espn_stats"].drop_duplicates("event_id")
+    us = tables["us_matches"]
+    have = set(zip(us.get("home_team", []), us.get("away_team", [])))
+    new = espn[[(to_us.get(h), to_us.get(a)) not in have for h, a in zip(espn.espn_home, espn.espn_away)]]
+    unknown = sorted({n for n in pd.concat([new.espn_home, new.espn_away]) if n not in to_us})
+    if unknown:
+        raise RuntimeError(f"no Understat name for {unknown}; add them to data/reference/teams_promoted_2627.csv")
+    if new.empty:
+        return 0
+    model = joblib.load(MODEL)
+    m, shots, fast = estimate_season(code, new, model)
+    if m.empty:
+        return 0
+    date = pd.to_datetime(m["date"], utc=True).dt.tz_localize(None)
+    m = m.assign(league=league, season=int(season), date=date.dt.strftime("%Y-%m-%d %H:%M:%S"),
+                 home_team=m.home_espn.map(to_us), away_team=m.away_espn.map(to_us), source="espn_estimate")
+    m["game"] = m.date.str[:10] + " " + m.home_team + "-" + m.away_team
+    tables["us_matches"] = pd.concat([us.assign(source="understat"), m.drop(columns=["home_espn", "away_espn"])],
+                                     ignore_index=True)
+    if len(shots):
+        shots = shots.assign(league=league, season=int(season), team=shots.team.map(to_us).fillna(shots.team),
+                             date=pd.to_datetime(shots["date"], utc=True).dt.tz_localize(None).dt.strftime(
+                                 "%Y-%m-%d %H:%M:%S"),
+                             body_part=shots.body.map({"foot": "Foot", "head": "Head", "other": "Other"}),
+                             situation=shots.situation.map({"open_play": "Open Play", "fast_break": "Open Play",
+                                                            "corner": "From Corner", "set_piece": "Set Piece",
+                                                            "free_kick": "Direct Freekick", "penalty": "Penalty"}),
+                             source="espn_estimate").drop(columns=["body", "zone", "assist", "penalty", "goal",
+                                                                    "event_id"], errors="ignore")
+        tables["us_shots"] = pd.concat([tables["us_shots"].assign(source="understat"), shots], ignore_index=True)
+    fast = fast.assign(team=fast.espn_team.map(to_us)).groupby("team").fast_shots.sum() * model["fast_scale"]
+    extra = pd.DataFrame({"team": fast.index, "block": "attackSpeed", "category": "Fast", "shots": fast.round(1).values,
+                          "source": "espn_estimate"})
+    tables["us_breakdowns"] = pd.concat([tables["us_breakdowns"].assign(source="understat"), extra], ignore_index=True)
+    return len(m)
+
+
 def collect(key: str, season: str, force: bool) -> None:
     league, code = LEAGUES[key]
     out = OUT / season / key
@@ -148,13 +208,21 @@ def collect(key: str, season: str, force: bool) -> None:
         print(f"{key} {season}: already collected, skipping")
         return
     t0 = time.time()
-    tables = understat_season(league, season, is_current)
+    try:
+        tables = understat_season(league, season, is_current)
+        fallback = False
+    except Exception as exc:  # understat.com down or changed: keep its last data, estimate newer matches from ESPN
+        print(f"{key} {season}: Understat unavailable ({type(exc).__name__}); using the ESPN fallback", flush=True)
+        tables, fallback = stored_understat(out), True
     tables["espn_stats"] = espn_season(code, season, is_current)
+    if fallback:
+        n = add_espn_estimates(league, code, season, tables)
+        print(f"{key} {season}: {n} matches estimated from ESPN", flush=True)
     out.mkdir(parents=True, exist_ok=True)
     for name, df in tables.items():
         df.to_csv(out / f"{name}.csv", index=False)
     n_us, n_espn = len(tables["us_matches"]), tables["espn_stats"]["event_id"].nunique()
-    print(f"{key} {season}: Understat {n_us} matches, {len(tables['us_shots'])} shots; ESPN {n_espn} matches "
+    print(f"{key} {season}: {n_us} matches ({'with ESPN estimates' if fallback else 'Understat'}), {len(tables['us_shots'])} shots; ESPN {n_espn} matches "
           f"({time.time() - t0:.0f}s)", flush=True)
 
 

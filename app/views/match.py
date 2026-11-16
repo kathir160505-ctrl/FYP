@@ -116,7 +116,10 @@ def post_match(s: dict, h: dict, ev: pd.DataFrame, event: str) -> None:
                             + pitch.stats_rows(stats, home["color"], away["color"]), unsafe_allow_html=True)
     with c2:
         if not shots.empty:
-            with ui.panel("Expected goals race", "Understat shot xG, cumulative · stars are goals"):
+            estimated = (tm.source == "espn_estimate").any()
+            source = ("Estimated xG from ESPN play-by-play (Understat unavailable)" if estimated
+                      else "Understat shot xG")
+            with ui.panel("Expected goals race", f"{source}, cumulative · stars are goals"):
                 xg = tm.set_index("team").xg
                 st.plotly_chart(charts.xg_race(shots, home["team"], away["team"], home["color"], away["color"]),
                                 width="stretch", key=f"xg-{event}")

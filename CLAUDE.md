@@ -159,7 +159,16 @@ Phases:
 - **Head-to-head, one season at a time (2026-11-15, supervisor's request):** a Season selector (current season by default; 2025/26 only in thesis mode). Styles, percentiles, the "more attacking" estimate (2025/26: `data.team_form()`; current: `live.form()`), last five and meetings all come from that season only. Never mix seasons or use promoted clubs' second-division data.
   - Under the estimate, `data.comparison_summary()` writes a few lines on which club is more likely to attack more, the main factors (theme contributions) and the season averages.
   - Each club card has a two-sentence description from `data.style_summary()` (cluster + strongest/weakest z-scores among that season's clubs). It is code, not an LLM, so it updates with each weekly refresh and needs no API key.
-- **Understat outage (from about 2026-11-03):** understat.com shows "We will come back soon", so the weekly refresh's history/live/players steps fail with JSONDecodeError while the run still reports success. The 2026/27 data stops at 30 Oct until Understat returns; nothing to fix on our side.
+- **Page seasons (2026-11-15, user's request):** the word "thesis" never appears in the UI; season selectors use `data.season_option()` ("2025/26 · previous season", "2026/27 · current season").
+  - Clubs is 2025/26 only: the "2025/26 vs 2026/27" tab was removed; Squad & line-ups shows the 2025/26 most used XI (`season_xi`), line-ups and squad.
+  - Leagues is 2025/26, plus the kept "Style mix: last season vs this season" panel. Overview, Players and Head-to-head keep both seasons.
+  - Matchday Results always include each league's latest full round (so an international break doesn't empty the tab).
+- **Understat outage (from about 2026-11-03) → ESPN fallback (2026-11-16):** understat.com shows "We will come back soon" (JSONDecodeError).
+  - `src.collect.history` now keeps the stored Understat files and appends ESPN estimates, in Understat's format, for newer matches (`source = "espn_estimate"`). Real Understat data replaces them on the first run that reaches Understat.
+  - Model: `python -m src.model.espn_fallback` (trained on 2025/26, tested on 2026/27) → `models/espn_fallback.joblib` + `reports/espn_fallback.md`. ESPN play-by-play gives shot x/y (`fieldPositionX/Y` / 100, same orientation as Understat), team and outcome; xG = shot model (distance, angle, header, assist, situation) scaled to Understat; deep completions/PPDA = regressions on ESPN box stats; fast attacks = ESPN "fast break" shots × scale.
+  - Validation: match xG r 0.86, shots/box shots r 0.99, deep completions r 0.68, fast attacks r 0.55; 90% same style even when every 2026/27 match is estimated.
+  - `team_match.source`, `team_season.estimated_matches`, `meta.json` `estimated_matches`; `src.collect.live` falls back to the history build. The app labels estimates (Overview, Head-to-head, match-centre xG race, Methodology).
+  - Players stay at Understat's last update (player stats have no ESPN equivalent).
 - **Gotcha:** CSS class names are global. My `.chip` (form chips) once overrode the Overview's `.chip` trait labels, so form chips are now `.fchip`.
 - **D. DONE (2026-10-28): honours and managers.**
   - Collect with `python -m src.collect.legacy` (Wikidata SPARQL, batches of 12 clubs; the search API returns 429, so use SPARQL only). Build with `python -m src.process.build_legacy`, then check with `python -m src.process.check_legacy`. Output goes to `data/processed/legacy/`. Also part of `src.refresh`.

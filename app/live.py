@@ -55,7 +55,7 @@ def _scoreboard(code: str, month: str) -> list[dict]:
 def fixtures(days_back: int = 7, days_ahead: int = 10) -> pd.DataFrame:
     """Results from the last `days_back` days, live matches, and fixtures in the next `days_ahead` days."""
     now = datetime.now(timezone.utc)
-    months = sorted({(now + timedelta(days=d)).strftime("%Y%m") for d in (-days_back, 0, days_ahead)})
+    months = sorted({(now + timedelta(days=d)).strftime("%Y%m") for d in (-max(days_back, 31), 0, days_ahead)})
     rows = []
     for league, code in LEAGUE_CODES.items():
         for month in months:
@@ -76,7 +76,11 @@ def fixtures(days_back: int = 7, days_ahead: int = 10) -> pd.DataFrame:
     if df.empty:
         return df
     df = df.drop_duplicates("id")
-    window = (df.kickoff >= now - timedelta(days=days_back)) & (df.kickoff <= now + timedelta(days=days_ahead))
+    # Results: the last `days_back` days, and always each league's latest full round (a round spans up to four
+    # days), so an international break never leaves the Results tab with only a handful of games.
+    last_round = df[df.state == "post"].groupby("league").kickoff.max() - timedelta(days=4)
+    start = df.league.map(last_round).fillna(now).clip(upper=now - timedelta(days=days_back))
+    window = (df.kickoff >= start) & (df.kickoff <= now + timedelta(days=days_ahead))
     df = df[window].copy()
     names = club_names()
     df["home"] = df.home_espn.map(names).fillna(df.home_espn)

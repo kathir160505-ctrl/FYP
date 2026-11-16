@@ -155,12 +155,17 @@ def season_label(season: int) -> str:
     return f"20{s[:2]}/{s[2:]}"
 
 
+def season_option(season: int) -> str:
+    """Season selector label: "2026/27 · current season" or "2025/26 · previous season"."""
+    return f"{season_label(season)} · {'current season' if season == max(seasons()) else 'previous season'}"
+
+
 @st.cache_data
 def history() -> pd.DataFrame:
     """One row per club-season (2025/26 → current), styles projected with the 2025/26 model."""
     h = pd.read_csv(HIST / "team_season.csv")
     h["league_name"] = h["league"].map(LEAGUES)
-    # Thesis clubs first; promoted clubs' crests and colours come from the live ESPN metadata.
+    # 2025/26 clubs first; promoted clubs' crests and colours come from the live ESPN metadata.
     live_meta = ROOT / "data" / "live" / "team_meta.csv"
     meta = pd.concat([pd.read_csv(REF / "team_meta.csv"), *([pd.read_csv(live_meta)] if live_meta.exists() else [])])
     meta = meta.drop_duplicates("team")[["team", "logo", "color", "abbr"]]
@@ -402,6 +407,19 @@ def club_info() -> pd.DataFrame:
 
 def legacy_retrieved() -> str:
     return pd.Timestamp((LEGACY / "retrieved.txt").read_text(encoding="utf-8").strip()).strftime("%d %b %Y")
+
+
+def estimated_matches(season: int, teams: list[str] | None = None) -> int:
+    """Matches of a season whose Understat numbers are ESPN estimates (Understat had not published them)."""
+    h = history()
+    h = h[h.season == season]
+    if teams is not None:
+        h = h[h.team.isin(teams)]
+    return int(h["estimated_matches"].sum()) if "estimated_matches" in h else 0
+
+
+ESTIMATE_NOTE = ("Understat was unavailable for the most recent matches, so their xG, shot locations, deep completions "
+                 "and fast attacks are estimated from ESPN's play-by-play (see Methodology).")
 
 
 def seasons() -> list[int]:

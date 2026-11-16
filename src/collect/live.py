@@ -9,6 +9,9 @@ and writes small tables the dashboard reads:
 - data/live/team_meta.csv  crest, colours and abbreviation for every current club
 - data/live/meta.json      refresh time and match counts
 Raw responses are cached in data/raw/live/ so re-runs only fetch new matches.
+
+If Understat cannot be reached, the league's matches come from data/processed/history/team_match.parquet instead
+(built by src.process.build_history, which estimates matches Understat has not published from ESPN).
 """
 import json
 import time
@@ -79,30 +82,43 @@ def espn_played(code: str, today: str) -> tuple[pd.DataFrame, list[dict]]:
     return df, list(meta.values())
 
 
+def understat_league(league: str, us_to_team: dict) -> pd.DataFrame:
+    # A no-cache read refreshes the stored league file, so the cached reader below sees new matches too.
+    sd.Understat(leagues=league, seasons=SEASON, no_cache=True).read_team_match_stats()
+    us = sd.Understat(leagues=league, seasons=SEASON)
+    matches = us.read_team_match_stats().reset_index()
+    matches = matches[matches["home_xg"].notna()]
+    shots = us.read_shot_events().reset_index()
+    tm = understat_long(matches).merge(shot_summary(shots), on=["game_id", "team"], how="left")
+    tm[["shots", "shots_on_target", "box_shots"]] = tm[["shots", "shots_on_target", "box_shots"]].fillna(0)
+    for col in ("team", "opponent", "home_team", "away_team"):
+        tm[col] = tm[col].map(us_to_team)
+    return tm
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     names = club_names()
     us_to_team, espn_to_team = dict(zip(names.understat, names.team)), dict(zip(names.espn, names.team))
     today = datetime.now(timezone.utc).strftime("%Y%m%d")
-    frames, metas, counts = [], [], {}
+    frames, metas, counts, estimated = [], [], {}, {}
     for league, code in LEAGUES.items():
-        # A no-cache read refreshes the stored league file, so the cached reader below sees new matches too.
-        sd.Understat(leagues=league, seasons=SEASON, no_cache=True).read_team_match_stats()
-        us = sd.Understat(leagues=league, seasons=SEASON)
-        matches = us.read_team_match_stats().reset_index()
-        matches = matches[matches["home_xg"].notna()]
-        shots = us.read_shot_events().reset_index()
-        tm = understat_long(matches).merge(shot_summary(shots), on=["game_id", "team"], how="left")
-        tm[["shots", "shots_on_target", "box_shots"]] = tm[["shots", "shots_on_target", "box_shots"]].fillna(0)
-        for col in ("team", "opponent", "home_team", "away_team"):
-            tm[col] = tm[col].map(us_to_team)
-
         espn, meta = espn_played(code, today)
         espn["home_team"] = espn["espn_home"].map(espn_to_team)
         espn["away_team"] = espn["espn_away"].map(espn_to_team)
         espn["team"] = espn["espn_team"].map(espn_to_team)
-        tm = tm.merge(espn[["home_team", "away_team", "team", *ESPN_STATS]], on=["home_team", "away_team", "team"],
-                      how="inner")
+        try:
+            tm = understat_league(league, us_to_team)
+            tm = tm.merge(espn[["home_team", "away_team", "team", *ESPN_STATS]],
+                          on=["home_team", "away_team", "team"], how="inner")
+        except Exception as exc:  # understat.com down: use the history build, which fills gaps from ESPN
+            print(f"{league}: Understat unavailable ({type(exc).__name__}); using the history build", flush=True)
+            hist = pd.read_parquet(ROOT / "data" / "processed" / "history" / "team_match.parquet")
+            tm = hist[(hist.season == int(SEASON)) & (hist.league == league) & ~hist.espn_missing]
+            tm = tm[["league", "game_id", "date", "team", "opponent", "is_home", "home_team", "away_team", "goals",
+                     "goals_against", "xg", "np_xg", "xg_against", "deep_completions", "ppda", "points", "shots",
+                     "shots_on_target", "box_shots", *ESPN_STATS, "source"]].copy()
+            estimated[league] = int(tm.loc[tm.source == "espn_estimate", "game_id"].nunique())
         unmapped = sorted(set(m["espn"] for m in meta) - set(espn_to_team))
         if tm["team"].isna().any() or unmapped:
             raise SystemExit(f"{league}: unmapped club names {unmapped}; add them to data/reference/teams_promoted_2627.csv")
@@ -119,7 +135,8 @@ def main() -> None:
         OUT / "team_meta.csv", index=False)
     (OUT / "meta.json").write_text(json.dumps({
         "season": "2026/27", "updated_at": datetime.now(timezone.utc).isoformat(timespec="minutes"),
-        "matches": counts, "clubs": int(form["team"].nunique())}, indent=1), encoding="utf-8")
+        "matches": counts, "estimated_matches": estimated, "clubs": int(form["team"].nunique())}, indent=1),
+        encoding="utf-8")
     print(f"team_form: {len(form)} clubs -> {OUT}")
 
 

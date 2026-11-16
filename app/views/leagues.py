@@ -11,7 +11,8 @@ def render() -> None:
     test = data.cluster_model()["league_test"]
     ui.page_header("League comparison", "Do the leagues attack differently?",
                    "All three leagues are clustered in one shared feature space, so every club is measured on the same "
-                   "scale. This page shows how the four philosophies are distributed across the leagues.")
+                   "scale. This page shows how the four philosophies are distributed across the leagues.",
+                   meta=f"Season <b>{data.season_label(data.THESIS_SEASON)}</b><br>Premier League · La Liga · Serie A")
 
     share = (df.groupby(["league_name", "cluster"]).size().rename("n").reset_index()
              .assign(share=lambda d: d.n / d.groupby("league_name").n.transform("sum") * 100))
@@ -54,7 +55,7 @@ def render() -> None:
                              data.SHORT_LABELS[feat]: st.column_config.ProgressColumn(
                                  format="%.2f", min_value=0, max_value=float(df[feat].max()))})
 
-    if data.EXTENSIONS:  # 2026/27 projection: an extension beyond the 2025/26 thesis
+    if data.EXTENSIONS:  # 2026/27 projection: an extension beyond the 2025/26 analysis
         hist = data.history()
         hist = hist[hist.cluster.notna()]
         with ui.panel("Style mix: last season vs this season", "Share of each league's clubs in each philosophy · "
