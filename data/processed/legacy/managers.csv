@@ -1,5 +1,5 @@
 team,wikidata,start,manager,end,born,nationality,current,days
-AC Milan,Q368682,2026-06-16,Ruben Amorim,,1985-01-27,Portugal,True,153
+AC Milan,Q368682,2026-06-16,Ruben Amorim,,1985-01-27,Portugal,True,160
 AC Milan,Q354529,2025-05-30,Massimiliano Allegri,2026-05-25,1967-08-11,Italy,False,360
 AC Milan,Q317298,2024-12-30,Sérgio Conceição,2025-05-29,1974-11-15,Portugal,False,150
 AC Milan,Q10346582,2024-07-01,Paulo Fonseca,2024-12-30,1973-03-05,Portugal,False,182
@@ -21,7 +21,7 @@ AC Milan,Q183108,1987-04-05,Fabio Capello,1987-06-30,1946-06-18,Italy,False,86
 AC Milan,Q1337031,1982-07-01,Ilario Castagner,1984-03-26,1940-12-18,Italy,False,634
 AC Milan,Q1280931,1981-07-01,Luigi Radice,1982-01-24,1935-01-15,Italy / Kingdom of Italy,False,207
 AC Milan,Q44420,1975-10-02,Giovanni Trapattoni,1976-05-30,1939-03-17,Italy,False,241
-Alavés,Q352313,2026-03-03,Quique Sánchez Flores,,1965-02-05,Spain,True,258
+Alavés,Q352313,2026-03-03,Quique Sánchez Flores,,1965-02-05,Spain,True,265
 Alavés,Q2547652,2024-12-02,Eduardo Coudet,2026-03-03,1974-09-12,Argentina,False,456
 Alavés,Q2531438,2022-07-01,Luis García Plaza,2024-12-02,1972-12-01,Spain,False,885
 Alavés,Q901237,2022-04-05,Julio Velázquez,2022-06-30,1981-10-05,Spain,False,86
@@ -30,7 +30,7 @@ Alavés,Q1332523,2021-04-05,Javier Calleja,2021-12-28,1978-05-12,Spain,False,267
 Alavés,Q318546,2021-01-12,Abelardo Fernández,2021-04-05,1970-03-19,Spain,False,83
 Alavés,Q11697229,2020-08-05,Pablo Machín,2021-01-12,1975-04-07,Spain,False,160
 Alavés,Q4806891,2019-07-01,Asier Garitano,2020-07-05,1969-12-06,Spain,False,370
-Arsenal,Q185572,2019-12-20,Mikel Arteta,,1982-03-26,Spain,True,2523
+Arsenal,Q185572,2019-12-20,Mikel Arteta,,1982-03-26,Spain,True,2530
 Arsenal,Q10560,2019-11-29,Freddie Ljungberg,2019-12-20,1977-04-16,Sweden,False,21
 Arsenal,Q295610,2018-05-23,Unai Emery,2019-11-29,1971-11-03,Spain,False,555
 Arsenal,Q47576,1996-10-01,Arsène Wenger,2018-05-21,1949-10-22,France,False,7902
@@ -40,11 +40,11 @@ Arsenal,Q726250,1984-01-11,Don Howe,1986-03-28,1935-10-12,United Kingdom,False,8
 Arsenal,Q1380624,1976-07-09,Terry Neill,1983-12-16,1942-05-08,United Kingdom,False,2716
 Arsenal,Q1389033,1958-01-01,George Swindin,1962-12-31,1914-12-04,United Kingdom / United Kingdom of Great Britain and Ireland,False,1825
 Arsenal,Q313784,1925-06-11,Herbert Chapman,1934-01-06,1878-01-19,United Kingdom / United Kingdom of Great Britain and Ireland,False,3131
-Aston Villa,Q295610,2022-11-01,Unai Emery,,1971-11-03,Spain,True,1476
+Aston Villa,Q295610,2022-11-01,Unai Emery,,1971-11-03,Spain,True,1483
 Aston Villa,Q459830,2021-11-11,Steven Gerrard,2022-10-20,1980-05-30,United Kingdom,False,343
 Aston Villa,Q5246473,2018-10-10,Dean Smith,2021-11-07,1971-03-19,United Kingdom,False,1124
 Aston Villa,Q316701,2011-06-17,Alex McLeish,2012-05-14,1959-01-21,United Kingdom,False,332
-Atalanta,Q3852721,2026-06-15,Maurizio Sarri,,1959-01-10,Italy,True,154
+Atalanta,Q3852721,2026-06-15,Maurizio Sarri,,1959-01-10,Italy,True,161
 Atalanta,Q282551,2025-11-11,Raffaele Palladino,2026-06-30,1984-04-17,Italy,False,231
 Atalanta,Q556688,2025-06-06,Ivan Jurić,2025-11-10,1975-08-25,Croatia,False,157
 Atalanta,Q367846,2016-07-01,Gian Piero Gasperini,2025-06-30,1958-01-26,Italy,False,3286
@@ -60,14 +60,14 @@ Atalanta,Q43304,1992-07-01,Marcello Lippi,1993-06-30,1948-04-12,Italy,False,364
 Atalanta,Q3052298,1987-07-01,Emiliano Mondonico,1990-06-30,1947-03-09,Italy,False,1095
 Atalanta,Q1080952,1983-07-01,Nedo Sonetti,1987-06-30,1941-02-25,Italy,False,1460
 Atalanta,Q645692,1981-07-01,Ottavio Bianchi,1983-06-30,1943-10-06,Italy,False,729
-Athletic Club,Q61709977,2026-07-01,Edin Terzić,,1982-10-30,Croatia / Germany,True,138
+Athletic Club,Q61709977,2026-07-01,Edin Terzić,,1982-10-30,Croatia / Germany,True,145
 Athletic Club,manual,2022-07-01,Ernesto Valverde,2026-06-30,,,False,1460
 Athletic Club,Q1339589,2021-01-04,Marcelino García Toral,2022-06-30,1965-08-14,Spain,False,542
 Athletic Club,Q742677,2018-12-05,Gaizka Garitano Aguirre,2021-01-03,1975-07-09,Spain,False,760
 Athletic Club,Q586415,2018-07-01,Eduardo Berizzo,2018-12-04,1969-11-13,Argentina,False,156
 Athletic Club,Q704571,2017-07-01,José Ángel Ziganda,2018-06-30,1966-10-01,Spain,False,364
 Athletic Club,Q359118,2013-07-01,Ernesto Valverde,2017-06-30,1964-02-09,Spain,False,1460
-Atlético Madrid,Q258115,2011-12-23,Diego Simeone,,1970-04-28,Argentina,True,5442
+Atlético Madrid,Q258115,2011-12-23,Diego Simeone,,1970-04-28,Argentina,True,5449
 Atlético Madrid,Q516332,2011-06-08,Gregorio Manzano,2011-12-22,1956-03-11,Spain,False,197
 Atlético Madrid,Q352313,2009-10-23,Quique Sánchez Flores,2011-05-31,1965-02-05,Spain,False,585
 Atlético Madrid,Q318494,2009-02-04,Abel Resino,2009-10-23,1960-02-02,Spain,False,261
@@ -75,7 +75,7 @@ Atlético Madrid,Q194311,2006-07-01,Javier Aguirre,2009-02-02,1958-12-01,Mexico,
 Atlético Madrid,Q235068,1999-07-01,Claudio Ranieri,2000-03-03,1951-10-20,Italy,False,246
 Atlético Madrid,Q294259,1998-07-01,Arrigo Sacchi,1999-02-14,1946-04-01,Italy,False,228
 Atlético Madrid,Q310078,1949-07-01,Helenio Herrera,1953-01-26,1910-04-10,Argentina / France,False,1305
-Barcelona,Q577384,2024-07-01,Hansi Flick,,1965-02-24,Germany,True,868
+Barcelona,Q577384,2024-07-01,Hansi Flick,,1965-02-24,Germany,True,875
 Barcelona,Q17500,2021-11-06,Xavi Hernández,2024-06-30,1980-01-25,Spain,False,967
 Barcelona,Q192635,2020-08-19,Ronald Koeman,2021-10-28,1963-03-21,Kingdom of the Netherlands,False,435
 Barcelona,Q2444534,2020-01-13,Quique Setién,2020-08-17,1958-09-27,Spain,False,217
@@ -138,7 +138,7 @@ Barcelona,Q279258,1913-01-15,Jack Greenwell,1923-08-31,1884-01-02,United Kingdom
 Barcelona,Q1990898,1912-12-30,Jack Alderson,1913-01-15,1891-11-28,United Kingdom / United Kingdom of Great Britain and Ireland,False,16
 Barcelona,Q690546,1912-09-01,Miles Barron,1912-12-29,1871-01-01,United Kingdom,False,119
 Barcelona,Q26262412,1912-01-01,William Charles Lambe,1912-08-31,1877-01-02,United Kingdom,False,243
-Bologna,Q282551,2026-09-16,Raffaele Palladino,,1984-04-17,Italy,True,61
+Bologna,Q282551,2026-09-16,Raffaele Palladino,,1984-04-17,Italy,True,68
 Bologna,Q28916689,2026-06-02,Domenico Tedesco,2026-09-16,1985-09-12,Germany / Italy,False,106
 Bologna,Q1091404,2024-06-05,Vincenzo Italiano,2026-05-28,1977-12-10,Italy,False,722
 Bologna,Q191885,2022-09-12,Thiago Motta,2024-06-04,1982-08-28,Brazil / Italy,False,631
@@ -152,7 +152,7 @@ Bologna,Q1080952,1991-11-17,Nedo Sonetti,1992-06-30,1941-02-25,Italy,False,226
 Bologna,Q1280931,1990-10-28,Luigi Radice,1991-06-30,1935-01-15,Italy / Kingdom of Italy,False,245
 Bologna,Q980528,1990-07-01,Franco Scoglio,1990-10-22,1941-05-02,Italy / Kingdom of Italy,False,113
 Bologna,Q1280931,1980-07-01,Luigi Radice,1981-06-30,1935-01-15,Italy / Kingdom of Italy,False,364
-Bournemouth,Q542990,2026-06-03,Marco Rose,,1976-09-11,Germany,True,166
+Bournemouth,Q542990,2026-06-03,Marco Rose,,1976-09-11,Germany,True,173
 Bournemouth,Q317216,2023-07-01,Andoni Iraola,2026-05-31,1982-06-22,Spain,False,1065
 Bournemouth,Q731946,2022-11-28,Gary O'Neil,2023-06-19,1983-05-18,United Kingdom,False,203
 Bournemouth,Q731946,2022-08-30,Gary O'Neil,2022-11-27,1983-05-18,United Kingdom,False,89
@@ -160,20 +160,21 @@ Bournemouth,Q213989,2021-07-01,Scott Parker,2022-08-30,1980-10-13,United Kingdom
 Bournemouth,Q296635,2021-02-04,Jonathan Woodgate,2021-06-30,1980-01-22,United Kingdom,False,146
 Bournemouth,Q6163630,2020-08-08,Jason Tindall,2021-02-03,1977-11-15,United Kingdom,False,179
 Bournemouth,Q5336135,2012-10-14,Eddie Howe,2020-08-01,1977-11-29,United Kingdom,False,2848
-Brentford,Q316704,2025-06-27,Keith Andrews,,1980-09-13,Ireland,True,507
+Brentford,Q316704,2025-06-27,Keith Andrews,,1980-09-13,Ireland,True,514
 Brentford,Q13469562,2018-10-16,Thomas Frank,2025-06-12,1973-10-09,Kingdom of Denmark,False,2431
 Brentford,Q5246473,2015-12-01,Dean Smith,2018-10-09,1971-03-19,United Kingdom,False,1043
 Brentford,Q16194857,2013-12-10,Mark Warburton,2015-05-30,1962-09-06,United Kingdom,False,536
-Brighton,Q115819313,2024-07-01,Fabian Hürzeler,,1993-02-26,Germany / Switzerland / United States,True,868
+Brighton,Q115819313,2024-07-01,Fabian Hürzeler,,1993-02-26,Germany / Switzerland / United States,True,875
 Brighton,Q2032119,2022-09-18,Roberto De Zerbi,2024-05-20,1979-06-06,Italy,False,610
 Brighton,Q5593150,2019-05-20,Graham Potter,2022-09-07,1975-05-20,United Kingdom,False,1206
 Brighton,Q351004,2014-12-31,Chris Hughton,2019-05-13,1958-12-11,United Kingdom,False,1594
+Burnley,Q443937,2026-10-28,Fabio Celestini,,1975-10-31,Switzerland,True,26
 Burnley,Q605304,2026-07-10,Nicky Hayen,2026-10-24,1980-08-16,Belgium,False,106
 Burnley,Q6831556,2026-04-30,Michael Jackson,2026-05-31,1973-12-04,United Kingdom,False,31
 Burnley,Q213989,2024-07-05,Scott Parker,2026-04-30,1980-10-13,United Kingdom,False,664
 Burnley,Q201381,2022-07-01,Vincent Kompany,2024-06-30,1986-04-10,Belgium,False,730
 Burnley,Q10599,2012-10-30,Sean Dyche,2022-04-15,1971-06-28,United Kingdom,False,3454
-Cagliari,Q3737807,2025-06-11,Fabio Pisacane,,1986-01-28,Italy,True,523
+Cagliari,Q3737807,2025-06-11,Fabio Pisacane,,1986-01-28,Italy,True,530
 Cagliari,Q3019103,2024-07-05,Davide Nicola,2025-06-04,1973-03-05,Italy,False,334
 Cagliari,Q235068,2023-01-01,Claudio Ranieri,2024-06-30,1951-10-20,Italy,False,546
 Cagliari,Q381262,2022-07-01,Fabio Liverani,2022-12-20,1976-04-29,Italy,False,172
@@ -198,11 +199,11 @@ Cagliari,Q44420,1995-07-01,Giovanni Trapattoni,1996-02-13,1939-03-17,Italy,False
 Cagliari,Q1280931,1993-07-01,Luigi Radice,1993-09-05,1935-01-15,Italy / Kingdom of Italy,False,66
 Cagliari,Q235068,1988-07-01,Claudio Ranieri,1991-06-30,1951-10-20,Italy,False,1094
 Cagliari,Q1280931,1974-12-09,Luigi Radice,1975-06-30,1935-01-15,Italy / Kingdom of Italy,False,203
-Celta Vigo,Q20534503,2024-03-12,Claudio Giráldez González,,1988-02-24,Spain,True,979
+Celta Vigo,Q20534503,2024-03-12,Claudio Giráldez González,,1988-02-24,Spain,True,986
 Celta Vigo,Q144048,2023-07-01,Rafa Benítez,2024-03-12,1960-04-16,Spain,False,255
 Celta Vigo,Q1042799,2022-11-02,Carlos Carvalhal,2023-06-30,1965-12-04,Portugal,False,240
 Celta Vigo,Q2547652,2020-11-12,Eduardo Coudet,2022-11-03,1974-09-12,Argentina,False,721
-Chelsea,Q208104,2026-07-01,Xabi Alonso,,1981-11-25,Spain,True,138
+Chelsea,Q208104,2026-07-01,Xabi Alonso,,1981-11-25,Spain,True,145
 Chelsea,Q137668183,2026-04-22,Calum McFarlane,2026-06-01,1985-11-13,United Kingdom,False,40
 Chelsea,Q1336865,2026-01-06,Liam Rosenior,2026-04-22,1984-07-09,United Kingdom,False,106
 Chelsea,Q317282,2024-07-01,Enzo Maresca,2026-01-01,1980-02-10,Italy,False,549
@@ -218,7 +219,7 @@ Chelsea,Q79983,2013-07-01,José Mourinho,2015-12-17,1963-01-26,Portugal,False,89
 Chelsea,Q174614,2009-07-01,Carlo Ancelotti,2011-05-22,1959-06-10,Italy,False,690
 Chelsea,Q79983,2004-07-01,José Mourinho,2007-09-20,1963-01-26,Portugal,False,1176
 Chelsea,Q235068,2000-09-18,Claudio Ranieri,2004-06-30,1951-10-20,Italy,False,1381
-Como,Q17499,2024-07-19,Cesc Fàbregas,,1987-05-04,Spain,True,850
+Como,Q17499,2024-07-19,Cesc Fàbregas,,1987-05-04,Spain,True,857
 Como,Q16199536,2023-12-20,Osian Roberts,2024-07-18,1965-08-18,United Kingdom,False,211
 Como,Q3737721,2016-07-01,Fabio Gallo,2017-05-26,1970-09-11,Italy,False,329
 Como,Q1407829,1990-07-01,Eugenio Bersellini,1991-06-30,1936-06-10,Italy / Kingdom of Italy,False,364
@@ -226,9 +227,9 @@ Como,Q578673,1987-07-01,Aldo Agroppi,1988-01-04,1944-04-14,Italy,False,187
 Como,Q3052298,1986-07-01,Emiliano Mondonico,1987-06-30,1947-03-09,Italy,False,364
 Como,Q645692,1984-07-01,Ottavio Bianchi,1985-06-30,1943-10-06,Italy,False,364
 Como,Q1407829,1971-07-01,Eugenio Bersellini,1973-06-30,1936-06-10,Italy / Kingdom of Italy,False,730
-Coventry City,Q41533,2024-11-28,Frank Lampard,,1978-06-20,United Kingdom,True,718
+Coventry City,Q41533,2024-11-28,Frank Lampard,,1978-06-20,United Kingdom,True,725
 Coventry City,Q1900410,2017-01-01,Mark Robins,2024-11-07,1969-12-22,United Kingdom,False,2867
-Cremonese,Q1087530,2026-09-02,Fabio Pecchia,,1973-08-24,Italy,True,75
+Cremonese,Q1087530,2026-09-02,Fabio Pecchia,,1973-08-24,Italy,True,82
 Cremonese,Q2704759,2026-03-18,Marco Giampaolo,2026-09-01,1967-08-02,Italy,False,167
 Cremonese,Q3019103,2025-07-02,Davide Nicola,2026-03-18,1973-03-05,Italy,False,259
 Cremonese,Q2656692,2023-09-19,Giovanni Stroppa,2024-10-08,1968-01-24,Italy,False,385
@@ -241,11 +242,12 @@ Cremonese,Q3052298,2007-07-01,Emiliano Mondonico,2008-06-30,1947-03-09,Italy,Fal
 Cremonese,Q1080952,1996-11-09,Nedo Sonetti,1997-06-30,1941-02-25,Italy,False,233
 Cremonese,Q2537282,1992-07-01,Luigi Simoni,1996-06-30,1939-01-22,Italy,False,1460
 Cremonese,Q3052298,1982-04-26,Emiliano Mondonico,1986-06-30,1947-03-09,Italy,False,1526
+Crystal Palace,Q13469562,2026-11-16,Thomas Frank,,1973-10-09,Kingdom of Denmark,True,7
 Crystal Palace,Q123584452,2026-06-15,Pierre Sage,2026-11-12,1979-05-05,France,False,150
 Crystal Palace,Q874777,2024-02-20,Oliver Glasner,2026-05-31,1974-08-28,Austria,False,831
 Crystal Palace,Q203781,2023-03-21,Roy Hodgson,2024-02-19,1947-08-09,United Kingdom,False,335
 Crystal Palace,Q46347,2021-07-04,Patrick Vieira,2023-03-17,1976-06-23,France,False,621
-Deportivo La Coruña,Q602465,2025-06-10,Antonio Hidalgo,,1979-02-06,Spain,True,524
+Deportivo La Coruña,Q602465,2025-06-10,Antonio Hidalgo,,1979-02-06,Spain,True,531
 Deportivo La Coruña,Q117853573,2024-11-05,Óscar Gilsanz,2025-06-10,1973-01-04,Spain,False,217
 Deportivo La Coruña,Q16214008,2023-07-01,Imanol Idiakez,2024-10-28,1972-03-14,Spain,False,485
 Deportivo La Coruña,Q24090734,2023-05-16,Rubén de la Barrera,2023-06-30,1985-01-18,Spain,False,45
@@ -258,7 +260,7 @@ Deportivo La Coruña,Q283997,2019-07-02,Juan Antonio Anquela,2019-10-07,1957-09-
 Deportivo La Coruña,Q705601,2019-04-08,José Luis Martí,2019-06-30,1975-04-24,Spain,False,83
 Deportivo La Coruña,Q11929086,2018-07-01,Natxo González,2019-04-07,1966-07-29,Spain,False,280
 Deportivo La Coruña,Q310078,1953-07-01,Helenio Herrera,1953-12-31,1910-04-10,Argentina / France,False,183
-Elche,Q110278664,2026-06-13,Martín Anselmi,,1985-07-11,Argentina,True,156
+Elche,Q110278664,2026-06-13,Martín Anselmi,,1985-07-11,Argentina,True,163
 Elche,Q106834887,2024-07-01,Eder Sarabia,2026-05-27,1980-09-27,Spain,False,695
 Elche,Q7442628,2023-03-21,Sebastián Beccacece,2024-06-30,1980-12-17,Argentina,False,467
 Elche,Q11697229,2022-11-17,Pablo Machín,2023-03-20,1975-04-07,Spain,False,123
@@ -271,7 +273,7 @@ Elche,Q7454313,2021-11-25,Sergio Mantecón,2021-11-29,1980-06-08,Spain,False,4
 Elche,Q3259945,2021-02-14,Fran Escribá,2021-11-21,1965-05-03,Spain,False,280
 Elche,Q6277636,2020-08-26,Jorge Almirón,2021-02-12,1971-06-19,Argentina,False,170
 Elche,Q1704254,2018-02-27,Pacheta,2020-08-25,1968-03-23,Spain,False,910
-Espanyol,Q106834887,2026-10-28,Eder Sarabia,,1980-09-27,Spain,True,19
+Espanyol,Q106834887,2026-10-28,Eder Sarabia,,1980-09-27,Spain,True,26
 Espanyol,Q107613083,2024-03-12,Manolo González,2026-10-27,1979-01-14,Spain,False,959
 Espanyol,Q3323952,2023-11-06,Luis Miguel Ramis,2024-03-12,1970-07-25,Spain,False,127
 Espanyol,Q440855,2023-04-03,Luis García Fernández,2023-11-05,1981-02-06,Spain,False,216
@@ -285,7 +287,7 @@ Espanyol,Q17030351,2019-07-01,David Gallego,2019-10-07,1972-01-26,Spain,False,98
 Espanyol,Q5573535,2018-07-01,Joan Francesc Ferrer Sicilia,2019-06-30,1970-02-05,Spain,False,364
 Espanyol,Q313000,2009-01-20,Mauricio Pochettino,2012-11-26,1972-03-02,Argentina / Spain,False,1406
 Espanyol,Q359118,2006-07-01,Ernesto Valverde,2008-06-30,1964-02-09,Spain,False,730
-Everton,Q297252,2025-01-11,David Moyes,,1963-04-25,United Kingdom,True,674
+Everton,Q297252,2025-01-11,David Moyes,,1963-04-25,United Kingdom,True,681
 Everton,Q10599,2023-01-30,Sean Dyche,2025-01-09,1971-06-28,United Kingdom,False,710
 Everton,Q41533,2022-01-31,Frank Lampard,2023-01-23,1978-06-20,United Kingdom,False,357
 Everton,Q144048,2021-06-30,Rafa Benítez,2022-01-16,1960-04-16,Spain,False,200
@@ -293,7 +295,7 @@ Everton,Q174614,2019-12-22,Carlo Ancelotti,2021-06-30,1959-06-10,Italy,False,556
 Everton,Q465623,2019-12-05,Duncan Ferguson,2019-12-21,1971-12-27,United Kingdom,False,16
 Everton,Q6757714,2018-05-31,Marco Silva,2019-12-05,1977-07-12,Portugal,False,553
 Everton,Q334388,2017-11-30,Sam Allardyce,2018-05-16,1954-10-19,United Kingdom,False,167
-Fiorentina,Q3362674,2026-09-07,Paolo Vanoli,,1972-08-12,Italy,True,70
+Fiorentina,Q3362674,2026-09-07,Paolo Vanoli,,1972-08-12,Italy,True,77
 Fiorentina,Q230529,2026-06-08,Fabio Grosso,2026-09-07,1977-11-28,Italy,False,91
 Fiorentina,Q3362674,2025-11-07,Paolo Vanoli,2026-06-30,1972-08-12,Italy,False,235
 Fiorentina,Q923088,2025-07-12,Stefano Pioli,2025-11-04,1965-10-20,Italy,False,115
@@ -315,17 +317,17 @@ Fiorentina,Q218369,1987-07-01,Sven-Göran Eriksson,1989-06-30,1948-02-05,Sweden,
 Fiorentina,Q1407829,1986-07-01,Eugenio Bersellini,1987-06-30,1936-06-10,Italy / Kingdom of Italy,False,364
 Fiorentina,Q578673,1985-07-01,Aldo Agroppi,1986-06-30,1944-04-14,Italy,False,364
 Fiorentina,Q1280931,1973-07-01,Luigi Radice,1974-06-30,1935-01-15,Italy / Kingdom of Italy,False,364
-Frosinone,Q935117,2024-10-22,Leandro Greco,,1986-07-19,Italy,True,755
+Frosinone,Q935117,2024-10-22,Leandro Greco,,1986-07-19,Italy,True,762
 Frosinone,Q26972310,2024-07-01,Vincenzo Vivarini,2024-10-22,1966-09-05,Italy,False,113
 Frosinone,Q396154,2023-07-01,Eusebio Di Francesco,2024-06-25,1968-01-01,Italy,False,360
 Frosinone,Q227892,2019-07-01,Alessandro Nesta,2021-03-22,1976-03-19,Italy,False,630
 Frosinone,Q1317738,2018-12-19,Marco Baroni,2019-06-02,1963-09-11,Italy,False,165
 Frosinone,Q3862936,2017-06-14,Moreno Longo,2018-12-19,1976-02-14,Italy,False,553
-Fulham,Q250901,2026-07-08,Álvaro Arbeloa,,1983-01-17,Spain,True,131
+Fulham,Q250901,2026-07-08,Álvaro Arbeloa,,1983-01-17,Spain,True,138
 Fulham,Q6757714,2021-07-01,Marco Silva,2026-06-02,1977-07-12,Portugal,False,1797
 Fulham,Q213989,2019-02-28,Scott Parker,2021-06-30,1980-10-13,United Kingdom,False,853
 Fulham,Q235068,2018-11-14,Claudio Ranieri,2019-02-28,1951-10-20,Italy,False,106
-Genoa,Q168497,2025-11-06,Daniele De Rossi,,1983-07-24,Italy,True,375
+Genoa,Q168497,2025-11-06,Daniele De Rossi,,1983-07-24,Italy,True,382
 Genoa,Q46347,2024-11-20,Patrick Vieira,2025-11-02,1976-06-23,France,False,347
 Genoa,Q182451,2022-12-06,Alberto Gilardino,2024-11-19,1982-07-05,Italy,False,714
 Genoa,Q1560347,2022-01-19,Alexander Blessin,2022-12-06,1973-05-28,Germany,False,321
@@ -345,16 +347,16 @@ Genoa,Q980528,1988-07-01,Franco Scoglio,1990-06-30,1941-05-02,Italy / Kingdom of
 Genoa,Q2537282,1987-07-01,Luigi Simoni,1988-01-25,1939-01-22,Italy,False,208
 Genoa,Q2537282,1980-07-01,Luigi Simoni,1984-06-30,1939-01-22,Italy,False,1460
 Genoa,Q2537282,1975-02-03,Luigi Simoni,1978-06-30,1939-01-22,Italy,False,1243
-Getafe,Q3323802,2023-04-29,José Bordalás,,1964-03-05,Spain,True,1297
+Getafe,Q3323802,2023-04-29,José Bordalás,,1964-03-05,Spain,True,1304
 Getafe,Q352313,2021-10-06,Quique Sánchez Flores,2023-04-27,1965-02-05,Spain,False,568
-Girona,Q939408,2026-07-01,Quique Álvarez,,1975-07-20,Spain,True,138
+Girona,Q939408,2026-07-01,Quique Álvarez,,1975-07-20,Spain,True,145
 Girona,Q2637295,2021-07-09,Miguel Ángel Sánchez Muñoz,2026-06-30,1975-10-30,Spain,False,1817
 Girona,Q3823451,2020-07-01,Francisco Javier Rodríguez Vílchez,2021-06-30,1978-06-17,Spain,False,364
 Girona,Q705601,2019-10-28,José Luis Martí,2020-06-30,1975-04-24,Spain,False,246
 Girona,Q2494806,2019-10-21,Juan Carlos Moreno Rodríguez,2019-10-28,1975-04-19,Spain,False,7
 Girona,Q560712,2019-07-01,Juan Carlos Unzué,2019-10-21,1967-04-22,Spain,False,112
 Girona,Q366816,2018-07-01,Eusebio Sacristán,2019-06-30,1964-04-13,Spain,False,364
-Hellas Verona,Q2706967,2026-02-03,Paolo Sammarco,,1983-03-17,Italy,True,286
+Hellas Verona,Q2706967,2026-02-03,Paolo Sammarco,,1983-03-17,Italy,True,293
 Hellas Verona,Q1494098,2024-06-13,Paolo Zanetti,2026-02-02,1982-12-16,Italy,False,599
 Hellas Verona,Q1317738,2023-07-01,Marco Baroni,2024-06-10,1963-09-11,Italy,False,345
 Hellas Verona,Q3846591,2022-12-03,Marco Zaffaroni,2023-06-30,1969-01-20,Italy,False,209
@@ -365,7 +367,7 @@ Hellas Verona,Q556688,2019-06-14,Ivan Jurić,2021-05-28,1975-08-25,Croatia,False
 Hellas Verona,Q230529,2018-06-21,Fabio Grosso,2019-05-01,1977-11-28,Italy,False,314
 Hellas Verona,Q3852721,2007-12-01,Maurizio Sarri,2008-01-27,1959-01-10,Italy,False,57
 Hellas Verona,Q2631653,2006-12-25,Gian Piero Ventura,2007-06-30,1948-01-14,Italy,False,187
-Hull City,Q1444714,2025-06-01,Sergej Jakirović,,1976-12-23,Bosnia and Herzegovina,True,533
+Hull City,Q1444714,2025-06-01,Sergej Jakirović,,1976-12-23,Bosnia and Herzegovina,True,540
 Hull City,Q115156958,2024-12-06,Rubén Sellés,2025-05-31,1983-06-15,Spain,False,176
 Hull City,Q54087426,2024-07-01,Tim Walter,2024-11-27,1975-11-08,,False,149
 Hull City,Q1336865,2022-11-03,Liam Rosenior,2024-05-07,1984-07-09,United Kingdom,False,551
@@ -374,7 +376,7 @@ Hull City,Q314365,2022-01-27,Shota Arveladze,2022-09-30,1973-02-22,Georgia / Sov
 Hull City,Q2710509,2019-07-01,Grant McCann,2022-01-25,1980-04-14,United Kingdom,False,939
 Hull City,Q520843,2017-12-07,Nigel Adkins,2019-06-30,1965-03-11,United Kingdom,False,570
 Hull City,Q331904,2012-07-01,Steve Bruce,2016-07-22,1960-12-31,United Kingdom,False,1482
-Inter,Q210491,2025-06-09,Cristian Chivu,,1980-10-26,Romania,True,525
+Inter,Q210491,2025-06-09,Cristian Chivu,,1980-10-26,Romania,True,532
 Inter,Q314670,2021-07-01,Simone Inzaghi,2025-06-03,1976-04-05,Italy,False,1433
 Inter,Q26580,2019-07-01,Antonio Conte,2021-06-30,1969-07-31,Italy,False,730
 Inter,Q310813,2017-07-01,Luciano Spalletti,2019-06-30,1959-03-07,Italy,False,729
@@ -393,14 +395,14 @@ Inter,Q1280931,1983-07-01,Luigi Radice,1984-06-30,1935-01-15,Italy / Kingdom of 
 Inter,Q1407829,1977-07-01,Eugenio Bersellini,1982-06-30,1936-06-10,Italy / Kingdom of Italy,False,1825
 Inter,Q310078,1973-07-01,Helenio Herrera,1974-02-05,1910-04-10,Argentina / France,False,219
 Inter,Q310078,1960-07-01,Helenio Herrera,1968-06-30,1910-04-10,Argentina / France,False,2921
-Ipswich Town,Q731946,2026-06-23,Gary O'Neil,,1983-05-18,United Kingdom,True,146
+Ipswich Town,Q731946,2026-06-23,Gary O'Neil,,1983-05-18,United Kingdom,True,153
 Ipswich Town,Q57017948,2021-12-20,Kieran McKenna,2026-06-10,1986-05-14,United Kingdom,False,1633
 Ipswich Town,Q6247850,2021-12-06,John McGreal,2021-12-19,1972-06-02,United Kingdom,False,13
 Ipswich Town,Q3305315,2021-03-02,Paul Cook,2021-12-04,1967-02-22,United Kingdom,False,277
 Ipswich Town,Q246724,2018-10-28,Paul Lambert,2021-02-28,1969-08-07,United Kingdom,False,854
 Ipswich Town,Q7151437,2018-05-30,Paul Hurst,2018-10-25,1974-09-25,United Kingdom,False,148
 Ipswich Town,Q437925,2012-11-01,Mick McCarthy,2018-04-10,1959-02-07,Ireland,False,1986
-Juventus,Q310813,2025-10-30,Luciano Spalletti,,1959-03-07,Italy,True,382
+Juventus,Q310813,2025-10-30,Luciano Spalletti,,1959-03-07,Italy,True,389
 Juventus,Q276544,2025-03-23,Igor Tudor,2025-10-27,1978-04-16,Croatia,False,218
 Juventus,Q191885,2024-07-01,Thiago Motta,2025-03-23,1982-08-28,Brazil / Italy,False,265
 Juventus,Q342484,2024-05-17,Paolo Montero,2024-06-30,1971-09-03,Uruguay,False,44
@@ -424,7 +426,7 @@ Juventus,Q43304,1994-07-01,Marcello Lippi,1999-02-07,1948-04-12,Italy,False,1682
 Juventus,Q44420,1991-07-01,Giovanni Trapattoni,1994-06-30,1939-03-17,Italy,False,1095
 Juventus,Q44420,1976-07-01,Giovanni Trapattoni,1986-05-03,1939-03-17,Italy,False,3593
 Juventus,Q1060075,1923-07-01,Jenő Károly,1926-07-28,1886-01-15,Hungary,False,1123
-Lazio,Q116980,2026-06-23,Gennaro Gattuso,,1978-01-09,Italy,True,146
+Lazio,Q116980,2026-06-23,Gennaro Gattuso,,1978-01-09,Italy,True,153
 Lazio,Q3852721,2025-06-02,Maurizio Sarri,2026-05-27,1959-01-10,Italy,False,359
 Lazio,Q1317738,2024-07-01,Marco Baroni,2025-05-30,1963-09-11,Italy,False,333
 Lazio,Q276544,2024-03-18,Igor Tudor,2024-06-05,1978-04-16,Croatia,False,79
@@ -437,7 +439,7 @@ Lazio,Q169092,1994-07-01,Zdeněk Zeman,1997-01-27,1947-05-12,Czech Republic,Fals
 Lazio,Q3059610,1986-07-01,Eugenio Fascetti,1988-06-30,1938-10-23,Italy,False,730
 Lazio,Q2537282,1985-07-01,Luigi Simoni,1986-06-30,1939-01-22,Italy,False,364
 Lazio,Q1337031,1980-07-01,Ilario Castagner,1982-01-25,1940-12-18,Italy,False,573
-Lecce,Q396154,2025-06-26,Eusebio Di Francesco,,1968-01-01,Italy,True,508
+Lecce,Q396154,2025-06-26,Eusebio Di Francesco,,1968-01-01,Italy,True,515
 Lecce,Q2704759,2024-11-11,Marco Giampaolo,2025-06-30,1967-08-02,Italy,False,231
 Lecce,Q3838152,2024-03-13,Luca Gotti,2024-11-09,1967-09-13,Italy,False,241
 Lecce,Q573195,2023-06-27,Roberto D'Aversa,2024-03-11,1975-08-12,Italy,False,258
@@ -453,11 +455,11 @@ Lecce,Q1080952,1993-07-01,Nedo Sonetti,1993-11-20,1941-02-25,Italy,False,142
 Lecce,Q672698,1992-03-01,Alberto Bigon,1992-06-30,1947-10-31,Italy,False,121
 Lecce,Q672698,1991-07-01,Alberto Bigon,1992-01-18,1947-10-31,Italy,False,201
 Lecce,Q1407829,1969-04-14,Eugenio Bersellini,1971-06-30,1936-06-10,Italy / Kingdom of Italy,False,807
-Leeds United,Q30015253,2023-07-04,Daniel Farke,,1976-10-30,Germany,True,1231
+Leeds United,Q30015253,2023-07-04,Daniel Farke,,1976-10-30,Germany,True,1238
 Leeds United,Q334388,2023-05-03,Sam Allardyce,2023-06-30,1954-10-19,United Kingdom,False,58
 Leeds United,Q4886441,2023-02-24,Javi Gracia,2023-05-02,1970-05-01,Spain,False,67
 Leeds United,Q1336179,2022-02-28,Jesse Marsch,2023-02-06,1973-11-08,United States,False,343
-Levante,Q112860643,2025-12-20,Luís Manuel Ferreira de Castro,,1980-05-07,Portugal,True,331
+Levante,Q112860643,2025-12-20,Luís Manuel Ferreira de Castro,,1980-05-07,Portugal,True,338
 Levante,Q24565063,2024-07-01,Julián Calero Fernández,2025-11-30,1970-10-26,Spain,False,517
 Levante,Q1339327,2024-02-19,Felipe Miñambres,2024-06-30,1965-04-29,Spain,False,132
 Levante,Q1332523,2022-10-17,Javier Calleja,2024-02-19,1978-05-12,Spain,False,490
@@ -466,22 +468,22 @@ Levante,Q380173,2022-07-01,Mehdi Nafti,2022-10-10,1978-11-28,France / Tunisia,Fa
 Levante,Q109890596,2021-11-30,Alessio Lisci,2022-06-30,1985-11-04,Italy,False,212
 Levante,Q104853253,2021-10-07,Javier Pereira,2021-11-29,1966-05-13,Spain,False,53
 Levante,Q2519433,2018-03-05,Paco López,2021-10-03,1967-09-19,Spain,False,1308
-Liverpool,Q317216,2026-06-04,Andoni Iraola,,1982-06-22,Spain,True,165
+Liverpool,Q317216,2026-06-04,Andoni Iraola,,1982-06-22,Spain,True,172
 Liverpool,Q1029223,2024-06-01,Arne Slot,2026-05-30,1978-09-17,Kingdom of the Netherlands,False,728
 Liverpool,Q83106,2015-10-08,Jürgen Klopp,2024-05-19,1967-06-16,Germany,False,3146
 Liverpool,Q310623,2012-06-01,Brendan Rodgers,2015-10-04,1973-01-26,United Kingdom,False,1220
 Liverpool,Q187198,2011-01-08,Kenny Dalglish,2012-05-16,1951-03-04,United Kingdom,False,494
 Liverpool,Q187198,1985-05-30,Kenny Dalglish,1991-02-21,1951-03-04,United Kingdom,False,2093
-Mallorca,Q440855,2026-06-01,Luis García Fernández,,1981-02-06,Spain,True,168
+Mallorca,Q440855,2026-06-01,Luis García Fernández,,1981-02-06,Spain,True,175
 Mallorca,Q150947,2026-02-26,Martín Demichelis,2026-06-22,1980-12-20,Argentina / Italy,False,116
 Mallorca,Q13422032,2024-07-01,Jagoba Arrasate,2026-02-23,1978-04-22,Spain,False,602
 Mallorca,Q194311,2022-03-24,Javier Aguirre,2024-06-30,1958-12-01,Mexico,False,829
 Mallorca,Q2531438,2020-08-06,Luis García Plaza,2022-03-22,1972-12-01,Spain,False,593
-Manchester City,Q317282,2026-06-29,Enzo Maresca,,1980-02-10,Italy,True,140
+Manchester City,Q317282,2026-06-29,Enzo Maresca,,1980-02-10,Italy,True,147
 Manchester City,Q164038,2016-07-01,Pep Guardiola,2026-05-31,1971-01-18,Spain,False,3621
 Manchester City,Q48330,2009-12-19,Roberto Mancini,2013-05-13,1964-11-27,Italy,False,1241
 Manchester City,Q218369,2007-07-06,Sven-Göran Eriksson,2008-06-02,1948-02-05,Sweden,False,332
-Manchester United,Q313000,2026-11-18,Mauricio Pochettino,,1972-03-02,Argentina / Spain,True,-2
+Manchester United,Q313000,2026-11-18,Mauricio Pochettino,,1972-03-02,Argentina / Spain,True,5
 Manchester United,Q29566,2026-01-13,Michael Carrick,2026-11-12,1981-07-28,United Kingdom,False,303
 Manchester United,Q172792,2026-01-05,Darren Fletcher,2026-01-13,1984-02-01,United Kingdom,False,8
 Manchester United,Q368682,2024-11-11,Ruben Amorim,2026-01-05,1985-01-27,Portugal,False,420
@@ -494,7 +496,7 @@ Manchester United,Q79983,2016-05-27,José Mourinho,2018-12-18,1963-01-26,Portuga
 Manchester United,Q207431,2014-07-01,Louis van Gaal,2016-05-23,1951-08-08,Kingdom of the Netherlands,False,692
 Manchester United,Q297252,2013-07-01,David Moyes,2014-04-22,1963-04-25,United Kingdom,False,295
 Manchester United,Q44980,1986-11-06,Alex Ferguson,2013-06-30,1941-12-31,United Kingdom,False,9733
-Monza,Q556688,2026-06-29,Ivan Jurić,,1975-08-25,Croatia,True,140
+Monza,Q556688,2026-06-29,Ivan Jurić,,1975-08-25,Croatia,True,147
 Monza,Q1444184,2025-07-01,Paolo Bianco,2026-06-30,1977-08-20,Italy,False,364
 Monza,Q227892,2025-02-10,Alessandro Nesta,2025-06-11,1976-03-19,Italy,False,121
 Monza,Q314744,2024-12-23,Salvatore Bocchetti,2025-02-10,1986-11-30,Italy,False,49
@@ -507,11 +509,11 @@ Monza,Q1280931,1997-03-19,Luigi Radice,1997-10-05,1935-01-15,Italy / Kingdom of 
 Monza,Q1080952,1993-11-22,Nedo Sonetti,1994-06-30,1941-02-25,Italy,False,220
 Monza,Q1280931,1969-07-01,Luigi Radice,1971-06-30,1935-01-15,Italy / Kingdom of Italy,False,729
 Monza,Q1280931,1966-07-01,Luigi Radice,1968-02-18,1935-01-15,Italy / Kingdom of Italy,False,597
-Málaga,Q111423428,2025-11-01,Juan Francisco Funes Arjona,,,Spain,True,380
+Málaga,Q111423428,2025-11-01,Juan Francisco Funes Arjona,,,Spain,True,387
 Málaga,Q28094306,2023-01-26,Sergio Pellicer,2025-11-30,1973-09-09,Spain,False,1039
 Málaga,Q2409599,2022-09-21,Pepe Mel,2023-01-25,1963-02-28,Spain,False,126
 Málaga,Q6056049,2022-04-03,Pablo Guede,2022-09-20,1974-11-12,Argentina,False,170
-Napoli,Q354529,2026-07-03,Massimiliano Allegri,,1967-08-11,Italy,True,136
+Napoli,Q354529,2026-07-03,Massimiliano Allegri,,1967-08-11,Italy,True,143
 Napoli,Q26580,2024-07-01,Antonio Conte,2026-05-24,1969-07-31,Italy,False,692
 Napoli,Q113652572,2024-02-19,Francesco Calzona,2024-06-30,1968-10-24,Italy,False,132
 Napoli,Q370838,2023-11-14,Walter Mazzarri,2024-02-19,1961-10-01,Italy,False,97
@@ -532,11 +534,11 @@ Napoli,Q645692,1992-11-22,Ottavio Bianchi,1993-06-30,1943-10-06,Italy,False,220
 Napoli,Q235068,1991-07-01,Claudio Ranieri,1992-11-22,1951-10-20,Italy,False,510
 Napoli,Q672698,1989-07-01,Alberto Bigon,1991-06-30,1947-10-31,Italy,False,729
 Napoli,Q645692,1985-07-01,Ottavio Bianchi,1989-06-30,1943-10-06,Italy,False,1460
-Newcastle United,Q690028,2026-08-05,Matthias Jaissle,,1988-04-05,Germany,True,103
+Newcastle United,Q690028,2026-08-05,Matthias Jaissle,,1988-04-05,Germany,True,110
 Newcastle United,Q5336135,2021-11-08,Eddie Howe,2026-07-30,1977-11-29,United Kingdom,False,1725
 Newcastle United,Q331904,2019-07-17,Steve Bruce,2021-10-20,1960-12-31,United Kingdom,False,826
 Newcastle United,Q144048,2016-03-11,Rafa Benítez,2019-06-30,1960-04-16,Spain,False,1206
-Nottingham Forest,Q874777,2026-07-06,Oliver Glasner,,1974-08-28,Austria,True,133
+Nottingham Forest,Q874777,2026-07-06,Oliver Glasner,,1974-08-28,Austria,True,140
 Nottingham Forest,Q556610,2026-02-15,Vítor Pereira,2026-07-01,1968-07-26,Portugal,False,136
 Nottingham Forest,Q10599,2025-10-21,Sean Dyche,2026-02-12,1971-06-28,United Kingdom,False,114
 Nottingham Forest,Q2849301,2025-09-09,Ange Postecoglou,2025-10-18,1965-08-27,,False,39
@@ -548,12 +550,12 @@ Nottingham Forest,Q310263,2019-01-15,Martin O'Neill,2019-06-30,1952-03-01,United
 Nottingham Forest,Q373064,2018-01-08,Aitor Karanka,2019-01-11,1973-09-18,Spain,False,368
 Nottingham Forest,Q16194857,2017-03-14,Mark Warburton,2017-12-31,1962-09-06,United Kingdom,False,292
 Nottingham Forest,Q316701,2012-12-28,Alex McLeish,2013-02-05,1959-01-21,United Kingdom,False,39
-Osasuna,Q13422032,2026-10-12,Jagoba Arrasate,,1978-04-22,Spain,True,35
+Osasuna,Q13422032,2026-10-12,Jagoba Arrasate,,1978-04-22,Spain,True,42
 Osasuna,Q3323952,2026-06-10,Luis Miguel Ramis,2026-10-12,1970-07-25,Spain,False,124
 Osasuna,Q109890596,2025-07-01,Alessio Lisci,2026-05-25,1985-11-04,Italy,False,328
 Osasuna,Q3321444,2024-07-01,Vicente Moreno,2025-05-24,1974-10-26,Spain,False,327
 Osasuna,Q13422032,2018-07-01,Jagoba Arrasate,2024-06-30,1978-04-22,Spain,False,2191
-Parma,Q182451,2026-09-29,Alberto Gilardino,,1982-07-05,Italy,True,48
+Parma,Q182451,2026-09-29,Alberto Gilardino,,1982-07-05,Italy,True,55
 Parma,Q116776804,2025-06-19,Carlos Cuesta,2026-09-30,1995-07-29,Spain,False,468
 Parma,Q210491,2025-02-18,Cristian Chivu,2025-06-30,1980-10-26,Romania,False,132
 Parma,Q1087530,2022-06-02,Fabio Pecchia,2025-02-17,1973-08-24,Italy,False,991
@@ -568,7 +570,7 @@ Parma,Q294259,2001-01-09,Arrigo Sacchi,2001-02-01,1946-04-01,Italy,False,23
 Parma,Q174614,1996-07-01,Carlo Ancelotti,1998-06-30,1959-06-10,Italy,False,729
 Parma,Q169092,1987-07-01,Zdeněk Zeman,1987-10-26,1947-05-12,Czech Republic,False,117
 Parma,Q294259,1985-07-01,Arrigo Sacchi,1987-06-30,1946-04-01,Italy,False,729
-Pisa,Q1444184,2026-06-22,Paolo Bianco,,1977-08-20,Italy,True,147
+Pisa,Q1444184,2026-06-22,Paolo Bianco,,1977-08-20,Italy,True,154
 Pisa,Q152067,2026-02-03,Oscar Hiljemark,2026-06-08,1992-06-28,Sweden,False,125
 Pisa,Q182451,2025-06-26,Alberto Gilardino,2026-02-01,1982-07-05,Italy,False,220
 Pisa,Q126503,2024-07-03,Filippo Inzaghi,2025-06-13,1973-08-09,Italy,False,345
@@ -588,21 +590,21 @@ Pisa,Q1337031,1991-09-16,Ilario Castagner,1992-06-30,1940-12-18,Italy,False,288
 Pisa,Q2537282,1986-07-01,Luigi Simoni,1987-06-30,1939-01-22,Italy,False,364
 Pisa,Q2537282,1984-07-01,Luigi Simoni,1985-06-30,1939-01-22,Italy,False,364
 Pisa,Q578673,1981-07-01,Aldo Agroppi,1982-06-30,1944-04-14,Italy,False,364
-Racing Santander,Q58839682,2022-12-13,José Alberto López Menéndez,,1982-05-21,Spain,True,1434
+Racing Santander,Q58839682,2022-12-13,José Alberto López Menéndez,,1982-05-21,Spain,True,1441
 Racing Santander,Q106834883,2021-07-01,Guillermo Fernández Romo,2022-12-12,1978-01-01,Spain,False,529
 Racing Santander,Q654516,2020-12-21,Aritz Solabarrieta,2021-06-30,1983-07-22,Spain,False,191
 Racing Santander,Q67940463,2020-08-03,Javi Rozada,2020-12-21,1982-07-03,Spain,False,140
 Racing Santander,Q1377271,2020-02-04,José Luis Oltra,2020-07-20,1969-03-24,Spain,False,167
 Racing Santander,Q2049205,2019-11-11,Cristóbal Parralo,2020-02-04,1967-08-21,Spain,False,85
 Racing Santander,Q3779635,2018-07-01,Iván Ania,2019-11-11,1977-10-24,Spain,False,498
-Rayo Vallecano,Q5751239,2026-07-01,Carlos Orúe,,1952-03-09,Spain,True,138
-Rayo Vallecano,Q10556689,2026-06-18,Beñat San José,,1979-09-24,Spain,False,151
+Rayo Vallecano,Q5751239,2026-07-01,Carlos Orúe,,1952-03-09,Spain,True,145
+Rayo Vallecano,Q10556689,2026-06-18,Beñat San José,,1979-09-24,Spain,False,158
 Rayo Vallecano,Q2499750,2024-02-14,Iñigo Pérez,2026-06-30,1988-01-18,Spain,False,867
 Rayo Vallecano,Q3823451,2023-07-01,Francisco Javier Rodríguez Vílchez,2024-02-13,1978-06-17,Spain,False,227
 Rayo Vallecano,Q317216,2020-08-06,Andoni Iraola,2023-06-30,1982-06-22,Spain,False,1058
 Rayo Vallecano,Q2637295,2017-02-21,Miguel Ángel Sánchez Muñoz,2019-03-18,1975-10-30,Spain,False,755
-Real Betis,Q296036,2020-08-01,Manuel Pellegrini,,1953-09-16,Chile,True,2298
-Real Madrid,Q79983,2026-07-01,José Mourinho,,1963-01-26,Portugal,True,138
+Real Betis,Q296036,2020-08-01,Manuel Pellegrini,,1953-09-16,Chile,True,2305
+Real Madrid,Q79983,2026-07-01,José Mourinho,,1963-01-26,Portugal,True,145
 Real Madrid,Q250901,2026-01-13,Álvaro Arbeloa,2026-06-30,1983-01-17,Spain,False,168
 Real Madrid,Q208104,2025-05-25,Xabi Alonso,2026-01-12,1981-11-25,Spain,False,232
 Real Madrid,Q174614,2021-07-01,Carlo Ancelotti,2025-05-24,1959-06-10,Italy,False,1423
@@ -615,8 +617,8 @@ Real Madrid,Q79983,2010-07-01,José Mourinho,2013-06-30,1963-01-26,Portugal,Fals
 Real Madrid,Q183108,2006-07-06,Fabio Capello,2007-06-28,1946-06-18,Italy,False,357
 Real Madrid,Q152107,1997-07-01,Jupp Heynckes,1998-06-30,1945-05-09,Germany,False,364
 Real Madrid,Q183108,1996-07-01,Fabio Capello,1997-06-30,1946-06-18,Italy,False,364
-Real Oviedo,Q11576,2026-11-09,Raúl,,1977-06-27,Spain,True,7
-Real Oviedo,Q24565063,2026-07-01,Julián Calero Fernández,2026-11-16,1970-10-26,Spain,False,138
+Real Oviedo,Q11576,2026-11-09,Raúl,,1977-06-27,Spain,True,14
+Real Oviedo,Q24565063,2026-07-01,Julián Calero Fernández,2026-11-23,1970-10-26,Spain,False,145
 Real Oviedo,Q5888276,2025-12-16,Guillermo Almada,2026-05-23,1969-06-18,Uruguay,False,158
 Real Oviedo,Q2310536,2025-10-09,Luis Carrión,2025-12-14,1979-02-07,Spain,False,66
 Real Oviedo,Q612930,2025-03-26,Veljko Paunović,2025-10-09,1977-08-21,Serbia / Spain,False,197
@@ -628,11 +630,11 @@ Real Oviedo,Q704571,2020-02-18,José Ángel Ziganda,2022-08-06,1966-10-01,Spain,
 Real Oviedo,Q67940463,2019-09-15,Javi Rozada,2020-02-18,1982-07-03,Spain,False,156
 Real Oviedo,Q7454244,2019-04-22,Sergio Egea Rueda,2019-09-15,1957-09-21,Argentina,False,146
 Real Oviedo,Q283997,2017-06-23,Juan Antonio Anquela,2019-04-22,1957-09-11,Spain,False,668
-Real Sociedad,Q80310717,2025-12-20,Pellegrino Matarazzo,,1977-11-28,United States,True,331
+Real Sociedad,Q80310717,2025-12-20,Pellegrino Matarazzo,,1977-11-28,United States,True,338
 Real Sociedad,Q3824000,2025-07-01,Sergio Francisco,2025-12-14,1979-03-19,Spain,False,166
 Real Sociedad,Q9008053,2018-12-27,Imanol Alguacil,2025-06-30,1971-07-04,Spain,False,2377
 Real Sociedad,Q4806891,2018-07-01,Asier Garitano,2018-12-26,1969-12-06,Spain,False,178
-Roma,Q367846,2025-06-06,Gian Piero Gasperini,,1958-01-26,Italy,True,528
+Roma,Q367846,2025-06-06,Gian Piero Gasperini,,1958-01-26,Italy,True,535
 Roma,Q235068,2024-11-14,Claudio Ranieri,2025-06-30,1951-10-20,Italy,False,228
 Roma,Q556688,2024-09-18,Ivan Jurić,2024-11-10,1975-08-25,Croatia,False,53
 Roma,Q168497,2024-01-16,Daniele De Rossi,2024-09-18,1983-07-24,Italy,False,246
@@ -662,7 +664,7 @@ Sassuolo,Q396154,2014-03-03,Eusebio Di Francesco,2017-06-12,1968-01-01,Italy,Fal
 Sassuolo,Q396154,2012-06-19,Eusebio Di Francesco,2014-01-28,1968-01-01,Italy,False,588
 Sassuolo,Q923088,2009-06-12,Stefano Pioli,2010-06-09,1965-10-20,Italy,False,362
 Sassuolo,Q354529,2007-07-17,Massimiliano Allegri,2008-05-28,1967-08-11,Italy,False,316
-Sevilla,Q2531438,2026-03-25,Luis García Plaza,,1972-12-01,Spain,True,236
+Sevilla,Q2531438,2026-03-25,Luis García Plaza,,1972-12-01,Spain,True,243
 Sevilla,Q359494,2025-06-16,Matías Almeyda,2026-03-23,1973-12-21,Argentina,False,280
 Sevilla,Q358692,2025-04-13,Joaquín Caparrós,2025-06-30,1955-10-13,Spain,False,78
 Sevilla,Q2671442,2024-07-01,García Pimienta,2025-04-13,1974-08-03,Spain,False,286
@@ -676,7 +678,7 @@ Sevilla,Q11697229,2018-07-01,Pablo Machín,2019-03-31,1975-04-07,Spain,False,273
 Sevilla,Q297768,2017-12-28,Vincenzo Montella,2018-04-28,1974-06-18,Italy,False,121
 Sevilla,Q295610,2013-01-01,Unai Emery,2016-06-30,1971-11-03,Spain,False,1276
 Sevilla,Q310078,1954-01-01,Helenio Herrera,1957-06-30,1910-04-10,Argentina / France,False,1276
-Sunderland,Q3455749,2024-07-01,Régis Le Bris,,1975-12-06,France,True,868
+Sunderland,Q3455749,2024-07-01,Régis Le Bris,,1975-12-06,France,True,875
 Sunderland,Q111180951,2024-02-19,Mike Dodds,2024-06-30,1986-06-03,United Kingdom,False,132
 Sunderland,Q112339753,2023-12-18,Michael Beale,2024-02-19,1980-09-04,United Kingdom,False,63
 Sunderland,Q717959,2022-08-30,Tony Mowbray,2023-12-05,1963-11-22,United Kingdom,False,462
@@ -685,7 +687,7 @@ Sunderland,Q797757,2019-10-17,Phil Parkinson,2020-11-29,1967-12-01,United Kingdo
 Sunderland,Q3805645,2018-05-25,Jack Ross,2019-10-08,1976-06-05,United Kingdom,False,501
 Sunderland,Q381769,2017-11-19,Chris Coleman,2018-04-29,1970-06-10,United Kingdom,False,161
 Sunderland,Q331904,2009-07-01,Steve Bruce,2011-11-30,1960-12-31,United Kingdom,False,882
-Torino,Q213007,2026-06-12,Ignazio Abate,,1986-11-12,Italy,True,157
+Torino,Q213007,2026-06-12,Ignazio Abate,,1986-11-12,Italy,True,164
 Torino,Q573195,2026-02-23,Roberto D'Aversa,2026-06-12,1975-08-12,Italy,False,109
 Torino,Q1317738,2025-06-05,Marco Baroni,2026-02-23,1963-09-11,Italy,False,263
 Torino,Q3362674,2024-07-01,Paolo Vanoli,2025-06-05,1972-08-12,Italy,False,339
@@ -704,7 +706,7 @@ Torino,Q3052298,1990-07-01,Emiliano Mondonico,1994-06-30,1947-03-09,Italy,False,
 Torino,Q1280931,1984-07-01,Luigi Radice,1988-12-12,1935-01-15,Italy / Kingdom of Italy,False,1625
 Torino,Q1407829,1982-07-01,Eugenio Bersellini,1984-06-30,1936-06-10,Italy / Kingdom of Italy,False,730
 Torino,Q1280931,1975-07-01,Luigi Radice,1980-02-04,1935-01-15,Italy / Kingdom of Italy,False,1679
-Tottenham,Q2032119,2026-03-31,Roberto De Zerbi,,1979-06-06,Italy,True,230
+Tottenham,Q2032119,2026-03-31,Roberto De Zerbi,,1979-06-06,Italy,True,237
 Tottenham,Q276544,2026-02-14,Igor Tudor,2026-03-29,1978-04-16,Croatia,False,43
 Tottenham,Q13469562,2025-06-13,Thomas Frank,2026-02-11,1973-10-09,Kingdom of Denmark,False,243
 Tottenham,Q2849301,2023-07-01,Ange Postecoglou,2025-06-06,1965-08-27,,False,706
@@ -718,7 +720,7 @@ Tottenham,Q313000,2014-05-27,Mauricio Pochettino,2019-11-19,1972-03-02,Argentina
 Tottenham,Q970732,2013-12-23,Tim Sherwood,2014-05-13,1969-02-06,United Kingdom,False,141
 Tottenham,Q212914,2012-07-03,André Villas-Boas,2013-12-16,1977-10-17,Portugal,False,531
 Tottenham,Q221349,2008-10-26,Harry Redknapp,2012-06-14,1947-03-02,United Kingdom,False,1327
-Udinese,Q1494098,2026-11-02,Paolo Zanetti,,1982-12-16,Italy,True,14
+Udinese,Q1494098,2026-11-02,Paolo Zanetti,,1982-12-16,Italy,True,21
 Udinese,Q1785131,2024-07-01,Kosta Runjaić,2026-11-02,1971-06-04,Germany,False,854
 Udinese,Q102027,2024-04-22,Fabio Cannavaro,2024-06-08,1973-09-13,Italy,False,47
 Udinese,Q1615609,2023-10-25,Gabriele Cioffi,2024-04-22,1975-09-07,Italy,False,180
@@ -733,7 +735,7 @@ Udinese,Q310813,2001-03-19,Luciano Spalletti,2001-06-30,1959-03-07,Italy,False,1
 Udinese,Q672698,1992-07-01,Alberto Bigon,1993-06-30,1947-10-31,Italy,False,364
 Udinese,Q980528,1991-07-01,Franco Scoglio,1992-02-26,1941-05-02,Italy / Kingdom of Italy,False,240
 Udinese,Q1080952,1987-12-20,Nedo Sonetti,1989-06-30,1941-02-25,Italy,False,558
-Valencia,Q194311,2026-09-23,Javier Aguirre,,1958-12-01,Mexico,True,54
+Valencia,Q194311,2026-09-23,Javier Aguirre,,1958-12-01,Mexico,True,61
 Valencia,Q293476,2026-09-13,Óscar Sánchez Fuentes,2026-09-23,1979-12-19,Spain,False,10
 Valencia,Q27983031,2024-12-24,Carlos Corberán,2026-09-13,1983-04-07,Spain,False,628
 Valencia,Q299488,2023-02-14,Rubén Baraja,2024-12-23,1975-07-11,Spain,False,678
@@ -748,7 +750,7 @@ Valencia,Q1339589,2017-07-01,Marcelino García Toral,2019-09-11,1965-08-14,Spain
 Valencia,Q359118,2012-12-03,Ernesto Valverde,2013-06-20,1964-02-09,Spain,False,199
 Valencia,Q235068,2004-07-01,Claudio Ranieri,2005-02-25,1951-10-20,Italy,False,239
 Valencia,Q235068,1997-09-20,Claudio Ranieri,1999-06-30,1951-10-20,Italy,False,648
-Venezia,Q3019103,2026-10-14,Davide Nicola,,1973-03-05,Italy,True,33
+Venezia,Q3019103,2026-10-14,Davide Nicola,,1973-03-05,Italy,True,40
 Venezia,Q2656692,2025-07-01,Giovanni Stroppa,2026-10-13,1968-01-24,Italy,False,469
 Venezia,Q396154,2024-06-26,Eusebio Di Francesco,2025-06-26,1968-01-01,Italy,False,365
 Venezia,Q3362674,2022-11-07,Paolo Vanoli,2024-06-20,1972-08-12,Italy,False,591
@@ -761,7 +763,7 @@ Venezia,Q310813,1999-11-29,Luciano Spalletti,2000-02-07,1959-03-07,Italy,False,7
 Venezia,Q310813,1999-07-01,Luciano Spalletti,1999-11-01,1959-03-07,Italy,False,123
 Venezia,Q2631653,1994-12-15,Gian Piero Ventura,1995-04-10,1948-01-14,Italy,False,116
 Venezia,Q2631653,1994-07-01,Gian Piero Ventura,1994-09-12,1948-01-14,Italy,False,73
-Villarreal,Q2499750,2026-06-01,Iñigo Pérez,,1988-01-18,Spain,True,168
+Villarreal,Q2499750,2026-06-01,Iñigo Pérez,,1988-01-18,Spain,True,175
 Villarreal,Q1339589,2023-11-13,Marcelino García Toral,2026-05-31,1965-08-14,Spain,False,930
 Villarreal,Q2551128,2023-11-10,Miguel Ángel Tena,2023-11-12,1982-01-17,Spain,False,2
 Villarreal,Q1704254,2023-09-09,Pacheta,2023-11-10,1968-03-23,Spain,False,62
@@ -771,14 +773,14 @@ Villarreal,Q1332523,2019-01-29,Javier Calleja,2020-07-20,1978-05-12,Spain,False,
 Villarreal,Q2531438,2018-12-10,Luis García Plaza,2019-01-29,1972-12-01,Spain,False,50
 Villarreal,Q1332523,2017-09-25,Javier Calleja,2018-12-10,1978-05-12,Spain,False,441
 Villarreal,Q359118,2009-06-02,Ernesto Valverde,2010-01-31,1964-02-09,Spain,False,243
-West Ham,Q213989,2026-11-04,Scott Parker,,1980-10-13,United Kingdom,True,12
+West Ham,Q213989,2026-11-04,Scott Parker,,1980-10-13,United Kingdom,True,19
 West Ham,Q372372,2025-09-27,Nuno Espírito Santo,2026-11-03,1974-01-25,Portugal,False,402
 West Ham,Q5593150,2025-01-09,Graham Potter,2025-09-27,1975-05-20,United Kingdom,False,261
 West Ham,Q115119,2024-07-01,Julen Lopetegui,2025-01-08,1966-08-28,Spain,False,191
 West Ham,Q297252,2019-12-29,David Moyes,2024-06-30,1963-04-25,United Kingdom,False,1645
 West Ham,Q296036,2018-07-01,Manuel Pellegrini,2019-12-28,1953-09-16,Chile,False,545
 West Ham,Q9354,2008-09-11,Gianfranco Zola,2010-05-11,1966-07-05,Italy,False,607
-Wolves,Q981657,2026-06-15,César Peixoto,,1980-05-12,Portugal,True,154
+Wolves,Q981657,2026-06-15,César Peixoto,,1980-05-12,Portugal,True,161
 Wolves,Q2067092,2025-11-12,Rob Edwards,2026-06-11,1982-12-25,United Kingdom,False,211
 Wolves,Q556610,2024-12-19,Vítor Pereira,2025-11-02,1968-07-26,Portugal,False,318
 Wolves,Q731946,2023-08-09,Gary O'Neil,2024-12-15,1983-05-18,United Kingdom,False,494

@@ -237,3 +237,21 @@ event_id,date,espn_home,espn_away,home_score,away_score,espn_team,home_away,poss
 401882807,2026-11-08T17:30Z,Villarreal,Getafe,2,0,Getafe,away,27.6,133,219,7,1.0,62,24,9,1,4,15,8
 401882816,2026-11-08T20:00Z,Atlético Madrid,Barcelona,1,2,Atlético Madrid,home,37.0,317,391,6,3.0,61,29,9,4,4,16,10
 401882816,2026-11-08T20:00Z,Atlético Madrid,Barcelona,1,2,Barcelona,away,63.0,615,675,9,2.0,33,18,19,4,2,13,7
+401882805,2026-11-20T20:00Z,Athletic Club,Espanyol,0,1,Athletic Club,home,57.8,394,471,19,6.0,35,14,17,6,9,10,8
+401882805,2026-11-20T20:00Z,Athletic Club,Espanyol,0,1,Espanyol,away,42.2,261,339,12,4.0,46,12,6,3,2,12,11
+401882806,2026-11-21T13:00Z,Alavés,Deportivo,3,1,Alavés,home,48.4,292,358,21,5.0,67,39,21,8,8,10,12
+401882806,2026-11-21T13:00Z,Alavés,Deportivo,3,1,Deportivo,away,51.6,306,391,14,4.0,58,24,7,2,2,12,6
+401882799,2026-11-21T15:15Z,Rayo Vallecano,Valencia,0,1,Rayo Vallecano,home,63.9,456,529,36,6.0,52,31,21,5,8,9,6
+401882799,2026-11-21T15:15Z,Rayo Vallecano,Valencia,0,1,Valencia,away,36.1,242,305,10,4.0,54,18,11,2,5,7,9
+401882797,2026-11-21T17:30Z,Sevilla,Real Betis,1,1,Sevilla,home,50.0,321,392,24,8.0,42,18,25,6,7,9,11
+401882797,2026-11-21T17:30Z,Sevilla,Real Betis,1,1,Real Betis,away,50.0,323,406,9,2.0,47,14,6,3,2,8,8
+401882798,2026-11-21T20:00Z,Real Madrid,Celta Vigo,2,1,Real Madrid,home,63.5,553,612,32,8.0,39,24,24,7,8,9,14
+401882798,2026-11-21T20:00Z,Real Madrid,Celta Vigo,2,1,Celta Vigo,away,36.5,288,360,5,0.0,54,18,8,4,3,7,11
+401882804,2026-11-22T13:00Z,Barcelona,Villarreal,3,2,Barcelona,home,69.9,550,621,23,5.0,23,9,30,9,10,13,3
+401882804,2026-11-22T13:00Z,Barcelona,Villarreal,3,2,Villarreal,away,30.1,199,276,2,1.0,50,11,4,2,0,12,5
+401882800,2026-11-22T15:15Z,Racing Santander,Real Sociedad,3,2,Racing Santander,home,37.2,273,367,7,1.0,57,14,12,8,7,11,13
+401882800,2026-11-22T15:15Z,Racing Santander,Real Sociedad,3,2,Real Sociedad,away,62.8,531,610,28,4.0,55,35,31,7,14,14,11
+401882801,2026-11-22T17:30Z,Osasuna,Málaga,1,0,Osasuna,home,47.2,360,442,28,10.0,57,29,11,2,4,12,12
+401882801,2026-11-22T17:30Z,Osasuna,Málaga,1,0,Málaga,away,52.8,433,507,17,2.0,48,22,5,0,1,5,10
+401882803,2026-11-22T20:00Z,Getafe,Atlético Madrid,0,3,Getafe,home,31.3,239,320,18,4.0,46,15,11,1,2,10,13
+401882803,2026-11-22T20:00Z,Getafe,Atlético Madrid,0,3,Atlético Madrid,away,68.7,655,733,14,3.0,61,35,20,10,7,11,9

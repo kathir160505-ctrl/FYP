@@ -247,22 +247,22 @@ Venezia,situation,FromCorner,21.0,0.0,1.7033544769510627,27.0,3.0,3.656069019809
 Venezia,situation,SetPiece,7.0,0.0,1.175643965601921,5.0,0.0,1.0189989330247045,understat
 Venezia,situation,DirectFreekick,6.0,0.0,0.5525549240410328,3.0,0.0,0.1284671388566494,understat
 Venezia,situation,Penalty,1.0,0.0,0.7612988352775574,2.0,1.0,1.5225976705551147,understat
-AC Milan,attackSpeed,Fast,0.0,,,,,,espn_estimate
+AC Milan,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Atalanta,attackSpeed,Fast,3.5,,,,,,espn_estimate
-Bologna,attackSpeed,Fast,5.3,,,,,,espn_estimate
+Bologna,attackSpeed,Fast,7.1,,,,,,espn_estimate
 Cagliari,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Como,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Fiorentina,attackSpeed,Fast,3.5,,,,,,espn_estimate
-Frosinone,attackSpeed,Fast,5.3,,,,,,espn_estimate
-Genoa,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Inter,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Frosinone,attackSpeed,Fast,7.1,,,,,,espn_estimate
+Genoa,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Inter,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Juventus,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Lazio,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Lazio,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Lecce,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Monza,attackSpeed,Fast,0.0,,,,,,espn_estimate
-Napoli,attackSpeed,Fast,0.0,,,,,,espn_estimate
-Parma Calcio 1913,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Roma,attackSpeed,Fast,0.0,,,,,,espn_estimate
+Napoli,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Parma Calcio 1913,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Roma,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Sassuolo,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Torino,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Udinese,attackSpeed,Fast,0.0,,,,,,espn_estimate

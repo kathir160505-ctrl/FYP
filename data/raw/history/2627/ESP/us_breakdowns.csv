@@ -251,11 +251,11 @@ Villarreal,situation,FromCorner,33.0,1.0,2.776801837608218,22.0,1.0,1.9270893875
 Villarreal,situation,DirectFreekick,5.0,0.0,0.29817651584744453,0.0,0.0,0.0,understat
 Villarreal,situation,SetPiece,4.0,0.0,1.107281013391912,3.0,1.0,0.4864162001758814,understat
 Villarreal,situation,Penalty,3.0,3.0,2.2298328280448914,2.0,2.0,1.4865552186965942,understat
-Alaves,attackSpeed,Fast,5.3,,,,,,espn_estimate
-Athletic Club,attackSpeed,Fast,1.8,,,,,,espn_estimate
+Alaves,attackSpeed,Fast,8.8,,,,,,espn_estimate
+Athletic Club,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Atletico Madrid,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Barcelona,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Celta Vigo,attackSpeed,Fast,0.0,,,,,,espn_estimate
+Celta Vigo,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Deportivo La Coruna,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Elche,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Espanyol,attackSpeed,Fast,0.0,,,,,,espn_estimate
@@ -265,9 +265,9 @@ Malaga,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Osasuna,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Racing Santander,attackSpeed,Fast,7.1,,,,,,espn_estimate
 Rayo Vallecano,attackSpeed,Fast,3.5,,,,,,espn_estimate
-Real Betis,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Real Betis,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Real Madrid,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Real Sociedad,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Sevilla,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Valencia,attackSpeed,Fast,3.5,,,,,,espn_estimate
-Villarreal,attackSpeed,Fast,1.8,,,,,,espn_estimate
+Villarreal,attackSpeed,Fast,3.5,,,,,,espn_estimate

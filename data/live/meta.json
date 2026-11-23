@@ -1,15 +1,15 @@
 {
  "season": "2026/27",
- "updated_at": "2026-11-16T20:42+00:00",
+ "updated_at": "2026-11-23T20:40+00:00",
  "matches": {
-  "ENG-Premier League": 100,
-  "ESP-La Liga": 119,
-  "ITA-Serie A": 110
+  "ENG-Premier League": 109,
+  "ESP-La Liga": 128,
+  "ITA-Serie A": 119
  },
  "estimated_matches": {
-  "ENG-Premier League": 20,
-  "ESP-La Liga": 19,
-  "ITA-Serie A": 20
+  "ENG-Premier League": 29,
+  "ESP-La Liga": 28,
+  "ITA-Serie A": 29
  },
  "clubs": 60
 }

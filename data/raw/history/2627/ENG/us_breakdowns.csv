@@ -247,21 +247,21 @@ Tottenham,situation,SetPiece,4.0,1.0,0.739059504121542,5.0,0.0,0.270800598897039
 Tottenham,situation,Penalty,0.0,0.0,0.0,1.0,0.0,0.7611688375473022,understat
 Arsenal,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Aston Villa,attackSpeed,Fast,0.0,,,,,,espn_estimate
-Bournemouth,attackSpeed,Fast,1.8,,,,,,espn_estimate
+Bournemouth,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Brentford,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Brighton,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Chelsea,attackSpeed,Fast,0.0,,,,,,espn_estimate
-Coventry,attackSpeed,Fast,0.0,,,,,,espn_estimate
+Coventry,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Crystal Palace,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Everton,attackSpeed,Fast,1.8,,,,,,espn_estimate
 Fulham,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Hull,attackSpeed,Fast,0.0,,,,,,espn_estimate
+Hull,attackSpeed,Fast,5.3,,,,,,espn_estimate
 Ipswich,attackSpeed,Fast,0.0,,,,,,espn_estimate
-Leeds,attackSpeed,Fast,1.8,,,,,,espn_estimate
-Liverpool,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Leeds,attackSpeed,Fast,3.5,,,,,,espn_estimate
+Liverpool,attackSpeed,Fast,7.1,,,,,,espn_estimate
 Manchester City,attackSpeed,Fast,0.0,,,,,,espn_estimate
 Manchester United,attackSpeed,Fast,3.5,,,,,,espn_estimate
-Newcastle United,attackSpeed,Fast,0.0,,,,,,espn_estimate
+Newcastle United,attackSpeed,Fast,3.5,,,,,,espn_estimate
 Nottingham Forest,attackSpeed,Fast,7.1,,,,,,espn_estimate
-Sunderland,attackSpeed,Fast,5.3,,,,,,espn_estimate
+Sunderland,attackSpeed,Fast,7.1,,,,,,espn_estimate
 Tottenham,attackSpeed,Fast,0.0,,,,,,espn_estimate

@@ -1023,23 +1023,23 @@ Tottenham,situation,SetPiece,4.0,1.0,0.739059504121542,5.0,0.0,0.270800598897039
 Tottenham,situation,Penalty,0.0,0.0,0.0,1.0,0.0,0.7611688375473022,ENG-Premier League,2627,understat
 Arsenal,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
 Aston Villa,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
-Bournemouth,attackSpeed,Fast,1.8,,,,,,ENG-Premier League,2627,espn_estimate
+Bournemouth,attackSpeed,Fast,5.3,,,,,,ENG-Premier League,2627,espn_estimate
 Brentford,attackSpeed,Fast,5.3,,,,,,ENG-Premier League,2627,espn_estimate
 Brighton,attackSpeed,Fast,3.5,,,,,,ENG-Premier League,2627,espn_estimate
 Chelsea,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
-Coventry City,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
+Coventry City,attackSpeed,Fast,1.8,,,,,,ENG-Premier League,2627,espn_estimate
 Crystal Palace,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
 Everton,attackSpeed,Fast,1.8,,,,,,ENG-Premier League,2627,espn_estimate
 Fulham,attackSpeed,Fast,1.8,,,,,,ENG-Premier League,2627,espn_estimate
-Hull City,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
+Hull City,attackSpeed,Fast,5.3,,,,,,ENG-Premier League,2627,espn_estimate
 Ipswich Town,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
-Leeds United,attackSpeed,Fast,1.8,,,,,,ENG-Premier League,2627,espn_estimate
-Liverpool,attackSpeed,Fast,3.5,,,,,,ENG-Premier League,2627,espn_estimate
+Leeds United,attackSpeed,Fast,3.5,,,,,,ENG-Premier League,2627,espn_estimate
+Liverpool,attackSpeed,Fast,7.1,,,,,,ENG-Premier League,2627,espn_estimate
 Manchester City,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
 Manchester United,attackSpeed,Fast,3.5,,,,,,ENG-Premier League,2627,espn_estimate
-Newcastle United,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
+Newcastle United,attackSpeed,Fast,3.5,,,,,,ENG-Premier League,2627,espn_estimate
 Nottingham Forest,attackSpeed,Fast,7.1,,,,,,ENG-Premier League,2627,espn_estimate
-Sunderland,attackSpeed,Fast,5.3,,,,,,ENG-Premier League,2627,espn_estimate
+Sunderland,attackSpeed,Fast,7.1,,,,,,ENG-Premier League,2627,espn_estimate
 Tottenham,attackSpeed,Fast,0.0,,,,,,ENG-Premier League,2627,espn_estimate
 Alavés,attackSpeed,Normal,74.0,11.0,8.961244623642415,71.0,10.0,7.00408536568284,ESP-La Liga,2627,understat
 Alavés,attackSpeed,Standard,38.0,2.0,3.611997553613037,35.0,1.0,3.5888048503547907,ESP-La Liga,2627,understat
@@ -1293,11 +1293,11 @@ Villarreal,situation,FromCorner,33.0,1.0,2.776801837608218,22.0,1.0,1.9270893875
 Villarreal,situation,DirectFreekick,5.0,0.0,0.29817651584744453,0.0,0.0,0.0,ESP-La Liga,2627,understat
 Villarreal,situation,SetPiece,4.0,0.0,1.107281013391912,3.0,1.0,0.4864162001758814,ESP-La Liga,2627,understat
 Villarreal,situation,Penalty,3.0,3.0,2.2298328280448914,2.0,2.0,1.4865552186965942,ESP-La Liga,2627,understat
-Alavés,attackSpeed,Fast,5.3,,,,,,ESP-La Liga,2627,espn_estimate
-Athletic Club,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
+Alavés,attackSpeed,Fast,8.8,,,,,,ESP-La Liga,2627,espn_estimate
+Athletic Club,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
 Atlético Madrid,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
 Barcelona,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
-Celta Vigo,attackSpeed,Fast,0.0,,,,,,ESP-La Liga,2627,espn_estimate
+Celta Vigo,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
 Deportivo La Coruña,attackSpeed,Fast,0.0,,,,,,ESP-La Liga,2627,espn_estimate
 Elche,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
 Espanyol,attackSpeed,Fast,0.0,,,,,,ESP-La Liga,2627,espn_estimate
@@ -1307,12 +1307,12 @@ Málaga,attackSpeed,Fast,0.0,,,,,,ESP-La Liga,2627,espn_estimate
 Osasuna,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
 Racing Santander,attackSpeed,Fast,7.1,,,,,,ESP-La Liga,2627,espn_estimate
 Rayo Vallecano,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
-Real Betis,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
+Real Betis,attackSpeed,Fast,5.3,,,,,,ESP-La Liga,2627,espn_estimate
 Real Madrid,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
 Real Sociedad,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
 Sevilla,attackSpeed,Fast,0.0,,,,,,ESP-La Liga,2627,espn_estimate
 Valencia,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
-Villarreal,attackSpeed,Fast,1.8,,,,,,ESP-La Liga,2627,espn_estimate
+Villarreal,attackSpeed,Fast,3.5,,,,,,ESP-La Liga,2627,espn_estimate
 AC Milan,attackSpeed,Normal,84.0,14.0,13.563598626293242,61.0,7.0,8.711536830291152,ITA-Serie A,2627,understat
 AC Milan,attackSpeed,Standard,19.0,3.0,5.384228221140802,16.0,4.0,2.9808763219043612,ITA-Serie A,2627,understat
 AC Milan,attackSpeed,Slow,9.0,1.0,0.753987118601799,6.0,0.0,0.27227659057825804,ITA-Serie A,2627,understat
@@ -1561,22 +1561,22 @@ Venezia,situation,FromCorner,21.0,0.0,1.7033544769510627,27.0,3.0,3.656069019809
 Venezia,situation,SetPiece,7.0,0.0,1.175643965601921,5.0,0.0,1.0189989330247045,ITA-Serie A,2627,understat
 Venezia,situation,DirectFreekick,6.0,0.0,0.5525549240410328,3.0,0.0,0.1284671388566494,ITA-Serie A,2627,understat
 Venezia,situation,Penalty,1.0,0.0,0.7612988352775574,2.0,1.0,1.5225976705551147,ITA-Serie A,2627,understat
-AC Milan,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
+AC Milan,attackSpeed,Fast,5.3,,,,,,ITA-Serie A,2627,espn_estimate
 Atalanta,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
-Bologna,attackSpeed,Fast,5.3,,,,,,ITA-Serie A,2627,espn_estimate
+Bologna,attackSpeed,Fast,7.1,,,,,,ITA-Serie A,2627,espn_estimate
 Cagliari,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
 Como,attackSpeed,Fast,1.8,,,,,,ITA-Serie A,2627,espn_estimate
 Fiorentina,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
-Frosinone,attackSpeed,Fast,5.3,,,,,,ITA-Serie A,2627,espn_estimate
-Genoa,attackSpeed,Fast,1.8,,,,,,ITA-Serie A,2627,espn_estimate
-Inter,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
+Frosinone,attackSpeed,Fast,7.1,,,,,,ITA-Serie A,2627,espn_estimate
+Genoa,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
+Inter,attackSpeed,Fast,5.3,,,,,,ITA-Serie A,2627,espn_estimate
 Juventus,attackSpeed,Fast,1.8,,,,,,ITA-Serie A,2627,espn_estimate
-Lazio,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
+Lazio,attackSpeed,Fast,5.3,,,,,,ITA-Serie A,2627,espn_estimate
 Lecce,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
 Monza,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
-Napoli,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
-Parma,attackSpeed,Fast,1.8,,,,,,ITA-Serie A,2627,espn_estimate
-Roma,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
+Napoli,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
+Parma,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
+Roma,attackSpeed,Fast,1.8,,,,,,ITA-Serie A,2627,espn_estimate
 Sassuolo,attackSpeed,Fast,3.5,,,,,,ITA-Serie A,2627,espn_estimate
 Torino,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
 Udinese,attackSpeed,Fast,0.0,,,,,,ITA-Serie A,2627,espn_estimate
